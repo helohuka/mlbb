@@ -1,0 +1,115 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public enum SOUND_ID : int
+{
+	SOUND_ATTACK = 1,
+	SOUND_FLY = 2,
+	SOUND_TIME = 3,
+	SOUND_LEVELUP = 4,
+	SOUND_BEATTACK = 5,
+	SOUND_DEAD = 6,
+	SOUND_RUN = 7,
+	SOUND_BUXUE = 8,
+	SOUND_BUXUEXVLI = 9,
+	SOUND_QIJUE = 10,
+	SOUND_QIJUEXVLI = 11,
+	SOUND_MINGJINGXVLI = 12,
+	SOUND_MINGJINGHUIXUE = 13,
+	SOUND_BINGDONG = 14,
+	SOUND_FENGREN = 15,
+	SOUND_HUOYAN = 16,
+	SOUND_MOFAXCLI = 17,
+	SOUND_XIXUE1 = 18,
+	SOUND_XIXUE2 = 19 ,
+	SOUND_YUNSHI = 20,
+	SOUND_GONGFAN = 21,
+	SOUND_GONGWU = 22,
+	SOUND_GONGXI = 23,
+	SOUND_HUIFUXVLI = 24,
+	SOUND_HUIFU = 25,
+	SOUND_HUIFUBUXUE = 26,
+	SOUND_JIEJING = 27,
+	SOUND_MOFAN = 28,
+	SOUND_MOWU = 29,
+	SOUND_MOXI = 30,
+	SOUND_WUSHUXVLI = 31,
+	SOUND_WUSHU = 32,
+	SOUND_WULIXVSHU = 33,
+	SOUND_QIGONGDAN = 34,
+	SOUND_JIUZUI = 35,
+	SOUND_ZHONGDU = 36,
+	SOUND_ZHOUSHU = 37,
+	SOUND_ZHONGSHUXVLI = 38,
+	SOUND_BUTTONCLICK = 39,
+	SOUND_CLOSEUI = 40,
+	SOUND_OPENUI = 41,
+}
+
+public enum MUSIC_ID : int
+{
+
+}
+
+public enum UIASSETS_ID : int
+{
+	UIASSETS_LoadingPanel = 1 , 
+	UIASSETS_LoginPanel = 2 , 
+	UIASSETS_MainPanel = 3 , 
+	UIASSETS_PanelXuan = 4 , 
+	UIASSETS_AttackPanel = 5 ,
+	UIASSETS_PrebattlePanel = 6 ,
+	UIASSETS_ClearingPanel = 7,
+	UIASSETS_BagPanel = 8,
+	UIASSETS_PlayerInfoPanel = 9,
+	UIASSETS_chongwuPanel = 10,
+	UIASSETS_SkillView = 11,
+	UIASSETS_HuobanPanel = 12,
+	UIASSETS_renwuPanel = 13,
+	UIASSETS_NpcTaskPanel = 14,
+	UIASSETS_FangjianPanel = 15,
+	UIASSETS_CreateTeamPanel = 16,
+	UIASSETS_MapPanel = 17,
+	UIASSETS_JoinTeamPanel = 18,
+	UIASSETS_TeamPanel = 19,
+	UIASSETS_GuaGuaKaPanel = 20,
+	UIASSETS_SkillTabPanel = 21,
+	UIASSETS_GatherPanel = 22,
+	UIASSETS_Friend = 23,
+	UIASSETS_Compound = 24,
+	UIASSETS_ExchangePanel = 25,
+	UIASSETS__ErrorTipsUI = 26,
+	UIASSETS__Arena = 27,
+	UIASSETS__ArenaRank = 28,
+	UIASSETS__StoreUI = 29,
+	UIASSETS__LearningUI = 30,
+	UIASSETS__WordMapUI = 31,
+	UIASSETS__BabySkillLearning= 32,
+	UIASSETS_NpcHeadChatPanel = 33,
+	UIASSETS_MessageBoxPanel = 34,
+    UIASSETS_EmptyPanel = 35,
+	UIASSETS_SkillPanel = 36,
+}
+
+public enum ENTITY_ID : int
+{
+	ENTITY_1 = 1 , 
+	ENTITY_2 = 2 , 
+	ENTITY_3 = 3 , 
+	ENTITY_4 = 4 ,
+}
+
+public enum EFFECT_ID : int
+{
+	EFFECT_SELECTTARGET = 1,
+	EFFECT_XVLI = 4,
+	Effect_Die = 5,
+	EFFECT_FENG = 6,
+	EFFECT_WULIXVLI = 7,
+	EFFECT_BINGDONG = 8,
+	EFFECT_huangwenhao = 1015,
+	EFFECT_huiwenhao = 1016,
+	EFFECT_tanhao = 1017,
+	EFFECT_duizhang_mark = 1018,
+
+}

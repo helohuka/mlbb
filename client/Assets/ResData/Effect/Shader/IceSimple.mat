@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: IceSimple
+  m_Shader: {fileID: 4800000, guid: e265ec3e717d23b46aaa9e5267adb31c, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 88ff7575bffeb7e498b8c4ee156fe11a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: f20ef6394a329114c94d93a68ef967f8, type: 3}
+          m_Scale: {x: .5, y: .5}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DecalTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 7234e3ce533337647914227a57ac0779, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Cube
+        second:
+          m_Texture: {fileID: 8900000, guid: c1ad01f33e5dc4d40ae09cf74ba9d47f, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMapGlass
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MainTexIce
+        second:
+          m_Texture: {fileID: 2800000, guid: 63a0af3f7d586b74988cc31f4d48ea53, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CutoutTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 5671b207587c31f44a6433f72fe759c2, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CutoutAlpha
+        second:
+          m_Texture: {fileID: 2800000, guid: 1abd47c73407ff745badc9a4b9633b48, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: 1
+      data:
+        first:
+          name: _Shininess
+        second: 1
+      data:
+        first:
+          name: _ReflectionStrength
+        second: 12.5357151
+      data:
+        first:
+          name: _Opacity
+        second: .25
+      data:
+        first:
+          name: _FPOW
+        second: 10
+      data:
+        first:
+          name: _R0
+        second: .899999976
+      data:
+        first:
+          name: _LightStr
+        second: .510714293
+      data:
+        first:
+          name: _BumpAmt
+        second: 0
+      data:
+        first:
+          name: _OpacityMain
+        second: 0
+      data:
+        first:
+          name: _ClipRange
+        second: .767857134
+      data:
+        first:
+          name: _RimPower
+        second: 8
+      data:
+        first:
+          name: _ColorStrength
+        second: .267857134
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .147058845, g: .147058845, b: .147058845, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _ReflectColor
+        second: {r: .6999892, g: .779801786, b: .889705896, a: 1}
+      data:
+        first:
+          name: _RimColor
+        second: {r: .938133895, g: .926470578, b: 1, a: 0}

@@ -1,0 +1,1231 @@
+#import com.arpc
+//运营活动相关
+
+//储存充值
+struct SGE_OrderInfo{
+	int32 productId_;
+	int32 productCount_;
+	float amount_;
+	string orderId_;
+	string payTime_;
+};
+
+//===============================累计登录===============================//
+struct COM_ADLoginTotalContent
+{
+	uint32								totalDays_;		//累计天数 0为每天都可领
+	array<uint32>						itemIds_;		//奖励道具id
+	array<uint32>						itemStacks_;	//奖励道具堆叠
+	uint8								status_;		//领取状态 0:不可领 1:可领取 2:已领取
+};
+
+struct COM_ADLoginTotal
+{
+	int32								loginDays_;
+	uint64								sinceStamp_;	//开始时间戳
+	uint64								endStamp_;		//结束时间戳
+	array<COM_ADLoginTotalContent>		contents_;		//所有奖励
+};
+//=================================End==================================//
+
+//===============================累计充值===============================//
+struct COM_ADChargeTotalContent
+{
+	uint32								currencyCount_;	//累计充值额度线
+	array<uint32>						itemIds_;		//奖励道具id
+	array<uint32>						itemStacks_;
+	uint8								status_;		//领取状态 0:不可领 1:可领取 2:已领取
+};
+struct COM_ADChargeTotal
+{
+	int32								recharge_; ///已经累计充值多少
+	uint64								sinceStamp_;	//开始时间戳
+	uint64								endStamp_;		//结束时间戳
+	array<COM_ADChargeTotalContent>		contents_;		//所有奖励
+};
+//=================================End==================================//
+
+//===============================打折商店===============================//
+struct COM_ADDiscountStoreContent
+{
+	uint32								price_;			//价格(单位水晶)
+	uint32								itemId_;		//道具id
+	float								discount_;		//折扣(方式待定)
+	uint32								buyLimit_;		//限购
+};
+struct COM_ADDiscountStore
+{
+	uint64								sinceStamp_;	//开始时间戳
+	uint64								endStamp_;		//结束时间戳
+	array<COM_ADDiscountStoreContent>	contents_;		//所有道具
+};
+//=================================End==================================//
+
+//===============================单笔充值===============================//
+struct COM_ADChargeEveryContent
+{
+	uint32								currencyCount_;	//单笔充值额度线
+	array<uint32>						itemIds_;		//奖励道具id
+	array<uint32>						itemStacks_;
+	uint8								status_;		//领取状态 0:不可领 1:可领取 2:已领取
+	uint8								count_;			//剩余领取次数
+};
+struct COM_ADChargeEvery
+{
+	int32								currentCount_;
+	uint64								sinceStamp_;	//开始时间戳
+	uint64								endStamp_;		//结束时间戳
+	array<COM_ADChargeEveryContent>		contents_;		//所有奖励
+};
+//=================================End==================================//
+
+
+//=================================翻牌=================================//
+struct COM_ADCardsContent
+{
+	uint32								count_;			//牌号
+	uint32								rewardId_;		//翻牌奖励表ID	
+};
+struct COM_ADCards
+{
+	uint64								sinceStamp_;	//开始时间戳
+	uint64								endStamp_;		//结束时间戳
+	array<COM_ADCardsContent>			contents_;		//所有奖励
+};
+//=================================End==================================//
+
+//===============================热点伙伴(宠物)===============================//
+struct COM_ADHotRoleContent
+{
+	EntityType							type_;			//是否是伙伴
+	uint32								buyNum_;		//购买次数
+	uint32								roleId_;		//角色id(伙伴即伙伴ID，宠物即宠物ID)
+	uint32								price_;			//售价
+};
+//=================================End==================================//
+
+//===============================热点商店===============================//
+struct COM_ADHotRole
+{
+	uint64								sinceStamp_;	//开始时间戳
+	uint64								endStamp_;		//结束时间戳
+	array<COM_ADHotRoleContent>			contents_;		//所有商品
+};
+//=================================End==================================//
+
+//===============================累计抽伙伴===============================//
+struct COM_ADEmployeeTotalContent
+{
+	uint32								outputCount_;	//累计抽取线
+	array<uint32>						itemIds_;		//奖励道具id
+	array<uint32>						itemStacks_;
+	uint8								status_;		//领取状态 0:不可领 1:可领取 2:已领取
+};
+struct COM_ADEmployeeTotal
+{
+	int32								outputNum_; 	///累计抽取次数
+	uint64								sinceStamp_;	//开始时间戳
+	uint64								endStamp_;		//结束时间戳
+	array<COM_ADEmployeeTotalContent>		contents_;	//所有奖励
+};
+//=================================End==================================//
+//小额礼包
+struct COM_GiftItem
+{
+	uint32 itemId_;
+	uint32 itemNum_;
+};
+
+struct COM_ADGiftBag
+{
+	uint64								sinceStamp_;	//开始时间戳
+	uint64								endStamp_;		//结束时间戳
+	bool								isflag_;		//是否已购买
+	uint8								price_;			//现价
+	uint8								oldprice_;		//原价
+	array<COM_GiftItem>					itemdata_;
+};
+
+//7天活动
+struct COM_Sevenday
+{
+	//uint32				day_;		//某天
+	uint32				quest_;		//任务
+	AchievementType		stype_;		//目标类型,用成就类型
+	uint32				qvalue_;	//任务进度
+	bool				isfinish_;	//
+	bool				isreward_;	//奖励是否领取
+};
+
+//转盘数据
+struct COM_ZhuanpanContent
+{
+	uint32		id_;
+	uint32 		item_;			//奖励道具
+	uint32		itemNum_;		//奖励道具个数
+	uint32		rate_;			//奖励权重
+	uint32		maxdrop_;		//全服最大产出数量,0为不做限制
+};
+//稀有奖励记录
+struct COM_Zhuanpan
+{
+	string	playerName_;
+	uint32	zhuanpanId_;
+};
+
+struct COM_ZhuanpanData
+{
+	uint64							sinceStamp_;	//开始时间戳
+	uint64							endStamp_;		//结束时间戳
+	array< COM_ZhuanpanContent >	contents_;		//
+	array< COM_Zhuanpan >			rarity_;		//
+};
+
+//积分商店
+struct COM_IntegralContent
+{
+	uint32			id_;
+	uint32			itemid_;
+	int32			times_;				//可购买次数
+	int32			cost_;				//购买消耗
+};
+
+struct COM_IntegralData
+{
+	uint64							sinceStamp_;	//开始时间戳
+	uint64							endStamp_;		//结束时间戳
+	uint32							integral_;		//积分
+	bool							isflag_;		//是否领取积分
+	array< COM_IntegralContent >	contents_;		//
+};
+
+//
+struct SGE_SysActivity{
+	COM_ADLoginTotal	loginData_;
+	COM_ADChargeTotal	chData_;
+	COM_ADDiscountStore	stData_;
+	COM_ADChargeEvery	ceData_;
+	COM_ADCards			acData_;
+	COM_ADHotRole		hrData_;
+	COM_ADEmployeeTotal etdata_;
+	COM_ADGiftBag		gbdata_;
+	COM_ZhuanpanData	zpdata_;
+	COM_IntegralData	icdata_;
+};
+
+///登录
+struct COM_LoginInfo
+{
+	string username_; 
+	string password_; 
+	uint32 version_; 
+	string sessionkey_;
+	
+	string mac_;
+	string idfa_;
+	string devicetype_;
+};
+
+//位置点
+struct COM_FPosition{
+	float x_;
+	float z_;
+	bool isLast_;
+};
+
+// 场景中角色简略信息
+struct COM_ScenePlayerInformation
+{
+	bool 			isLeader_;
+	bool			isTeamMember_;
+	bool 			isInBattle_;
+	int16			vip_;
+	int32 			instId_;
+	int32 			assetId_;
+	int32 			weaponItemId_;
+	int32			fashionId_;
+	int32 			hpMax_;
+	int32 			hpCrt_;
+	int32 			mpMax_;
+	int32 			mpCrt_;
+	int32 			level_;
+	int32 			battlePower_;
+	int32 			jl_;					//职业等级
+	int32			magicLv_;				//神器等级
+	uint64 			openSubSystemFlag_;
+	int32			title_;			//当前称号
+	string 			instName_;
+	string 			guildeName_;
+	JobType 		jt_;				//职业类型
+	EntityType 		type_;			//Entity类型
+	COM_FPosition 	originPos_;	//初始位置
+	int32 showBabyTableId_;
+	string showBabyName_;
+};
+
+struct COM_BattleEntityInformation{
+	EntityType		type_;	
+	string			instName_;
+	int32			instId_;
+	int32			tableId_;
+	int32			assetId_;
+	JobType			jt_;
+	BattlePosition	battlePosition_;
+	int32 			weaponItemId_;
+	int32 			fashionId_;
+	int32 			hpMax_;
+	int32 			hpCrt_;
+	int32 			mpMax_;
+	int32 			mpCrt_;
+	int32 			level_;
+};
+
+// 选择角色界面中一个角色的结构
+struct COM_SimpleInformation
+{
+	int32 instId_;
+	int32 level_;
+	int32 asset_id_;
+	string instName_;
+	int32 weaponItemId_;
+	int32	fashionId_;
+	uint32 section_;		//JJC等级
+	JobType jt_;
+	int32   jl_;
+};
+
+///账户信息
+struct COM_AccountInfo
+{
+	uint32 guid_;
+	string username_;
+	string password_;
+	uint64 createtime_;
+	string phoneNumber_;
+};
+
+struct COM_PropValue
+{
+    PropertyType	type_;
+    float			value_;
+};
+
+//item
+struct COM_Item
+{
+	uint32	itemId_;
+	uint32	instId_;						//<实例ID
+	int16	stack_;   
+	bool	isBind_;						//<是否绑定
+	bool	isLock_;	
+	int8	strLevel_;						//<强化等级
+	int16	slot_;							//<物品槽位
+	int32	skillID_;						//战斗使用道具所对应
+	int32   durability_;				//	耐久		//宠物装备时是技能
+	int32   durabilityMax_;		//最大耐久				//宠物装备时是技能等级
+	int32	usedTimeout_; ///限时装备
+	int32	lastSellTime_;
+	array<COM_PropValue> propArr;		
+};
+
+struct COM_DropItem
+{
+	uint32 itemId_;
+	uint32 itemNum_;
+};
+
+//水晶系统
+struct COM_CrystalProp
+{
+	uint32				level_;				//水晶属性等级
+	PropertyType		type_;				//水晶属性类型
+	uint32				val_;				//水晶属性值
+};
+
+struct COM_CrystalData
+{
+	uint32	level_;			//水晶等级
+	array<COM_CrystalProp>	props_;
+};
+
+struct COM_QuestTarget
+{
+	uint32 targetId_;
+	int32  targetNum_;
+};
+
+///技能相关
+struct COM_Skill
+{
+	uint32			skillID_;				
+	uint32			skillExp_;
+	uint32			skillLevel_;
+};
+
+///任务相关
+struct COM_QuestInst
+{
+	int32 questId_;
+	array<COM_QuestTarget>	targets_;		//多任务目标
+};
+
+struct COM_State
+{
+    uint32 stateId_;
+    int8   turn_; ///回合数
+	int8   tick_; ///次数
+	int8   type_;
+
+	int32 value0_;
+	int32 value1_;
+};
+
+struct COM_Entity
+{
+	EntityType type_;
+	string      instName_;
+	uint32       instId_;
+	BattlePosition	battlePosition_;
+	array<float> properties_;
+	array<COM_Skill> skill_;
+	array<COM_Item> equips_;
+	array<COM_State> states_;
+};
+
+struct COM_BabyInst : COM_Entity
+{
+	string				ownerName_;
+	bool				isShow_;
+	bool				isBattle_;
+	bool				isBind_;
+	bool				isLock_;
+	int32				tableId_;
+	int32				slot_;		///放入仓库时对应的槽位
+	uint32				intensifyLevel_;	//强化等级
+	uint32				intensifynum_;		//强化次数
+	int32				lastSellTime_;
+	array<int32>		gear_;		///宠物各属性档位基数
+	array<float>		addprop_;		//加点存储
+};
+
+struct COM_EmployeeInst : COM_Entity
+{
+	string				ownerName_;
+	bool				isBattle_;	//是否出战
+	uint32				weaponId_;	//伙伴武器ID,前端需要
+	QualityColor		quality_;	//品阶
+	uint32				star_;		//星级
+	uint32				soul_;		//武魂
+};
+
+struct COM_ContactInfo
+{
+	uint32			instId_;
+	string			name_;
+	uint32			level_;
+	float			exp_;
+	JobType			job_;			//职业
+	uint32			assetId_;
+	uint32			jobLevel_;
+	VipLevel		vip_;
+	
+	uint32			ff_;			//战斗力
+	uint32			rank_;			//排名
+	int32			section_;		//在线JJC段位
+	uint32			value_;			//在线JJC积分
+	bool			isLine_;  // 是否在线
+};
+
+struct SGE_ContactInfoExt : COM_ContactInfo
+{
+	uint64			rolefirst_;		//角色第一次登陆时间
+	uint64			rolelast_;		//角色最后一次登陆时间
+	uint64			logoutTime_;	//角色离线时间
+	uint32			gold_;			
+	uint32			diamond_;
+	uint32			magicgold_;		//水晶
+	int32			guildContribute_; ///帮派贡献
+	string			accName_;
+	string		userid_;	///SDK
+	string		pfid_;	   ///渠道ID
+	string		pfname_;   ///渠道名
+	uint32			serverid_;
+};
+
+///成就
+struct COM_Achievement
+{
+	uint32				achId_;
+	AchievementType		achType_;
+	uint32				achValue_;		///
+	bool				isAch_;			///成就是否达成
+	bool				isAward_;		///是否已领取奖励
+};
+
+///百人道场
+struct COM_HundredBattle
+{
+	uint32			playerId_;			
+	uint32			tier_;				///当前可挑战层
+	uint32			curTier_;			///当前挑战层
+	uint32			surplus_;			///剩余次数
+	uint32			resetNum_;			///重置次数
+};
+
+///同步竞技场
+struct COM_PlayerVsPlayer
+{
+	int32			playerInst_;
+	int32			section_;			///段位(排位)
+	int32			value_;				///积分(战绩)
+	int32			winNum_;			///战斗胜利次数
+	int32			battleNum_;			///战斗总场次
+	float			winValue_;			///本赛季胜率
+	int32			contWin_;			///本赛季最大连胜
+	bool			isCont_;			///是否连胜
+};
+
+///活动
+struct COM_Activity
+{
+	int32 actId_;
+	int32 counter_;
+};
+
+struct COM_ActivityTable
+{
+	array<COM_Activity> activities_;
+	array<uint32> flag_; //活跃度奖励领取标记
+	int32 reward_;
+};
+
+//历程礼包
+struct COM_CourseGift{
+	uint32		id_;				//shopID
+	float		timeout_;		
+};
+
+struct COM_SimplePlayerInst : COM_Entity{
+	bool isLeavingTeam_; ///是否队伍暂离
+	bool isBattle_;
+	bool autoBattle_;
+	bool isTeamLeader_;
+	int32	sceneId_; //下线时场景ID
+	uint64 	openSubSystemFlag_;
+	int64	createTime_;	//创建时间
+	string guildName_;
+	COM_FPosition scenePos_;
+	COM_PlayerVsPlayer	pvpInfo_;
+	array<COM_BabyInst> babies1_;
+	array<COM_EmployeeInst> battleEmps_;
+
+};
+
+struct COM_PlayerInst : COM_Entity
+{
+	bool	isLeavingTeam_; ///是否队伍暂离
+	bool	isBattle_;
+	bool	autoBattle_;
+	bool	isTeamLeader_;
+	int32	sceneId_; //下线时场景ID
+	uint64 	openSubSystemFlag_;
+	int64	createTime_;	//创建时间
+	string	guildName_;
+	COM_FPosition		scenePos_;
+	COM_PlayerVsPlayer	pvpInfo_;
+	
+	bool	onlineTimeFlag_;
+	float	onlineTime_;
+	array<uint32>	onlineTimeReward_;
+	
+	bool	isFund_;
+	array<uint32>	fundtags_;
+
+	bool	openDoubleTimeFlag_;
+	bool 	isFirstLogin_;
+	bool	firstRechargeDiamond_;		//首充
+	bool	isFirstRechargeGift_;		//是否领取首充礼包
+	float   offlineExp_;
+	float	rivalTime_;
+	int8	rivalNum_;
+	int8	promoteAward_;
+	uint64	guideIdx_;
+	float	noTalkTime_;		//禁言倒计时
+	uint32	wishShareNum_;		//许愿分享次数
+	uint32	warriortrophyNum_;	//获得箱子个数
+	uint32	employeelasttime_;			//上一次钻石单抽抽中紫色次数
+	uint32	employeeonecount_;			//钻石单抽次数
+	uint32	employeetencount_;			//钻石10连抽次数
+	float	greenBoxTimes_;				//普通宝箱CD时间
+	float	blueBoxTimes_;				//普通宝箱CD时间
+	uint32	greenBoxFreeNum_;			//普通宝箱免费次数
+	COM_HundredBattle   hbInfo_;
+	array<int32>		openScenes_; //开启的场景
+	array<uint32>		copyNum_;		//可进入副本次数
+	
+	int32		magicItemLevel_;//神器等级
+	int32		magicItemeExp_; //神器经验
+	JobType		magicItemeJob_; //神器职业
+	int32		magicTupoLevel_;//神器突破等级 
+	array<int32>	cachedNpcs_;
+	array<string> gft_;	//兑换过的礼包类型
+	array<uint32>	babycache_;		//babyRace count
+	array<int32>	titles_;
+	int32	guildContribution_;
+	uint32	exitGuildTime_;
+	array<COM_Skill>	guildSkills_;
+	array<ADType>		gmActivities_;
+	COM_ADLoginTotal	festival_; //节日活动
+	COM_ADChargeTotal	selfRecharge_; //个人累计充值
+	COM_ADChargeTotal	sysRecharge_; //系统累计充值
+	COM_ADDiscountStore	selfDiscountStore_; //打折商店
+	COM_ADDiscountStore	sysDiscountStore_; //打折商店
+	COM_ADChargeEvery selfOnceRecharge_; ///单笔充值
+	COM_ADChargeEvery sysOnceRecharge_;
+	COM_ADEmployeeTotal empact_;		///累计抽伙伴
+	COM_ADCards	selfCards_;		//翻牌
+	COM_ADChargeTotal	myselfRecharge_; //个人累计充值常驻版
+	COM_ADHotRole hotdata_;
+	COM_ADGiftBag	gbdata_;		//小额礼包
+	bool		sevenflag_;
+	bool		signFlag_;
+	array<COM_Sevenday>	sevendata_;
+	bool		viprewardflag_;			//VIP奖励领取标记
+	string		phoneNumber_;
+	array<uint32>	levelgift_;			//已领取等级礼包ID
+	COM_ActivityTable activity_;
+	array<COM_Item> fuwen_;
+	COM_CrystalData		crystalData_;	//水晶
+	COM_IntegralData	integralData_;	//积分商店数据
+	array<COM_CourseGift> coursegift_;
+};
+
+struct COM_MonsterInst : COM_Entity{
+	array<int32> gear_;		///怪物各属性档位基数
+};
+
+struct COM_ReportState : COM_State
+{
+	bool  add_; // 0 删除 1 添加 2 更新
+	int32 ownerId_;
+	int8 addQueue_; //草了草了
+};
+
+struct COM_ReportTargetBase{
+	BattlePosition  position_;
+	COM_PropValue   prop_;
+	bool bao_;
+	bool fly_;
+};
+
+struct COM_ReportTarget : COM_ReportTargetBase{
+	array<COM_ReportTargetBase> prop2_; //反击
+};
+
+struct COM_Order
+{
+	OrderStatus status_;
+	int32 casterId_;
+	int32 target_;
+	int32 skill_;
+	int32 itemId_;
+	int32 weaponInstId_;
+	int32 babyId_;
+	int8  isSec_; ///是否是2动
+	int8  uinteGroup_;
+	int32 uniteNum_;
+	bool isNo_; ///宠物是否no了
+	
+};
+
+struct COM_ReportActionCounter
+{
+	int32 casterId_;
+	uint8 targetPosition_;
+	COM_ReportTarget props_;
+	array<COM_ReportState> states_;	  ///反击时BUFF
+};
+
+struct COM_ReportAction : COM_Order 
+{
+	bool	zhuachongOk_; ///是否抓宠成功
+	uint8	skillLevel_;
+	uint8	huweiPosition_;
+	BattlePosition	bp0_;
+	BattlePosition	bp1_;
+	COM_BattleEntityInformation	baby_;
+	array<int32>	eraseEntities_;
+	array<COM_ReportTarget> targets_;
+	array<COM_ReportState> stateIds_;	  ///攻击时BUFF
+	array<COM_ReportActionCounter> counters_; ///反击
+	array<COM_BattleEntityInformation> dynamicEntities_;
+};
+
+/// 战报
+struct COM_BattleReport
+{
+	array<COM_ReportState> stateIds_; ///回合开始时BUFF
+	array<COM_ReportAction> actionResults_;
+	array<COM_ReportTarget> targets_; 
+	array<COM_BattleEntityInformation> waveEntities_; ///下一波
+};
+
+struct COM_InitBattle
+{
+	uint32 battleId_;
+	BattleType bt_;
+	uint32 roundCount_;
+	OperateType opType_;
+	SneakAttackType	 sneakAttack_;
+	array<COM_BattleEntityInformation> actors_;
+};
+
+struct COM_CreateTeamInfo
+{
+	TeamType type_;
+	uint8  maxMemberSize_;
+	string name_;
+	string pwd_;
+	uint16 minLevel_;
+	uint16 maxLevel_;
+};
+
+struct COM_SimpleTeamInfo : COM_CreateTeamInfo
+{
+	uint32		teamId_;
+	uint8		curMemberSize_;
+	string		leaderName_;
+	JobType		job_;		//职业
+	uint32		joblevel_;
+	bool		needPassword_;
+	bool		isRunning_;
+	bool		isWelcome_;			//是否受本队欢迎
+};
+
+struct COM_TeamInfo : COM_SimpleTeamInfo
+{
+	array<COM_SimplePlayerInst> members_;
+};
+
+struct COM_JJCBattleMsg
+{
+	string	defier_;		//挑战者
+	string	bydefier_;		//被
+	uint32	rank_;			//当前自己排名
+	bool	isWin_;			//输赢
+	int64	curTime_;
+};
+
+struct COM_BattleEmp
+{
+	EmployeesBattleGroup empBattleGroup_;	//伙伴当前出战组
+	array<uint32>		 employeeGroup1_;
+	array<uint32>		 employeeGroup2_;
+};
+
+struct COM_Gather
+{
+	uint32				gatherId_;
+	GatherStateType		flag_;		
+	uint32				num_;		//日常最大采集次数
+};
+
+///DB 存储相关
+struct SGE_DBPlayerData : COM_PlayerInst
+{
+	int32			versionNumber_;
+	bool			freeze_;
+	bool			seal_;
+	uint32			signs_;
+	int32			sellIdMax_; ///售卖ID
+	int32			push_;//占位
+	int32			acceptRandQuestCounter_;
+	int32			submitRandQuestCounter_;
+	string			pfid_;//角色使用的渠道
+	int32			itemStoreSize_; //道具银行大小
+	int32			babyStoreSize_; //宠物银行大小
+	array<SGE_OrderInfo> orders_; ///这个是充值数组
+	uint64			loginTime_;
+	uint64			logoutTime_;
+	uint32			genItemMaxGuid_; ///创建道具使用
+	uint32			gaterMaxNum_;	///采集总次数
+	bool			firstRollEmployeeCon_; //第一次金币roll
+	bool			firstRollEmployeeDia_; //第一次钻石roll
+	array<COM_EmployeeInst> employees_;
+	array<COM_Item>			itemStorage_;
+	array<COM_BabyInst>		babyStorage_;
+	array<COM_BabyInst>		babies_;
+	array<COM_Item>			bagItems_;
+	array<COM_QuestInst>	quests_;
+	array<int32>			completeQuests_;
+	array<COM_Item>			mineReward_;
+	array<COM_JJCBattleMsg> jjcBattleMsg_;
+	array<COM_ContactInfo>	friend_;
+	array<COM_ContactInfo>	blacklist_;
+
+	array<int32>			achValues_;
+	array<COM_Achievement>	achievement_;
+	EmployeesBattleGroup	empBattleGroup_;	//伙伴当前出战组
+	array<uint32>			employeeGroup1_;
+	array<uint32>			employeeGroup2_;
+	array<COM_Gather>		gatherData_;
+	array<uint32>			compoundList_;
+};
+
+//战斗清算
+struct COM_BattleOverClearing
+{
+	bool				isFly_;	//主角是否被飞
+	int32				playExp_;
+	uint32				playLevel_;
+	uint32				playFree_;
+	int32				pvpJJCGrade_;
+	int32				money_; //获得金钱
+	uint32				babyExp_;
+	uint32				babyLevel_;
+	array<COM_DropItem>	items_;
+	array<COM_Skill>	skills_;		
+};
+
+struct COM_Addprop
+{
+	PropertyType		type_;
+	uint32				uVal_;
+};
+
+struct COM_ExpendItem		//伙伴升星消耗
+{
+	uint32		itemInstId_;
+	uint32		num_;
+};
+
+struct COM_Chat
+{
+	ChatKind ck_;
+	bool isAudio_;
+	string content_;
+	int32 audioTime_;
+	array<uint8> audio_; ///
+	bool isMe;
+	int32 teamId_;
+	TeamType teamType_; //
+	int16 teamMinLevel_;
+	int16 teamMaxLevel_;
+	string teamName_;
+};
+
+struct COM_ChatInfo : COM_Chat
+{
+	int32 audioId_;
+	uint16 assetId_; /// 头像
+	string playerName_;
+	string guildName_; ///工会
+	uint32 instId_;
+};
+
+struct COM_EndlessStair
+{
+	uint32	rank_;
+	string	name_;
+	JobType	job_;		//职业
+	uint32	joblevel_;
+	int32	assetId_;
+	uint32	level_;
+	float	rivalTime_;
+	int32	rivalNum_;
+};
+
+struct COM_BabyRankData
+{
+	uint32	instId_;
+	int32	rank_;
+	string	name_;
+	string	ownerName_;
+	int32	ff_;			//战斗力
+};
+
+struct COM_EmployeeRankData
+{
+	uint32	instId_;
+	int32	rank_;
+	string	name_;
+	string	ownerName_;
+	int32	ff_;			//战斗力
+};
+
+
+struct COM_MailItem
+{
+	int32 itemId_;
+	int32 itemStack_;
+};
+
+///邮件
+struct COM_Mail{
+	int32 mailId_;
+	MailType mailType_;
+	int64 timestamp_;
+	string sendPlayerName_;
+	string recvPlayerName_;
+	string title_;
+	string content_;
+	int32 money_; //金币
+	int32 diamond_; //钻石
+	array<COM_MailItem> items_; 
+	bool isRead_;
+};
+
+struct COM_GuildBuilding
+{
+	int32 level_;			///<等级
+	int32 struction_;		///<建筑建设度
+};
+
+//<帮派请求
+struct COM_GuildRequestData
+{
+	int64  roleId_;
+	int8   level_;
+	string roleName_;
+	int32	time_;
+	int8	prof_;
+	int8	profLevel_;
+};
+
+struct COM_GuildProgen{
+	int32 mId_;
+	int32 lev_;
+	int32 exp_;
+};
+
+//帮派
+struct COM_Guild
+{
+	int8					guildLevel_;		///<帮派级别
+	int32					createTime_;		///<创建时间
+	uint32					guildId_;			///<帮派id
+	uint32					guildContribution_;		///<帮派建设
+	uint32					fundz_;				///<帮派资金
+	int32					presentNum_;		///采集捐献
+	int64					master_;			//<帮主id
+	string					masterName_;		//<帮主名
+	string					guildName_;			///<帮派名字
+	string					notice_;			///<帮派通知
+	array<COM_GuildRequestData>	requestList_;	///<申请列表
+	int32					noFundzDays_; ///没有资金的日子
+	array<COM_GuildBuilding>	buildings_;		///<帮派建筑
+	array<COM_GuildProgen>		progenitus_;	///<帮派神兽
+	array<int32>				progenitusPositions_; //站位
+};
+
+struct COM_GuildShopItem{
+	int32 shopId_;
+	int32 buyLimit_;
+};
+
+//帮派成员
+struct COM_GuildMember
+{
+	int8					level_;			//<角色等级
+	int8					shopRefreshTimes_;
+	uint32					guildId_;		//<帮派id
+	int8					profType_;		//<职业
+	int8					profLevel_;
+	int32					contribution_;
+	int8					job_;			//<职位
+	int32					roleId_;		//<角色id
+	uint32					offlineTime_;	//最后在线时间
+	string					roleName_;		//角色名字 
+	uint32					joinTime_;	//加入时间
+	bool					signflag_;		//签到
+	array<COM_GuildShopItem>			shopItems_; //商城道具
+};
+
+struct COM_GuildViewerData
+{
+	uint32		guid_;			//帮派ID
+	string		guildName_;		//帮派名
+	string		playerName_;	//帮主名
+	string		notice_;		//公告
+	int8		level_;			//等级
+	int16		memberNum_;		//现有人数
+	int16		memberTotal_;	//总人数
+	int8		guildRank_;		//排名
+};
+
+//商会
+
+struct COM_SearchContext{
+	string title_;
+	ItemSubType ist_;
+	RaceType rt_;
+	int32 itemId_;
+	int32 babyId_;
+	int32 begin_;
+	int32 limit_;
+};
+
+struct COM_SellItem{
+	int32 guid_;		 ///记录ID
+	int32 sellPlayerId_; ///售卖人
+	int32 sellPrice;	 ///售卖价格
+	string title_;
+	ItemSubType ist_;
+	RaceType rt_;
+	COM_Item item_;
+	COM_BabyInst baby_;
+	int32 time_;
+};
+
+struct COM_SelledItem{
+	int32 guid_;
+	int32 sellPlayerId_; ///售卖人
+	int32 sellTime_;
+	int32 selledTime_;
+	int32 itemId_;
+	int32 babyId_;
+	int32 itemStack_;
+	int32 price_;
+	int32 tax_;
+};
+
+struct SGE_BuyContent{
+	int32 playerId_;
+	int32 guid_;
+	int32 diamond_;
+	int32 magic_;
+	bool isBabyFull_;
+	bool isBagFull_;
+};
+
+struct SGE_ScenePlayerInfo{
+	int32 playerId_;
+	int32 playerLevel_;
+	int32 sceneId_;
+	int32 entryId_;
+	
+	array<int32> currentQuestIds_;
+	array<int32> accecptQuestIds_;
+	array<int32> openScenes_; //开启的场景
+};
+
+struct COM_SceneInfo{
+	int32 sceneId_;
+	COM_FPosition position_;
+	array<COM_ScenePlayerInformation> players_;
+	array<int32> npcs_; ///npcJI HE 
+};
+
+//断线重连
+struct COM_ReconnectInfo
+{
+	ReconnectType reconnectProcess_;		//重连进度
+	string sessionKey_;
+	array<COM_SimpleInformation> roles_;
+	COM_PlayerInst playerInst_;
+	COM_SceneInfo sceneInfo_;
+	COM_TeamInfo team_;
+	COM_InitBattle initBattle_;
+};
+
+struct COM_Notice
+{
+	NoticeSendType	SendType_;		///<播放类型
+	string			note_;				///<gmtnotice内容
+	float			accumulate_;		///<累计间隔
+	float			startTime_;			///<开始时间
+	float			stopTime_;			///<间隔时间
+	float			interval_;			///<终止时间
+	bool			validate_;			///<是否有效
+};
+
+//show item
+struct COM_ShowItemInst
+{
+	int32			showId_;
+	string			playerName_;
+	COM_Item		itemInst_;
+};
+
+struct COM_ShowItemInstInfo
+{
+	int32			showId_;
+	string			playerName_;
+	uint32			itemId_;
+};
+
+//show baby
+struct COM_ShowbabyInst
+{
+	int32			showId_;
+	string			playerName_;
+	COM_BabyInst	babyInst_;
+};
+
+struct COM_ShowbabyInstInfo
+{
+	int32			showId_;
+	string			playerName_;
+	uint32			babyId_;
+};
+
+struct SGE_Account{
+	string gamename_;
+	string pfid_;
+	string pfname_;
+	string accountid_;
+	uint64 createtime_;
+	string mac_;
+	string idfa_;
+	string ip_;
+	string devicetype_;
+
+};
+
+struct SGE_Login{
+	string gamename_;
+	string pfid_;
+	string pfname_;
+	string accountid_;
+	uint32 roleId_;
+	uint64 logintime_;
+	uint64 logouttime_;
+	uint64 firsttime_;
+	uint64 rolefirsttime_;
+	uint32  firstserid_;
+	uint32  serverid_;
+	string mac_;
+	string idfa_;
+	string ip_;
+	string devicetype_;
+};
+
+struct SGE_Order{
+	string gamename_;
+	string pfid_;
+	string pfname_;
+	string orderid_;
+	uint32 roleId_;
+	uint32 rolelv_;
+	string accountid_;
+	float  payment_;
+	string paytime_;
+};
+
+struct SGE_LogUIBehavior{
+	uint32 accountGuid_;
+	string accountName_;
+	uint32 playerGuid_;
+	string playerName_;
+	string clientIp_;
+	UIBehaviorType type_;
+};
+
+struct SGE_LogRole{
+	string 	gamename_;
+	string 	pfid_;
+	string 	pfname_;
+	uint32 	roleid_;
+	uint64 	cachetime_;
+	string 	accountid_;
+	int8 	serverid_;
+	string 	servername_;
+	int8 	firstserid_;
+	uint64 	rolefirsttime_;
+	uint64 	rolelasttime_;
+	int8 	rolelv_;
+	int64 	gold_;
+	int64 	diamond_;
+	int64 	magicgold_;//
+	int8 	vip_;
+	int64 	ce_;//战斗力
+};
+
+//产出log
+struct SGE_LogProduceTrack{
+	uint64 	timestamp_; ///时间戳
+	int32 	from_;		///来源 1商城 2伙伴 3签到 4邮件 5拍卖 6神器 7答题 8脚本 9战斗 10技能 11帮会 12锻造 13掉落 14许愿 15修理 16活动
+	uint32 	playerId_;
+	string 	playerName_; ///玩家
+	uint32 	itemId_;
+	uint32 	itemInstId_;
+	int32 	itemStack_;
+	int32 	diamond_;
+	int32 	money_;
+	int32 	exp_;
+	int32	magic_;		//魔力币
+};
+
+//答题
+struct COM_Exam
+{
+	uint8			questionIndex_;			
+	uint8			rightNum_;
+	uint8			errorNum_;	
+	uint32			money_;			//答题收获
+	uint32			exp_;
+	array<uint32>	questions_;
+};
+
+struct COM_Answer
+{
+	uint8	questionIndex_;
+	uint32	money_;			//答题收获
+	uint32	exp_;
+	bool	isRigth_;
+};
+
+//许愿
+struct COM_Wishing
+{
+	WishType	wt_;
+	string		wish_;
+};
+
+struct COM_Wish
+{
+	uint32		playerInstId_;
+	string		playerName_;
+	string		wish_;
+};
+
+///GMT
+struct SGE_GmtOrder{
+	int32 shopId_;
+	string orderId_;
+	float payment_;
+};
+
+///激活码礼包
+struct COM_KeyContent
+{
+	string						giftname_;		//礼包名
+	string						pfid_;			//渠道ID
+	string						key_;			//激活码
+	string						playerName_;	//谁使用的
+	int64						usetime_;		//使用時間
+	array<COM_GiftItem>			items_;			//奖励
+};
+
+//佣兵任务
+struct COM_EmployeeQuestInst{
+	EmployeeQuestStatus  status_; ///是否进行中
+	int32 questId_;
+	int32 timeout_;	///做任务倒计时 保存任务倒计时
+	array<int32> usedEmployees_; //做任务使用的佣兵
+};
+
+struct SGE_EmployeeQuestInst : COM_EmployeeQuestInst{
+	int64 doTime_;	   //做任务开始时间
+	int64 refreshTime_;//刷新时间
+};
+
+struct SGE_PlayerEmployeeQuestArray{
+	array<SGE_EmployeeQuestInst> value_;
+};
+
+struct SGE_PlayerEmployeeQuest {
+	int32 playerId_;
+	array<int32> usedEmployees_;
+	array<SGE_PlayerEmployeeQuestArray> quests_;
+};

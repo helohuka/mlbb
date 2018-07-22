@@ -1,0 +1,657 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: shangchengAtlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 315cfb2164b30a4419113469ad9d443f, type: 2}
+  mSprites:
+  - name: baoxiangxiao
+    x: 1520
+    y: 538
+    width: 99
+    height: 88
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 8
+    paddingBottom: 0
+  - name: baoxiangxiao2
+    x: 1507
+    y: 628
+    width: 96
+    height: 91
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 5
+  - name: bb_jiantou
+    x: 1701
+    y: 867
+    width: 60
+    height: 92
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: chongzhi
+    x: 1101
+    y: 62
+    width: 250
+    height: 166
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: chongzhidikuang
+    x: 0
+    y: 81
+    width: 346
+    height: 373
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: czfl_1
+    x: 1360
+    y: 820
+    width: 139
+    height: 139
+    borderLeft: 50
+    borderRight: 42
+    borderTop: 48
+    borderBottom: 45
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: czfl_10
+    x: 1360
+    y: 961
+    width: 354
+    height: 63
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: czfl_1000
+    x: 1609
+    y: 768
+    width: 132
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 17
+    paddingRight: 20
+    paddingTop: 2
+    paddingBottom: 1
+  - name: czfl_10000
+    x: 426
+    y: 716
+    width: 164
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 4
+    paddingTop: 2
+    paddingBottom: 1
+  - name: czfl_18
+    x: 586
+    y: 65
+    width: 257
+    height: 230
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 26
+    paddingTop: 0
+    paddingBottom: 10
+  - name: czfl_19
+    x: 1101
+    y: 230
+    width: 254
+    height: 230
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 29
+    paddingTop: 0
+    paddingBottom: 10
+  - name: czfl_2
+    x: 1742
+    y: 831
+    width: 87
+    height: 34
+    borderLeft: 14
+    borderRight: 11
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: czfl_20
+    x: 845
+    y: 65
+    width: 254
+    height: 230
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 29
+    paddingTop: 0
+    paddingBottom: 10
+  - name: czfl_200
+    x: 1104
+    y: 732
+    width: 104
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 29
+    paddingRight: 36
+    paddingTop: 2
+    paddingBottom: 1
+  - name: czfl_2000
+    x: 1605
+    y: 666
+    width: 136
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 20
+    paddingTop: 2
+    paddingBottom: 1
+  - name: czfl_21
+    x: 711
+    y: 466
+    width: 264
+    height: 236
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 19
+    paddingTop: 0
+    paddingBottom: 4
+  - name: czfl_22
+    x: 1104
+    y: 787
+    width: 254
+    height: 237
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 29
+    paddingTop: 0
+    paddingBottom: 3
+  - name: czfl_23
+    x: 426
+    y: 474
+    width: 283
+    height: 228
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 12
+  - name: czfl_24
+    x: 977
+    y: 462
+    width: 255
+    height: 240
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 28
+    paddingTop: 0
+    paddingBottom: 0
+  - name: czfl_3
+    x: 1609
+    y: 722
+    width: 93
+    height: 44
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: czfl_4
+    x: 586
+    y: 15
+    width: 281
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 2
+    paddingTop: 0
+    paddingBottom: 0
+  - name: czfl_5
+    x: 869
+    y: 2
+    width: 212
+    height: 61
+    borderLeft: 18
+    borderRight: 26
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: czfl_500
+    x: 1221
+    y: 7
+    width: 104
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 29
+    paddingRight: 36
+    paddingTop: 2
+    paddingBottom: 1
+  - name: czfl_5000
+    x: 1083
+    y: 7
+    width: 136
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 20
+    paddingTop: 2
+    paddingBottom: 1
+  - name: czfl_6
+    x: 348
+    y: 13
+    width: 236
+    height: 282
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: czfl_60
+    x: 592
+    y: 716
+    width: 69
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 47
+    paddingRight: 53
+    paddingTop: 2
+    paddingBottom: 1
+  - name: czfl_7
+    x: 1501
+    y: 823
+    width: 136
+    height: 136
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: czfl_9
+    x: 0
+    y: 14
+    width: 297
+    height: 65
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ewauzengsong
+    x: 1357
+    y: 407
+    width: 165
+    height: 81
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 2
+    paddingTop: 0
+    paddingBottom: 1
+  - name: jiantoujia
+    x: 1639
+    y: 867
+    width: 60
+    height: 92
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: jinbi
+    x: 0
+    y: 771
+    width: 663
+    height: 253
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jn_jinlan
+    x: 1234
+    y: 490
+    width: 128
+    height: 113
+    borderLeft: 38
+    borderRight: 31
+    borderTop: 35
+    borderBottom: 37
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: molibi
+    x: 1716
+    y: 961
+    width: 55
+    height: 63
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: molibi_icon
+    x: 1507
+    y: 721
+    width: 100
+    height: 100
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: remen
+    x: 1704
+    y: 726
+    width: 101
+    height: 40
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: sc_lingqujiangli
+    x: 1353
+    y: 12
+    width: 271
+    height: 107
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 5
+    paddingBottom: 1
+  - name: sc_remen
+    x: 1234
+    y: 605
+    width: 225
+    height: 71
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: sc_shouchonganniu
+    x: 1353
+    y: 121
+    width: 271
+    height: 107
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 5
+    paddingBottom: 1
+  - name: sc_shouchonganniu(1)
+    x: 1234
+    y: 678
+    width: 271
+    height: 107
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 5
+    paddingBottom: 1
+  - name: sc_tuijian
+    x: 1364
+    y: 522
+    width: 154
+    height: 81
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: shouchong
+    x: 348
+    y: 297
+    width: 697
+    height: 157
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: tanhao
+    x: 1047
+    y: 414
+    width: 50
+    height: 46
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: toumingtiao
+    x: 1520
+    y: 490
+    width: 73
+    height: 46
+    borderLeft: 29
+    borderRight: 25
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: tuijian
+    x: 1639
+    y: 825
+    width: 101
+    height: 40
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: vipdiban
+    x: 0
+    y: 456
+    width: 424
+    height: 313
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: vipdiban1
+    x: 665
+    y: 704
+    width: 437
+    height: 320
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+  mCoordinates: 0
+  sprites: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

@@ -1,0 +1,617 @@
+2018-07-11 00:48:16  Init world serv... 
+2018-07-11 00:48:16  ScriptEnv::init
+2018-07-11 00:48:17  INFO LOG ENABLED...
+2018-07-11 00:48:17  ERROR LOG ENABLED...
+2018-07-11 00:48:17  DEBUG LOG ENABLED...
+2018-07-11 00:48:17  Loading from file "../../config/Tables/PeriodEvent.xml"...
+2018-07-11 00:48:17  Loading from file "../../config/Tables/PlayerData.csv"...
+2018-07-11 00:48:17  Loading from file "../../config/Tables/SkillData.csv"...
+2018-07-11 00:48:17  Loading from file "../../config/Tables/BabySuitSkill.csv"...
+2018-07-11 00:48:17  Loading from file "../../config/Tables/State.csv"...
+2018-07-11 00:48:18  Loading from file "../../config/Tables/ItemData.csv"...
+2018-07-11 00:48:19  Loading from file "../../config/Tables/Drop.csv"...
+2018-07-11 00:48:20  Loading from file "../../config/Tables/Npc.csv"...
+2018-07-11 00:48:21  Loading from file "../../config/Tables/Monster.csv"...
+2018-07-11 00:48:22  Loading from file "../../config/Tables/Scene.csv"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_2.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_3.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_4.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_5.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_6.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_20.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_30.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_40.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_100.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_101.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_102.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_103.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_104.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_105.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_106.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_107.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_108.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_202.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_206.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_207.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_208.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_306.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_401.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_402.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_403.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_404.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_501.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_502.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_503.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_504.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_505.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_506.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_507.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_508.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_509.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_510.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_511.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_512.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_513.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_514.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_515.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_516.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_517.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_518.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_519.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_520.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_521.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_522.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_523.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_524.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_525.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_526.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_527.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_528.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_529.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_530.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_531.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_532.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_533.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_534.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_535.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_536.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_537.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_538.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_539.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_540.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_541.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_542.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_543.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_544.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_545.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_546.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_547.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_548.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_549.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_550.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_551.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_700.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_800.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_801.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_802.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_803.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_804.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_805.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_810.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_999.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1000.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1001.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1002.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1003.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1004.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1005.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1006.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1007.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1008.xml"...
+2018-07-11 00:48:23  Load from file "../../config/Tables/Scene/Scene_1100.xml"...
+2018-07-11 00:48:23  Loading from file "../../config/Tables/EmployeeData.csv"...
+2018-07-11 00:48:23  Loading from file "../../config/Tables/Exp.csv"...
+2018-07-11 00:48:23  Loading from file "../../config/Tables/Quest.csv"...
+2018-07-11 00:48:24  Loading from file "../../config/Tables/Gather.csv"...
+2018-07-11 00:48:24  Loading from file "../../config/Tables/Make.csv"...
+2018-07-11 00:48:24  Loading from file "../../config/Tables/Lottery.csv"...
+2018-07-11 00:48:24  Loading from file "../../config/Tables/Randname.csv"...
+2018-07-11 00:48:24  Loading from file "../../config/Tables/RobotData.csv"...
+2018-07-11 00:48:24  Loading from file "../../config/Tables/ArenaAiData.csv"...
+2018-07-11 00:48:24  Loading from file "../../config/Tables/ProfessionData.csv"...
+2018-07-11 00:48:24  Loading from file "../../config/Tables/BattleData.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/ShopData.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/GameEvent.xml"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/Title.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/AchieveData.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/ChallengeData.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/DailyReward.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/PVPrunk.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/PVRreward.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/EmployeeConfig.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/Diamondsconfig.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/DebrisConfig.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/ArtifactLevel.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/ArtifactConfig.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/filterword.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/ArtifactChange.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/PetActivityData.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/HomeShopData.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/family.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/Blessing.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/Copy.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/timereward.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/foundation.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/Runes.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/lastOrder.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/AiNt.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/EmployeeQuest.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/EmployeeSkill.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/EmployeeMonster.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/Crystal.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/CrystalUp.csv"...
+2018-07-11 00:48:25  Function probe:TableSystem::Load(d:\workspace\mlbb\server\tables\tablesystem.cpp:42) runtime 0.000000
+2018-07-11 00:48:25  Loading from file "../../config/Tables/DailyActivities.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/ZhuanpanConfig.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/ACT_Reward.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/question.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/QualityWeight.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/EmployeeWeight.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/festival.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/recharge.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/recharge_single.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/sale.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/cardsper.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/cardsreward.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/hotshop.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/Sevendays.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/EmployeeActivity.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/recharge_all.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/LevelGift.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/ScoreShop.csv"...
+2018-07-11 00:48:25  Loading from file "../../config/Tables/CourseGift.csv"...
+2018-07-11 00:48:25  World serv listen [127.0.0.1:20005|GATEWAY] 
+2018-07-11 00:48:25  World serv listen [127.0.0.1:20002|DATEBASE] 
+2018-07-11 00:48:25  World serv listen [127.0.0.1:20003|LOGIN] 
+2018-07-11 00:48:25  World serv listen [127.0.0.1:20004|Mall] 
+2018-07-11 00:48:25  World serv listen [127.0.0.1:20006|Scene] 
+2018-07-11 00:48:25  World serv listen [127.0.0.1:20010|GMT] 
+2018-07-11 00:48:25  World serv listen [127.0.0.1:20007|LOG] 
+2018-07-11 00:48:25  Init world serv succ... 
+2018-07-11 00:48:26  Login connected !!! 
+2018-07-11 00:48:26  DB connected !!! 
+2018-07-11 00:48:26  getEndlessStairDate OK
+2018-07-11 00:48:26  Sync player infos 
+2018-07-11 00:48:26  SYNC Max Guid 24 
+2018-07-11 00:48:26  Gateway connected !!! 
+2018-07-11 00:48:33  SceneHandler conneczted !!! 
+2018-07-11 00:53:27  >>>> lua 8400124 | arena 20971488 | ordblks 10516 | hblkhd 2097184 | usmblks 23068672 | uordblks 22420208 | fordblks 648464 | keepcost 480152 <<<< 
+2018-07-11 00:58:42  >>>> lua 8400124 | arena 20971488 | ordblks 40371 | hblkhd 2097184 | usmblks 23068672 | uordblks 17275800 | fordblks 5792872 | keepcost 480200 <<<< 
+2018-07-11 01:03:42  >>>> lua 8400124 | arena 20971488 | ordblks 40371 | hblkhd 2097184 | usmblks 23068672 | uordblks 17275800 | fordblks 5792872 | keepcost 480200 <<<< 
+2018-07-11 01:08:40  >>>> lua 8400124 | arena 20971488 | ordblks 40371 | hblkhd 2097184 | usmblks 23068672 | uordblks 17275800 | fordblks 5792872 | keepcost 480200 <<<< 
+2018-07-11 01:13:07  Connect channel 1
+2018-07-11 01:13:07  Connect channel 2
+2018-07-11 01:13:07  Connect channel 3
+2018-07-11 01:13:07  Connect channel 4
+2018-07-11 01:13:07  Deconnect channel 1 
+2018-07-11 01:13:07  Handle close  Channel[1]
+2018-07-11 01:13:07  Channel 2 2 3 dispatch error 
+2018-07-11 01:13:07  Chan data recv error
+2018-07-11 01:13:07  Handle close  Channel[2]
+2018-07-11 01:13:07  Can not find channel (2)
+2018-07-11 01:13:07  Channel 4 2 3 dispatch error 
+2018-07-11 01:13:07  Chan data recv error
+2018-07-11 01:13:07  Handle close  Channel[4]
+2018-07-11 01:13:07  Can not find channel (4)
+2018-07-11 01:13:07  Can not find channel (4)
+2018-07-11 01:13:07  Can not find channel (4)
+2018-07-11 01:13:07  Can not find channel (4)
+2018-07-11 01:13:07  Can not find channel (4)
+2018-07-11 01:13:07  Can not find channel (4)
+2018-07-11 01:13:07  Can not find channel (4)
+2018-07-11 01:13:07  Can not find channel (4)
+2018-07-11 01:13:07  Can not find channel (4)
+2018-07-11 01:13:07  Deconnect channel 2 
+2018-07-11 01:13:07  Deconnect channel 2 not found
+2018-07-11 01:13:07  Deconnect channel 3 
+2018-07-11 01:13:07  Handle close  Channel[3]
+2018-07-11 01:13:25  Connect channel 5
+2018-07-11 01:13:40  >>>> lua 8400124 | arena 20971488 | ordblks 40371 | hblkhd 2097184 | usmblks 23068672 | uordblks 17275800 | fordblks 5792872 | keepcost 480200 <<<< 
+2018-07-11 01:13:40  Connect channel 6
+2018-07-11 01:15:07  Deconnect channel 5 
+2018-07-11 01:15:07  Handle close  Channel[5]
+2018-07-11 01:15:07  Deconnect channel 6 
+2018-07-11 01:15:07  Handle close  Channel[6]
+2018-07-11 01:18:44  >>>> lua 8400124 | arena 20971488 | ordblks 40371 | hblkhd 2097184 | usmblks 23068672 | uordblks 17275800 | fordblks 5792872 | keepcost 480200 <<<< 
+2018-07-11 01:22:44  Connect channel 7
+2018-07-11 01:22:55  Client session login 3f9e4b1133eb032589f7f13ec8797295 
+2018-07-11 01:22:55  Session login failed !!! 3f9e4b1133eb032589f7f13ec8797295 
+2018-07-11 01:22:55  VerifiedAccount::add 3f9e4b1133eb032589f7f13ec8797295
+2018-07-11 01:22:55  Client login 3f9e4b1133eb032589f7f13ec8797295, 7
+2018-07-11 01:22:55  Client session login 3f9e4b1133eb032589f7f13ec8797295 
+2018-07-11 01:22:55  Session login failed !!! 3f9e4b1133eb032589f7f13ec8797295 
+2018-07-11 01:22:55  ClientHandler::login(COM_LoginInfo& info) scend 3f9e4b1133eb032589f7f13ec8797295
+2018-07-11 01:22:55  Query account 3f9e4b1133eb032589f7f13ec8797295 ok ...!!!
+2018-07-11 01:22:55  VerifiedAccount::del 3f9e4b1133eb032589f7f13ec8797295
+2018-07-11 01:23:02  Create player is ok 
+2018-07-11 01:23:02  Player::login() BEGIN 25:圣剑骑士杰森
+2018-07-11 01:23:02  requestOpenBuyBox Player[25] greenBoxTimes_[0.000000] blueBoxTimes_[0.000000]
+2018-07-11 01:23:02  Player::login() END 25:圣剑骑士杰森 0
+2018-07-11 01:23:19  Join battle Player[圣剑骑士杰森:25] Baby[国宝:26] Monster[魔族] Monster[魔族] Monster[漆黑之影] Monster[魔族] Monster[魔族] Monster[牧师] Monster[法师] Monster[猎人] Monster[佣兵] 
+2018-07-11 01:23:42  >>>> lua 8400268 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 01:23:42  changeProp findEntityByPos(18) Entity is null !!!!
+2018-07-11 01:23:42  Skill[12] Action Condition return false
+2018-07-11 01:23:42  Skill[12] Action Condition return false
+2018-07-11 01:23:42  Deconnect channel 7 
+2018-07-11 01:23:42  Handle close  Channel[7] Account[3f9e4b1133eb032589f7f13ec8797295] Player[圣剑骑士杰森]
+2018-07-11 01:23:42  Account deconnect 3f9e4b1133eb032589f7f13ec8797295
+2018-07-11 01:23:42  Connect channel 8
+2018-07-11 01:23:52  This monster is deadth!!! do not hit it please !!!! 佣兵
+2018-07-11 01:24:00  Deconnect channel 8 
+2018-07-11 01:24:00  Handle close  Channel[8]
+2018-07-11 01:24:02  Exit battle Player[圣剑骑士杰森:25:112] Baby[国宝:26:89.8] Monster[魔族:0] Monster[魔族:0] Monster[漆黑之影:0] Monster[魔族:0] Monster[魔族:0] Monster[牧师:570.942] Monster[法师:152.23] Monster[猎人:889.648] Monster[佣兵:500] 
+2018-07-11 01:24:18  Connect channel 9
+2018-07-11 01:24:28  Client session login 23816d40c6815af8acedf91306a047fb 
+2018-07-11 01:24:28  Session login failed !!! 23816d40c6815af8acedf91306a047fb 
+2018-07-11 01:24:28  VerifiedAccount::add 23816d40c6815af8acedf91306a047fb
+2018-07-11 01:24:28  Client login 23816d40c6815af8acedf91306a047fb, 9
+2018-07-11 01:24:28  Client session login 23816d40c6815af8acedf91306a047fb 
+2018-07-11 01:24:28  Session login failed !!! 23816d40c6815af8acedf91306a047fb 
+2018-07-11 01:24:28  ClientHandler::login(COM_LoginInfo& info) scend 23816d40c6815af8acedf91306a047fb
+2018-07-11 01:24:29  Query account 23816d40c6815af8acedf91306a047fb ok ...!!!
+2018-07-11 01:24:29  VerifiedAccount::del 23816d40c6815af8acedf91306a047fb
+2018-07-11 01:24:34  Create player is ok 
+2018-07-11 01:24:34  Player::login() BEGIN 27:幽默的卡纳斯
+2018-07-11 01:24:34  requestOpenBuyBox Player[27] greenBoxTimes_[0.000000] blueBoxTimes_[0.000000]
+2018-07-11 01:24:34  Player::login() END 27:幽默的卡纳斯 0
+2018-07-11 01:24:42  Join battle Player[幽默的卡纳斯:27] Baby[国宝:28] Monster[魔族] Monster[魔族] Monster[漆黑之影] Monster[魔族] Monster[魔族] Monster[牧师] Monster[法师] Monster[猎人] Monster[佣兵] 
+2018-07-11 01:24:58  changeProp findEntityByPos(18) Entity is null !!!!
+2018-07-11 01:24:58  Skill[12] Action Condition return false
+2018-07-11 01:24:58  Skill[12] Action Condition return false
+2018-07-11 01:25:27  This monster is deadth!!! do not hit it please !!!! 佣兵
+2018-07-11 01:25:42  Exit battle Player[幽默的卡纳斯:27:112] Baby[国宝:28:88.8] Monster[魔族:0] Monster[魔族:0] Monster[漆黑之影:0] Monster[魔族:0] Monster[魔族:0] Monster[牧师:631.908] Monster[法师:210.938] Monster[猎人:889.648] Monster[佣兵:500] 
+2018-07-11 01:26:25  Deconnect channel 9 
+2018-07-11 01:26:25  Handle close  Channel[9] Account[23816d40c6815af8acedf91306a047fb] Player[幽默的卡纳斯]
+2018-07-11 01:26:25  Account deconnect 23816d40c6815af8acedf91306a047fb
+2018-07-11 01:26:48  Connect channel 10
+2018-07-11 01:26:59  Client session login f040e37ab044124f57f8e017e697a79e 
+2018-07-11 01:26:59  Session login failed !!! f040e37ab044124f57f8e017e697a79e 
+2018-07-11 01:26:59  VerifiedAccount::add f040e37ab044124f57f8e017e697a79e
+2018-07-11 01:26:59  Client login f040e37ab044124f57f8e017e697a79e, 10
+2018-07-11 01:26:59  Client session login f040e37ab044124f57f8e017e697a79e 
+2018-07-11 01:26:59  Session login failed !!! f040e37ab044124f57f8e017e697a79e 
+2018-07-11 01:26:59  ClientHandler::login(COM_LoginInfo& info) scend f040e37ab044124f57f8e017e697a79e
+2018-07-11 01:26:59  Query account f040e37ab044124f57f8e017e697a79e ok ...!!!
+2018-07-11 01:26:59  VerifiedAccount::del f040e37ab044124f57f8e017e697a79e
+2018-07-11 01:27:05  Create player is ok 
+2018-07-11 01:27:05  Player::login() BEGIN 29:死亡祭司雷米
+2018-07-11 01:27:05  requestOpenBuyBox Player[29] greenBoxTimes_[0.000000] blueBoxTimes_[0.000000]
+2018-07-11 01:27:05  Player::login() END 29:死亡祭司雷米 0
+2018-07-11 01:27:15  Join battle Player[死亡祭司雷米:29] Baby[国宝:30] Monster[魔族] Monster[魔族] Monster[漆黑之影] Monster[魔族] Monster[魔族] Monster[牧师] Monster[法师] Monster[猎人] Monster[佣兵] 
+2018-07-11 01:27:36  changeProp findEntityByPos(18) Entity is null !!!!
+2018-07-11 01:27:36  Skill[12] Action Condition return false
+2018-07-11 01:27:36  Skill[12] Action Condition return false
+2018-07-11 01:28:04  This monster is deadth!!! do not hit it please !!!! 佣兵
+2018-07-11 01:28:18  Exit battle Player[死亡祭司雷米:29:112] Baby[国宝:30:86] Monster[魔族:0] Monster[魔族:0] Monster[漆黑之影:0] Monster[魔族:0] Monster[魔族:0] Monster[牧师:602.554] Monster[法师:138.682] Monster[猎人:891.906] Monster[佣兵:500] 
+2018-07-11 01:28:37  >>>> lua 8400417 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 01:32:41  Deconnect channel 10 
+2018-07-11 01:32:41  Handle close  Channel[10] Account[f040e37ab044124f57f8e017e697a79e] Player[死亡祭司雷米]
+2018-07-11 01:32:41  Account deconnect f040e37ab044124f57f8e017e697a79e
+2018-07-11 01:33:44  >>>> lua 8400417 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17275800 | fordblks 5792872 | keepcost 479168 <<<< 
+2018-07-11 01:33:44  Account::~Account() 3f9e4b1133eb032589f7f13ec8797295
+2018-07-11 01:33:44  Player::logout() BEGIN 25:圣剑骑士杰森
+2018-07-11 01:33:44  Player::logout() END 25:圣剑骑士杰森
+2018-07-11 01:33:44  Account logout 3f9e4b1133eb032589f7f13ec8797295
+2018-07-11 01:36:21  Account::~Account() 23816d40c6815af8acedf91306a047fb
+2018-07-11 01:36:21  Player::logout() BEGIN 27:幽默的卡纳斯
+2018-07-11 01:36:21  Player::logout() END 27:幽默的卡纳斯
+2018-07-11 01:36:21  Account logout 23816d40c6815af8acedf91306a047fb
+2018-07-11 01:38:43  >>>> lua 8400417 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17275800 | fordblks 5792872 | keepcost 479168 <<<< 
+2018-07-11 01:39:29  Connect channel 11
+2018-07-11 01:39:39  Client session login 697c905eea227094f7ad4833c22f6b35 
+2018-07-11 01:39:39  Session login failed !!! 697c905eea227094f7ad4833c22f6b35 
+2018-07-11 01:39:40  VerifiedAccount::add 697c905eea227094f7ad4833c22f6b35
+2018-07-11 01:39:40  Client login 697c905eea227094f7ad4833c22f6b35, 11
+2018-07-11 01:39:40  Client session login 697c905eea227094f7ad4833c22f6b35 
+2018-07-11 01:39:40  Session login failed !!! 697c905eea227094f7ad4833c22f6b35 
+2018-07-11 01:39:40  ClientHandler::login(COM_LoginInfo& info) scend 697c905eea227094f7ad4833c22f6b35
+2018-07-11 01:39:40  Query account 697c905eea227094f7ad4833c22f6b35 ok ...!!!
+2018-07-11 01:39:40  VerifiedAccount::del 697c905eea227094f7ad4833c22f6b35
+2018-07-11 01:40:01  Create player is ok 
+2018-07-11 01:40:01  Player::login() BEGIN 31:红玫瑰威尔曼
+2018-07-11 01:40:01  requestOpenBuyBox Player[31] greenBoxTimes_[0.000000] blueBoxTimes_[0.000000]
+2018-07-11 01:40:01  Player::login() END 31:红玫瑰威尔曼 0
+2018-07-11 01:40:10  Join battle Player[红玫瑰威尔曼:31] Baby[国宝:32] Monster[魔族] Monster[魔族] Monster[漆黑之影] Monster[魔族] Monster[魔族] Monster[牧师] Monster[法师] Monster[猎人] Monster[佣兵] 
+2018-07-11 01:40:27  changeProp findEntityByPos(18) Entity is null !!!!
+2018-07-11 01:40:27  Skill[12] Action Condition return false
+2018-07-11 01:40:27  Skill[12] Action Condition return false
+2018-07-11 01:40:57  This monster is deadth!!! do not hit it please !!!! 佣兵
+2018-07-11 01:41:13  Exit battle Player[红玫瑰威尔曼:31:112] Baby[国宝:32:86] Monster[魔族:0] Monster[魔族:0] Monster[漆黑之影:0] Monster[魔族:0] Monster[魔族:0] Monster[牧师:600.296] Monster[法师:109.328] Monster[猎人:878.358] Monster[佣兵:500] 
+2018-07-11 01:41:32  Use item 2 5098
+2018-07-11 01:42:06  Player wear equipment 31 红玫瑰威尔曼 4
+2018-07-11 01:42:06  Player wear equipment 31 红玫瑰威尔曼 7
+2018-07-11 01:42:06  Use item 5 5100
+2018-07-11 01:42:07  Use item 6 5101
+2018-07-11 01:42:18  Join battle Player[红玫瑰威尔曼:31] Baby[国宝:32] Monster[盗匪首领] 
+2018-07-11 01:42:31  Account::~Account() f040e37ab044124f57f8e017e697a79e
+2018-07-11 01:42:31  Player::logout() BEGIN 29:死亡祭司雷米
+2018-07-11 01:42:31  Player::logout() END 29:死亡祭司雷米
+2018-07-11 01:42:31  Account logout f040e37ab044124f57f8e017e697a79e
+2018-07-11 01:42:35  Exit battle Player[红玫瑰威尔曼:31:143] Baby[国宝:32:107.91] 
+2018-07-11 01:43:00  Join battle Player[红玫瑰威尔曼:31] Baby[国宝:32] Monster[盗匪] Monster[盗匪] 
+2018-07-11 01:43:15  Exit battle Player[红玫瑰威尔曼:31:133.347] Baby[国宝:32:107.91] 
+2018-07-11 01:43:39  >>>> lua 8400753 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17278872 | fordblks 5789800 | keepcost 476096 <<<< 
+2018-07-11 01:43:57  Join battle Player[红玫瑰威尔曼:31] Baby[国宝:32] Monster[软泥怪] Monster[软泥怪] 
+2018-07-11 01:44:14  Exit battle Player[红玫瑰威尔曼:31:146.221] Baby[国宝:32:124.82] 
+2018-07-11 01:44:38  Player wear equipment 31 红玫瑰威尔曼 9
+2018-07-11 01:44:45  Join battle Player[红玫瑰威尔曼:31] Baby[国宝:32] Monster[软泥怪] Monster[软泥怪] 
+2018-07-11 01:45:04  Exit battle Player[红玫瑰威尔曼:31:158] Baby[国宝:32:111.257] 
+2018-07-11 01:45:36  Join battle Player[红玫瑰威尔曼:31] Baby[国宝:32] Employee[莉莉丝:33] Monster[捣蛋鬼] 
+2018-07-11 01:45:49  Exit battle Player[红玫瑰威尔曼:31:173] Baby[国宝:32:141.73] Employee[莉莉丝:33:235] 
+2018-07-11 01:48:42  >>>> lua 8400897 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17278872 | fordblks 5789800 | keepcost 476096 <<<< 
+2018-07-11 01:53:40  >>>> lua 8400897 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 01:58:38  >>>> lua 8400897 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:03:39  >>>> lua 8400897 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:04:09  Add diamond 红玫瑰威尔曼(31) 900000
+2018-07-11 02:04:09  Push GMCMD 红玫瑰威尔曼 
+2018-07-11 02:04:57  Player wear equipment 31 红玫瑰威尔曼 14
+2018-07-11 02:05:09  Use item 15 5037
+2018-07-11 02:05:09  Use item 16 5038
+2018-07-11 02:05:27  Use item 18 5100
+2018-07-11 02:05:27  Use item 19 5101
+2018-07-11 02:05:28  Use item 27 5098
+2018-07-11 02:05:28  Use item 28 5099
+2018-07-11 02:08:41  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17278872 | fordblks 5789800 | keepcost 476096 <<<< 
+2018-07-11 02:13:42  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:18:38  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:23:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:24:09  Deconnect channel 11 
+2018-07-11 02:24:09  Handle close  Channel[11] Account[697c905eea227094f7ad4833c22f6b35] Player[红玫瑰威尔曼]
+2018-07-11 02:24:09  Account deconnect 697c905eea227094f7ad4833c22f6b35
+2018-07-11 02:28:38  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:33:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:34:03  Account::~Account() 697c905eea227094f7ad4833c22f6b35
+2018-07-11 02:34:03  Player::logout() BEGIN 31:红玫瑰威尔曼
+2018-07-11 02:34:03  Player::logout() END 31:红玫瑰威尔曼
+2018-07-11 02:34:03  Account logout 697c905eea227094f7ad4833c22f6b35
+2018-07-11 02:38:42  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:43:42  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:48:41  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:53:48  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 02:58:52  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:03:41  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:08:38  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:13:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:18:46  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:23:38  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:28:38  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:33:44  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:38:39  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:43:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:48:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:53:38  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 03:58:38  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:03:39  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:08:38  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:13:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:18:44  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:23:42  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:28:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:33:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:38:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:43:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:48:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:53:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 04:58:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:03:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:08:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:13:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:18:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:23:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:28:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:33:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:38:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:43:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:48:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:53:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 05:58:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:03:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:08:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:13:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:18:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:23:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:28:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:33:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:38:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:43:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:48:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:53:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 06:58:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:03:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:08:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:13:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:18:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:23:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:28:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:33:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:38:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:43:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:48:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:53:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 07:58:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:03:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:08:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:13:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:18:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:23:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:28:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:33:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:38:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:43:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:48:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:53:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 08:58:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:03:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:08:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:13:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:18:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:23:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:28:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:33:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:38:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:43:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:48:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:53:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 09:58:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:03:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:08:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:13:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:18:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:23:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:28:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:33:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:38:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:43:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:48:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:53:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 10:58:37  >>>> lua 8401041 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:03:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:08:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:13:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:18:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:23:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:28:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:33:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:38:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:43:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:48:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:53:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 11:58:37  >>>> lua 8401021 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:03:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:08:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:13:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:18:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:23:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:28:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:33:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:38:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:43:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:48:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:53:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 12:58:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:03:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:08:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:13:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:18:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:23:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:28:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:33:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:38:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:43:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:48:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:53:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 13:58:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:03:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:08:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:13:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:18:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:23:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:28:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:33:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:38:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:43:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:48:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:53:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 14:58:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:03:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:08:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:13:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:18:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:23:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:28:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:33:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:38:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:43:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:48:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:53:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 15:58:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:03:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:08:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:13:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:18:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:23:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:28:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:33:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:38:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:43:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:48:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:53:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 16:58:37  >>>> lua 8401022 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:03:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:08:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:13:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:18:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:23:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:28:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:33:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:38:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:43:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:48:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:53:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 17:58:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:03:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:08:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:13:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:18:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:23:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:28:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:33:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:38:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:43:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:48:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:53:37  >>>> lua 8401029 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 18:58:37  >>>> lua 8401021 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:03:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:08:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:13:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:18:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:23:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:28:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:33:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:38:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:43:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:48:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:53:37  >>>> lua 8401028 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 19:58:37  >>>> lua 8401036 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:03:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:08:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:13:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:18:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:23:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:28:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:33:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:38:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:43:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:48:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:53:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 20:58:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:03:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:08:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:13:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:18:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:23:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:28:37  >>>> lua 8401011 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:33:37  >>>> lua 8401014 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:38:37  >>>> lua 8401014 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:43:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:48:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:53:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 21:58:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 22:03:42  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 22:08:39  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 22:13:40  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 22:18:41  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 22:23:46  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 22:28:40  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 
+2018-07-11 22:33:37  >>>> lua 8401019 | arena 20971488 | ordblks 40372 | hblkhd 2097184 | usmblks 23068672 | uordblks 17276824 | fordblks 5791848 | keepcost 478144 <<<< 

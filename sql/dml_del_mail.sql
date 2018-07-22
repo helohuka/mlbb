@@ -1,0 +1,26 @@
+/**
+ * 创建存储过程 3600 * 24 * 14
+ * */
+DROP PROCEDURE IF EXISTS del_mail;
+CREATE PROCEDURE del_mail()
+BEGIN
+	DELETE
+	FROM
+		Mail
+	WHERE
+		Mail.ItemNum = 0 
+	AND
+		Mail.sendTime <= (SELECT UNIX_TIMESTAMP(CURRENT_TIMESTAMP) - 3600 * 24 * 14);
+END
+;
+
+/**
+ * 创建定时器事件
+ * */
+DROP EVENT IF EXISTS del_mail_evt;
+CREATE EVENT del_mail_evt 
+ON SCHEDULE EVERY 1 DAY
+STARTS "2013-06-16 23:59:59" 
+ON COMPLETION NOT PRESERVE
+ENABLE
+DO CALL del_mail();

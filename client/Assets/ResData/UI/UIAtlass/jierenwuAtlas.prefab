@@ -1,0 +1,579 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: jierenwuAtlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: d23d26e2f3c71b54a9e1139c50f5869b, type: 2}
+  mSprites:
+  - name: biaotouliang
+    x: 837
+    y: 452
+    width: 113
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: duihuakuang
+    x: 0
+    y: 262
+    width: 431
+    height: 250
+    borderLeft: 80
+    borderRight: 80
+    borderTop: 67
+    borderBottom: 113
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: duiyuan(1)
+    x: 339
+    y: 8
+    width: 54
+    height: 28
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: duizhang(1)
+    x: 664
+    y: 11
+    width: 54
+    height: 28
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: dw_hp
+    x: 526
+    y: 25
+    width: 137
+    height: 14
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: dw_hpdi
+    x: 193
+    y: 128
+    width: 143
+    height: 20
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 2
+    paddingBottom: 1
+  - name: dw_mp
+    x: 193
+    y: 113
+    width: 137
+    height: 14
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: dw_zhiyedi
+    x: 713
+    y: 96
+    width: 43
+    height: 43
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: gbi(1)
+    x: 880
+    y: 390
+    width: 63
+    height: 61
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: gbix(1)
+    x: 478
+    y: 98
+    width: 40
+    height: 38
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 2
+  - name: hpdi
+    x: 559
+    y: 359
+    width: 232
+    height: 39
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 2
+    paddingBottom: 1
+  - name: hptiao
+    x: 734
+    y: 262
+    width: 220
+    height: 27
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: jierenwu
+    x: 0
+    y: 110
+    width: 192
+    height: 151
+    borderLeft: 49
+    borderRight: 52
+    borderTop: 56
+    borderBottom: 51
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: lt_shouhuianniu1
+    x: 951
+    y: 431
+    width: 62
+    height: 81
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: lt_shouhuianniu1(1)
+    x: 432
+    y: 382
+    width: 86
+    height: 130
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 6
+    paddingTop: 4
+    paddingBottom: 0
+  - name: lt_shouhuianniu2
+    x: 719
+    y: 3
+    width: 23
+    height: 36
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: lt_shouhuianniu2(1)
+    x: 472
+    y: 251
+    width: 86
+    height: 130
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 6
+    paddingTop: 4
+    paddingBottom: 0
+  - name: mingzidi
+    x: 706
+    y: 446
+    width: 130
+    height: 66
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: mingzikuang
+    x: 0
+    y: 33
+    width: 338
+    height: 76
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: mpdi
+    x: 526
+    y: 40
+    width: 232
+    height: 39
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 2
+    paddingBottom: 1
+  - name: mptiao
+    x: 759
+    y: 27
+    width: 220
+    height: 27
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: renwudi
+    x: 193
+    y: 149
+    width: 139
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: renwutiao
+    x: 759
+    y: 55
+    width: 87
+    height: 84
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: renwutiaozhuxian
+    x: 792
+    y: 361
+    width: 87
+    height: 84
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: rw_wancheng
+    x: 665
+    y: 140
+    width: 112
+    height: 68
+    borderLeft: 30
+    borderRight: 27
+    borderTop: 25
+    borderBottom: 30
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: rw_weiwancheng
+    x: 734
+    y: 290
+    width: 112
+    height: 68
+    borderLeft: 36
+    borderRight: 37
+    borderTop: 34
+    borderBottom: 28
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: sanjiao
+    x: 394
+    y: 10
+    width: 42
+    height: 26
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: shanchu
+    x: 706
+    y: 399
+    width: 46
+    height: 46
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: xian
+    x: 665
+    y: 137
+    width: 8
+    height: 2
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zhixian
+    x: 559
+    y: 309
+    width: 174
+    height: 49
+    borderLeft: 13
+    borderRight: 146
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zhiye
+    x: 559
+    y: 259
+    width: 174
+    height: 49
+    borderLeft: 16
+    borderRight: 139
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zhuxian
+    x: 659
+    y: 209
+    width: 174
+    height: 49
+    borderLeft: 17
+    borderRight: 141
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zhuxiantiao
+    x: 333
+    y: 178
+    width: 138
+    height: 83
+    borderLeft: 34
+    borderRight: 34
+    borderTop: 27
+    borderBottom: 33
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: zhuxiantiaoxuanzhong
+    x: 339
+    y: 94
+    width: 138
+    height: 83
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: zjm_bairendaochang
+    x: 519
+    y: 456
+    width: 186
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 37
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zjm_chengbao
+    x: 519
+    y: 399
+    width: 186
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 37
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zjm_chuansongshi
+    x: 526
+    y: 80
+    width: 186
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 37
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zjm_jiuguan
+    x: 339
+    y: 37
+    width: 186
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 37
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zjm_shangcheng
+    x: 478
+    y: 137
+    width: 186
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 37
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zjm_youxiang
+    x: 472
+    y: 194
+    width: 186
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 37
+    paddingTop: 0
+    paddingBottom: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+  mCoordinates: 0
+  sprites: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

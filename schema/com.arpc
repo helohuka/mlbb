@@ -1,0 +1,1782 @@
+
+///主版本
+enum MajorVersion
+{
+	Major_0,
+	MajorNumber,
+};
+
+///中间版本
+enum MinorVersion
+{
+	Minor_0,
+	Minor_1,
+	Minor_2,
+	Minor_3,
+	Minor_4,
+	Minor_5,
+	Minor_6,
+	MinorNumber,	
+};
+
+///补丁版本
+enum PatchVersion
+{
+	Patch_0,
+	Patch_1,
+	Patch_2,
+	Patch_3,
+	Patch_4,
+	Patch_5,
+	PatchNumber,
+};
+
+
+enum PetQuality
+{
+    PE_None,
+	PE_White,
+	PE_Green,
+	PE_Blue,
+	PE_Purple,
+	PE_Golden,
+	PE_Orange,
+	PE_Pink,
+};
+
+enum ErrorNo
+{
+	EN_None,
+	EN_VersionNotMatch,		///版本不对
+	EN_AccountNameSame,
+	EN_PlayerNameSame,
+	EN_FilterWord,			///屏蔽字
+	EN_CannotfindPlayer,	///找不到玩家
+	EN_AcceptQuestNotFound, ///没有这个任务
+	EN_AcceptQuestNoItem, ///接任务没有道具
+	EN_AcceptSecendDaily, ///接到第二个日常
+	EN_DailyNoNum, 			///日常任务没次数了
+	EN_AcceptSecendProfession, ///接到第二个职业
+	EN_Battle,				//战斗中
+	EN_MoneyLess,//金币不够
+	EN_DiamondLess, ///钻石不够
+	EN_NoSubSyste,			//功能没开
+	EN_InTeam,
+	EN_NoTeamLeader,		///不是队长
+	EN_TeamPassword,	///请求加入队伍密码错误 ///帮派战未开始
+	EN_TeamIsFull,
+	EN_NoTeam,				///队伍不存在
+	EN_TeamIsRunning,		///队伍已经开启了
+	EN_TeamMemberLeaving,	///有队员暂离
+	EN_NoBackTeam,			///不能归队
+	EN_InTeamBlackList,		///在队伍黑名单中不能加入这个队伍
+	EN_EmployeeIsFull,
+	EN_NoUpSkill,		///没有可升级的技能
+	EN_PropisNull,		///当前没有已经分配的属性点，不能使用
+	EN_DoubleExpTimeFull,	///双倍经验时间已满
+	EN_DoubleExpTimeNULL,	///没有双倍时间
+	EN_NoTeamNoTongji, ///没有组队不能做通缉
+	EN_TongjiTimesMax, //通缉次数超过
+	EN_TongjiTeamMemberTimesMax, //通缉队员次数超过
+	EN_NoTeamLeaderNoTongji, ///不是队长不能接通缉任务k
+	EN_TeamSizeTongjiError, ///不是队长不能接通缉任务
+	EN_GetPoisonMushroom,		///获得一个毒蘑菇
+	EN_GetMushroom,				///获得一个蘑菇
+	EN_TongjiTeamLevelTooLow, ///统计队员 等级太小
+	EN_PlayerIsInTeam,
+	EN_AcceptQuestBagMax, //接任务包满了
+	EN_SubmitQuestBagMax, //交任务包满了
+	EN_GuildNameSame,		///帮派名字重复
+	EN_PlayerGoldLess,		///玩家金钱不够
+	EN_PlayerHasGuild,		///玩家已有帮派
+	EN_InRequestErr,		//已申请过
+	EN_RequestListFull,		//帮会申请列表已满
+	EN_joinGuildRequestOk,	//申请进入帮会成功
+	EN_JoinOtherGuild,		//提示对方已经加入帮派
+	EN_PremierQuitError,	//帮主不能退帮
+	EN_CommandPositionLess,	//没有权限
+	EN_PositionUpMax,		//该职位满员时不能晋升
+	EN_MallBuyOk,
+	EN_MallBuyFailBagFull,
+	EN_MallBuyFailBabyFull,
+	EN_MallBuyFailDiamondLess,
+	EN_MallBuyFailSelled,
+	EN_OpenBaoXiangBagFull,
+	EN_NoBaby,				//没找到宝宝
+	EN_BagFull,				//背包满了
+	EN_BagSizeMax,			//
+	EN_BabyStorageFull,		//宝宝仓库满了
+	EN_BabyFullToStorage,	//宝宝携带数上限,放入仓库
+	EN_NewItemError,
+	EN_BabyFull, //宝宝满了
+	EN_RemouldBabyLevel,	//宝宝改造等级大于一级
+	EN_SkillSoltFull, //技能栏满了
+	EN_WorldChatPayError, //说话没钱
+	EN_DontTalk,
+	EN_BadMushroom, //掉血蘑菇
+	EN_ItemMushroom,//道具蘑菇
+	EN_GetMailItemBagFull, //收取附件背包满了
+	EN_Materialless,		//材料不够
+	EN_OpenGatherlose,
+	EN_OpenGatherRepetition,
+	EN_GatherLevelLess, ///采集ID 找不到
+	EN_GatherTimesLess, //采集次数不够
+	EN_OpenBaoXiangLevel,// 新手礼包使用等级判断，在使用道具脚本的时候返回一个EN_OpenBaoXiangLevel给你
+	EN_NoBattleBaby,		//没有出战宠物
+	EN_NoThisPoint,		//这个属性是0
+	EN_BabyLevelHigh,	//宠物等级过高
+	EN_AddMoney1W,		//获得金币
+	EN_AddDionmand100,		//获得钻石
+	EN_AddMoney2W,		//获得金币
+	EN_AddDionmand200,		//获得钻石
+	EN_AddMoney3W,		//获得金币
+	EN_AddDionmand300,		//获得钻石
+	EN_AddMoney4W,		//获得金币
+	EN_AddDionmand400,		//获得钻石
+	EN_AddMoney5W,		//获得金币
+	EN_AddDionmand500,		//获得钻石
+	EN_AddMoney6W,		//获得金币
+	EN_AddDionmand600,		//获得钻石
+
+	EN_DelBaby1000,			//删除宠物
+	EN_DelBaby30,			//删除宠物
+	EN_DelBaby54,			//删除宠物
+	EN_DelBaby10030,		//删除宠物
+	EN_DelBaby10015,		//删除宠物
+	EN_DelBaby10157,		//删除宠物
+
+	EN_DelDefaultSkill,		//删除新手技能
+	EN_GreenBoxFreeNum,		//免费抽伙伴没次数了
+	EM_NotNormalVip,		//不是vip
+	EN_NotSuperVip,			//不是超级VIP
+	EN_FirendNotOpen,		//好友没有开启
+	EN_BlackCannotFriend,	//黑名单中
+	EN_HasFriend,			//已经是好友了
+	EN_HunderdNoNum,		//百人没次数
+	EN_HunderdTier,			//百人挑战层级错误
+	EN_HunderdLevel,		//百人道场挑战等级不够
+	EN_SkillExperr,			//技能经验道具使用失败
+	EN_TimeMushroom,		//蘑菇次数满了
+	EN_TimeTongji,			//通缉次数满了
+	EN_TimeXiji,			//袭击次数满了
+	EN_Storefull,			//仓库已经扩充满了
+	EN_HasBattleTime,		//
+	EN_HourLess24,			//
+	EN_HourLess24_Join,			//
+	EN_TeamMemberHourLess24,	//队伍成员中有不足24小时的 //帮派战中
+	EN_GuildBattleJoinSceneMoveValue, ///帮派贡献不足
+	
+	EN_IdgenNull,		//领取码无效
+	EN_Idgenhas,		//领取码已使用
+	EN_Gifthas,			//领取过此礼包
+	EN_UseMakeRepeat,// 使用配方重复
+	EN_WishNull,		//没有愿望
+	
+	EN_NoGuild, ///没有帮派
+	EN_GuildMemberMax, ///帮派人数上限
+	EN_LevelupGuildBuilding,
+	EN_LevelupGuildBuildingLevelMax,
+	EN_LevelupGuildBuildingMoneyLess,
+	EN_LevelupGuildBuildingHallBuildLevelLess,
+	
+	EN_AddGuildMoneyMax, ///家族资金达到上限
+	EN_PresentGuildOk, //家族捐献成功
+	EN_RefreshShopTimeLess, //帮派商店刷新次数不足
+	EN_TeamMemberNoGuild, ///队伍成员没有帮派
+	EN_MagicCurrencyLess, ///魔力比不够
+	EN_DisShopLimitLess,
+	EN_FamilyPremierCanntDelete, ///帮主不能删号
+	EN_MyFamilyMonster, //自己的神兽
+	EN_NoBattleTime,	///我不能打
+	EN_OtherNoBattleTime, ///我不能打他
+	EN_GuildBattleTimeout2, ///谈提示
+	EN_GuildBattleHasTeam, ///进帮派战场景不让组队
+	EN_AccountIsSeal, //账户已经被冻结
+	EN_PlayerNoOnline,	//玩家不在线
+	EN_ActivityNoTime,	//不是活动时间，没有开启
+	EN_NoTeamExist,		//不符合队伍条件,如等级限制
+	EN_GuildNoMember,	//帮派中找不到这个人
+	EN_MallSellTimeLess, ///售卖道具冻结时间未到
+	EN_GuildMemberLess24,
+	EN_InviteeLeaveGuildLess24,		//被邀请人离开帮派不足24小时
+	EN_PboneNumberSuccess,
+	EN_PhoneNumberError,
+	EN_OtherPlayerInBattle,
+	EN_GuildBattleNotMatch, ///家族战没有匹配
+	EN_GuildBattleIsStart,
+	EN_GuileBattleIsClose,
+	EN_GuildBattleTeamNoSameGuild, //不在一个家族中
+	EN_BackTeamCommandLeaderInGuildHomeSceneAndYouAreNotSameGuild, ///返回队伍时 队长在家族场景里 并且你们不是一个家族
+	EN_AccecptRandQuestSizeLimitError, ///接取跑环任务超出最大数量限制
+	EN_Max,
+};
+
+enum OperateType
+{
+	OT_0,
+	OT_P1,
+	OT_P2,
+	OT_B,
+};
+
+//道具绑定类型
+enum BindType{
+	BIT_None,  // 不绑定
+	BIT_Bag,   // 拾取绑定
+	BIT_Use,   // 使用绑定
+	BIT_Max,
+};
+
+enum ReconnectType
+{
+	RECT_None,
+	RECT_LoginOk,
+	RECT_EnterGameOk,
+	RECT_JoinTeamOk,
+	RECT_EnterSceneOk,
+	RECT_EnterBattleOk,
+	RECT_Max,
+};
+
+enum SexType
+{
+    ST_Unknown,
+	ST_Male,
+	ST_Female,
+};
+
+enum BattleType
+{
+	BT_None,
+	BT_PVE,
+	BT_PVR,
+	BT_PVP,
+	BT_PVH,				///百人道场战斗
+	BT_PET,				///抓宠活动战斗
+	BT_PK1,				///PK活动
+	BT_PK2,				///PK活动
+	BT_Guild,			
+	BT_MAX,
+};
+
+enum EntityType
+{
+	ET_None,
+	ET_Player,
+	ET_Baby,
+    ET_Monster,
+	ET_Boss,
+	ET_Emplyee,
+	ET_Max,
+};
+
+enum MineType
+{
+	MT_None,
+	MT_JinShu,
+	MT_MuCai,
+	MT_BuLiao,
+	MT_Max,
+};
+
+enum GroupType
+{
+	GT_None,
+	GT_Up,
+	GT_Down,
+};
+
+enum SkillTargetType
+{
+	STT_None,
+	STT_Self,
+	STT_Team,
+	STT_TeamDead,
+	STT_TeamNoSelf,
+	STT_All,
+	STT_AllNoSelf,
+    STT_Max,
+};
+
+enum SkillType
+{
+    SKT_None,
+	SKT_DefaultSecActive, ///出生技能 2动能够释放
+	SKT_DefaultSecPassive,
+	SKT_DefaultActive, ///出生技能
+	SKT_DefaultPassive,
+    SKT_Active,
+    SKT_Passive,
+    SKT_Gather,			//采集
+    SKT_Make,			//制作
+	SKT_CannotUse,		//不能主动使用的技能
+	SKT_GuildPlayerSkill,
+	SKT_GuildBabySkill,
+    SKT_Max,
+};
+
+enum PassiveType
+{
+	PAT_None,
+	PAT_Buff,
+	PAT_Deference,
+	PAT_Dodge,
+	PAT_Counter,
+	PAT_Change,
+	PAT_Guard,
+	PAT_Runaway,
+	PAT_BabyInnout,
+	PAT_SecKill,
+};
+
+/// 角色状态
+enum PlayerStatus
+{
+	PS_Idle,
+	PS_Login,
+	PS_Game,
+	PS_Logout,
+	PS_Illegal,
+};
+
+/// 装备类型
+enum OccupationType
+{
+	OT_None,		///
+	OT_HeavyArmor,	///重甲
+	OT_LightArmor,	///轻甲
+	OT_Spell,		///法术 
+	OT_Max,
+};
+
+enum PeriodType{
+	PT_Daily,
+	PT_Weekly,
+	PT_Customly,
+};
+
+/// 玩家和伙伴职业类型
+enum JobType
+{
+	JT_None,
+	JT_Newbie,		///初心者
+	JT_Axe,			///斧王
+	JT_Sword,		///剑客
+	JT_Knight,		///骑士
+	JT_Archer,		///弓箭手
+	JT_Fighter,		///格斗
+	JT_Ninja,		///忍者
+	JT_Mage,		///法师
+	JT_Sage,		///传教
+	JT_Wizard,		///巫师
+	JT_Word,		///咒术
+};
+
+/// 种族
+enum RaceType
+{
+	RT_None,
+	RT_Human,			/// 人形
+	RT_Insect,			/// 昆虫
+	RT_Plant,			/// 植物
+	RT_Extra,			/// 特殊
+	RT_Dragon,			/// 龙
+	RT_Animal,			/// 野兽
+	RT_Fly,				/// 飞行
+	RT_Undead,			/// 不死
+	RT_Metal,			/// 金属
+	RT_Max,
+};
+
+/// 宠物属性档位
+enum BabyInitGear
+{
+    BIG_None,
+    BIG_Stama, 		///体力
+    BIG_Strength,	///力量
+    BIG_Power, 		///强度
+    BIG_Speed, 	 	///速度
+    BIG_Magic,	 	///魔法
+    BIG_Max,
+}; 
+
+///伙伴品质
+enum QualityColor
+{
+	QC_None,
+	QC_White,
+	QC_Green,
+	QC_Blue,
+	QC_Blue1,
+	QC_Purple,
+	QC_Purple1,
+	QC_Purple2,
+	QC_Golden,
+	QC_Golden1,
+	QC_Golden2,
+	QC_Orange,
+	QC_Orange1,
+	QC_Orange2,
+	QC_Pink,
+	QC_Max,
+};
+
+/// 属性
+enum PropertyType
+{
+    ///< 所有属性按整形统一存取 真实数值 / 10 (小数点后一位  
+    ///< 格式为 FFFF FFFF FFFF FFFF 
+    ///<      编码数 值数
+    ///< 真实值 = 值数 / 编码数 >> 24
+/// 修正属性 这尼玛是啥
+	PT_None,
+	PT_NoSleep,			///抗昏睡
+	PT_NoPetrifaction,	///抗石化
+	PT_NoDrunk,			///抗酒醉
+	PT_NoChaos,			///抗混乱
+	PT_NoForget,		///抗遗忘
+	PT_NoPoison,		///抗毒
+	PT_Assassinate,		///暗杀
+	
+	///货币
+	PT_Money,
+	PT_Diamond,
+	PT_MagicCurrency,			//魔力币
+	PT_EmployeeCurrency,		//伙伴回收点
+	///体力
+	PT_Gather,   //采集挖矿消耗
+/// 生产相关
+//	PT_Anima,			///灵力
+//	PT_Endurance,		///耐力
+//	PT_Intelligence,		///智力
+    PT_Level,       ///等级  
+    PT_Exp,         ///经验
+	PT_ConvertExp,	///活动转储经验
+/// 声望值
+	PT_OneDayReputation, ///一天可获得最大声望
+    PT_Reputation,  ///声望
+    PT_TableId,     ///资源表索引
+	PT_AssetId,		///主显示资源
+	PT_Sex,			    ///性别
+	PT_BagNum,    ///开启背包槽位数
+	PT_Race,		///种族
+	PT_Profession,	///职业
+	PT_ProfessionLevel, ///职业等级
+	
+/// 一级属性
+	PT_Stama, 		///体力
+	PT_Strength,	///力量
+	PT_Power, 		///强度
+	PT_Speed, 	 	///速度
+	PT_Magic,	 	///魔法
+	PT_Durability,	///耐久
+	
+/// 二级级属性
+    PT_HpCurr,
+    PT_MpCurr,
+	PT_HpMax,		///生命值
+	PT_MpMax,		///魔法值
+	PT_Attack,		///攻击力
+	PT_Defense,		///防御力
+	PT_Agile,		///敏捷
+	PT_Spirit,		///精神
+	PT_Reply,		///回复
+	PT_Magicattack,	///魔攻
+	PT_Magicdefense,///抗魔
+	PT_Damage,		///伤害
+	PT_SneakAttack,	///偷袭属性
+	
+/// 修正属性
+	PT_Hit,				///命中
+	PT_Dodge,			///闪躲
+	PT_Crit,			///必杀
+	PT_counterpunch,	///反击
+	
+	
+	//PT_Position,	///位置
+	PT_Front,		///是否前排 0后排 1前排
+	
+/// 水晶属性
+	PT_Wind,		///风
+	PT_Land,		///地
+	PT_Water,		///水
+	PT_Fire,		///火
+	
+	PT_Free,		//自由点数
+
+	///当前称号
+	PT_Title, 
+	PT_GuildID,
+
+	PT_Glamour, ///魅力值
+	PT_DoubleExp,	//双倍经验
+	PT_TongjiComplateTimes, ///统计完成计数 个人
+	PT_VipLevel, ///VIP 等级
+	PT_VipTime,		///vip时间
+	PT_FightingForce, ///战斗力
+	PT_Max,
+};
+
+enum VipLevel{
+	VL_None,
+	VL_1,
+	VL_2,
+	VL_Max,
+};
+
+//Item类型
+enum ItemMainType
+{
+	IMT_None,
+	IMT_Quest,		//任务道具
+	IMT_Consumables, //消耗品
+	IMT_Equip,       //装备 
+	IMT_Employee,    //伙伴卡
+	IMT_EmployeeEquip,    //伙伴装备
+	IMT_Debris,    //碎片
+	IMT_FuWen,    //符文
+	IMT_BabyEquip, //宠物装备
+	IMT_Max,
+};
+
+//Item子类型
+enum ItemSubType
+{
+	IST_None,
+	IST_Axe,   ///斧子
+	IST_Sword,  ///剑
+	IST_Spear,   ///枪
+	IST_Bow,    ///弓
+	IST_Stick,  ///杖
+	IST_Knife,   ///小刀
+	//IST_V,		///回力标
+	IST_Hat,   ///帽子
+	IST_Helmet,   ///头盔
+	IST_Clothes,   ///衣服
+	IST_Robe,   ///袍
+	IST_Armor,   ///铠甲
+	IST_Boot,   ///靴子
+	IST_Shoes,   ///鞋
+	IST_Shield,  ///盾牌
+	IST_Crystal,	///水晶
+	IST_Charm,     //护身符
+	IST_Earrings,  //耳环
+	IST_Bracelet,  //手环
+	IST_Ring,      //戒指
+	IST_Necklace,  //项链
+	IST_Headband,  //头带
+	IST_Instruments,  //乐器
+	IST_EquipMax,
+	IST_Ornament,   
+	IST_Lottery,
+	IST_Coupun,
+	IST_OpenGird,
+	IST_ConsBegin,
+	IST_Consumables, //消耗品
+	IST_Blood, //血瓶魔瓶
+	IST_Buff,  //buff类道具
+	IST_Gem,  //宝石
+	IST_Material, //材料
+	IST_ItemDebris, //碎片
+	IST_BabyDebris, //碎片 
+	IST_EmployeeDebris, //碎片
+	IST_BabyExp, // 宠物经验
+	IST_SkillExp, // 技能经验
+	IST_ConsEnd,
+	IST_Gloves, // 拳套
+	IST_EmployeeEquip, //伙伴装备
+	IST_PVP, //竞技场可掉落类型
+	IST_Fashion,			///时装
+	IST_FuWenAttack,    //攻击符文
+	IST_FuWenDefense,    //防御符文
+	IST_FuWenAssist,    //辅助符文
+	IST_Max,
+};
+
+enum ItemUseFlag{
+	IUF_None,
+	IUF_Battle,
+	IUF_Scene,
+	IUF_All,
+};
+
+/// 装备槽位
+enum EquipmentSlot
+{
+	ES_None, 
+	ES_Boot,			///鞋
+	ES_SingleHand,		///主手
+	ES_Ornament_0,		///饰品0
+	ES_Head,			///头
+	ES_Ornament_1,		///饰品1
+	ES_Body,	     	///身体
+	ES_DoubleHand,		///副手
+	ES_Crystal,			///水晶
+	ES_Fashion,			///时装
+	ES_Max,
+};
+
+
+//Weapon子类型
+enum WeaponType
+{
+	WT_None,
+	WT_Axe,
+	WT_Sword,
+	WT_Spear,
+	WT_Bow,
+	WT_Stick,
+	WT_Knife,
+	//WT_V,			//回力标
+	WT_Hoe,			//锄头
+	WT_Pickax,		//镐头
+	WT_Lumberaxe,	//伐木斧
+	WT_Gloves, // 拳套
+	WT_Max,
+};
+
+
+/// 聊天类型
+enum ChatKind
+{
+	CK_None,
+	CK_World,
+	CK_Team,
+	CK_System,
+	CK_Friend,
+	CK_GM,
+	CK_Guild,
+    CK_Max,
+};
+
+///Battle Position
+
+enum BattlePosition
+{
+	BP_None,
+    BP_Down0,
+    BP_Down1,
+    BP_Down2,
+    BP_Down3,
+    BP_Down4,
+
+    BP_Down5,
+    BP_Down6,
+    BP_Down7,
+    BP_Down8,
+    BP_Down9,
+
+    BP_Up0,
+    BP_Up1,
+    BP_Up2,
+    BP_Up3,
+    BP_Up4,
+
+    BP_Up5,
+    BP_Up6,
+    BP_Up7,
+    BP_Up8,
+    BP_Up9,
+
+    BP_Max,
+};
+
+enum BattleJudgeType
+{
+	BJT_None,
+	BJT_Continue,
+	BJT_Win,
+	BJT_Lose,
+};
+
+///Lua Index 
+
+enum OrderParamType
+{
+    OPT_None,
+    OPT_BabyId,
+    OPT_Unite,
+	OPT_Huwei,
+	OPT_IsNo,
+    OPT_Max,
+};
+
+enum OrderStatus
+{
+	OS_None,
+	OS_ActiveOk,
+	OS_RunawayOk,
+	OS_FangBaobao,
+	OS_ShouBaobao,
+	OS_Weapon,
+	OS_Zhuachong,
+	OS_Flee, ///飞
+	OS_Summon,
+};
+
+enum AIEvent
+{
+	ME_None,
+	ME_Born,		///怪物出生事件
+	ME_Deadth,		///怪物死亡事件
+	ME_AttackGo,	///怪物攻击事件
+	ME_SkillGO,		///怪物技能事件
+	ME_Update,		///怪物周期事件
+	ME_Max,
+};
+
+enum SyncIPropType		///I属性更新的类型
+{
+	SPT_None,
+	SPT_Player,
+	SPT_Baby,
+	SPT_Employee,
+	SPT_Max,
+};
+
+enum BoxType		///抽取伙伴宝箱类型
+{
+	BX_None,
+	BX_Normal,
+	BX_Blue,
+	BX_Glod,
+};
+
+///////////// 任务相关
+enum QuestKind
+{
+	QK_None,
+	QK_Main,
+	QK_Daily,
+	QK_Profession,
+	QK_Sub,
+	QK_Tongji,
+	QK_Copy,
+	QK_Wishing,
+	QK_Guild,
+	QK_Rand,
+	QK_Sub1,
+	QK_Max,
+};
+
+enum QuestType
+{ //其实是任务目标
+	QT_None,
+	QT_Dialog, //对话任务
+	QT_Battle, //战斗任务
+	QT_Kill,   //monster 类型
+	QT_KillAI, //ai 名字
+	QT_Item,   //收集道具
+	QT_Profession, ///职业任务
+	QT_Other, //其他任务
+	QT_GiveItem,//上交道具
+	QT_GiveBaby,//上交宠物
+	QT_Max,
+};
+
+enum RequireType
+{
+	RT_Nil,
+};
+
+enum TeamType
+{
+	TT_None,		//无任务目标
+	TT_MainQuest,	//主线
+	TT_TongjiQuest,	//通缉任务
+	TT_Daochang,	//百人道场
+	TT_CaoMoGu,		//采蘑菇活动
+	TT_Zhanchang,	//野外战场
+	TT_Hero,		//英雄传
+	TT_Pet,			//宠物神殿
+	TT_JJC,			//竞技场
+	TT_ShuaGuai,	//野外刷怪
+	TT_Copy,	//副本
+	TT_Max,
+};
+
+///stateType
+enum StateType
+{	
+	ST_None,
+	ST_Normal,						///通用
+	ST_Defense,						///防御
+	ST_Dodge,						///闪避
+	ST_ActionAbsorb,				///攻击吸收
+	ST_MagicAbsorb,					///魔法吸收
+	ST_Shield,						///圣盾
+	ST_ActionBounce,				///攻击反弹
+	ST_MagicBounce,					///魔法反弹
+	ST_ActionInvalid,				///攻击无效
+	ST_MagicInvalid,				///魔法无效
+	ST_Defend,						///保卫
+	ST_NoDodge,						///明镜
+	ST_Poison,						///毒
+	ST_Basilisk,					///石化
+	ST_Sleep,						///昏睡
+	ST_Chaos,						///混乱
+	ST_Drunk,						///酒醉
+	ST_Forget,						///遗忘
+	ST_BeatBack,					///反击
+	ST_Recover,						///恢复
+	ST_StrongRecover,				///强力恢复
+	ST_GroupRecover,				///群体恢复
+	ST_MagicDef,					///魔法防御
+	ST_Max,
+};
+
+enum SceneType
+{
+	SCT_None,
+	SCT_New, ///新手场景
+	SCT_Home, /// 主城
+	SCT_Scene,/// 场景
+	SCT_City, // 城镇
+	SCT_Bairen, ///百人道场
+	SCT_Instance, ///副本场景
+	SCT_AlonePK,	//单人PK活动场景
+	SCT_TeamPK,		//组队PK活动场景
+	SCT_GuildHome,	//家族领地
+	SCT_GuildBattleScene,
+	SCT_Max,
+};
+
+enum BornType
+{
+	BOT_None,
+	BOT_BornPos,				//出生点位置
+	BOT_Cached,				//战斗前缓存位置
+	BOT_FromSceneEntry,		//从副本进迷宫后的门
+	BOT_FromMazeEntry,		//从迷宫进副本后的门
+	BOT_NormalMazeEntry,		//迷宫层之间进出的门
+	BOT_Max,
+};
+
+enum WeaponActionType
+{
+	WAT_None,			//空手
+	WAT_Chop,			//砍
+	WAT_Stab,			//刺
+	WAT_Bow,			//弓
+	WAT_Throw,			//投
+	WAT_Max,
+};
+
+enum SceneOutpuType
+{
+	SOT_None,
+	SOT_PVE,
+	SOT_PVP,
+	SOT_Max,
+};
+
+enum TogetherStateType
+{
+	TST_None,
+	TST_Self,
+	TST_Enemy,
+	TST_Max,
+};
+
+//< 新手指引高亮对象
+enum GuideAimType
+{
+	GAT_None,
+	GAT_FirstAchievement,
+	GAT_FirstSkill,
+	GAT_FirstLevelSkill,
+	GAT_FirstQuest,
+	GAT_DialogUI,
+	GAT_MainTeamBtn,
+	GAT_MainTaskBtn,
+	GAT_QuestMiniFirst,
+	GAT_QuestMiniSecond,
+	GAT_QuestMiniThird,
+	GAT_MainCrystal,
+	GAT_MainCastle,
+	GAT_MainJJC,
+	GAT_OfflineJJC,
+	GAT_OfflineJJC4,
+	GAT_WorldMapER,
+	GAT_WorldMapFL,
+	GAT_WorldMapWorldBtn,
+	GAT_MiniMap,
+	GAT_TeamCreateBtn,
+	GAT_TeamWorldMapBtn,
+	GAT_FirstPartner_PosUI,
+	GAT_FreeLootPartner,
+	GAT_FriendAddBtn,
+	GAT_PartnerShowCancel,
+	GAT_PartnerPositionTab,
+	GAT_PartnerDetailBaseTab,
+	GAT_PartnerDetailBodySlot,
+	GAT_PartnerDetailEquipBtn,
+	GAT_PartnerDetailBaseFirstSkill,
+	GAT_PartnerDetailBaseSkillLvUpBtn,
+	GAT_LearnSkillAttackSkillTab,
+	GAT_LearnSkillAttackMagicTab,
+	GAT_LearnSkillStatusMagicTab,
+	GAT_LearnSkillAidSkillTab,
+	GAT_LearnSkillBtn,
+	GAT_FirstLearningBabySkill,
+	GAT_FirstLearningBabySkill_BabyList,
+	GAT_ThirdLearningBabySkill_SkillSlot,
+	GAT_BabySkillLearningBtn,
+	GAT_MessageBoxOkBtn,
+	GAT_MainReturn,
+	GAT_MainBag,
+	GAT_MainBagTipUseItem,
+	GAT_MainbagTipEquip,
+	GAT_MainBagFuwenTab,
+	GAT_MainBagFuwenFirstItem,
+	GAT_MainBagFuwenTipsCombieBtn,
+	GAT_MainBagFuwenTipsInsertBtn,
+	GAT_MainFuwenUICombieBtn,
+	GAT_MainFuwenCloseBtn,
+	GAT_MainSkill,
+	GAT_MainMake,
+	GAT_MainMakeSword,
+	GAT_MainMakeAxe,
+	GAT_MainMakeStick,
+	GAT_MainMakeBow,
+	GAT_MainMakeCompoundBtn,
+	GAT_MainMakeLevel10,
+	GAT_MainMakeSubFirst,
+	GAT_MainMakeSubSecond,
+	GAT_MainMakeSubThird,
+	GAT_MainMakeGemBtn,
+	GAT_MainMakeGemClose,
+	GAT_MainMakeGemFirst,
+	GAT_MainBaby,
+	GAT_MainBabyStatusBtn,
+	GAT_MainBabyPropertyBtn,
+	GAT_MainBabyPropertyContainer,
+	GAT_MainBabyPropertyConfirm,
+	GAT_MainBabyClose,
+	GAT_MainMagic,
+	GAT_MainMagicLevelFirst,
+	GAT_MainMagicLevelBtn,
+	GAT_MainFriend,
+	GAT_MainPartner,
+	GAT_MainSetting,
+	GAT_MainRecharge,
+	GAT_MainActivity,
+	GAT_MainPlayerInfo,
+	GAT_MainPlayerInfoStatusBtn,
+	GAT_MainPlayerInfoPropertyBtn,
+	GAT_MainPlayerInfoPropertyContainer,
+	GAT_MainPlayerInfoPropertyConfirm,
+	GAT_MainPlayerInfoClose,
+	GAT_MainJiubaHouse,
+	GAT_MainStick,
+	GAT_MainAchievement,
+	GAT_MainRaise,
+	GAT_MainFamily,
+	GAT_BattleAttack,
+	GAT_BattleSkill,
+	GAT_BattleBabySkill,
+	GAT_BattleDeference,
+	GAT_BattleChangePosition,
+	GAT_BattleAuto,
+	GAT_BattleBag,
+	GAT_BattleCatch,
+	GAT_BattleBaby,
+	GAT_BattleRunaway,
+	GAT_BattlePlayerInfo,
+	GAT_BattleRewardClose,
+	GAT_FirstAutoSkill,
+	GAT_PlayerAuto,
+	GAT_Max,
+};
+
+//< 脚本事件
+enum ScriptGameEvent
+{
+	SGE_None,
+	SGE_MainPanelOpen,
+	SGE_FirstEnterMainScene,
+	SGE_EnterScene,
+	SGE_EnterMainScene,
+	SGE_Talk_FirstEnterMainScene,
+	SGE_Talk_BattleReady,
+	SGE_Talk_ActorReady,
+	SGE_Talk_BattleOver,
+	SGE_WorldMapOpen,
+	SGE_WorldMapToWorld,
+	SGE_MiniMapOpen,
+	SGE_TeamUIOpen,
+	SGE_AchievementUIOpen,
+	SGE_AchievementReceived,
+	SGE_TeamUISelectMapOpen,
+	SGE_PartnerForBattle,
+	SGE_PartnerPositionTabShow,
+	SGE_PartnerListTabShow,
+	SGE_PartnerDetailUIOpen,
+	SGE_PartnerDetailBaseOpen,
+	SGE_PartnerDetailEquipClick,
+	SGE_PartnerDetailEquipSucc,
+	SGE_PartnerDetailBaseSkillOpen,
+	SGE_ParnterDetailBaseSkillLvUpSucc,
+	SGE_MainMakeSub,
+	SGE_MainMakeSubDetail,
+	SGE_MainMakeItemOk,
+	SGE_MainMakeGemUI,
+	SGE_MainMakeGemOk,
+	SGE_MainMakeGemUIClose,
+	SGE_MainTeamUI,
+	SGE_MainTaskUI,
+	SGE_MainTaskFlushOk,
+	SGE_JJCEntryUI,
+	SGE_OfflineJJCUI,
+	SGE_BagItemDoubleClick,
+	SGE_BagFuwenOpen,
+	SGE_BagFuwenCombieUI,
+	SGE_BagFuwenCombieSuccess,
+	SGE_BagFuwenClickTipsInsertBtn,
+	SGE_FuwenUIClose,
+	SGE_NpcDialogBegin,
+	SGE_NpcRenwuUIOpen,
+	SGE_NpcRenwuPreAccept,
+	SGE_NpcRenwuAccept,
+	SGE_NpcRenwuSubmit,
+	SGE_EnterNPCBattle,
+	SGE_EnterBattle,
+	SGE_MessageBoxOpen,
+	SGE_BeforeEnterBattle,
+	SGE_PlayerLevelUp,
+	SGE_PlayerUIOpen,
+	SGE_PlayerUIStatusSwitch,
+	SGE_PlayerUIPropertySwitch,
+	SGE_PlayerUIAddPoint,
+	SGE_PlayerUIPropertyConfirmClick,
+	SGE_PlayerUIClose,
+	SGE_BabyLevelUp,
+	SGE_BabyUIOpen,
+	SGE_BabyUIStatusSwitch,
+	SGE_BabyUIPropertySwitch,
+	SGE_BabyUIAddPoint,
+	SGE_BabyUIPropertyConfirmClick,
+	SGE_BabyUIClose,
+	SGE_BattleTurn,
+	SGE_ExitBattle,
+	SGE_SelectTarget,
+	SGE_SelectTargetOk,
+	SGE_BabySelectSkill,
+	SGE_SelectSkill,
+	SGE_SelectSkillLevel,
+	SGE_StickDisplay,
+	SGE_StickTouchDown,
+	SGE_StickTouchMove,
+	SGE_StickTouchUp,
+	SGE_BattleOverRewardOpen,
+	SGE_BattleOverRewardClose,
+	SGE_CheckState,
+	SGE_TogetherState,
+	SGE_BagTipOpen,
+	SGE_UseItem,
+	SGE_GainItem,
+	SGE_EquipItem,
+	SGE_MainLearningUI,
+	SGE_MainLearningClickTab,
+	SGE_MainLearningOneSkillClick,
+	SGE_MainLearningSkillOk,
+	SGE_MainMakeUIOpen,
+	SGE_MainMagicTipClose,
+	SGE_MainMagicUIOpen,
+	SGE_MainMagicLevelUp,
+	SGE_MainMagicFirstClick,
+	SGE_PartnerShowUI,
+	SGE_PartnerHideUI,
+	SGE_BabyLearningSkillUI,
+	SGE_BabyLearningSkill_BabyListUI,
+	SGE_BabyLearningSkill_BabySkillUI,
+	SGE_BabyLearningSkillOk,
+	SGE_ClickBabyLearningSkill,
+	SGE_ClickMiniQuest,
+	SGE_ClickMainBag,
+	SGE_ClickMainSkill,
+	SGE_ClickMainBaby,
+	SGE_ClickMainFriend,
+	SGE_ClickMainPartner,
+	SGE_ClickMainSetting,
+	SGE_ClickMainRecharge,
+	SGE_ClickMainActivity,
+	SGE_ClickMainInfo,
+	SGE_ClickBattleAttack,
+	SGE_ClickBattleSkill,
+	SGE_ClickBattleBabySkill,
+	SGE_ClickBattleDeference,
+	SGE_ClickBattleChangePosition,
+	SGE_ClickBattleAuto,
+	SGE_ClickBattleBag,
+	SGE_ClickBattleBaby,
+	SGE_ClickBattleRunaway,
+	SGE_ClickBattleInfo,
+	SGE_ClickAddFriendBtn,
+	SGE_ClickMainFamily,
+	SGE_ClickRaiseUpBtn,
+	SGE_UseItemOk,
+	SGE_CheckBuff,
+	SGE_PlayerPropUpdate,
+	SGE_NpcTalked,
+	SGE_EnterCopy,
+	SGE_PlayerAutoOrder,
+	SGE_OpenAutoPanel,
+	
+	//剧情相关
+	SGE_SenseEnter2,	//第二个Sense事件
+	//可以开始说话了
+	SGE_WaitTalk,		//SenseActorType 谁
+	//说话完毕
+	SGE_SenseTalked,	//SenseActorType 谁   talkId说完了什么话
+	//退出剧情
+	SGE_ExitSense,		//int 剧情id
+	
+	SGE_Max,
+};
+
+enum SenseActorType
+{
+	SAT_Guard,			//卫兵
+	SAT_Ambassdor,		//大使
+	SAT_King,			//国王
+	SAT_Yingzi,			//阴影
+	SAT_VillageKing,	//村长
+	SAT_Archor,			//弓手
+	SAT_Axe,			//战斧
+	SAT_Sage,			//牧师
+	SAT_Mage,			//法师
+	SAT_Girl,			//小女孩
+	SAT_AllMonster,		//所有怪物
+};
+
+enum GameEventType
+{
+	GET_None,
+	GET_Online,				//玩家上线
+	GET_Offline,			//玩家下线
+	GET_CreatePlayerOK,		//创建角色OK
+	GET_Kill,				//击杀
+	GET_Die,				//PLAYER死亡
+	GET_LevelUp,			//PLAYER升级
+	GET_Flee,				//战斗逃跑
+	GET_LearnSkill,			//PLAYER学习技能
+	GET_SkillLevelUp,		//PLAYER技能升级
+	GET_UseSkill,			//使用技能
+	GET_EnterJJC,			//进入离线竞技场
+	GET_MakeEquip,			//制作装备
+	GET_RecruitEmp,			//招募伙伴
+	GET_EmployeeEvolve,		//伙伴进阶
+	GET_AddBaby,			//获得宠物
+	GET_DelBaby,			//宠物删除
+	GET_CatchBaby,			//抓宝宝
+	GET_DepositBaby,		//宠物存放
+	GET_BabyLevelUp,		//宠物升级
+	GET_ResetBaby,			//洗宝宝
+	GET_BabyNo, 			//baby no了 battleid , whono (pos)
+	GET_BabyLearnSkill,		//宝宝学技能
+	GET_AddSkillExp,		//加技能经验
+	GET_HalfHourAgo,		//过0点
+	GET_Sign,				//签到
+	GET_BattleChangeProp,	//PLAYER战斗造成伤害或治疗
+	GET_BattleOver,			//战斗结束
+	GET_TalkNpc, 			///NPC 对话
+	GET_Activity, 			//活动事件
+	GET_PvR,				//离线竞技场
+	GET_JJC,				//在线竞技场
+	GET_Challenge,			//百人道场
+	GET_Zhuanpan,			//大转盘
+	GET_Richang,			//日常任务
+	GET_Pet,				//宠物活动
+	GET_Tongji,				//通缉任务
+	GET_Babyintensify,		//宠物强化
+	GET_CreateGuild,		//创建帮派
+	GET_JoinGuild,			//加入帮派
+	GET_GuildBattleWin,		//帮派战胜利
+	GET_GuildBattleLose,	//帮派战失败
+	GET_OpenGuildBattle,	//开启帮派战斗
+	GET_CloseGuildBattle,   //关闭帮派战斗
+	GET_OpenGuildDemonInvaded, //开启魔族入侵
+	GET_CloseGuildDemonInvaded, //关闭魔族入侵
+	GET_OpenGuildLeaderInvaded, //开启首领入侵
+	GET_CloseGuildLeaderInvaded, //关闭首领入侵
+	GET_Exam,				//答题
+	GET_Wish,				//许愿
+	GET_ChangeMoney,		//金钱变动
+	GET_ChangeDiamond,		//钻石变动
+	GET_ChangeMagicCurrency,//水晶
+	GET_WearEquip,			//PLAYER穿装备
+	GET_AddFleeProp,		//PLAYER加属性点
+	GET_Gather,				//采集事件
+	GET_AddFriend,			//添加好友
+	GET_ExtendStorage,		//扩充仓库
+	GET_FinishAch,			//完成成就
+	GET_AddTeamMemberCondition,
+	GET_Shenqishengji,
+	GET_NewServer,
+	GET_Recharge,			//充值事件
+	GET_PhoneNumber, ///手机号验证通过
+	GET_ChangeProfession,	//
+	GET_BagFullSendMail,	//背包满发送邮件
+	GET_WearFuwen,			//穿戴符文
+	GET_Max,
+};
+
+enum SneakAttackType
+{
+	SAT_None,
+	SAT_SneakAttack,
+	SAT_SurpriseAttack,
+	SAT_Max,
+};
+
+enum ShopType
+{
+	SIT_None,
+	SIT_FirstRecharge,
+	SIT_Recharge,
+	SIT_Shop,
+	SIT_EmployeeShop,
+	SIT_VIP,
+	SIT_Fund,
+	SIT_Giftbag,
+	SIT_CourseGiftBag,
+	SIT_Equip,
+	SIT_Max,
+};
+
+enum ShopPayType
+{
+	SPT_Nil,
+	SPT_RMB,
+	SPT_Diamond,
+	SPT_MagicCurrency,
+	SPT_Gold,
+};
+
+enum GuidePointerRotateType
+{
+	GPRT_None,  
+	GPRT_R45,
+	GPRT_R90,
+	GPRT_R135,
+	GPRT_R180,
+	GPRT_R225,
+	GPRT_R270,
+	GPRT_R315,
+	GPRT_Max,
+};
+
+enum NpcType
+{
+	NT_None,
+	NT_Normal, //一般NPC
+	NT_Tongji,
+	NT_SinglePK, //通缉NPC
+	NT_TeamPK,
+	NT_Mogu,   //悬赏NPC
+	NT_Xiji,
+	NT_Caiji1,	//采集NPC
+	NT_Caiji2,	//采集NPC
+	NT_Caiji3,	//采集NPC
+
+	NT_Max,
+};
+
+enum OpenSubSystemFlag
+{
+	OSSF_None,				
+	OSSF_Skill,				//技能系统
+	OSSF_Baby,				//宠物系统
+	OSSF_Friend,			//好友系统
+	OSSF_EmployeeGet,		//伙伴招募
+	OSSF_EmployeeList,		//伙伴列表
+	OSSF_EmployeePosition,	//伙伴位置
+	OSSF_EmployeeEquip,		//伙伴装备
+	OSSF_Bar,				//主城酒吧	
+	OSSF_Castle,	  		//主城城堡	
+	OSSF_JJC,				//主城竞技场
+	OSSF_PVPJJC,			//同步竞技场
+	OSSF_Make,				//打造功能
+	OSSF_Hundred,			//百人道场
+	OSSF_Activity,			//活动1
+	OSSF_Handbook,			//图鉴1
+	OSSF_EveryTask,			//每日活动1 
+	OSSF_Achieve,			//成就 
+	OSSF_Rank,				//排行榜
+	OSSF_OnKyTalk,
+	OSSF_Setting,			//排行榜
+	OSSF_Shop,				//商城
+	OSSF_DoubleExp,  		//双倍时间
+	OSSF_Family,  			//家族
+	OSSF_AuctionHouse,  	//拍卖行
+	OSSF_BabyLeranSkill,  	//宠物学技能
+	OSSF_MagicItem,  		//神器
+	OSSF_EmployeePos10,  	//10级伙伴位置
+	OSSF_EmployeePos15,  	//15级伙伴位置
+	OSSF_EmployeePos20,  	//20级伙伴位置
+	OSSF_Guid,  //指引
+	OSSF_Team,		
+	OSSF_choujiang,
+	OSSF_Cystal,			//水晶系统
+	OSSF_PetEquip,			//宠物装备
+	OSSF_Max,
+};
+
+enum AchievementType
+{
+	AT_None,	
+	AT_EarnConis,			//赚取金币
+	AT_SpendMoney,			//消耗金币
+	AT_SpendDiamond,		//花费钻石
+	AT_Recharge,            //获得钻石
+	
+	AT_RoleLevel,			//主角等级
+	AT_PetLevel,			//宠物等级
+	
+	AT_AttackLevel,			//攻击等级
+	AT_DefenseLevel,		//防御等级
+	AT_AgileLevel,			//敏捷等级
+	AT_WearCrystal,			//装备水晶
+	AT_WearAccessories,     //装备饰品
+	
+	AT_TotalDamage,         //总伤害量
+	AT_TotalTreatment,      //总治疗量
+	AT_HasSkillNum,			//拥有技能个数
+	AT_BabySkill,           //宠物技能 
+	
+	AT_CatchPet,			//捉宠物
+	AT_RecruitPartner,      //招募伙伴
+	AT_PartnerCard,         //获得伙伴卡
+	AT_PartnersUpgradeGreen,     //伙伴卡升级
+	AT_PartnersUpgradeBlue,     //伙伴卡升级
+	AT_PartnersUpgradePurple,     //伙伴卡升级
+	AT_PartnersUpgradeGold,     //伙伴卡升级
+	AT_PartnersUpgradeOrangle,     //伙伴卡升级
+	AT_PartnersUpgradePink,     //伙伴卡升级
+	
+	AT_QualifyingAdvanced,  //jjc排位进阶
+	AT_ArenaWin,            //竞技场获胜
+	AT_KillMonster,			//击杀怪物
+	AT_KillBoss,			//击杀boss
+	AT_KillPlayer,         	//击败对手
+	AT_MakeEquipment,       //制造装备
+	AT_Reward50,			//成就进度50%
+	
+	//下面没添加
+	AT_EverydayActivities,  //日常活动
+	AT_Sign,				//登陆
+	AT_Wanted,				//通缉任务
+	AT_Copy30,				//副本30
+	AT_Copy40,				//副本40
+	AT_Blood,				//自动补血
+	AT_Magic,				//自动补魔
+	AT_Bag,					//仓库
+	AT_PetBag,				//宠物仓库
+	AT_GoodMake,			//绝品装备
+	AT_PetIntensive,		//宠物强化
+	AT_PetHuman,			/// 人形
+	AT_PetInsect,			/// 昆虫
+	AT_PetPlant,			/// 植物
+	AT_PetExtra,			/// 特殊
+	AT_PetDragon,			/// 龙
+	AT_PetAnimal,			/// 野兽
+	AT_PetFly,				/// 飞行
+	AT_PetUndead,			/// 不死
+	AT_PetMetal,			/// 金属
+	AT_Home,				/// 家族
+	AT_CollectMaterial,     //采集材料
+	AT_Friend,              //好友 
+	AT_Billboard,           //排行榜
+	AT_OwnConis,			//身上拥有金币
+	AT_MagicEquip,			//神器等级
+	AT_RunesLevel,			//身上装备的符文总等级
+	AT_Max,
+};
+
+enum CategoryType
+{
+  ACH_All,
+  ACH_Growup,
+  ACH_Battle,
+  ACH_Pet,
+  ACH_Partner,
+  ACH_Illustrations,
+  ACH_Max,
+};
+enum ClassifyType
+{
+  SD_Debris,
+  SD_Data,
+  SD_Pet,
+  SD_Fashion,
+  SD_Diamond,
+  SD_1Ji,
+  SD_2Ji,
+};
+
+
+// 多功能随机点类型
+enum FunctionalPointType
+{
+	FPT_None,
+	FPT_Tongji,
+	FPT_Mogu,
+	FPT_Xiji,
+	FPT_Npc,
+	FPT_Max,
+};
+
+// 活动类型
+enum ActivityType
+{
+	ACT_None,
+	ACT_Tongji,
+	ACT_Mogu,
+	ACT_Richang,
+	ACT_Pet,
+	ACT_AlonePK,
+	ACT_TeamPK,
+	ACT_JJC,
+	ACT_Challenge,
+	ACT_Exam,
+	ACT_Copy,
+	ACT_Xuyuan,
+	ACT_Family_0,
+	ACT_Family_1,
+	ACT_Family_2,
+	ACT_Family_3,
+	ACT_Family_4,
+	ACT_Warrior,			///勇者选拔战活动
+	ACT_Money,
+	ACT_Rand,
+	ACT_Max,
+};
+
+enum MailType{
+	MT_Normal,
+	MT_System,
+};
+
+//指引历程类型
+enum HelpType
+{
+	HT_None,
+	HT_Money,     
+	HT_Diamond,
+	HT_Role,
+	HT_Baby,
+	HT_Employee,
+	HT_Skill,
+	HT_Exp,
+	HT_Magic,
+	HT_Equip,
+};
+
+enum GuildJob
+{					
+	GJ_None,
+	GJ_People, //<帮众
+	GJ_Minister, //精英
+	GJ_SecretaryHead, //长老	
+	GJ_VicePremier,		//<副帮主
+	GJ_Premier,			//<帮主
+	GJ_Max,
+};
+
+//列表修改标志
+enum ModifyListFlag
+{
+	MLF_Add,	           
+	MLF_Delete,
+	MLF_ChangeOnline,            //上线
+	MLF_ChangeOffline,			 //下线
+	MLF_ChangePosition,			 //职位改变
+	MLF_ChangeContribution,		 //帮贡
+	MLF_ChangeLevel,
+	MLF_ChangeProfession,		 //职业改变
+	MLF_ChangeGuuildBattleCon,
+};
+
+/// 帮派建筑类型
+enum GuildBuildingType
+{
+	GBT_MIN,
+	GBT_Main,			///<主建筑(帮派等级)
+	GBT_Bank,		///<子建筑(帮派科技-增加人数)
+	GBT_Shop,		///<子建筑(帮派科技-增加物攻、法攻、生命、物防、法防)
+	GBT_Collection,		///<子建筑(帮派科技-增加身法、命中)
+	GBT_Goddess,
+	GBT_Progenitus,
+	GBT_MAX,
+};
+
+enum SellItemType{
+	SelIT_None,
+	SelIT_Max,
+};
+
+enum DiamondConfigClass{
+	DBT_Type_None,
+	DBT_Type_Mine_Famu, ///采集类型
+	DBT_Type_Mine_Caikuang, ///采集类型
+	DBT_Type_Mine_Zhibu, ///采集类型
+	DBT_Type_Max,
+};
+
+enum DiamondConfigType{
+	DBT_None,
+	DBT_Day,	//每日
+	DBT_Week,	//每周
+	DBT_Month,	//每月
+	DBT_Max,
+};
+
+enum FixType{
+	FT_None,
+	FT_Money,
+	FT_Diamond,
+	FT_Max,
+};
+
+enum StorageType{
+	ST_Item,
+	ST_Baby,
+};
+
+enum EmployeesBattleGroup
+{
+	EBG_None,
+	EBG_Free,
+	EBG_GroupOne,
+	EBG_GroupTwo,
+	EBG_Max,
+};
+
+//激活码礼包类型
+enum GiftType
+{
+	GFT_Bug,
+	GFT_UC1,
+	GFT_UC2,
+	GFT_Group,
+};
+
+// gm tools 协议
+///协议值 从上往下 从0开始
+///除特殊说明所有执行都会返回 GMT_Ret 结构
+enum GMT_Protocol
+{
+	GMT_None,	///<占位(此值无效)		0
+	GMT_GMCommand,	///<GM指令模块  	1
+	GMT_Notice,	///<公告模块			2
+	GMT_InsertMail,	///<邮件发放		4
+	GMT_QueryPlayer,
+	GMT_LoginActivity, ///累计登录活动
+	GMT_7Days,			//7日活动
+	GMT_Cards,			//翻牌
+	GMT_ExtractEmployee,
+	GMT_ChargeTotal,	//累计充值
+	GMT_ChargeEvery,	//单笔充值
+	GMT_DiscountStore,	//打折商店
+	GMT_Foundation,		//成长基金
+	GMT_LoginTotal,		//累计登录
+	GMT_OnlineReward,	//在线奖励
+	GMT_HotRole,	//热点角色
+	GMT_SelfChargeTotal,	//个人累计充值
+	GMT_SelfChargeEvery,	//个人单笔充值
+	GMT_MinGiftBag,		//小额礼包
+	GMT_DoScript,		//执行服务器命令
+	GNT_MakeOrder,		//模拟充值
+	GMT_Zhuanpan,		//转盘活动
+	GMT_IntegralShop,	//积分商店
+	GMT_QueryRoleList,		//查询账户下角色列表
+	GMT_QueryRMB,
+	GMT_QueryDia,
+	GMT_QueryMoney,
+	GMT_MAX,	///<上限(此值无效)		7
+};
+
+///GMT_GMCommand 协议 type 字段使用 从上往下 从0开始
+enum GMCommandType
+{
+	GMCT_NoTalk,		///<禁言		0
+	GMCT_Freeze,		///<冻结		1
+	GMCT_Seal,			///<封号		2	
+	GMCT_Kick,			///<踢人		3
+	GMCT_OpenTalk,		///<解除禁言	4
+	GMCT_Unseal,		///<解除封号	5
+	GMCT_SkipGuide,		//跳过新手引导
+	GMCT_AddMoney,
+	GMCT_AddDiamond,
+	GMCT_AddExp,
+	GMCT_OpenGM,
+	GMCT_CloseGM,
+	GMCT_DoScript,
+	GMCT_Max,
+};
+
+
+///GMT_Notice 协议 Broadcasttype 字段使用  从上往下 从0开始
+enum NoticeSendType
+{
+	NST_Immediately,		///<立即发送	0
+	NST_Timming,		///<定时发送	1
+	NST_Loop,		///<循环发送	2
+};
+
+enum InsertMailType
+{
+	IGMT_PlayerId, //角色ID 条件
+	IGMT_AllOnline,	
+	IGMT_AllRegist,
+};
+
+enum ItemContainerType
+{
+	ICT_EquipContainer,
+	ICT_BagContainer,
+};///行为记录事件
+enum UIBehaviorType{
+	UBT_None,
+	UBT_Bag,
+	UBT_Baby,
+	UBT_Employee,
+	UBT_SkillView,
+	UBT_SkillLearn,
+	UBT_Task,
+	UBT_Make,
+	UBT_Gather,
+	UBT_MagicItem,
+	UBT_Store,
+	UBT_Help,
+	UBT_Friend,
+	UBT_Email,
+	UBT_Auction,
+	UBT_Activity,
+	UBT_SignUp,
+	UBT_EmployessList,
+	UBT_EmployessPos,
+	UBT_EmployessTavern,
+	UBT_PlayerProperty,
+	UBT_Max,
+};
+
+ enum HelpRaiseType
+{    
+	HRT_None,
+    HRT_PlayerAddProp,  //角色加点
+    HRT_PlayerResetProp,//角色洗点
+    HRT_PlayerAddEvolve,//角色进阶
+    HRT_BabyAddProp,    //宠物加点
+    HRT_BabyReset,		//宠物还原
+    HRT_BabyStr,		//宠物强化
+    HRT_BabySkill,		//宠物技能
+    HRT_BabyChange,		//宠物改造
+    HRT_SkillAuto,		//技能挂机
+    HRT_SkillItem,		//技能草
+    HRT_EquipCompound,  //装备打造
+    HRT_EquipGem,		//装备宝石
+    HRT_EmployeeBuy,	//伙伴招募
+    HRT_EmployeePos,    //伙伴上阵
+    HRT_EmployeeSkill,	//伙伴技能
+    HRT_EmployeeEquip,  //伙伴装备
+    HRT_EmployeeEvolve, //伙伴进阶
+    HRT_MagicLevelUp,   //神器升级
+    HRT_MagicEvolve,    //神器进阶
+    HRT_Max,
+};
+
+enum SceneFilterType
+{
+	SFT_None,		//不筛选
+	SFT_Team,		//队伍以外筛选
+	SFT_Friend,		//好友以外筛选
+	SFT_Guild,		//帮派以外筛选
+	SFT_All,		//全部筛选
+	SFT_Max,
+};
+
+//采集开启状态类型
+enum GatherStateType
+{
+	GST_None,		//为开启
+	GST_Vulgar,		//低级
+	GST_Advanced,	//高级
+	GST_Max,
+};
+
+//许愿类型
+enum WishType
+{
+	WIT_None,
+	WIT_Exp,
+	WIT_Money,
+	WIT_Baby,
+	WIT_Employee,
+	WIT_Max,
+};
+
+//运营活动类型
+enum ADType
+{
+	ADT_None,
+	ADT_7Days,			//7日活动
+	ADT_Cards,			//翻牌
+	ADT_ChargeTotal,	//累计充值
+	ADT_ChargeEvery,	//单笔充值
+	ADT_DiscountStore,	//打折商店
+	ADT_Foundation,		//成长基金
+	ADT_LoginTotal,		//累计登录
+	ADT_OnlineReward,	//在线奖励
+	ADT_HotRole,	//热点角色
+	ADT_SelfChargeTotal,	//个人累计充值
+	ADT_SelfChargeEvery,	//个人单笔充值
+	ADT_SelfDiscountStore,	//个人打折商店
+	ADT_BuyEmployee,	//抽伙伴
+	ADT_PhoneNumber,
+	ADT_Level,
+	ADT_Sign,   
+	ADT_GiftBag,		//小额礼包
+	ADT_Zhuanpan,		//转盘活动
+	ADT_IntegralShop,	//积分商店
+	ADT_Max,
+};
+
+//伙伴任务
+enum EmployeeSkillType{
+	EKT_GroupDamage,			//群体伤害
+	EKT_DeadlyDamage,			//致命爪牙
+	EKT_BattleTimeLimit,		//限时战斗
+	EKT_Thump,					//重击
+	EKT_SiegeDamage,			//爪牙围攻
+	EKT_SuperMagic,				//强力法术
+	EKT_Debuff,					//减益状态
+	EKT_PhysicalDefense,		//物理防御
+	EKT_Max,			
+};
+//伙伴任务品质
+enum EmployeeQuestColor{
+	EQC_White,		//白
+	EQC_Blue,		//蓝
+	EQC_Purple,		//紫
+	EQC_Max,
+};
+
+//伙伴任务状态
+enum EmployeeQuestStatus{
+	EQS_None,		///只是被刷新
+	EQS_Running,	///正在进行中
+	EQS_Complate,	//完成
+};
+
+//机器人行动类型
+enum RobotActionType
+{
+	RAT_None,
+	RAT_Resting,
+	RAT_Move,
+	RAT_QuestMove,
+	RAT_TeamMove,
+	RAT_Max,
+};

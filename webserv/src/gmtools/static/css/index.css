@@ -1,0 +1,256 @@
+/*表单*/
+body{
+	min-height: 800px;
+}
+.hide{
+	display:none;
+}
+.show{
+	display:block;
+}
+.input input{
+	height:35px;
+}
+input[type="date"],input[type="time"]{
+	line-height: 21px;
+}
+/*.hs,.his{
+	margin-bottom:20px;
+}*/
+.form{
+	margin-bottom:10px;
+}
+/*服务器*/
+.fieldset,.fieldset1{
+	margin-bottom:10px;
+}
+.legend,.legend1{
+	margin-bottom:10px;
+}
+.sevs_types,.sevs_type{
+	padding:5px;display:none;
+}
+.sevs_types li,.sevs_type li{
+	list-style:none;cursor:pointer;
+}
+.sevs_types li:hover,.sevs_type li:hover{
+	background:#eee;
+}
+.sevs_types li input[type="checkbox"],.sevs_type li input[type="radio"]{
+	margin-left:20px;margin-right:20px;
+}
+.sevs_input p,.sevs_input span,.sevs_inputs p,.sevs_inputs span{
+	line-height:35px;margin-left:10px;
+}
+
+/*历史查询*/
+
+
+.w_nav{
+	margin-top:4px;
+}
+.nav_ul li{
+	 text-align:center;
+	 margin-top:10px;
+}
+.nav_ul{
+	margin-bottom:0;
+}
+.nav_ul li form input[type='button']{
+	width:320px;padding:5px; border:0;
+}
+.bg{
+	background:#444;color:#fff;border:1px  solid   #444；
+}
+/*登录*/
+.form-signin { 
+ 	max-width: 330px;
+ 	padding: 15px;
+    margin: 0 auto;
+ }
+.form-signin .form-signin-heading,.form-signin .checkbox {
+	margin-bottom: 10px;
+  }
+ .form-signin .checkbox {
+      font-weight: normal;
+  }
+ .form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+ }
+ .form-signin .form-control:focus {
+     z-index: 2;
+  }
+ .form-signin input[type="text"],.form-signin input[type="password"] {
+        margin-bottom: 5px;
+   }
+/*运营活动*/
+#activity-1 label,#activity-2 label,#activity-3 label,#activity-4 label,#activity-5 label,#activity-6 label{
+	width:120px;text-align:center;
+}
+.colors{
+	background:#555;color:#fff;
+}
+  /* 运营活动添加功能 */
+ .btable{
+    border:1px solid #ddd;
+  }
+/*.btable tbody tr:first-child td{
+	padding:8px;
+  }*/
+  .btable tbody tr td{
+    border-right:1px solid #ddd;padding:3px;
+  }
+  .btable tr td:last-child{
+    border-right:0;
+  }
+.btable .w_wid input[type="text"]{
+	width:200px;margin:3px;
+}
+.btable tr td:first-child,.btable tr td:last-child,.btable tr .q_wid{
+	vertical-align: inherit;
+}
+.btable tr td:last-child input[type="checkbox"]{
+	width:20px;height:20px;
+}
+
+/*小额礼包*/
+#Money input[type="radio"]{
+	width:20px;height:20px;vertical-align: sub;
+}
+#Money label{
+	font-size:25px;margin-right:20px;
+}
+
+
+/*数据统计*/
+/*.t_table,.b_table{
+	border: 1px solid #ddd;text-align-last: center;
+}*/
+#orders_button,#pay_button,.w_btn{
+	float:right;margin-right:10px;
+	height:15px;height: 33px; 
+	border-radius: 5px;border: 1px solid #999;
+	padding:0 10px;
+}
+.sjx{
+	 width:0; 
+    height:0; 
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:5px solid #000;
+	position:absolute;
+	top:75px;
+	right:285px;
+}
+
+.pay_sjx{
+	 width:0; 
+    height:0; 
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:5px solid #000;
+	position:absolute;
+	top:75px;
+	right:60px;
+}
+/*付费统计*/
+.w_menu li{
+	text-indent:1em;
+}
+/*订单统计设置*/
+.w_tab table{
+	border:1px solid #ccc;border-top:0;
+}
+.w_tab table tbody tr td{
+	border:1px solid #ccc;
+}
+.w_tab table tbody tr td:first-child,.w_tab table tbody tr td:nth-child(2){
+	border-top:0;
+}
+
+/*左侧导航*/
+
+.w_sidebar{
+	position:absolute;padding-top:0;/*background:#ddd;color:#428bca;*/
+}
+.w_sidebar ul li:hover,.nav_ul li form input[type='button']:hover{
+	background:#fff;color:#428bca;
+}
+.ul{
+	margin-bottom:0;margin-top:10px;
+}
+/*渠道*/
+.tbody tr,.Channel_tbody tr{
+	border:1px solid #999;
+}
+.tbody tr td,.Channel_tbody tr td{
+	border-right:1px solid #999;
+}
+.details{
+	margin-top:5px;
+}
+
+.Channel_tbody tr td input[type="text"]{
+	width:100%;
+}
+/*cdk查询*/
+/*.f_ul{
+	float:right;
+	margin-right:10px;
+}
+.f_ul li{
+	padding:5px 10px;
+	list-style:none;
+	float:left;
+	border:1px solid #999;
+	line-height:20px;
+	text-align:center;
+	background:#eee;
+	margin-left:10px;
+	cursor:pointer;
+}*/
+.faceShow{
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+.faceShow span{
+	line-height:10px;
+	padding:5px;
+	width:10%;
+	text-align:center;
+	border:1px #000000 solid;
+	
+}
+#faceContent{
+	width:800px;
+	border:1px #CCCCCC solid;
+	display:none;
+	border-radius:5px;
+}
+#clipDIV ul{
+	width:600px;
+	margin:0 auto;
+}
+.detatable tr td{
+	border:1px solid #333;
+	cursor:pointer;
+}
+.detatable tr td input{
+	cursor:pointer;
+}
+
+
+/*游服操作  渠道版本管理*/
+.CV_body ul li{
+	list-style:none;
+	float:left;
+	margin-left:10px;
+	padding:10px 0;
+}

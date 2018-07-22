@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="us">
+	{{template "header.html" .}}
+	
+
+		<div class="ui-widget">
+			<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+					<strong>SUCCESS:</strong> 成功 <br>
+					{{with  .Param }}
+						<strong>ACCID  :</strong>{{ printf "%s" .AccId }} <br>
+						<strong>ID  :</strong>{{ printf "%d" .Id }} <br>
+						<strong>名称 :</strong>{{ printf "%s" .Name }} <br>
+						<strong>帮派 :</strong>{{ printf "%d" .Guild}} <br>
+						<strong>等级 :</strong>{{ printf "%d" .Level }} <br>
+						<strong>经验 :</strong>{{ printf "%d" .Exp }} <br>
+						<strong>金币 :</strong>{{ printf "%d" .Gold }} <br>
+						<strong>钻石 :</strong>{{ printf "%d" .Money }} <br>
+						<strong>水晶 :</strong>{{ printf "%d" .MagicCurrency }} <br>
+						<strong>职业 :</strong>{{ printf "%d" .Prof }} <br>
+						<strong>职业等级 :</strong>{{ printf "%d" .ProfLevel }} <br>
+						<strong>引导进度 :</strong>{{ printf "%d" .Guide }} <br>
+						
+						
+						<strong>已接任务列表:</strong><br>
+						{{range .CurrentQuest}}
+							&nbsp&nbsp&nbsp{{ printf "%d" .}}<br>
+						{{end}}
+						
+						<strong>技能列表:</strong><br>
+						{{range .Skills}}
+							&nbsp&nbsp&nbsp{{ printf "(ID :%d,等级:%d,经验:%d)" .Id  .Level .Exp}}<br>
+						{{end}}
+						
+						<strong>背包列表:</strong><br>
+						{{range .BagItems}}
+							&nbsp&nbsp&nbsp{{ printf "(ID :%d,堆叠:%d)" .Id .Stack}}<br>
+						{{end}}
+						
+						<strong>宠物列表:</strong><br>
+						{{range .Babies}}
+							&nbsp&nbsp&nbsp{{ printf "(ID :%d,名字:%s,等级:%d,经验:%d,强化:%d," .Id .Name .Level .Exp .StrongLevel}}
+							档位列表:
+							{{range .Gears}}
+								&nbsp{{printf "%d" .}}
+							{{end}})<br>
+							&nbsp&nbsp&nbsp&nbsp技能列表:<br>
+							{{range .Skills}}
+								&nbsp&nbsp&nbsp&nbsp&nbsp{{ printf "(ID :%d,等级:%d,经验:%d)" .Id .Level .Exp}}<br>
+							{{end}}
+						{{end}}
+						
+						<strong>佣兵列表:</strong><br>
+						{{range .Emplyees}}
+							&nbsp&nbsp&nbsp{{ printf "(ID :%d,名字:%s,等级:%d,经验:%d,颜色:%d)" .Id .Name .Level .Exp .Color}}<br>
+						{{end}}
+					{{ end }}
+				</p>
+			</div>
+		</div>
+
+
+</html>

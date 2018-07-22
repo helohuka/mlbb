@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: d519d5bfb144b1c4cbdc5e9985239b91
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip02
+    100002: Bip02 Head
+    100004: Bip02 L Calf
+    100006: Bip02 L Foot
+    100008: Bip02 L Thigh
+    100010: Bip02 Neck
+    100012: Bip02 Neck1
+    100014: Bip02 Pelvis
+    100016: Bip02 R Calf
+    100018: Bip02 R Foot
+    100020: Bip02 R Thigh
+    100022: Bip02 Spine
+    100024: Bone0001
+    100026: Bone001
+    100028: Bone001(mirrored)
+    100030: Bone002
+    100032: Bone002(mirrored)
+    100034: Bone003
+    100036: Bone003(mirrored)
+    100038: Bone004
+    100040: Bone004(mirrored)
+    100042: Bone006
+    100044: Bone006(mirrored)
+    100046: Bone008
+    100048: Bone009
+    100050: Bone010
+    100052: Bone011
+    100054: Bone011 1
+    100056: Bone013
+    100058: Bone013(mirrored)
+    100060: Bone014
+    100062: Bone014(mirrored)
+    100064: Bone015
+    100066: Bone015(mirrored)
+    100068: //RootNode
+    400000: Bip02
+    400002: Bip02 Head
+    400004: Bip02 L Calf
+    400006: Bip02 L Foot
+    400008: Bip02 L Thigh
+    400010: Bip02 Neck
+    400012: Bip02 Neck1
+    400014: Bip02 Pelvis
+    400016: Bip02 R Calf
+    400018: Bip02 R Foot
+    400020: Bip02 R Thigh
+    400022: Bip02 Spine
+    400024: Bone0001
+    400026: Bone001
+    400028: Bone001(mirrored)
+    400030: Bone002
+    400032: Bone002(mirrored)
+    400034: Bone003
+    400036: Bone003(mirrored)
+    400038: Bone004
+    400040: Bone004(mirrored)
+    400042: Bone006
+    400044: Bone006(mirrored)
+    400046: Bone008
+    400048: Bone009
+    400050: Bone010
+    400052: Bone011
+    400054: Bone011 1
+    400056: Bone013
+    400058: Bone013(mirrored)
+    400060: Bone014
+    400062: Bone014(mirrored)
+    400064: Bone015
+    400066: Bone015(mirrored)
+    400068: //RootNode
+    7400000: dead
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: dead
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip02
+        weight: 1
+      - path: Bip02/Bip02 Pelvis
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf/Bip02 L Foot
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Neck1
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Neck1/Bip02 Head
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Neck1/Bip02 Head/Bone011
+          1
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf/Bip02 R Foot
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bone001
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bone001/Bone002
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bone001/Bone002/Bone003
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bone001/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bone001/Bone002/Bone003/Bone006
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bone001(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bone001(mirrored)/Bone002(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bone001(mirrored)/Bone002(mirrored)/Bone003(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bone001(mirrored)/Bone002(mirrored)/Bone003(mirrored)/Bone004(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bone001(mirrored)/Bone002(mirrored)/Bone003(mirrored)/Bone006(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bone008
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bone008/Bone009
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bone008/Bone009/Bone010
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bone008/Bone009/Bone010/Bone011
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bone013
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bone013/Bone014
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bone013/Bone014/Bone015
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bone013(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bone013(mirrored)/Bone014(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bone013(mirrored)/Bone014(mirrored)/Bone015(mirrored)
+        weight: 1
+      - path: Bone0001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

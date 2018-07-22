@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>法兰城的回忆【运营活动】</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  	<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-3.3.2.min.js"></script>
+	 <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+	<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+	
+	<script src="../js/date.js"></script>
+    <script src="../js/js.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../css/navbar-static-top.css" rel="stylesheet">
+    <link href="../css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+	<script>
+		
+		if(sessionStorage.getItem("type")!=2){
+		window.location.href="index.html" //证明不是用户登录的，跳转到你需要的页面；
+		};
+
+	</script>
+  	</head>
+	  <body>
+	    <!-- Static navbar -->
+	    <nav class="navbar navbar-inverse navbar-static-top" role="navigation" >
+	      <div class="container">
+	        <div id="navbar" class="navbar-collapse collapse" style="width:1401px;">
+	          <ul class="nav navbar-nav ou">
+	            <li><a href="manage.html" >管理功能 </a></li>
+	            <li><a href="chat.html" >聊天查询</a></li>
+	            <li class="active"><a href="operative.html">运营活动</a></li>
+	            <li><a href="role.html">角色查询</a></li>
+	            <li><a href="history.html">历史公告邮件/活动状态查询</a></li>
+	            <li><a href="gm.html" >GM功能</a></li>
+	            <li><a href="statistic.html" >数据统计</a></li>
+	            <li><a href="user.html" >用户统计</a></li>
+				
+				
+	          </ul>
+	            <button  type="button" id="Admin_btn" class="btn btn-default" style="margin-top:8px;margin-left:100px;">超级管理员</button>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </nav>
+	    <!-- 导航结束 -->
+	    <div class="container-fluid">
+	       <div class="row">
+		        <div class="col-sm-3 col-md-2 sidebar w_sidebar">
+			        <ul class="nav nav-sidebar ul">
+			            <li class='active logo'><a href="#">登录活动</a></li>
+			            <li class="recharge"><a href="#">累积充值</a></li>
+			            <li class="shop"><a href="#">打折商店</a></li>
+			            <li class="Singl"><a href="#">单笔充值</a></li>
+			            <li class="partner"><a href="#">热点伙伴</a></li>
+			            <li class=" finde"><a href="#">顶级招募</a></li>
+						<li class=" money"><a href="#">小额礼包</a></li>
+						<li class=" choujiang"><a href="#">抽奖活动</a></li>
+						<li class=" shop"><a href="#">积分商店</a></li>
+						<li class=" shop"><a href="#">添加礼包</a></li>
+			        </ul>
+		        </div>
+	        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main tab">
+	          <!-- 登录活动 -->
+	            <div id="activity-1" aria-labelledby="ui-id-31" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content show" aria-hidden="false" style="display: block;">
+		            <form id="activity" >
+		                <div>  
+			                <fieldset class="fieldset">
+			                    
+			                </fieldset>  
+			                <fieldset>
+			                    <legend>时间参数</legend>
+			                    <div id="login_activity_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                    
+								<label for="low_time1" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动开始时间</label>
+						        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+						            <input id="low_time1" name="low_time1" class="form-control" size="16" type="text" value="" readonly>
+						            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+						         </div>
+								<label for="low_time1" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动关闭时间</label>
+								 <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+						            <input id="close_time1" name="close_time1" class="form-control" size="16" type="text" value="" readonly>
+						            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+						         </div>
+								
+			                </fieldset>
+			                <fieldset style="margin-top:10px;">
+			                    <legend>参数</legend><br>
+			                    <div id="login_activity_div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <table class="table btable login_table" id="tab16" >
+			                          <tbody>
+											<tr align="center">
+					                            <td width="18%">天数</td>
+					                            <td width="18%">奖励</td>
+					                            <td width="18%">数量</td>
+					                            <td width="18%">选择</td>
+					                        </tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb0" value="1"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  id="ckab1" name="ckab1" value="5504"/>
+													<input  type="text" name="ckab2" value="1000"/>
+													<input  type="text" name="ckab3" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb1" value="1"/>
+													<input  type="text" name="ckeb2" value="1"/>
+													<input  type="text" name="ckeb3" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb1" value="2"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab4" value="5526"/>
+													<input  type="text" name="ckab5" value="1000"/>
+													<input  type="text" name="ckab6" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb4" value="1"/>
+													<input  type="text" name="ckeb5" value="1"/>
+													<input  type="text" name="ckeb6" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb2" value="3"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab7" value="5046"/>
+													<input  type="text" name="ckab8" value="1000"/>
+													<input  type="text" name="ckab9" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb7" value="1"/>
+													<input  type="text" name="ckeb8" value="1"/>
+													<input  type="text" name="ckeb9" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb3" value="4"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab10" value="5527"/>
+													<input  type="text" name="ckab11" value="1000"/>
+													<input  type="text" name="ckab12" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb10" value="1"/>
+													<input  type="text" name="ckeb11" value="1"/>
+													<input  type="text" name="ckeb12" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb4" value="5"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab13" value="5047"/>
+													<input  type="text" name="ckab14" value="1000"/>
+													<input  type="text" name="ckab15" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb13" value="1"/>
+													<input  type="text" name="ckeb14" value="1"/>
+													<input  type="text" name="ckeb15" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb5" value="6"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab16" value="5528"/>
+													<input  type="text" name="ckab17" value="1000"/>
+													<input  type="text" name="ckab18" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb16" value="1"/>
+													<input  type="text" name="ckeb17" value="1"/>
+													<input  type="text" name="ckeb18" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb6" value="7"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab19" value="5048"/>
+													<input  type="text" name="ckab20" value="1000"/>
+													<input  type="text" name="ckab21" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb19" value="1"/>
+													<input  type="text" name="ckeb20" value="1"/>
+													<input  type="text" name="ckeb21" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+			                        	</tbody>
+									</table>
+			                       	<!--<input type="button"  value="添加" class="ui-widget ui-controlgroup-item ui-button ui-corner-left w_add" role="button">-->
+			                        <input type="button"   value="删除" class="ui-widget ui-button ui-controlgroup-item w_remove" role="button">
+			                      	<input id="login_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+									<input id="log_btn" type="button" value="导入" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+			                    </div>
+		                 	</fieldset>
+		                </div>
+		            </form>
+	            </div>
+	            <!-- 累积充值 -->
+	            <div id="activity-2" aria-labelledby="ui-id-32" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+	               <form id="accumulate_recharge" >
+	                   <div>
+		                    <fieldset class="fieldset">
+			                    
+			                </fieldset>  
+		                    <fieldset>
+		                        <legend>时间参数</legend>
+		                        <div id="accumulate_recharge_div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+		                         
+									<label for="appointed_day" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">指定时间开启</label>
+							        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+							            <input id="appointed_day" name="appointed_day1" class="form-control" size="16" type="text" value="" readonly>
+							            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+							         </div>
+									<label for="close_day" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动关闭时间</label>
+							        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+							            <input id="close_day" name="close_day1" class="form-control" size="16" type="text" value="" readonly>
+							            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+							         </div>
+		                        </div>
+		                    </fieldset> 
+		                    <fieldset style="margin-top:10px;">
+		                        <legend>累积充值档次</legend>
+		                        <div id="accumulate_recharge_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+		                            <table id="tab" class="table btable accumulate_table">
+		                             <tbody>
+										<tr align="center">
+				                            <td width="20%">金额</td>
+				                            <td width="20%">奖励</td>
+				                            <td width="20%">数量</td>
+				                            <td width="20%">选择</td>
+			                            </tr>
+										<tr align="center">
+												<td width="18%"><input  type="text" name="ckb0" value="60"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab1" value="1757"/>
+													<input  type="text" name="ckab2" value="1000"/>
+													<input  type="text" name="ckab3" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb1" value="1"/>
+													<input  type="text" name="ckeb2" value="1"/>
+													<input  type="text" name="ckeb3" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+										</tr>
+										<tr align="center">
+												<td width="18%"><input  type="text" name="ckb1" value="300"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab4" value="21350"/>
+													<input  type="text" name="ckab5" value="1000"/>
+													<input  type="text" name="ckab6" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb4" value="10"/>
+													<input  type="text" name="ckeb5" value="1"/>
+													<input  type="text" name="ckeb6" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb2" value="1000"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab7" value="5051"/>
+													<input  type="text" name="ckab8" value="1000"/>
+													<input  type="text" name="ckab9" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb7" value="1"/>
+													<input  type="text" name="ckeb8" value="1"/>
+													<input  type="text" name="ckeb9" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb3" value="2000"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab10" value="5529"/>
+													<input  type="text" name="ckab11" value="1000"/>
+													<input  type="text" name="ckab12" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb10" value="1"/>
+													<input  type="text" name="ckeb11" value="1"/>
+													<input  type="text" name="ckeb12" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb4" value="5000"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab13" value="3810"/>
+													<input  type="text" name="ckab14" value="1000"/>
+													<input  type="text" name="ckab15" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb13" value="1"/>
+													<input  type="text" name="ckeb14" value="1"/>
+													<input  type="text" name="ckeb15" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb5" value="10000"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab16" value="102026"/>
+													<input  type="text" name="ckab17" value="1000"/>
+													<input  type="text" name="ckab18" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb16" value="400"/>
+													<input  type="text" name="ckeb17" value="1"/>
+													<input  type="text" name="ckeb18" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb6" value="20000"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab19" value="102026"/>
+													<input  type="text" name="ckab20" value="1000"/>
+													<input  type="text" name="ckab21" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb19" value="800"/>
+													<input  type="text" name="ckeb20" value="1"/>
+													<input  type="text" name="ckeb21" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="ckb7" value="50000"/></td>
+												<td width="18%" class="w_wid">
+													<input  type="text"  name="ckab22" value="5069"/>
+													<input  type="text" name="ckab23" value="1000"/>
+													<input  type="text" name="ckab24" value="1000"/>
+												</td>
+												<td width="18%" class="w_wid">
+													<input  type="text" name="ckeb22" value="1"/>
+													<input  type="text" name="ckeb23" value="1"/>
+													<input  type="text" name="ckeb24" value="1"/>
+												</td>
+												<td width="18%">
+													<input class="w_check" type="checkbox" name="ckbc"/>
+												</td>
+											</tr>
+		                            </tbody></table>
+		                            <!--<input type="button"  value="添加" class="ui-widget ui-controlgroup-item ui-button ui-corner-left w_add" role="button">-->
+		                        	<input type="button"   value="删除" class="ui-widget ui-button ui-controlgroup-item w_remove" role="button">
+		                          	<input id="accumulate_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+									<input id="sed_btn" type="button" value="导入" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+		                        </div>
+		                    </fieldset> 
+	                    </div>      
+	                </form>
+	            </div>
+	            <!-- 打折商店 -->
+	            <div id="activity-3" aria-labelledby="ui-id-33" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+	                <form id="discount_store">
+		                <div>
+		                    <fieldset class="fieldset">
+			                    
+			                </fieldset> 
+		                    <fieldset>
+			                    <legend>时间参数</legend>
+			                    <div id="discount_store_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+										<label for="open_time" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">指定开启时间</label>
+								        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+								            <input id="open_time" name="open_time1" class="form-control" size="16" type="text" value="" readonly>
+								            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+								         </div>
+										<label for="close_time" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动关闭时间</label>
+								        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+								            <input id="close_time" name="close_time1" class="form-control" size="16" type="text" value="" readonly>
+								            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+								        </div>
+			                    </div>
+		                    </fieldset>
+		                    <fieldset style="margin-top:10px;">
+			                    <legend>商店内容</legend>
+			                    <div id="discount_store_div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <br>
+									<table  id="tab17" class="table btable discount_table">
+				                          <tbody><tr align="center" width="100px">
+				                            <td width="16%">道具ID</td>
+				                            <td width="16%">价格</td>
+				                            <td width="16%">折扣</td>
+				                            <td width="16%">限购</td>
+											<td width="16%">数量</td>
+				                            <td width="16%">选择</td>
+				                          </tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb0" value="21362"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab0" value="600"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb0" value="0.6"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb0" value="1"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb1" value="1723"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab1" value="800"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb1" value="0.5"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb1" value="1"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb2" value="4509"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab2" value="100"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb2" value="0.8"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb2" value="20"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb3" value="4510"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab3" value="40"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb3" value="0.8"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb3" value="50"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb4" value="5086"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab4" value="30"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb4" value="0.8"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb4" value="200"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb5" value="5044"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab5" value="20"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb5" value="0.9"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb5" value="100"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb6" value="5084"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab6" value="500"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb6" value="0.8"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb6" value="4"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb7" value="5085"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab7" value="500"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb7" value="0.8"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb7" value="4"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb8" value="5001"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab8" value="500"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb8" value="0.8"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb8" value="5"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb9" value="21347"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab9" value="400"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb9" value="0.9"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb9" value="10"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text" name="ckb10" value="3807"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckab10" value="300"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckeb10" value="0.8"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckcb10" value="20"/></td>
+											<td width="16%" class="w_wid wid"><input  type="text" name="ckdb" value="0"/></td>
+											<td width="16%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										
+				                        </tbody>
+									</table>
+			                        <!--<input type="button"  value="添加" class="ui-widget ui-controlgroup-item ui-button ui-corner-left w_add" role="button">-->
+			                        <input type="button"   value="删除" class="ui-widget ui-button ui-controlgroup-item w_remove" role="button">
+			                        <input id="discount_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+									<input id="third_btn" type="button" value="导入" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+			                    </div>  
+		                    </fieldset>
+		                </div>
+	                </form>
+	            </div>
+	            <!-- 单笔充值 -->
+	            <div id="activity-4" aria-labelledby="ui-id-34" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+		            <form id="single_recharge" >
+		                <div>
+		                    <fieldset class="fieldset">
+			                    
+			                </fieldset> 
+		                    <fieldset>
+		                        <legend>时间参数</legend>
+		                        <div id="single_recharge_div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+		                          
+									<label for="open_time" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">指定开启时间</label>
+							        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+							            <input id="open_time" name="open_time1" class="form-control" size="16" type="text" value="" readonly>
+							            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+							         </div>
+									<label for="close_time" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动关闭时间</label>
+							        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+							            <input id="close_time" name="close_time1" class="form-control" size="16" type="text" value="" readonly>
+							            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+							         </div>
+		                       </div>
+		                    </fieldset>
+		                    <fieldset style="margin-top:10px;">
+		                        <legend>单笔充值档次</legend>
+		                        <div id="single_recharge_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <table  id="tab1" class="table btable single_table">
+			                               <tbody><tr align="center">
+			                              <td width="20%">金额</td>
+			                              <td width="20%">奖励</td>
+			                              <td width="20%">数量</td>
+			                              <td width="20%">次数</td>
+			                              <td width="20%">选择</td>
+			                               </tr>
+										<tr align="center">
+											<td width="16%"><input  type="text"  name="ckb0" value="60"/></td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckab1" value="5520"/>
+												<input  type="text" name="ckab2" value="1000"/>
+												<input  type="text" name="ckab3" value="1000"/>
+											</td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckeb1" value="1"/>
+												<input  type="text" name="ckeb2" value="1"/>
+												<input  type="text" name="ckeb3" value="1"/>
+											</td>
+											<td width="16%" class="w_wid q_wid">
+												<input  type="text" name="ckcb" value="1"/>
+											</td>
+											<td width="16%" ><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text"  name="ckb1" value="300"/></td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckab4" value="5521"/>
+												<input  type="text" name="ckab5" value="1000"/>
+												<input  type="text" name="ckab6" value="1000"/>
+											</td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckeb4" value="1"/>
+												<input  type="text" name="ckeb5" value="1"/>
+												<input  type="text" name="ckeb6" value="1"/>
+											</td>
+											<td width="16%" class="w_wid q_wid">
+												<input  type="text" name="ckcb" value="1"/>
+											</td>
+											<td width="16%" ><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text"  name="ckb2" value="980"/></td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckab7" value="5522"/>
+												<input  type="text" name="ckab8" value="1000"/>
+												<input  type="text" name="ckab9" value="1000"/>
+											</td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckeb7" value="1"/>
+												<input  type="text" name="ckeb8" value="1"/>
+												<input  type="text" name="ckeb9" value="1"/>
+											</td>
+											<td width="16%" class="w_wid q_wid">
+												<input  type="text" name="ckcb" value="1"/>
+											</td>
+											<td width="16%" ><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text"  name="ckb3" value="1980"/></td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckab10"  value="5523"/>
+												<input  type="text" name="ckab11" value="1000"/>
+												<input  type="text" name="ckab12" value="1000"/>
+											</td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckeb10" value="1"/>
+												<input  type="text" name="ckeb11" value="1"/>
+												<input  type="text" name="ckeb12" value="1"/>
+											</td>
+											<td width="16%" class="w_wid q_wid">
+												<input  type="text" name="ckcb" value="1"/>
+											</td>
+											<td width="16%" ><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text"  name="ckb4" value="3280"/></td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckab13" value="5524"/>
+												<input  type="text" name="ckab14" value="1000"/>
+												<input  type="text" name="ckab15" value="1000"/>
+											</td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckeb13" value="1"/>
+												<input  type="text" name="ckeb14" value="1"/>
+												<input  type="text" name="ckeb15" value="1"/>
+											</td>
+											<td width="16%" class="w_wid q_wid">
+												<input  type="text" name="ckcb" value="1"/>
+											</td>
+											<td width="16%" ><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="16%"><input  type="text"  name="ckb5" value="6480"/></td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckab16" value="5525"/>
+												<input  type="text" name="ckab17" value="1000"/>
+												<input  type="text" name="ckab18" value="1000"/>
+											</td>
+											<td width="16%" class="w_wid ">
+												<input  type="text" name="ckeb16" value="1"/>
+												<input  type="text" name="ckeb17" value="1"/>
+												<input  type="text" name="ckeb18" value="1"/>
+											</td>
+											<td width="16%" class="w_wid q_wid">
+												<input  type="text" name="ckcb" value="1"/>
+											</td>
+											<td width="16%" ><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+			                        </tbody></table>
+			                        <!--<input type="button"  value="添加" class="ui-widget ui-controlgroup-item ui-button ui-corner-left w_add" role="button">-->
+			                        <input type="button"   value="删除" class="ui-widget ui-button ui-controlgroup-item w_remove" role="button">
+			                        <input id="single_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+									<input id="fourth_btn" type="button" value="导入" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+			                    </div>
+		                    </fieldset>
+		                </div>
+		            </form>
+	            </div>
+	            <!-- 热点伙伴 -->
+	            <div id="activity-5" aria-labelledby="ui-id-35" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+		           <form id="hotspot_partner">
+		                <div>
+		                    <fieldset class="fieldset">
+			                    
+			                </fieldset> 
+		                    <fieldset>
+			                    <legend>伙伴参数</legend>
+			                    <div id="hotspot_partner_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+									
+									<select id="types" name="partner_type" style="margin-left: 33px; width: 55px;height: 25px;margin-bottom:20px;">
+				                          
+				                        <option value="true" >是</option>
+				                            
+				                        <option value="false">否</option>
+				                            
+				                     </select>
+			                        <label for="partner_type" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-button ui-controlgroup-item ui-checkboxradio-label ui-corner-left" style="width:60px;"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"></span><span class="ui-checkboxradio-icon-space"> </span><span class="ui-controlgroup-label-contents">伙伴</span></label>                        
+			                        <br><br>
+									<label for="partner_opentime" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">指定开启时间</label>
+								    <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+								        <input id="opentime" name="opentime1" class="form-control" size="16" type="text" value="" readonly>
+								        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+								    </div>
+									<label for="closetime" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动关闭时间</label>
+								    <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+								        <input id="closetime" name="closetime1" class="form-control" size="16" type="text" value="" readonly>
+								        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+								     </div>
+			                        <label for="prop_id" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents">伙伴道具的ID</span></label>
+			                        <input id="prop_id" name="prop_id" class="ui-controlgroup-item" value="2025"><br><br>
+			                        <label for="partner_price" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents">热点伙伴价格</span></label>
+			                        <input id="partner_price" name="partner_price" class="ui-controlgroup-item" value="2000"><br><br>
+			                        <label for="prop_quantity" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">伙伴道具数量</span></label>
+			                        <input id="prop_quantity" name="prop_quantity" class="ui-controlgroup-item" value="0"><br><br>
+			                    </div>
+		                    </fieldset>
+		                    <fieldset style="margin-top:10px;">
+			                    <legend>参数</legend>
+			                    <div id="hotspot_partner_div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="purchased_number" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">玩家购买次数</span></label>
+			                        <input id="purchased_number" name="purchased_number" class="ui-controlgroup-item" value="10">
+			                        <input id="hotspot_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+			                    </div>
+		                    </fieldset> 
+		                </div>
+		            </form>
+	            </div>
+	            <!-- 抽伙伴伙伴 -->
+	            <div id="activity-6" aria-labelledby="ui-id-36" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+	                <form id="extract_partner"> 
+	                  <div>
+	                    <fieldset class="fieldset">
+			                    
+			                </fieldset> 
+	                    <fieldset>
+		                    <legend>时间参数</legend>
+		                    <div id="extract_partner_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+									<label for="opentime" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">指定开启时间</label>
+							        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+							            <input id="opentime" name="opentime1" class="form-control" size="16" type="text" value="" readonly>
+							            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+							         </div>
+									<label for="closetime" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动关闭时间</label>
+							        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+							            <input id="closetime" name="closetime1" class="form-control" size="16" type="text" value="" readonly>
+							            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+							         </div>
+		                    </div>
+	                    </fieldset>
+	                    <fieldset>
+		                    <legend>参数</legend>
+		                    <div id="extract_partner_div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+		                      	<table  id="tab12" class="table btable extract_table">
+			                        <tbody>
+										<tr align="center">
+					                        <td width="20%">需招募次数</td>
+					                        <td width="20%">奖励</td>
+					                        <td width="20%">数量</td>
+					                        <td width="20%">选择</td>
+				                         </tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="ckb0" value="5"/></td>
+											<td width="18%" class="w_wid">
+												<input  type="text"  name="ckab1" value="4511"/>
+												<input  type="text" name="ckab2" value="0"/>
+												<input  type="text" name="ckab3" value="0"/>
+											</td>
+											<td width="18%" class="w_wid">
+												<input  type="text" name="ckeb1" value="1"/>
+												<input  type="text" name="ckeb2" value="0"/>
+												<input  type="text" name="ckeb3" value="0"/>
+											</td>
+											<td width="18%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="ckb1" value="10"/></td>
+											<td width="18%" class="w_wid">
+												<input  type="text"  name="ckab4" value="4511"/>
+												<input  type="text" name="ckab5" value="0"/>
+												<input  type="text" name="ckab6" value="0"/>
+											</td>
+											<td width="18%" class="w_wid">
+												<input  type="text" name="ckeb4" value="1"/>
+												<input  type="text" name="ckeb5" value="0"/>
+												<input  type="text" name="ckeb6" value="0"/>
+											</td>
+											<td width="18%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="ckb2" value="20"/></td>
+											<td width="18%" class="w_wid">
+												<input  type="text"  name="ckab7" value="4511"/>
+												<input  type="text" name="ckab8" value="0"/>
+												<input  type="text" name="ckab9" value="0"/>
+											</td>
+											<td width="18%" class="w_wid">
+												<input  type="text" name="ckeb7" value="2"/>
+												<input  type="text" name="ckeb8" value="0"/>
+												<input  type="text" name="ckeb9" value="0"/>
+											</td>
+											<td width="18%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="ckb3" value="40"/></td>
+											<td width="18%" class="w_wid">
+												<input  type="text"  name="ckab10" value="5519"/>
+												<input  type="text" name="ckab11" value="0"/>
+												<input  type="text" name="ckab12" value="0"/>
+											</td>
+											<td width="18%" class="w_wid">
+												<input  type="text" name="ckeb10" value="1"/>
+												<input  type="text" name="ckeb11" value="0"/>
+												<input  type="text" name="ckeb12" value="0"/>
+											</td>
+											<td width="18%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="ckb4" value="60"/></td>
+											<td width="18%" class="w_wid">
+												<input  type="text"  name="ckab13" value="5519"/>
+												<input  type="text" name="ckab14" value="0"/>
+												<input  type="text" name="ckab15" value="0"/>
+											</td>
+											<td width="18%" class="w_wid">
+												<input  type="text" name="ckeb13" value="1"/>
+												<input  type="text" name="ckeb14"  value="0"/>
+												<input  type="text" name="ckeb15" value="0"/>
+											</td>
+											<td width="18%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="ckb5" value="80"/></td>
+											<td width="18%" class="w_wid">
+												<input  type="text"  name="ckab16" value="5519"/>
+												<input  type="text" name="ckab17" value="0"/>
+												<input  type="text" name="ckab18" value="0"/>
+											</td>
+											<td width="18%" class="w_wid">
+												<input  type="text" name="ckeb16" value="1"/>
+												<input  type="text" name="ckeb17" value="0"/>
+												<input  type="text" name="ckeb18" value="0"/>
+											</td>
+											<td width="18%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="ckb6" value="100"/></td>
+											<td width="18%" class="w_wid">
+												<input  type="text"  name="ckab19"  value="5519"/>
+												<input  type="text" name="ckab20"  value="0"/>
+												<input  type="text" name="ckab21"  value="0"/>
+											</td>
+											<td width="18%" class="w_wid">
+												<input  type="text" name="ckeb19"  value="1"/>
+												<input  type="text" name="ckeb20"  value="0"/>
+												<input  type="text" name="ckeb21"  value="0"/>
+											</td>
+											<td width="18%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="ckb7" value="130"/></td>
+											<td width="18%" class="w_wid">
+												<input  type="text"  name="ckab22" value="5519"/>
+												<input  type="text" name="ckab23" value="0"/>
+												<input  type="text" name="ckab24" value="0"/>
+											</td>
+											<td width="18%" class="w_wid">
+												<input  type="text" name="ckeb22" value="1"/>
+												<input  type="text" name="ckeb23" value="0"/>
+												<input  type="text" name="ckeb24" value="0"  />
+											</td>
+											<td width="18%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="ckb8" value="160"/></td>
+											<td width="18%" class="w_wid">
+												<input  type="text"  name="ckab25" value="5519"/>
+												<input  type="text" name="ckab26" value="0"/>
+												<input  type="text" name="ckab27" value="0"/>
+											</td>
+											<td width="18%" class="w_wid">
+												<input  type="text" name="ckeb25" value="1"/>
+												<input  type="text" name="ckeb26" value="0"/>
+												<input  type="text" name="ckeb27" value="0"/>
+											</td>
+											<td width="18%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="ckb9" value="200"/></td>
+											<td width="18%" class="w_wid">
+												<input  type="text"  name="ckab28" value="5519"/>
+												<input  type="text" name="ckab29" value="0"/>
+												<input  type="text" name="ckab30" value="0"/>
+											</td>
+											<td width="18%" class="w_wid">
+												<input  type="text" name="ckeb28" value="1"/>
+												<input  type="text" name="ckeb29" value="0"/>
+												<input  type="text" name="ckeb30" value="0"/>
+											</td>
+											<td width="18%"><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+			                        </tbody>
+								</table>
+		                        <!--<input type="button"  value="添加" class="ui-widget ui-controlgroup-item ui-button ui-corner-left w_add" role="button">-->
+		                        <input type="button"   value="删除" class="ui-widget ui-button ui-controlgroup-item w_remove" role="button">
+		                        <input id="extract_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+								<input id="fifth_btn" type="button" value="导入" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+		                    </div>
+	                    </fieldset>
+	                  </div>
+	                </form>
+	            </div>
+				 <!-- 小额礼包 -->
+	            <div id="activity-7" aria-labelledby="ui-id-36" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+	                <form id="Money_partner"> 
+		                <div>
+		                    <fieldset class="fieldset">
+			                    
+			                </fieldset> 
+		                    <fieldset class="money_int">
+			                    <legend>礼包道具</legend>
+			                    <div id="div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_1" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_1" name="itemId_1" type="text" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off" value="5086">
+			                        
+			                        <label for="stack_1" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_1" name="itemNum_1"  type="text" class="ui-controlgroup-item" value="10">
+			                    </div>
+			                  
+			                    <div id="div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_2" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_2" name="itemId_2" type="text" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off" value="5044">
+			                        <label for="stack_2" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_2" name="itemNum_2" type="text" class="ui-controlgroup-item" value="1">
+			                    </div>
+			                  
+			                    <div id="div_3" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_3" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_3" name="itemId_3" type="text" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off" value="5002">
+			                        <label for="stack_3" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_3" name="itemNum_3" type="text" class="ui-controlgroup-item" value="10">
+			                    </div>
+			
+			                    <div id="div_4" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_4" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_4" name="itemId_4" type="text" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off" value="1756">
+			                        <label for="stack_4" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_4" name="itemNum_4" type="text" class="ui-controlgroup-item" value="1">
+			                    </div>
+		                    </fieldset>
+							<fieldset style="margin-top:10px;">
+			                    <legend>时间</legend>
+			                    <div id="time" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+						                <label for="sinceStamp" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:73px;">开始时间</label>
+						                <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="float:left;">
+						                    <input id="sinceStamp" name="sinceStamp" class="form-control" size="16" type="text" value="" readonly>
+						                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+						                </div>
+										
+						                <label for="endStamp" class="col-sm-1 control-label" style="margin-top:5px;width:88px;">结束时间</label>
+						                <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+						                    <input id="endStamp" name="endStamp" class="form-control" size="16" type="text" value="" readonly>
+						                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+						                </div>
+						        </div>
+		                    </fieldset>
+							<fieldset>
+		                        <legend >是否已购买</legend>
+								<div id="Money" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix finda ">
+			                      	
+									<select id="types" name="isflag" style="margin-left: 33px; width: 175px;height: 25px;margin-bottom:20px;">
+			                          
+			                            <option value="true" >是</option>
+			                            
+			                            <option value="false">否</option>
+			                            
+			                        </select>
+								<!--<input id="t_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">-->
+								</div>
+		                    </fieldset>
+							<fieldset>
+		                       <legend >价格</legend>
+								<div id="Money" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix finda ">
+									<label for="price" class="ui-button ui-widget ui-controlgroup-item ui-checkboxradio-label ui-corner-left">
+										<span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"></span>
+										<span class="ui-checkboxradio-icon-space"></span>现价
+									</label>
+			                      	<input id="price" type="text" name="price"  value="1"   class="ui-checkboxradio ui-helper-hidden-accessible input">
+									
+									<label  for="oldprice" class="ui-button ui-widget ui-controlgroup-item ui-checkboxradio-label ui-corner-left">
+										<span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"></span>
+										<span class="ui-checkboxradio-icon-space"></span>原价
+									</label>
+									<input  id="oldprice" type="text" name="oldprice"  value="50"   class="ui-checkboxradio ui-helper-hidden-accessible input">
+									
+									<input id="money_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+									<input id="eight_btn" type="button" value="导入" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+								</div>
+		                    </fieldset>
+		                </div>
+	                </form>
+	            </div>
+				 <!-- 抽奖活动-->
+				<div id="activity-8" aria-labelledby="ui-id-31" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: none;">
+			        <form id="zhuanpan" >
+			                <div>  
+			                  <fieldset class="fieldset">
+			                    
+			                </fieldset>   
+			                  <fieldset>
+			                    <legend>时间参数</legend>
+			                    <div id="login_activity_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                    
+								<label for="low_time1" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动开始时间</label>
+						        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+						            <input id="low_time1" name="low_time1" class="form-control" size="16" type="text" value="" readonly>
+						            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+						         </div>
+								<label for="low_time1" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动关闭时间</label>
+								 <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+						            <input id="close_time1" name="close_time1" class="form-control" size="16" type="text" value="" readonly>
+						            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+						         </div>
+								
+			                  </fieldset>
+			                  <fieldset style="margin-top:10px;">
+			                    <legend>参数</legend><br>
+			                    <div id="login_activity_div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <table class="table btable zhuanpan_table" id="tab20" >
+			                          <tbody>
+											<tr align="center">
+					                            <td width="18%">zhuanpamID</td>
+					                            <td width="18%">奖励道具</td>
+					                            <td width="18%">奖励道具个数</td>
+					                            <td width="18%">奖励权重</td>
+												<td width="18%">最大产出数量</td>
+												<td width="18%"></td>
+					                        </tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id0" value="1"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid0" value="102067"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack0" value="1"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability0" value="5"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput0" value="2"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id1" value="2"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid1" value="3810"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack1" value="1"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability1" value="10"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput1" value="10"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id2" value="3"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid2" value="5050"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack2" value="1"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability2" value="200"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput2" value="0"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id3" value="4"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid3" value="4510"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack3" value="10"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability3" value="1100"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput3" value="0"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id4" value="5"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid4" value="3807"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack4" value="1"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability4" value="1100"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput4" value="0"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id5" value="6"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid5" value="4511"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack5" value="2"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability5" value="1100"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput5" value="0"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id6" value="7"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid6" value="5044"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack6" value="3"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability6" value="1100"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput6" value="0"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id7" value="8"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid7" value="5029"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack7" value="3"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability7" value="1885"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput7" value="0"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id8" value="9"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid8" value="5041"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack8" value="3"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability8" value="1100"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput8" value="0"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id9" value="10"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid9" value="102001"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack9" value="40"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability9" value="200"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput9" value="0"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id10" value="11"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid10" value="5086"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack10" value="3"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability10" value="1100"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput10" value="0"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+											<tr align="center">
+												<td width="18%"><input  type="text" name="id11" value="12"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemid11" value="4509"/></td>
+												<td width="18%" class="w_wid"><input  type="text"  name="itemstack11" value="2"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="probability11" value="1100"/></td>
+												<td width="18%" style="vertical-align: inherit;"><input  type="text" name="dailyoutput11" value="0"/></td>
+												<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+											</tr>
+			                        	</tbody>
+									</table>
+			                       <!--<input type="button"  value="添加" class="ui-widget ui-controlgroup-item ui-button ui-corner-left w_add" role="button">-->
+			                        <input type="button"   value="删除" class="ui-widget ui-button ui-controlgroup-item w_remove" role="button">
+			                      	<input id="cj_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+									<input id="sixth_btn" type="button" value="导入" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+			                    </div>
+			                  </fieldset>
+			            </div>
+			       </form>
+	        	</div>
+			 <!--商店 -->
+				<div id="activity-9" aria-labelledby="ui-id-31" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: none;">
+	              <form id="Integral_store" >
+	                <div>  
+		                <fieldset class="fieldset">
+			                    
+			             </fieldset>
+		                <fieldset>
+		                    <legend>时间参数</legend>
+		                    <div id="login_activity_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+		                    
+							<label for="low_time1" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动开始时间</label>
+					        <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+					            <input id="low_time1" name="low_time1" class="form-control" size="16" type="text" value="" readonly />
+					            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+					         </div>
+							<label for="low_time1" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:120px;">活动关闭时间</label>
+							 <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+					            <input id="close_time1" name="close_time1" class="form-control" size="16" type="text" value="" readonly />
+					            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+					         </div>
+		                </fieldset>
+		                <fieldset style="margin-top:10px;">
+		                    <legend>参数</legend><br>
+		                    <div id="login_activity_div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+		                        <table class="table btable Integral_table" id="tab21" >
+		                          	<tbody>
+										<tr align="center">
+				                            <td width="18%">ID</td>
+				                            <td width="18%">奖励道具ID</td>
+				                            <td width="18%">可购买次数</td>
+				                            <td width="18%">购买消耗</td>
+											<td width="18%"></td>
+				                        </tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id0" value="1"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid0" value="102078"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times0" value="1"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost0" value="4500"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id1" value="2"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid1" value="5001"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times1" value="10"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost1" value="100"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id2" value="3"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid2" value="5085"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times2" value="10"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost2" value="100"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id3" value="4"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid3" value="4510"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times3" value="100"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost3" value="10"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id4" value="5"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid4" value="4509"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times4" value="20"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost4" value="25"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id5" value="6"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid5" value="21364"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times5" value="20"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost5" value="30"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id6" value="7"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid6" value="5086"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times6" value="100"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost6" value="10"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id7" value="8"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid7" value="202012"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times8" value="100"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost7" value="10"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id8" value="9"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid8" value="1757"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times8" value="20"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost89" value="10"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id9" value="10"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid9" value="21347"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times9" value="10"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost9" value="80"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id10" value="11"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid10" value="21348"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times10" value="10"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost10" value="120"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										<tr align="center">
+											<td width="18%"><input  type="text" name="id11" value="12"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="itemid11" value="21349"/></td>
+											<td width="18%" class="w_wid"><input  type="text"  name="times11" value="10"/></td>
+											<td width="18%" style="vertical-align: inherit;"><input  type="text" name="cost11" value="160"/></td>
+											<td><input class="w_check" type="checkbox" name="ckbc"/></td>
+										</tr>
+										
+		                        	</tbody>
+								</table>
+		                       <!--<input type="button"  value="添加" class="ui-widget ui-controlgroup-item ui-button ui-corner-left w_add" role="button">-->
+		                        <input type="button"   value="删除" class="ui-widget ui-button ui-controlgroup-item w_remove" role="button">
+		                      	<input id="shop_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+								<input id="seventh_btn" type="button" value="导入" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+		                    </div>
+		                </fieldset>
+	                </div>
+	            </form>
+	        </div>
+			 <!-- 九游礼包 -->
+				<div id="activity-8" aria-labelledby="ui-id-36" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+	                <form id="Nine_partner"> 
+		                <div>
+		                    <!--<fieldset class="fieldset">
+			                    
+			                </fieldset>--> 
+		                    <fieldset style="margin-left: 27px;">
+			                    <legend>礼包道具</legend>
+			                    <div id="div_nine1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_num1" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_num1" name="itemId_1" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+			                        
+			                        <label for="stack_num1" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_num1" name="itemNum_1" class="ui-controlgroup-item">
+			                    </div>
+			                  
+			                    <div id="div_nine2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_num2" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_num2" name="itemId_2" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+			                        <label for="stack_num2" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_num2" name="itemNum_2" class="ui-controlgroup-item">
+			                    </div>
+			                  
+			                    <div id="div_nine3" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_num3" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_num3" name="itemId_3" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+			                        <label for="stack_num3" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_num3" name="itemNum_3" class="ui-controlgroup-item">
+			                    </div>
+			
+			                    <div id="div_nine4" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_num4" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_num4" name="itemId_4" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+			                        <label for="stack_num4" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_num4" name="itemNum_4" class="ui-controlgroup-item">
+			                    </div>
+		                    </fieldset>
+							<fieldset >
+			                  
+			                    <div id="div_nine" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix" >
+			                        <label for="item_num" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">领取参数</span></label>
+			                        <input id="item_num" name="num" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+			                        
+			                        <label for="stack_num" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right" ><span class="ui-controlgroup-label-contents"> kaid</span></label>
+			                        <input id="stack_num" name="kaid" class="ui-controlgroup-item">
+									
+			                    </div>
+								<label for="limit" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right" ><span class="ui-controlgroup-label-contents"> 领取限制</span></label>
+			                    <input id="limit" name="limit" class="ui-controlgroup-item">
+			                  	
+		                    </fieldset>
+							<fieldset>
+			                      <legend>邮件头</legend>
+			                        <div id="header" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix" style="margin-bottom:15px;">
+			                          <label for="title" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">标题</span></label>
+			                          <input id="title" name="title" class="ui-controlgroup-item">
+			                          <label for="sender" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">发件人</span></label>
+			                          <input id="sender" name="sender" class="ui-controlgroup-item">
+			                        </div>
+			                </fieldset>
+							<fieldset>
+			                      <legend>邮件内容</legend>
+			                      <textarea id="content" name="content" style="resize:none;width:100%;height:10em"></textarea>
+			                    </fieldset> 
+							<input id="nine_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button" />
+		                </div>
+	                </form>
+	            </div>
+	    </div>
+	</body>
+</html>

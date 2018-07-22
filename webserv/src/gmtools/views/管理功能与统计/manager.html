@@ -1,0 +1,452 @@
+<!--取得大区信息-->
+
+
+<!--系统公告-->
+{{define "system_notice"}}
+    <div>
+		<fieldset>
+			<legend>公告内容</legend>
+			<textarea id='system_notice_content' name='system_notice_content' style="resize:none;width:100%;height:20em"></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>参数</legend>
+			<div id="system_notice_content_param">
+				<label for="system_notice_title" class="ui-controlgroup-label">公告标题</label>
+				<input id="system_notice_title" name="system_notice_title" class="ui-controlgroup-item" />
+				<label for="system_notice_content_color" class="ui-controlgroup-label">公告颜色</label>
+				<input id="system_notice_content_color" name="system_notice_content_color" class="ui-controlgroup-item" />
+				<input type="submit" value="发送">
+			</div>
+		</fieldset>
+		<!--
+		<fieldset>
+			
+			<legend>历史系统公告查询</legend>
+			<div id="history_system_notice">
+				<label for="history_system_notice" class="ui-controlgroup-label">历史系统公告</label> 
+				<input id="history_system_notice" name="history_system_notice" class="ui-controlgroup-item" type="hidden" value="1"/>
+				<input type="button" onclick="history_system_notice_click()" value="查询">
+			</div>
+		</fieldset>
+		-->
+	</div>
+	
+{{end}}
+
+<!--区服公告-->
+{{define "service_notice"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "service_notice_%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "service_notice_serv_%d"  .Id }}" >{{ printf "%s" .Name }}</label>
+						<input type="checkbox" name="{{ printf "service_notice_serv_%d"  .Id }}" id="{{ printf "service_notice_serv_%d"  .Id }}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+		<fieldset>
+			<legend>公告内容</legend>
+			<textarea id='service_notice_content' name='service_notice_content' style="resize:none;width:100%;height:20em"></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>参数</legend>
+			<div id="service_notice_content_param">
+				<label for="service_notice_title" class="ui-controlgroup-label">公告标题</label>
+				<input id="service_notice_title" name="service_notice_title" class="ui-controlgroup-item" />
+				<label for="service_notice_content_color" class="ui-controlgroup-label">公告颜色</label>
+				<input id="service_notice_content_color" name="service_notice_content_color" class="ui-controlgroup-item" />
+				<input type="submit" value="发送">
+			</div>
+		</fieldset>
+		<!--
+		<fieldset>
+			
+			<legend>历史区服公告查询</legend>
+			<div id="history_service_notice">
+				<label for="history_service_notice" class="ui-controlgroup-label">历史区服公告</label>
+				<input id="history_service_notice" name="history_service_notice" class="ui-controlgroup-item" type="hidden" value="2" />
+				<input type="button" onclick="history_server_notice_click()" value="查询">
+			</div>
+		</fieldset>
+		-->
+	</div>
+	
+{{end}}
+
+<!--滚动公告-->
+{{define "roll_notice"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "roll_notice_%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "roll_notice_serv_%d" .Id}}" >{{ printf "%s" .Name }}</label>
+						<input type="checkbox" name="{{ printf "roll_notice_serv_%d" .Id}}" id="{{ printf "roll_notice_serv_%d" .Id}}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+		<fieldset>
+			<legend>公告内容</legend>
+			<textarea id='roll_notice_content' name='roll_notice_content' style="resize:none;width:100%;height:20em"></textarea>
+		</fieldset>	
+		<fieldset>
+			<legend>发送方式</legend>
+			<div id="roll_notice_send">
+				<select id="roll_notice_send_types" name="roll_notice_send_types">
+						{{range .RollNoticeSendTypes}}
+			  			<option value={{.Id}} {{if .IsSelected}} select="selected"{{end}}>{{.Value}}</option>
+			  			{{end}}
+				</select>
+			
+				<br /><br />
+				<label for="roll_notice_send_param" class="ui-controlgroup-label">时间参数</label>
+
+				<input id="roll_notice_send_param" class="ui-controlgroup-item" name="roll_notice_send_param_name0" type="date"  />
+				<input id="roll_notice_send_param" class="ui-controlgroup-item" name="roll_notice_send_param_name1" type="time"  /><br /><br />
+				<label for="roll_notice_send_param" class="ui-controlgroup-label">如果是循环发送添加</label>
+				<input id="roll_notice_send_param" class="ui-controlgroup-item" name="roll_notice_send_param_name4" type="date"  />
+				<input id="roll_notice_send_param" class="ui-controlgroup-item" name="roll_notice_send_param_name5" type="time"  />
+				<input id="roll_notice_send_param" class="ui-controlgroup-item" name="roll_notice_send_param_name3" />
+				<input type="submit" value="发送">
+			</div>
+				
+		</fieldset>
+		
+	</div>
+	<div>
+	<!--
+		<fieldset>
+			
+			<legend>历史滚动公告查询</legend>
+			<div id="history_roll_notice">
+				<label for="history_roll_notice" class="ui-controlgroup-label">历史滚动公告</label>
+				<input id="history_roll_notice" name="history_roll_notice" class="ui-controlgroup-item" type="hidden" value="3"/>
+				<input type="button" onclick="history_roll_notice_click()" value="查询">
+			</div>
+		</fieldset>
+		-->
+	</div>
+{{end}}
+
+<!--邮件发送-->
+{{define "send_mail"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "send_mail_%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "send_mail_serv_%d" .Id }}" >{{ printf "%s" .Name }}</label>
+						<input type="checkbox" name="{{ printf "send_mail_serv_%d" .Id }}" id="{{ printf "send_mail_serv_%d" .Id }}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+		<fieldset>
+			<legend>邮件头</legend>
+				<div id="send_mail_header">
+					<label for="send_mail_title" class="ui-controlgroup-label">标题</label>
+					<input id="send_mail_title" name="send_mail_title" class="ui-controlgroup-item"/>
+					<label for="send_mail_sender" class="ui-controlgroup-label">发件人</label>
+					<input id="send_mail_sender" name="send_mail_sender" class="ui-controlgroup-item"/>
+				</div>
+		</fieldset> 
+		<fieldset>
+			<legend>邮件内容</legend>
+			<textarea id='send_mail_content' name='send_mail_content' style="resize:none;width:100%;height:10em"></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>收件人</legend>
+			<textarea id='send_mail_recvers' name='send_mail_recvers' style="resize:none;width:100%;height:10em"></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>邮件道具</legend>
+			<div id="send_mail_item_div_1">
+				<label for="send_mail_item_1" class="ui-controlgroup-label">道具</label>
+				<input id="send_mail_item_1" name="send_mail_item_1" class="ui-controlgroup-item"></input>
+				
+				<label for="send_mail_item_stack_1" class="ui-controlgroup-label">堆叠</label>
+				<input id="send_mail_item_stack_1" name="send_mail_item_stack_1" class="ui-controlgroup-item" />
+			</div>
+	
+			<div id="send_mail_item_div_2">
+				<label for="send_mail_item_2" class="ui-controlgroup-label">道具</label>
+				<input id="send_mail_item_2" name="send_mail_item_2" class="ui-controlgroup-item"></input>
+				<label for="send_mail_item_stack_2" class="ui-controlgroup-label">堆叠</label>
+				<input id="send_mail_item_stack_2" name="send_mail_item_stack_2" class="ui-controlgroup-item" />
+			</div>
+	
+			<div id="send_mail_item_div_3">
+				<label for="send_mail_item_3" class="ui-controlgroup-label">道具</label>
+				<input id="send_mail_item_3" name="send_mail_item_3" class="ui-controlgroup-item"></input>
+				<label for="send_mail_item_stack_3" class="ui-controlgroup-label">堆叠</label>
+				<input id="send_mail_item_stack_3" name="send_mail_item_stack_3" class="ui-controlgroup-item" />
+			</div>
+
+			<div id="send_mail_item_div_4">
+				<label for="send_mail_item_4" class="ui-controlgroup-label">道具</label>
+				<input id="send_mail_item_4" name="send_mail_item_4" class="ui-controlgroup-item"></input>
+				<label for="send_mail_item_stack_4" class="ui-controlgroup-label">堆叠</label>
+				<input id="send_mail_item_stack_4" name="send_mail_item_stack_4" class="ui-controlgroup-item" />
+			</div>
+		
+			<div id="send_mail_item_div_5">
+				<label for="send_mail_item_5" class="ui-controlgroup-label">道具</label>
+				<input id="send_mail_item_5" name="send_mail_item_5" class="ui-controlgroup-item"></input>
+				<label for="send_mail_item_stack_5" class="ui-controlgroup-label">堆叠</label>
+				<input id="send_mail_item_stack_5" name="send_mail_item_stack_5" class="ui-controlgroup-item" />
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>等级限制</legend>
+			<div id="send_mail_level">
+				<label for="send_mail_low_level" class="ui-controlgroup-label">最低等级</label>
+				<input id="send_mail_low_level" name="send_mail_low_level" class="ui-controlgroup-item" />
+				<label for="send_mail_high_level" class="ui-controlgroup-label">最高等级</label>
+				<input id="send_mail_high_level" name="send_mail_high_level" class="ui-controlgroup-item" />
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>注册时间限制</legend>
+			<div id="send_mail_regist_time">
+				<label for="send_mail_regist_low_time" class="ui-controlgroup-label">最早注册</label>
+				<input id="send_mail_regist_low_time" name="send_mail_regist_low_time1" class="ui-controlgroup-item" type="date" />
+				<input id="send_mail_regist_low_time" name="send_mail_regist_low_time2" class="ui-controlgroup-item" type="time" />
+				<label for="send_mail_regist_high_time" class="ui-controlgroup-label">最晚注册</label>
+				<input id="send_mail_regist_high_time" name="send_mail_regist_high_time1" class="ui-controlgroup-item" type="date" />
+				<input id="send_mail_regist_high_time" name="send_mail_regist_high_time2" class="ui-controlgroup-item" type="time" />
+			</div>
+		</fieldset>
+		
+		<fieldset>
+			<legend>操作方式</legend>
+			<div id="send_mail_contorl">
+				<select id="send_mail_types" name="send_mail_types">
+					{{range .SendMailTypes}}
+		  			<option value={{.Id}} {{if .IsSelected}} select="selected"{{end}}>{{.Value}}</option>
+		  			{{end}}
+				</select>
+				<label for="send_mail_timmer" class="ui-controlgroup-label">定时</label>
+				<input id="send_mail_timmer" class="ui-controlgroup-item" type=" datetime" />
+				<input type="submit" name="send_mail_submit" value="发送">
+			</div>
+		</fieldset>
+	</div>
+	
+	<div>
+	<!--
+		<fieldset>
+			
+			<legend>历史邮件记录查询</legend>
+			<div id="history_send_mail_query">
+				<label for="history_send_mail_query" class="ui-controlgroup-label">历史邮件记录</label>
+				<input id="history_send_mail_query" name="history_send_mail_query" class="ui-controlgroup-item" type="hidden" value=""/>
+				<input type="button" onclick="history_insert_mail_click()" value="查询">
+			</div>
+		</fieldset>
+		-->
+	</div>
+	
+{{end}}
+
+<!--角色操作-->
+{{define "contorl_player"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "contorl_player_%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "contorl_player_serv_%d" .Id }}" >{{ printf "%s" .Name }}</label>
+						<input type="radio" name="contorl_player_radio" id="{{ printf "contorl_player_serv_%d" .Id }}" value="{{ printf "contorl_player_serv_%d" .Id }}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+		<fieldset >
+			<legend>角色操作</legend>
+			<div id="contorl_player_op">
+				<select id="contorl_player_type" name="contorl_player_type">
+							{{range .ControTypes}}
+							<option value={{.Id}} {{if .IsSelected}} select="selected"{{end}}>{{.Value}}</option>
+							{{end}}
+                </select><br/>
+				<label for="contorl_player_playerid" class="ui-controlgroup-label">角色ID</label>
+				<input id="contorl_player_playerid" name="contorl_player_playerid" class="ui-controlgroup-item"/><br/><br/><br/>
+				<label for="contorl_player_param" class="ui-controlgroup-label">参数</label>
+				<input id="contorl_player_param" name="contorl_player_param" class="ui-controlgroup-item"/>
+				<input type="submit" value="执行">
+			</div>
+		</fieldset >
+		
+	</div>
+{{end}}
+
+
+<!--角色查询
+{{define "query_player"}}
+	<div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "query_player_%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "query_player_serv_%d" .Id }}" >{{ printf "%s" .Name }}</label>
+						<input type="radio" name="query_player_radio" id="{{ printf "query_player_serv_%d" .Id }}" value="{{ printf "query_player_serv_%d" .Id }}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+		<fieldset >
+			<legend>角色查询</legend>
+			<div id="query_player_op">
+				<label for="query_player_playerid" class="ui-controlgroup-label">角色ID</label>
+				<input id="query_player_playerid" name="query_player_playerid" class="ui-controlgroup-item"/>
+				<input type="submit" value="执行">
+			</div>
+		</fieldset >
+	</div>
+{{end}}
+-->
+<div id="manager" >
+	<ul>
+		<li><a href="#manager-1">系统公告</a></li>
+		<li><a href="#manager-2">区服公告</a></li>
+		<li><a href="#manager-3">滚动公告</a></li>
+		<li><a href="#manager-4">邮件发送</a></li>
+		<li><a href="#manager-5">角色操作</a></li>
+		
+	</ul>
+	<div id="manager-1">
+		<form action="do_system_notice" method="post" target="_blank">
+			{{template "system_notice" .}}
+		</form>
+	</div>
+	<div id="manager-2">
+		<form action="do_server_notice" method="post" target="_blank">
+			{{template "service_notice" .}}
+		</form>
+	</div>
+	<div id="manager-3">
+		<form action="do_roll_notice" method="post" target="_blank">
+			{{template "roll_notice" .}}
+		</form>
+	</div>
+	<div id="manager-4">
+		<form action="do_insert_mail" method="post" target="_blank">
+			{{template "send_mail" .}}
+		</form>
+	</div>
+	<div id="manager-5">
+		<form action="do_contorl_player" method="post" target="_blank">
+			{{template "contorl_player" .}}
+		</form>
+	</div>
+	<!--<div id="manager-6">
+		<form action="do_query_player" method="post" target="_blank">
+			{{template "query_player" .}}
+		</form>
+	</div>
+	-->
+</div>
+
+<script  language="javascript" type="text/javascript">
+{{range $key, $val := .Servs}}
+	$( "{{ printf "#system_notice_%s" $key }}" ).controlgroup({"direction": "horizontal"});	
+	$( "{{ printf "#service_notice_%s" $key }}" ).controlgroup({"direction": "horizontal"});	
+	$( "{{ printf "#roll_notice_%s" $key }}" ).controlgroup({"direction": "horizontal"});	
+	$( "{{ printf "#send_mail_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	$( "{{ printf "#contorl_player_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	$( "{{ printf "#query_player_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+{{end}}
+
+	$("#service_notice_content_param").controlgroup({"direction": "horizontal"});
+	$("#system_notice_content_param").controlgroup({"direction": "horizontal"});
+	$( "#roll_notice_tabs" ).tabs();
+	$( "#roll_notice_send" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#send_mail_header" ).controlgroup({"direction": "horizontal"});
+	$( "#send_mail_level" ).controlgroup({"direction": "horizontal"});
+	$( "#send_mail_regist_time" ).controlgroup({"direction": "horizontal"});
+	$( "#send_mail_contorl" ).controlgroup({"direction": "horizontal"});
+	$( "#send_mail_item_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#send_mail_item_div_2" ).controlgroup({"direction": "horizontal"});
+	$( "#send_mail_item_div_3" ).controlgroup({"direction": "horizontal"});
+	$( "#send_mail_item_div_4" ).controlgroup({"direction": "horizontal"});
+	$( "#send_mail_item_div_5" ).controlgroup({"direction": "horizontal"});
+	//$( "#history_send_mail_query" ).controlgroup({"direction": "horizontal"});
+	//$( "#history_roll_notice" ).controlgroup({"direction": "horizontal"});
+	//$( "#history_service_notice" ).controlgroup({"direction": "horizontal"});
+	//$( "#history_system_notice" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#contorl_player_op" ).controlgroup({"direction": "horizontal"});
+	$( "#query_player_level" ).controlgroup({"direction": "horizontal"});
+	$( "#query_player_create_time" ).controlgroup({"direction": "horizontal"});
+	$( "#query_player_param" ).controlgroup({"direction": "horizontal"});
+	//$( "#query_player_op" ).controlgroup({"direction": "horizontal"});
+	
+var atcompsrc = [
+	{{range .Items}}
+		{{ printf "%s" .Value  }} ,
+	{{end}}
+]
+	
+	$("#send_mail_item_1").autocomplete({
+		source: atcompsrc
+	})
+	$("#send_mail_item_2").autocomplete({
+		source: atcompsrc
+	})
+	$("#send_mail_item_3").autocomplete({
+		source: atcompsrc
+	})
+	$("#send_mail_item_4").autocomplete({
+		source: atcompsrc
+	})
+	$("#send_mail_item_5").autocomplete({
+		source: atcompsrc
+	})
+
+	
+	$( "#manager" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#manager li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+
+	/*function history_system_notice_click(){
+		var id = Math.random();
+    	document.write('<form id="post' + id + '" name="post'+ id +'" action="do_system_notice_history" method="post">');
+   		document.write('<input type="hidden" name="type" value="system_notice" />');
+    	document.write('</form>');   
+    	document.getElementById('post' + id).submit();
+	}
+	
+	function history_server_notice_click(){
+		var id = Math.random();
+		window.location.href = 'history'    
+    	document.write('<form id="post' + id + '" name="post'+ id +'" target="_blank" method="post">');
+   		document.write('<input type="hidden" name="type" value="server_notice" />');
+    	document.write('</form>');
+		
+    	document.getElementById('post' + id).submit();
+	}
+	
+	function history_roll_notice_click(){
+		var id = Math.random();
+    	document.write('<form id="post' + id + '" name="post'+ id +'" action="history" method="post">');
+   		document.write('<input type="hidden" name="type" value="roll_notice" />');
+    	document.write('</form>');    
+    	document.getElementById('post' + id).submit();
+	}
+	
+	function history_insert_mail_click(){
+		var id = Math.random();
+    	document.write('<form id="post' + id + '" name="post'+ id +'" action="history" method="post">');
+   		document.write('<input type="hidden" name="type" value="insert_mail" />');
+    	document.write('</form>');    
+    	document.getElementById('post' + id).submit();
+	}*/
+</script >

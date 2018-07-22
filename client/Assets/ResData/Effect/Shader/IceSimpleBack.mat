@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: IceSimpleBack
+  m_Shader: {fileID: 4800000, guid: 92346ec92984e8f458f65ded91c9746d, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 88ff7575bffeb7e498b8c4ee156fe11a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: f20ef6394a329114c94d93a68ef967f8, type: 3}
+          m_Scale: {x: 2, y: 2}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DecalTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 7234e3ce533337647914227a57ac0779, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Cube
+        second:
+          m_Texture: {fileID: 8900000, guid: c1ad01f33e5dc4d40ae09cf74ba9d47f, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MainTexIce
+        second:
+          m_Texture: {fileID: 2800000, guid: 63a0af3f7d586b74988cc31f4d48ea53, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CutoutTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 5671b207587c31f44a6433f72fe759c2, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CutoutAlpha
+        second:
+          m_Texture: {fileID: 2800000, guid: 1abd47c73407ff745badc9a4b9633b48, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: 0
+      data:
+        first:
+          name: _Shininess
+        second: 1
+      data:
+        first:
+          name: _ReflectionStrength
+        second: 4.05357122
+      data:
+        first:
+          name: _Opacity
+        second: .321428597
+      data:
+        first:
+          name: _FPOW
+        second: 1
+      data:
+        first:
+          name: _R0
+        second: 1
+      data:
+        first:
+          name: _LightStr
+        second: 1
+      data:
+        first:
+          name: _OpacityMain
+        second: 0
+      data:
+        first:
+          name: _ClipRange
+        second: .767857134
+      data:
+        first:
+          name: _RimPower
+        second: 8
+      data:
+        first:
+          name: _ColorStrength
+        second: .267857134
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .557115257, g: .550335228, b: .639705896, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .963235319, g: .966531456, b: 1, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _ReflectColor
+        second: {r: .426470578, g: .572820187, b: 1, a: 1}
+      data:
+        first:
+          name: _RimColor
+        second: {r: .938133895, g: .926470578, b: 1, a: 0}

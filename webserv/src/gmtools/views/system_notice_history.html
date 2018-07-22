@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="us">
+{{template "header.html" .}}
+	
+	<body>
+		<table class="table table-striped" border="1px #ooo" id="tab16" cellpadding="0" cellspacing="0" >
+			<tr align="center" bgcolor="white">
+				<td width="25%">公告标题</td>
+				<td width="25%">公告内容</td>
+				<td width="25%">公告颜色</td>
+				
+				
+			</tr>
+{{range .Results }}
+			<tr align="center">
+				<td width="25%">{{printf "%s" .Title}}</td>
+				<td width="25%">{{printf "%s" .Content}}</td>
+				<td width="25%">{{printf "%s" .Color}}</td>
+				
+			</tr>	
+{{end}}
+		</table>
+		
+	</body>
+</html>

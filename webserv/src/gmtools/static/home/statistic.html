@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>法兰城的回忆【数据统计】</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-3.3.2.min.js"></script>
+	<!--导出js-->
+	<script src="../js/xlsx.core.min.js"></script>
+	<script src="../js/blob.js"></script>
+	<script src="../js/FileSaver.min.js"></script>
+	<script src="../js/tableexport.min.js"></script>
+	
+	<!--分页js-->
+	<script type="text/javascript" src="../js/king-table.js"></script>
+   <!--导出css-->
+	<link href="../css/tableexport.min.css" rel="stylesheet">
+	<!--分页css-->
+	<link href="../css/king-table.css" rel="stylesheet">
+	<!--侧导航-->
+    <link href="../css/dashboard.css" rel="stylesheet">
+	 <script src="../js/js.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+	
+	
+	<script>
+	
+		if(sessionStorage.getItem("type")!=2){
+			window.location.href="index.html" //证明不是用户登录的，跳转到你需要的页面；
+		};
+
+	</script>
+  </head>
+  <body>
+    <!-- Static navbar -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation" >
+	    <div class="container">
+	        <div id="navbar" class="navbar-collapse collapse" style="width:1401px;">
+	          <ul class="nav navbar-nav ou">
+	             <li  ><a href="manage.html" >管理功能 </a></li>
+	            <li><a href="chat.html" >聊天查询</a></li>
+	            <li><a href="operative.html">运营活动</a></li>
+	            <li><a href="role.html">角色查询</a></li>
+	            <li><a href="history.html">历史公告邮件/活动状态查询</a></li>
+	            <li><a href="gm.html" >GM功能</a></li>
+	            <li class="active"><a href="statistic.html" >数据统计</a></li>
+	            <li><a href="user.html" >用户统计</a></li>
+				
+	          </ul>
+	           <button  type="button" id="Admin_btn" class="btn btn-default" style="margin-top:8px;margin-left:100px;">超级管理员</button>
+	        </div>
+	    </div>
+    </nav>
+    <!-- 导航结束 -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar w_sidebar">
+          <ul class="nav nav-sidebar ul">
+            <li class="active o_orders"><a href="#">订单统计</a></li>
+            <li class=" p_pay"><a href="#">付费统计</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main tab">
+			<div id="statistic_function-1" aria-labelledby="ui-id-40" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content show" aria-hidden="false" style="display: block;">
+	             <form id="statistic_orders">
+	               	<div>
+						<div style="height: 40px;"> <h3 style="float: left;margin-top:0px;">订单统计</h3>
+							<button type="button"  class="btn-primary  " id="orders_button" >导出</button>
+						</div>
+						<div style="height: 40px;">
+							
+							<fieldset style="margin-right: 10px;">
+		                        <div id="send" style="float:right" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                          <label for="param" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents">渠道</span></label>
+			                       
+									<select id="order_id" name="order_id" style=" width: 175px;height: 34px;margin-left: 10px;">
+                              
+		                                <!--<option value="" select="selected">160101</option>-->
+		                                
+		                                <!--<option value="">800101</option>-->
+		                                
+		                                <!--<option value="">800122</option>-->
+										
+										<!--<option value="">800127</option>-->
+										
+										<!--<option value="">999997</option> -->
+										   
+										<!--<option value="">800007</option>-->
+										
+										<!--<option value="">000255</option>-->
+										
+										<!--<option value="">160146</option>-->
+										
+										<!--<option value="">000965</option>-->
+										
+										<!--<option value="">111226</option>-->
+										
+										<!--<option value="">800040</option>-->
+										
+										<!--<option value="">800032</option>-->
+										
+										<!--<option value="">999998</option>-->
+										
+										<!--<option value="">99999</option>-->
+										
+										<!--<option value="">160140</option>-->
+										
+										<!--<option value="">001201</option>-->
+										
+										<!--<option value="">160097</option>-->
+										
+										<!--<option value="">500030</option>-->
+										
+										<!--<option value="">500035</option>-->
+										
+										<!--<option value="">500015</option>-->
+										
+										<!--<option value="">500002</option>-->
+										
+										<!--<option value="">500004</option>-->
+		                          	</select>
+								</div>
+								
+							<fieldset>
+							
+							<fieldset     style="margin-right: 10px;">
+		                        <div id="send" style="float:right" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix;">
+									<label for="param" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item;" style=" float:left;   margin-top: 8px;margin-right: 5px;"><span class="ui-controlgroup-label-contents">服务器</span></label>
+			                         	<div style="height: 34px;float:right;">
+											<input type="text" style="height: 34px;cursor:pointer;" class="order_input"/>
+											 <ul id="sever_types" name="sever_types" style=" width: 175px;background:#fff;border:1px solid #999;position:relative;z-index:999;" class="hide">
+					                             
+					                         </ul>
+										</div>
+										<div class="sjx"></div>
+								</div>
+							<fieldset>
+							
+						</div>
+		                <div>   
+			                <table class=" data-table orders_table" id="gs_table" style="margin-top:10px;">
+					
+							</table>
+		                </div>
+	                </div>
+                </form>
+          	</div>
+			<div id="statistic_function-2" aria-labelledby="ui-id-26" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+	             <form id="s_pay">
+	               	<div>
+						<div style="margin-bottom: 10px;height: 30px;">
+							<div style="height: 40px;">
+								<h3 style="float: left;margin-top:0px;">支付统计</h3>
+								<button type="button"  class="btn-primary   pay_button" id="pay_button" >导出</button>
+							</div>
+							<div id="send" style="float:right;margin-right:10px;margin-bottom: 10px;" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix;">
+									<label for="param" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item;" style=" float:left;   margin-top: 8px;margin-right: 5px;"><span class="ui-controlgroup-label-contents">服务器</span></label>
+			                         	<div style="height: 34px;float:right;">
+											<input type="text" style="height: 34px;cursor:pointer;" class="pay_input"/>
+											 <ul id="pay_types" name="pay_types" style=" width: 175px;background:#fff;border:1px solid #999;position:relative;z-index:999;" class="hide">
+					                             
+					                         </ul>
+										</div>
+									<div class="pay_sjx"></div>
+							</div>
+						</div>
+		                <div>   
+			                <table class=" data-table pay_table" id="fs_table" style="margin-top:10px;">
+					
+							</table>
+		                </div> 
+	                </div>
+                </form>
+          	</div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+							

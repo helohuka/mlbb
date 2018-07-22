@@ -1,0 +1,925 @@
+fileFormatVersion: 2
+guid: a37dc344c6aa1504181864c5e09770c2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip02
+    100002: Bip02 Head
+    100004: Bip02 L Calf
+    100006: Bip02 L Clavicle
+    100008: Bip02 L Foot
+    100010: Bip02 L Forearm
+    100012: Bip02 L Hand
+    100014: Bip02 L Thigh
+    100016: Bip02 L UpperArm
+    100018: Bip02 Neck
+    100020: Bip02 Pelvis
+    100022: Bip02 R Calf
+    100024: Bip02 R Clavicle
+    100026: Bip02 R Foot
+    100028: Bip02 R Forearm
+    100030: Bip02 R Hand
+    100032: Bip02 R Thigh
+    100034: Bip02 R UpperArm
+    100036: Bip02 Spine
+    100038: Bone00001
+    100040: Bone002
+    100042: Bone003
+    100044: Bone004
+    100046: Bone008
+    100048: Bone010
+    100050: Bone012(mirrored)
+    100052: Bone012(mirrored)(mirrored)
+    100054: Bone013(mirrored)
+    100056: Bone013(mirrored)(mirrored)
+    100058: Bone014(mirrored)
+    100060: Bone014(mirrored)(mirrored)
+    100062: Plane01
+    100064: xihongshi
+    100066: //RootNode
+    400000: Bip02
+    400002: Bip02 Head
+    400004: Bip02 L Calf
+    400006: Bip02 L Clavicle
+    400008: Bip02 L Foot
+    400010: Bip02 L Forearm
+    400012: Bip02 L Hand
+    400014: Bip02 L Thigh
+    400016: Bip02 L UpperArm
+    400018: Bip02 Neck
+    400020: Bip02 Pelvis
+    400022: Bip02 R Calf
+    400024: Bip02 R Clavicle
+    400026: Bip02 R Foot
+    400028: Bip02 R Forearm
+    400030: Bip02 R Hand
+    400032: Bip02 R Thigh
+    400034: Bip02 R UpperArm
+    400036: Bip02 Spine
+    400038: Bone00001
+    400040: Bone002
+    400042: Bone003
+    400044: Bone004
+    400046: Bone008
+    400048: Bone010
+    400050: Bone012(mirrored)
+    400052: Bone012(mirrored)(mirrored)
+    400054: Bone013(mirrored)
+    400056: Bone013(mirrored)(mirrored)
+    400058: Bone014(mirrored)
+    400060: Bone014(mirrored)(mirrored)
+    400062: Plane01
+    400064: //RootNode
+    400066: xihongshi
+    4300000: xihongshi
+    4300002: Plane01
+    7400000: stand
+    7400002: attack
+    7400004: magic
+    7400006: dodge
+    7400008: defense
+    7400010: run
+    7400012: beattack
+    7400014: dead
+    7400016: Take 0017
+    9500000: //RootNode
+    13700000: Plane01
+    13700002: xihongshi
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: stand
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip02
+        weight: 1
+      - path: Bip02/Bip02 Pelvis
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf/Bip02 L Foot
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)/Bone014(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone014(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm/Bip02 L Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm/Bip02 R Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf/Bip02 R Foot
+        weight: 1
+      - path: Bone00001
+        weight: 1
+      - path: Bone008
+        weight: 1
+      - path: Bone008/Bone010
+        weight: 1
+      - path: Plane01
+        weight: 1
+      - path: xihongshi
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: attack
+      takeName: Take 001
+      firstFrame: 44
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip02
+        weight: 1
+      - path: Bip02/Bip02 Pelvis
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf/Bip02 L Foot
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)/Bone014(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone014(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm/Bip02 L Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm/Bip02 R Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf/Bip02 R Foot
+        weight: 1
+      - path: Bone00001
+        weight: 1
+      - path: Bone008
+        weight: 1
+      - path: Bone008/Bone010
+        weight: 1
+      - path: Plane01
+        weight: 1
+      - path: xihongshi
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: magic
+      takeName: Take 001
+      firstFrame: 84
+      lastFrame: 122
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip02
+        weight: 1
+      - path: Bip02/Bip02 Pelvis
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf/Bip02 L Foot
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)/Bone014(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone014(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm/Bip02 L Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm/Bip02 R Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf/Bip02 R Foot
+        weight: 1
+      - path: Bone00001
+        weight: 1
+      - path: Bone008
+        weight: 1
+      - path: Bone008/Bone010
+        weight: 1
+      - path: Plane01
+        weight: 1
+      - path: xihongshi
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dodge
+      takeName: Take 001
+      firstFrame: 126
+      lastFrame: 153
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip02
+        weight: 1
+      - path: Bip02/Bip02 Pelvis
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf/Bip02 L Foot
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)/Bone014(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone014(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm/Bip02 L Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm/Bip02 R Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf/Bip02 R Foot
+        weight: 1
+      - path: Bone00001
+        weight: 1
+      - path: Bone008
+        weight: 1
+      - path: Bone008/Bone010
+        weight: 1
+      - path: Plane01
+        weight: 1
+      - path: xihongshi
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: defense
+      takeName: Take 001
+      firstFrame: 154
+      lastFrame: 181
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip02
+        weight: 1
+      - path: Bip02/Bip02 Pelvis
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf/Bip02 L Foot
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)/Bone014(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone014(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm/Bip02 L Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm/Bip02 R Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf/Bip02 R Foot
+        weight: 1
+      - path: Bone00001
+        weight: 1
+      - path: Bone008
+        weight: 1
+      - path: Bone008/Bone010
+        weight: 1
+      - path: Plane01
+        weight: 1
+      - path: xihongshi
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 185
+      lastFrame: 205
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip02
+        weight: 1
+      - path: Bip02/Bip02 Pelvis
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf/Bip02 L Foot
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)/Bone014(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone014(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm/Bip02 L Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm/Bip02 R Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf/Bip02 R Foot
+        weight: 1
+      - path: Bone00001
+        weight: 1
+      - path: Bone008
+        weight: 1
+      - path: Bone008/Bone010
+        weight: 1
+      - path: Plane01
+        weight: 1
+      - path: xihongshi
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: beattack
+      takeName: Take 001
+      firstFrame: 208
+      lastFrame: 210
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip02
+        weight: 1
+      - path: Bip02/Bip02 Pelvis
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf/Bip02 L Foot
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)/Bone014(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone014(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm/Bip02 L Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm/Bip02 R Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf/Bip02 R Foot
+        weight: 1
+      - path: Bone00001
+        weight: 1
+      - path: Bone008
+        weight: 1
+      - path: Bone008/Bone010
+        weight: 1
+      - path: Plane01
+        weight: 1
+      - path: xihongshi
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dead
+      takeName: Take 001
+      firstFrame: 213
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip02
+        weight: 1
+      - path: Bip02/Bip02 Pelvis
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 L Thigh/Bip02 L Calf/Bip02 L Foot
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)/Bone013(mirrored)/Bone014(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 Head/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone014(mirrored)(mirrored)
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 L Clavicle/Bip02 L UpperArm/Bip02
+          L Forearm/Bip02 L Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 Neck/Bip02 R Clavicle/Bip02 R UpperArm/Bip02
+          R Forearm/Bip02 R Hand
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf
+        weight: 1
+      - path: Bip02/Bip02 Pelvis/Bip02 Spine/Bip02 R Thigh/Bip02 R Calf/Bip02 R Foot
+        weight: 1
+      - path: Bone00001
+        weight: 1
+      - path: Bone008
+        weight: 1
+      - path: Bone008/Bone010
+        weight: 1
+      - path: Plane01
+        weight: 1
+      - path: xihongshi
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

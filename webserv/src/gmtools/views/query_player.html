@@ -1,0 +1,42 @@
+<!--角色查询-->
+{{define "query_player"}}
+	<div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "query_player_%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "query_player_serv_%d" .Id }}" >{{ printf "%s" .Name }}</label>
+						<input type="radio" name="query_player_radio" id="{{ printf "query_player_serv_%d" .Id }}" value="{{ printf "query_player_serv_%d" .Id }}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+		<fieldset>
+			<legend>角色查询</legend>
+			<div id="query_player_op1">
+				<label for="query_player_playerid" class="ui-controlgroup-label">角色ID</label>
+				<input id="query_player_playerid" name="query_player_playerid" class="ui-controlgroup-item"/>
+				<input type="submit" value="执行">
+			</div>
+		</fieldset>
+	</div>
+{{end}}
+<div id="query_player" >
+		<form action="do_query_player" method="post" target="_blank">
+			{{template "query_player" .}}
+		</form>
+</div>
+
+<script  language="javascript" type="text/javascript">
+{{range $key, $val := .Servs}}
+	$( "{{ printf "#query_player_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+{{end}}
+
+	$( "#query_player_level" ).controlgroup({"direction": "horizontal"});
+	$( "#query_player_create_time" ).controlgroup({"direction": "horizontal"});
+	$( "#query_player_param" ).controlgroup({"direction": "horizontal"});
+	$( "#query_player_op1" ).controlgroup({"direction": "horizontal"});
+	//$( "#query_player_detailed" ).controlgroup({"direction": "verticality"});
+	
+</script>

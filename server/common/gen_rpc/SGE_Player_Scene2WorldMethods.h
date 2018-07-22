@@ -1,0 +1,10 @@
+virtual bool joinScene(COM_SceneInfo& info);
+virtual bool move2(COM_FPosition& pos);
+virtual bool cantMove();
+virtual bool transfor2(COM_FPosition& pos);
+virtual bool autoBattleResult(bool isOk);
+virtual bool zoneJoinBattle(S32 zoneId);
+virtual bool playerAddNpc(std::vector< S32 >& npcs);
+virtual bool playerDelNpc(std::vector< S32 >& npcs);
+virtual bool talkedNpc(S32 npcid);
+virtual bool findDynamicNpcOK(S32 npcid, bool hasnpc);

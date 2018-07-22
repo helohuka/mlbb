@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" href="../../favicon.ico">
+	    <title>法兰城的回忆【GM】</title>
+	    <!-- 新 Bootstrap 核心 CSS 文件 -->
+	    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+	    <script type="text/javascript" src="../js/bootstrap-3.3.2.min.js"></script>
+		<script type="text/javascript" src="../js/king-table.js"></script>
+		<!--导出js-->
+		<!--<script src="../js/xlsx.core.min.js"></script>-->
+		<!--<script src="../js/blob.js"></script>-->
+		<!--<script src="../js/FileSaver.min.js"></script>-->
+		<!--<script src="../js/tableexport.min.js"></script>-->
+		<!--分页-->
+		<!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+		<!--<script type="text/javascript" src="../js/page.js"></script>-->
+		<script src="../js/js.js"></script>
+		<!--<link type="text/css" rel="stylesheet" href="../css/fenye.css"/>-->
+		<!--<link type="text/css" rel="stylesheet" href="../css/page.css">-->
+		<!--导出css-->
+		<!--<link href="../css/tableexport.min.css" rel="stylesheet">-->
+		<link href="../css/king-table.css" rel="stylesheet">
+	    <!-- Custom styles for this template -->
+	    <link href="../css/navbar-static-top.css" rel="stylesheet">
+	    <link href="../css/dashboard.css" rel="stylesheet">
+	    <link rel="stylesheet" href="../css/index.css">
+		<script>
+			//sessionStorage.setItem("type","1")//给你的第一个页面添加这句话，把type存进sessioStorage里面
+			if(sessionStorage.getItem("type")!=2){
+			window.location.href="index.html" //证明不是用户登录的，跳转到你需要的页面；
+			};
+	
+		</script>
+	</head>
+	  <body>
+	    <!-- Static navbar -->
+	   <nav class="navbar navbar-inverse navbar-static-top" role="navigation" >
+	      <div class="container">
+	        <div id="navbar" class="navbar-collapse collapse" style="width:1401px;">
+	          <ul class="nav navbar-nav ou">
+	            <li  ><a href="manage.html" >管理功能 </a></li>
+	            <li><a href="chat.html" >聊天查询</a></li>
+	            <li><a href="operative.html">运营活动</a></li>
+	            <li><a href="role.html">角色查询</a></li>
+	            <li><a href="history.html">历史公告邮件/活动状态查询</a></li>
+	            <li class="active"><a href="gm.html" >GM功能</a></li>
+	            <li ><a href="statistic.html" >数据统计</a></li>
+	            <li ><a href="user.html" >用户统计</a></li>
+				
+				
+	          </ul>
+	            <button  type="button" id="Admin_btn" class="btn btn-default" style="margin-top:8px;margin-left:100px;">超级管理员</button>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </nav>
+	    <!-- 导航结束 -->
+	<div class="container-fluid">
+	    <div class="row">
+	        <div class="col-sm-3 col-md-2 sidebar w_sidebar">
+		        <ul class="nav nav-sidebar ul">
+		            <li class="active w_server"><a href="#">服务器状态查询</a></li>
+		            <li><a href="#">CDKEY生成</a></li>
+		            <li><a href="#">CDKE查询</a></li>
+					<li><a href="#">CDKE删除</a></li>
+		        </ul>
+	        </div>
+		    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main tab">
+		           <!-- 服务器状态查询 -->
+			        <div id="other_function-3" aria-labelledby="ui-id-40" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content show" aria-hidden="false" style="display: block;">
+			            <form id="server_monitor">
+			                <div>
+				                <div>   
+				                    <table class="table table-striped s_table" width="400px" border="1" bordercolor="gray" cellspacing="0" cellpadding="5" text-align="center">
+				                     	<tbody>
+				                            <tr bgcolor="white">
+					                            <td>服务器id</td>
+					                            <td>服务器名称</td>
+					                            <td>大区名称</td>
+					                            <td>容量</td>
+												<td>服务器状态</td>
+				                            </tr>
+				                        </tbody>
+				                    </table> 
+				                </div> 
+			                </div>
+			            </form>
+			        </div>
+		          <!-- CDKEY生成 -->
+		        <div id="other_function-1" aria-labelledby="ui-id-41" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+		            <form id="cdkey_generate">
+		                <div>  
+							
+			                <fieldset >
+			                    <legend>生成CDKEY</legend>
+			                    <div id="cdkey_generate_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+				                    <label for="cdkey_generate_tag" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents" >TAG</span></label>
+				                    <input id="cdkey_generatey_tag" name="cdkey_generate_tag" class="ui-controlgroup-item">
+				                    <label for="cdkey_generate_number" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents">数量</span></label>
+				                    <input id="cdkey_generate_number" name="cdkey_generate_number" class="ui-controlgroup-item" placeholder="最少100个,最多10000个" title="最少100个,最多10000个,大于10000个无效"><br><br>
+									<fieldset>
+				                        <legend>奖励</legend>
+				                        <div id="div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+					                        <label for="item_1" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+					                        <input id="item_1" name="item_1" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+					                        
+					                        <label for="stack_1" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+					                        <input id="stack_1" name="stack_1" class="ui-controlgroup-item">
+				                        </div>
+					                    <div id="div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+					                        <label for="item_2" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+					                        <input id="item_2" name="item_2" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+					                        <label for="stack_2" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+					                        <input id="stack_2" name="stack_2" class="ui-controlgroup-item">
+					                    </div>
+				                  
+					                    <div id="div_3" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+					                        <label for="item_3" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+					                        <input id="item_3" name="item_3" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+					                        <label for="stack_3" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+					                        <input id="stack_3" name="stack_3" class="ui-controlgroup-item">
+					                    </div>
+				
+					                    <div id="div_4" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+					                        <label for="item_4" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+					                        <input id="item_4" name="item_4" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+					                        <label for="stack_4" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+					                        <input id="stack_4" name="stack_4" class="ui-controlgroup-item">
+					                    </div>
+				                    
+					                    <div id="div_5" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix" style="margin-bottom:10px;">
+					                        <label for="item_5" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+					                        <input id="item_5" name="item_5" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+					                        <label for="stack_5" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+					                        <input id="stack_5" name="stack_5" class="ui-controlgroup-item">
+					                    </div>
+				                	</fieldset>
+					                <label for="cdkey_generate_channel" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents">渠道</span></label>
+					            	<input id="cdkey_generate_channel" name="cdkey_generate_channel" class="ui-controlgroup-item"><br><br>
+					                      
+					                <input id="w_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button" >
+					            </div>
+					        </fieldset>
+		                </div>
+		           </form>
+		        </div>
+		          <!-- CDKE查询 -->
+		        	<div id="other_function-2" aria-labelledby="ui-id-42" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+			            <form id="cdkey_select" >    
+				            <div>
+								
+				                <fieldset>
+				                    <legend>根据条件查询</legend>
+				                    <div id="cdkey_select_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+				                       
+										<input id="cdkey_select" name="cdkey_select" type="text" placeholder="礼包名" class="cdkey_select"/>
+				                    	<input id="q_btn" type="button" name="check" value="查询" class="ui-widget ui-controlgroup-item ui-button ui-corner-right btn" role="button">
+										<input id="cdkey_export" name="cdkey_export" type="button" value="导出" class="ui-widget ui-controlgroup-item ui-button ui-corner-right btn" role="button">
+									</div>
+				                </fieldset>
+				            </div>
+				        </form>
+						<table id="example" class="table table-bordered table-striped table-hover" >
+		                    
+		                </table>
+						
+		           </div>
+					<!-- CDKEY删除 -->
+			        	<div id="other_function-4" aria-labelledby="ui-id-42" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+			            	<form id="cdkey_delete" >    
+					            <div>
+									
+					                <fieldset>
+					                    <legend>根据条件查询</legend>
+					                    <div id="cdkey_select_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+					                       
+											<input id="cdkey_select" name="cdkey_select" type="text" placeholder="礼包名"/>
+					                    	<input id="delete_btn" type="button" name="check" value="删除" class="ui-widget ui-controlgroup-item ui-button ui-corner-right btn" role="button">
+										</div>
+					                </fieldset>
+				                </div>
+				            </form>
+			            </div>
+		        </div>
+		    </div>
+	    </div>
+	</body>
+	
+</html>

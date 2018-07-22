@@ -1,0 +1,76 @@
+<div>
+     <fieldset>
+		<legend>历史公告（邮件）查询</legend>
+		<div id="history_system_notice"> 
+			<form action="history" method="post" target="_blank">
+				<input id="history_system_notice" name="history_system_notice" class="ui-controlgroup-item" type="hidden" value="1"/>
+				<input type="hidden" name="type" value="system_notice" />
+				<input type="submit" value="历史系统公告查询">
+			</form>
+			<form action="history" method="post" target="_blank">
+				<input id="history_service_notice" name="history_service_notice" class="ui-controlgroup-item" type="hidden" value="2" />
+				<input type="hidden" name="type" value="server_notice" />
+				<input type="submit" value="历史区服公告查询">
+			</form>
+			<form action="history" method="post" target="_blank">
+				<input id="history_roll_notice" name="history_roll_notice" class="ui-controlgroup-item" type="hidden" value="3"/>
+				<input type="hidden" name="type" value="roll_notice" />
+				<input type="submit"  value="历史滚动公告查询">
+			</form>
+			<form action="history" method="post" target="_blank">
+				<input id="history_send_mail_query" name="history_send_mail_query" class="ui-controlgroup-item" type="hidden" value=""/>
+				<input type="hidden" name="type" value="insert_mail" />
+				<input type="submit"  value="历史发送邮件查询">
+			</form>
+		</div>
+		
+	</fieldset>
+	<fieldset>
+		<legend>活动状态查询</legend>
+         <div id="history_accumulate_recharge">
+			<form action="history" method="post" target="_blank">
+				<input id="history_login_activity" name="history_login_activity" class="ui-controlgroup-item" type="hidden" value="登录活动"/>
+					
+				<input type="hidden" name="type" value="login_activity" />
+				<input type="submit"  value="登录活动状态查询">
+			</form>
+			<form action="history" method="post" target="_blank">
+				<input id="history_accumulate_recharge" name="history_accumulate_recharge" class="ui-controlgroup-item" type="hidden" value="累积充值"/>
+				<input type="hidden" name="type" value="accumulate_recharge" />
+				<input type="submit"  value="累积充值状态查询">
+			</form>
+			<form action="history" method="post" target="_blank">
+				<input id="history_discount_store" name="history_discount_store" class="ui-controlgroup-item" type="hidden" value="打折商店"/>
+				<input type="hidden" name="type" value="discount_store" />
+				<input type="submit"  value="打折商店状态查询">
+			</form>
+			<form action="history" method="post" target="_blank">
+				<input id="history_single_recharge" name="history_single_recharge" class="ui-controlgroup-item" type="hidden" value="单笔充值" />
+				<input type="hidden" name="type" value="single_recharge" />
+				<input type="submit"  value="单笔充值状态查询">
+			</form>
+			<form action="history" method="post" target="_blank">
+				<input id="history_hotspot_partner" name="history_hotspot_partner" class="ui-controlgroup-item" type="hidden" value="热点伙伴"/>
+				<input type="hidden" name="type" value="hotspot_partner" />
+				<input type="submit"  value="热点伙伴状态查询">
+			</form>
+			<form action="history" method="post" target="_blank">
+				<input id="history_extract_partner" name="history_extract_partner" class="ui-controlgroup-item" type="hidden" value="抽伙伴活动"/>
+				<input type="hidden" name="type" value="extract_partner" />
+				<input type="submit"  value="抽取伙伴状态查询">
+			</form>
+		</div>
+	</fieldset>
+</div>
+<script  language="javascript" type="text/javascript">
+	$( "#history_system_notice" ).controlgroup({"direction": "horizontal"});
+	$( "#history_roll_notice" ).controlgroup({"direction": "horizontal"});
+	$( "#history_service_notice" ).controlgroup({"direction": "horizontal"});
+	$( "#history_send_mail_query" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#history_accumulate_recharge" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#history_select" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#history_select li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+
+</script>

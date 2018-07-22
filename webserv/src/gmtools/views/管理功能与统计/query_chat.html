@@ -1,0 +1,81 @@
+{{define "history_chat"}}
+<div>
+	{{range $key, $val := .Servs}}
+	<fieldset>
+		<legend>{{ printf "%s" $key }}</legend>
+		<div id="{{ printf "query_history_chat_%s" $key }}" >
+			{{range $val}}
+			<label for="{{ printf "query_history_chat_serv_%d"  .Id }}" >{{ printf "%s" .Name }}</label>
+			<input type="radio" name="query_history_chat" id="{{ printf "query_history_chat_serv_%d"  .Id }}" value="{{ printf "query_history_chat_serv_%d" .Id }}">
+			{{end}}
+		</div>
+	</fieldset>	
+	{{end}}
+	<fieldset>
+		<div id="query_history_chat_time">
+			<label for="query_history_chat_low_time" class="ui-controlgroup-label">起始时间</label>
+			<input id="query_history_chat_low_time" name="query_history_chat_low_time1" class="ui-controlgroup-item" type="date" />
+			<input id="query_history_chat_low_time" name="query_history_chat_low_time2" class="ui-controlgroup-item" type="time" /><br /><br />
+			<label for="query_history_chat_high_time" class="ui-controlgroup-label">结束时间</label>
+			<input id="query_history_chat_high_time" name="query_history_chat_high_time1" class="ui-controlgroup-item" type="date" />
+			<input id="query_history_chat_high_time" name="query_history_chat_high_time2" class="ui-controlgroup-item" type="time" />
+			<input type="submit" name="query_history_chat_submit" value="查询">
+		</div>
+	</fieldset>		
+</div>
+{{end}}
+{{define "now_chat"}}
+<div>
+	{{range $key, $val := .Servs}}
+	<fieldset>
+		<legend>{{ printf "%s" $key }}</legend>
+		<div id="{{ printf "query_now_chat_%s" $key }}" >
+			{{range $val}}
+			<label for="{{ printf "query_now_chat_serv_%d"  .Id }}" >{{ printf "%s" .Name }}</label>
+			<input type="radio" name="query_now_chat" id="{{ printf "query_now_chat_serv_%d"  .Id }}" value="{{ printf "query_now_chat_serv_%d"  .Id }}">
+			{{end}}
+		</div>
+	</fieldset>
+	{{end}}
+	<fieldset>
+		<div id="query_history_chat1_time">
+			<label for="query_limit" class="ui-controlgroup-label">记录数量</label>
+			<input id="query_limit" name="query_limit" class="ui-controlgroup-item" value="100"/>
+			<input type="submit" name="query_now_chat_submit" value="查询">
+		</div>
+	</fieldset>	
+</div>
+{{end}}
+<div id="query_chat" >
+	<ul>
+		<li><a href="#query_chat-1">历史聊天查询</a></li>
+		<li><a href="#query_chat-2">在线聊天查询</a></li>
+	</ul>
+	
+	<div id="query_chat-1">
+		<form action="do_query_history_chat" method="post" target="_blank">
+			{{template "history_chat" .}}
+		</form>
+	</div>
+	<div id="query_chat-2">
+		<form action="do_query_now_chat" method="post" target="_blank">
+			{{template "now_chat" .}}
+		</form>
+	</div>
+	
+	
+</div>
+
+  
+
+<script  language="javascript" type="text/javascript">
+	{{range $key, $val := .Servs}}
+	$( "{{ printf "#query_history_chat_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	$( "{{ printf "#query_now_chat_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	$( "#query_history_chat_time" ).controlgroup({"direction": "horizontal"});
+	$( "#query_history_chat1_time" ).controlgroup({"direction": "horizontal"});
+	{{end}}
+	$( "#query_chat" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#query_chat li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+	
+</script>

@@ -1,0 +1,17 @@
+<html>
+	{{template "header.html" .}}
+	<b>玩家信息</b>
+	<form action="player_contorl" method="post">
+            玩家:<input type="text" name="Name"/><br>
+			参数:<input type="number" name="Param"/><br>
+			类型<select id="ControType" name="ControType">
+							{{range .ControTypes}}
+							<option value={{.Id}} {{if .IsSelected}} select="selected"{{end}}>{{.Value}}</option>
+							{{end}}
+                        </select>
+            <input type="submit" value="执行">
+    </form>
+	<hr/>
+	<b>聊天信息</b>
+	<hr/>
+</html>

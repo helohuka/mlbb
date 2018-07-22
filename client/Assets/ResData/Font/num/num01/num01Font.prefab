@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: num01Font
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b4eb3a400afab046abb8471a9d746d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mMat: {fileID: 2100000, guid: 2eb5ad605158283428f24f026d1cf3a8, type: 2}
+  mUVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: .25
+    height: 1
+  mFont:
+    mSize: 34
+    mBase: 0
+    mWidth: 64
+    mHeight: 128
+    mSpriteName: num01Font
+    mSaved:
+    - index: 32
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 17
+      channel: 15
+      kerning: 
+    - index: 48
+      x: 16
+      y: 81
+      width: 14
+      height: 23
+      offsetX: 2
+      offsetY: 5
+      advance: 18
+      channel: 15
+      kerning: 
+    - index: 49
+      x: 15
+      y: 57
+      width: 7
+      height: 23
+      offsetX: 5
+      offsetY: 5
+      advance: 17
+      channel: 15
+      kerning: 
+    - index: 50
+      x: 0
+      y: 105
+      width: 15
+      height: 23
+      offsetX: 1
+      offsetY: 5
+      advance: 17
+      channel: 15
+      kerning: 
+    - index: 51
+      x: 16
+      y: 105
+      width: 15
+      height: 23
+      offsetX: 1
+      offsetY: 5
+      advance: 17
+      channel: 15
+      kerning: 
+    - index: 52
+      x: 32
+      y: 105
+      width: 15
+      height: 23
+      offsetX: 1
+      offsetY: 5
+      advance: 17
+      channel: 15
+      kerning: 
+    - index: 53
+      x: 31
+      y: 81
+      width: 14
+      height: 23
+      offsetX: 1
+      offsetY: 5
+      advance: 17
+      channel: 15
+      kerning: 
+    - index: 54
+      x: 46
+      y: 81
+      width: 14
+      height: 23
+      offsetX: 2
+      offsetY: 5
+      advance: 18
+      channel: 15
+      kerning: 
+    - index: 55
+      x: 48
+      y: 105
+      width: 15
+      height: 23
+      offsetX: 1
+      offsetY: 5
+      advance: 17
+      channel: 15
+      kerning: 
+    - index: 56
+      x: 0
+      y: 81
+      width: 15
+      height: 23
+      offsetX: 1
+      offsetY: 5
+      advance: 17
+      channel: 15
+      kerning: 
+    - index: 57
+      x: 0
+      y: 57
+      width: 14
+      height: 23
+      offsetX: 2
+      offsetY: 5
+      advance: 17
+      channel: 15
+      kerning: 
+  mAtlas: {fileID: 11400000, guid: 872acdd02f748454daf9e4cb04c87cb0, type: 2}
+  mReplacement: {fileID: 0}
+  mSymbols:
+  - sequence: 0
+    spriteName: ph_0
+  - sequence: 1
+    spriteName: ph_1
+  - sequence: 2
+    spriteName: ph_2
+  - sequence: 3
+    spriteName: ph_3
+  - sequence: 4
+    spriteName: ph_4
+  - sequence: 5
+    spriteName: ph_5
+  - sequence: 6
+    spriteName: ph_6
+  - sequence: 7
+    spriteName: ph_7
+  - sequence: 8
+    spriteName: ph_8
+  - sequence: 9
+    spriteName: ph_9
+  mDynamicFont: {fileID: 0}
+  mDynamicFontSize: 16
+  mDynamicFontStyle: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

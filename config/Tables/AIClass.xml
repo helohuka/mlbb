@@ -1,0 +1,991 @@
+
+
+<!-- "RECEIVER, ARG0, ARG1, ARG2, ARG3, ARG4, ARG5, ARG6, ARG7, ARG8, ARG9" -->
+<!--  ######## 战斗ID  -->
+<Root>
+	<!--  盗匪  -->
+	<Class name="1" monsterId="20" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "10" />
+			<item id = "7006" probability = "100" />
+		</MonsterLoot>
+	</Class>
+	<!--  软泥怪  -->
+	<Class name="2" monsterId="4" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "15" />
+			<item id = "7001" probability = "100" />
+		</MonsterLoot>
+	</Class>
+	<!--  哥布林  -->
+	<Class name="3" monsterId="3" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "17" />
+			<item id = "7009" probability = "100" />
+		</MonsterLoot>
+	</Class>
+	<!--  僵尸  -->
+	<Class name="4" monsterId="9" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  树精  -->
+	<Class name="5" monsterId="5" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "7010" probability = "100" />
+		</MonsterLoot>
+	</Class>
+	<!--  蝙蝠  -->
+	<Class name="6" monsterId="6" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  BOSS盗匪首领  -->
+	<Class name="7" monsterId="21" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  BOSS阴影  -->
+	<Class name="8" monsterId="18" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  僵尸  -->
+	<Class name="9" monsterId="9" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  BOSS捣蛋鬼  -->
+	<Class name="10" monsterId="24" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  BOSS盗匪巴托  -->
+	<Class name="11" monsterId="25" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  BOSS牛头怪  -->
+	<Class name="12" monsterId="2" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  口臭鬼  -->
+	<Class name="13" monsterId="11" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  蜜蜂  -->
+	<Class name="14" monsterId="7" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  石像蝙蝠  -->
+	<Class name="15" monsterId="16" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  树怪  -->
+	<Class name="16" monsterId="5" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  海底龟  -->
+	<Class name="17" monsterId="17" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  仙人掌  -->
+	<Class name="18" monsterId="10" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  蜥蜴  -->
+	<Class name="19" monsterId="19" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  螃蟹怪  -->
+	<Class name="20" monsterId="27" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  任务捕捉蜜蜂  -->
+	<Class name="21" monsterId="1000" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  小型火元素  -->
+	<Class name="23" monsterId="23" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "7005" probability = "100" />
+		</MonsterLoot>
+	</Class>
+	<!--  实验室骷髅战士  -->
+	<Class name="26" monsterId="26" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "7007" probability = "100" />
+		</MonsterLoot>
+	</Class>
+	<!--  铁剪螃蟹  -->
+	<Class name="27" monsterId="27" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  毒蝎  -->
+	<Class name="28" monsterId="28" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  炸弹魔  -->
+	<Class name="29" monsterId="29" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  食人魔  -->
+	<Class name="30" monsterId="30" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  食人魔奥兹  -->
+	<Class name="31" monsterId="31" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  食人魔首领克洛  -->
+	<Class name="32" monsterId="32" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  黑熊  -->
+	<Class name="33" monsterId="33" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "7011" probability = "100" />
+		</MonsterLoot>
+	</Class>
+	<!--  吸血海蝙蝠  -->
+	<Class name="34" monsterId="34" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "7012" probability = "100" />
+		</MonsterLoot>
+	</Class>
+	<!--  海巨龙  -->
+	<Class name="35" monsterId="35" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  第二章软泥怪1  -->
+	<Class name="36" monsterId="36" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  第二章蜜蜂1  -->
+	<Class name="37" monsterId="37" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  第二章盗匪  -->
+	<Class name="38" monsterId="38" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  第二章软泥怪2  -->
+	<Class name="39" monsterId="39" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  第二章蜜蜂2  -->
+	<Class name="40" monsterId="40" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  第二章蝙蝠  -->
+	<Class name="41" monsterId="41" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  哥布林2  -->
+	<Class name="42" monsterId="42" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  穴熊  -->
+	<Class name="43" monsterId="43" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	<!--  水蜘蛛  -->
+	<Class name="10074" monsterId="10074" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+	
+	<Class name="100" monsterId="2000" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_huoban_event_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_huoban_event_update(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+	</Class>
+	<Class name="101" monsterId="2001" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_huoban_event_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_huoban_event_update(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+	</Class>
+	<Class name="102" monsterId="2002" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_huoban_event_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_huoban_event_update(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+	</Class>
+	<Class name="103" monsterId="2003" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_huoban_event_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_huoban_event_update(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+	</Class>
+	<Class name="104" monsterId="2004" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_huoban_event_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_huoban_event_update(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+	</Class>
+	
+<!--  ######## 新手战斗的AI  -->
+	<Class name="10001" monsterId="101" level="40">
+		<MonsterEvent>
+			<ME_Born>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "0" />
+		</MonsterLoot>
+	</Class>
+	<Class name="10002" monsterId="102" level="40">
+		<MonsterEvent>
+			<ME_Born>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "0" />
+		</MonsterLoot>
+	</Class>
+	<Class name="10003" monsterId="103" level="50">
+		<MonsterEvent>
+			<ME_Born>
+				AI_guid_wushi_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_guid_wushi_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "0" />
+		</MonsterLoot>
+	</Class>
+	<Class name="10004" monsterId="104" level="50">
+		<MonsterEvent>
+			<ME_Born>
+				AI_guid_chuanjiao_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_guid_chuanjiao_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "0" />
+		</MonsterLoot>
+	</Class>
+	<Class name="10005" monsterId="105" level="100">
+		<MonsterEvent>
+			<ME_Born>
+				AI_guid_renzhe_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_guid_renzhe_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+		</MonsterLoot>
+	</Class>
+	<Class name="10006" monsterId="106" level="50">
+		<MonsterEvent>
+			<ME_Born>
+				AI_guid_fashi_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_guid_fashi_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "0" />
+		</MonsterLoot>
+	</Class>
+	<Class name="10007" monsterId="107" level="50">
+		<MonsterEvent>
+			<ME_Born>
+				AI_guid_gongjian_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_guid_gongjian_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "0" />
+		</MonsterLoot>
+	</Class>
+	<Class name="10008" monsterId="108" level="50">
+		<MonsterEvent>
+			<ME_Born>
+				AI_guid_zhanfu_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_guid_zhanfu_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "0" />
+		</MonsterLoot>
+	</Class>
+	<Class name="10009" monsterId="109" level="50">
+		<MonsterEvent>
+			<ME_Born>
+				AI_guid_zhoushu_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Deadth>
+			<ME_Update>
+				AI_guid_zhoushu_born(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4)
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "0" />
+		</MonsterLoot>
+	</Class>
+	<!--  xinshouzhandou盗匪  -->
+	<Class name="10010" monsterId="20" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "20" />
+		</MonsterLoot>
+	</Class>
+	<!--  僵尸实验体  -->
+	<Class name="44" monsterId="44" level="1">
+		<MonsterEvent>
+			<ME_Born>
+				AI_born_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Born>
+			<ME_Deadth>
+				test_deadth_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Deadth>
+			<ME_Update>
+				AI_update_event(RECEIVER, ARG0, ARG1, ARG2, ARG3,ARG4);
+			</ME_Update>
+		</MonsterEvent>
+		<MonsterLoot>
+			<exp value = "30" />
+			<item id = "3723" probability = "30" />
+		</MonsterLoot>
+	</Class>
+</Root>

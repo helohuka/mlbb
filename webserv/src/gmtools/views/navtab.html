@@ -1,0 +1,47 @@
+<!-- 导航切页 -->
+
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">管理功能</a></li>
+		<li><a href="#tabs-2">聊天查询</a></li>
+		<li><a href="#tabs-3">运营活动</a></li>
+		<li><a href="#tabs-4">角色查询</a></li>
+		<li><a href="#tabs-5">历史公告邮件/活动状态查询</a></li>
+		<li><a href="#tabs-6">GM功能</a></li>
+		<li><a href="#tabs-7">数据统计</a></li>
+		<li><a href="#tabs-8">用户统计</a></li>
+	</ul>
+	<div id="tabs-1">
+		{{template "manager.html" .}}
+	</div>
+	<div id="tabs-2">
+		{{template "query_chat.html" .}}
+	</div>
+	
+	<div id="tabs-4">
+		{{template "query_player.html" .}}
+	</div>
+	<div id="tabs-3">
+		{{template "activity.html" .}}
+	</div>
+	<div id="tabs-5">
+		{{template "history_select.html" .}}
+	</div>
+	<div id="tabs-6">
+		{{template "other_function.html" .}}
+	</div>
+	<div id="tabs-7">
+		{{template "data_statistics.html" .}}
+	</div>
+	<div id="tabs-8">
+		{{template "user_statistics.html" .}}
+	</div>
+	
+</div>
+<script>
+	$( "#tabs" ).tabs();
+	$( "#tabs li" );
+	
+	
+</script>

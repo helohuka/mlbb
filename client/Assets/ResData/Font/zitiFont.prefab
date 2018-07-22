@@ -1,0 +1,565 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: zitiFont
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b4eb3a400afab046abb8471a9d746d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mMat: {fileID: 0}
+  mUVRect:
+    serializedVersion: 2
+    x: 0
+    y: -.90625
+    width: 1
+    height: 1
+  mFont:
+    mSize: 64
+    mBase: 51
+    mWidth: 1024
+    mHeight: 1024
+    mSpriteName: ziti_0
+    mSaved:
+    - index: 12290
+      x: 993
+      y: 0
+      width: 14
+      height: 12
+      offsetX: 2
+      offsetY: 44
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 19978
+      x: 783
+      y: 48
+      width: 49
+      height: 43
+      offsetX: 0
+      offsetY: 12
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 19990
+      x: 735
+      y: 48
+      width: 47
+      height: 44
+      offsetX: 1
+      offsetY: 12
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 20043
+      x: 46
+      y: 49
+      width: 49
+      height: 46
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 20104
+      x: 833
+      y: 48
+      width: 45
+      height: 43
+      offsetX: 1
+      offsetY: 13
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 20132
+      x: 745
+      y: 0
+      width: 47
+      height: 47
+      offsetX: 1
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 20170
+      x: 96
+      y: 49
+      width: 49
+      height: 46
+      offsetX: 0
+      offsetY: 11
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 20256
+      x: 150
+      y: 0
+      width: 49
+      height: 48
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 20320
+      x: 200
+      y: 0
+      width: 49
+      height: 48
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 20882
+      x: 879
+      y: 48
+      width: 43
+      height: 43
+      offsetX: 3
+      offsetY: 13
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 21019
+      x: 588
+      y: 48
+      width: 46
+      height: 45
+      offsetX: 0
+      offsetY: 11
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 21161
+      x: 346
+      y: 49
+      width: 47
+      height: 46
+      offsetX: 0
+      offsetY: 11
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 21476
+      x: 146
+      y: 49
+      width: 49
+      height: 46
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 21518
+      x: 440
+      y: 48
+      width: 49
+      height: 45
+      offsetX: 0
+      offsetY: 12
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 21746
+      x: 299
+      y: 0
+      width: 48
+      height: 48
+      offsetX: 1
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 22120
+      x: 635
+      y: 48
+      width: 49
+      height: 44
+      offsetX: 0
+      offsetY: 13
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 22763
+      x: 685
+      y: 48
+      width: 49
+      height: 44
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 22815
+      x: 596
+      y: 0
+      width: 49
+      height: 47
+      offsetX: 0
+      offsetY: 11
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 22914
+      x: 936
+      y: 0
+      width: 46
+      height: 47
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 23427
+      x: 394
+      y: 49
+      width: 45
+      height: 46
+      offsetX: 2
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 23558
+      x: 0
+      y: 0
+      width: 49
+      height: 48
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 24076
+      x: 696
+      y: 0
+      width: 48
+      height: 47
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 24110
+      x: 889
+      y: 0
+      width: 46
+      height: 47
+      offsetX: 1
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 25152
+      x: 196
+      y: 49
+      width: 49
+      height: 46
+      offsetX: 0
+      offsetY: 12
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 25289
+      x: 246
+      y: 49
+      width: 49
+      height: 46
+      offsetX: 0
+      offsetY: 11
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 25345
+      x: 396
+      y: 0
+      width: 49
+      height: 47
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 26159
+      x: 490
+      y: 48
+      width: 49
+      height: 45
+      offsetX: 0
+      offsetY: 12
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 26377
+      x: 100
+      y: 0
+      width: 49
+      height: 48
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 26395
+      x: 540
+      y: 48
+      width: 47
+      height: 45
+      offsetX: 1
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 26684
+      x: 296
+      y: 49
+      width: 49
+      height: 46
+      offsetX: 0
+      offsetY: 11
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 30340
+      x: 0
+      y: 49
+      width: 45
+      height: 47
+      offsetX: 2
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 31070
+      x: 793
+      y: 0
+      width: 47
+      height: 47
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 33021
+      x: 446
+      y: 0
+      width: 49
+      height: 47
+      offsetX: 0
+      offsetY: 9
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 35828
+      x: 496
+      y: 0
+      width: 49
+      height: 47
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 36335
+      x: 546
+      y: 0
+      width: 49
+      height: 47
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 36718
+      x: 50
+      y: 0
+      width: 49
+      height: 48
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 36825
+      x: 646
+      y: 0
+      width: 49
+      height: 47
+      offsetX: 0
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 38505
+      x: 841
+      y: 0
+      width: 47
+      height: 47
+      offsetX: 2
+      offsetY: 11
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 38544
+      x: 348
+      y: 0
+      width: 47
+      height: 48
+      offsetX: 2
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 40614
+      x: 250
+      y: 0
+      width: 48
+      height: 48
+      offsetX: 1
+      offsetY: 10
+      advance: 49
+      channel: 15
+      kerning: 
+    - index: 65292
+      x: 983
+      y: 0
+      width: 9
+      height: 13
+      offsetX: 19
+      offsetY: 45
+      advance: 49
+      channel: 15
+      kerning: 
+  mAtlas: {fileID: 11400000, guid: fd24e666ce701d44699a634f66b26383, type: 2}
+  mReplacement: {fileID: 0}
+  mSymbols:
+  - sequence: "\u3002"
+    spriteName: juhao
+  - sequence: "\u62C9"
+    spriteName: la
+  - sequence: "\u4F20"
+    spriteName: chuan
+  - sequence: "\u5E2E"
+    spriteName: bang
+  - sequence: "\u521B"
+    spriteName: chuang
+  - sequence: "\u7684"
+    spriteName: de
+  - sequence: "\u683C"
+    spriteName: ge
+  - sequence: "\u591F"
+    spriteName: gou
+  - sequence: "\u53E4"
+    spriteName: gu
+  - sequence: "\u540E"
+    spriteName: hou
+  - sequence: "\u5C06"
+    spriteName: jiang
+  - sequence: "\u4EA4"
+    spriteName: jiao
+  - sequence: "\u4ECA"
+    spriteName: jin
+  - sequence: "\u8DEF"
+    spriteName: lu
+  - sequence: "\u4F26"
+    spriteName: lun
+  - sequence: "\u9EA6"
+    spriteName: mai
+  - sequence: "\u5192"
+    spriteName: mao
+  - sequence: "\u80FD"
+    spriteName: neng
+  - sequence: "\u4F60"
+    spriteName: "\u4F60"
+  - sequence: "\u5668"
+    spriteName: qi
+  - sequence: "\u5982"
+    spriteName: ru
+  - sequence: "\u4E0A"
+    spriteName: shang
+  - sequence: "\u795E"
+    spriteName: shen
+  - sequence: "\u662F"
+    spriteName: shi
+  - sequence: "\u4E16"
+    spriteName: shi2
+  - sequence: "\u58EB"
+    spriteName: shi3
+  - sequence: "\u8BF4"
+    spriteName: shuo
+  - sequence: "\u6240"
+    spriteName: suo
+  - sequence: "\u5B83"
+    spriteName: ta
+  - sequence: "\u671B"
+    spriteName: wang
+  - sequence: "\u5E0C"
+    spriteName: xi
+  - sequence: "\u9669"
+    spriteName: xian
+  - sequence: "\u9690"
+    spriteName: yin
+  - sequence: "\u6709"
+    spriteName: you
+  - sequence: "\u4E88"
+    spriteName: yu
+  - sequence: "\u8FD9"
+    spriteName: zhe
+  - sequence: "\u54F2"
+    spriteName: zhe2
+  - sequence: "\u4E4B"
+    spriteName: zhi
+  - sequence: "\u52A9"
+    spriteName: zhu
+  - sequence: ','
+    spriteName: douhao
+  - sequence: "\u6301"
+    spriteName: "\u6301"
+  mDynamicFont: {fileID: 0}
+  mDynamicFontSize: 16
+  mDynamicFontStyle: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

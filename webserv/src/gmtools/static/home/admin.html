@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
+		<title>法兰城的回忆【历史公告邮件/活动状态查询】</title>
+		<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap-3.3.2.min.js"></script>
+		<script type="text/javascript" src="../js/king-table.js"></script>
+		<script src="../js/echarts.min.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap-3.3.2.min.css" type="text/css">
+		<link href="../css/king-table.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="../css/navbar-static-top.css" rel="stylesheet">
+		<link href="../css/dashboard.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/index.css">
+		<script>
+			$(function() {
+				if(sessionStorage.getItem("type") != 2) {
+					window.location.href = "regist.html" //证明不是用户登录的，跳转到你需要的页面；
+				};
+				// 登录
+				function admin() {
+					$.ajax({
+						type: "post",
+						url: "../do_admin.php",
+						dataType: "json",
+						success: function(e) {
+							var data = [];
+							for(var i = 0; i < e.length; i++) {
+								data[i] = [e[i].Name, e[i].Password, e[i].Admin, e[i].Tel, e[i].Time];
+							}
+							var cs = new table({
+								"tableId": "ss_table", //必须 表格id
+								"headers": ["用户名", "密码", "角色", "电话", "时间"], //必须 thead表头
+								"data": data, //必须 tbody 数据展示
+								"displayNum": 20, //必须   默认 10  每页显示行数
+								"groupDataNum": 1, //可选    默认 10  组数
+								"display_tfoot": true, // true/false  是否显示tfoot --- 默认false
+								"bindContentTr": function() { //可选 给tbody 每行绑定事件回调
+									this.tableObj.find("tbody").on("click", 'tr', function(e) {
+										return false;
+										var tr_index = $(this).data("tr_index"); // tr行号  从0开始
+										var data_index = $(this).data("data_index"); //数据行号  从0开始
+									})
+								},
+								sort: true, // 点击表头是否排序 true/false  --- 默认false
+								search: true // 默认为false 没有搜索
+							});
+						}
+					})
+				}
+				admin()
+
+				$("#w_button").click(function() {
+					var name = $.trim($('#w_name').val());
+					var password = $.trim($('#w_password').val());
+					var admin = $.trim($('#w_admin').val());
+					var tel = $.trim($('#w_tel').val());
+					var level = $.trim($('#w_level').val());
+					var req=/^(0|86|17951)?(13[0-9]|15[012356789]|17[0678]|18[0-9]|14[57])[0-9]{8}$/;
+					if(name == "" && password == "" && admin == "" && tel == ""&& level == "") {
+						alert('不能为空');
+					}else if(!req.test(tel)) {
+						alert('请输入正确的手机号码！')
+					
+					}else {
+						$.ajax({
+							type: "post",
+							url: "../do_add.php",
+							data: $("#add").serialize(),
+							success: function(e) {
+								alert("成功")
+							},
+							error: function(e) {
+								alert("用户已存在")
+							}
+						})
+					}
+					location.reload()
+				})
+
+				// 密码修改ajax
+				$(".new_psd").click(function() {
+					//alert($('#password').serialize())
+					$.ajax({
+						type: "post",
+						url: '../do_password.php',
+						dataType: "json",
+						data: $('#password').serialize(),
+						success: function(e) {
+
+							alert("执行成功")
+						},
+						error: function(e) {
+							alert("执行错误")
+						}
+					})
+					location.reload()
+				})
+				
+			})
+		</script>
+	</head>
+
+	<body>
+		<!-- Static navbar -->
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div id="navbar" class="navbar-collapse collapse" style="width:1401px;">
+					<ul class="nav navbar-nav ou">
+						<li>
+							<a href="manage.html">管理功能 </a>
+						</li>
+						<li>
+							<a href="chat.html">聊天查询</a>
+						</li>
+						<li>
+							<a href="operative.html">运营活动</a>
+						</li>
+						<li>
+							<a href="role.html">角色查询</a>
+						</li>
+						<li>
+							<a href="history.html">历史公告邮件/活动状态查询</a>
+						</li>
+						<li>
+							<a href="gm.html">GM功能</a>
+						</li>
+						<li>
+							<a href="statistic.html">数据统计</a>
+						</li>
+						<li>
+							<a href="user.html">用户统计</a>
+						</li>
+						<li><a href="simulator.html" >游服操作</a></li>
+					</ul>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" style="margin-top:8px;margin-left:200px;">添加管理员</button>
+					<button type="button" class="btn btn-default" style="margin-top:8px;margin-left:100px;" data-toggle="modal" data-target="#newModal">修改密码</button>
+				</div>
+			</div>
+		</nav>
+		<!--/.nav-collapse -->
+		<!-- 导航结束 -->
+		<div class="container-fluid">
+			<div class="row">
+
+				<div class="col-sm-3 col-md-2 sidebar w_sidebar">
+					<ul class="nav nav-sidebar ul">
+						<li class="active w_server">
+							<a href="#">管理员列表</a>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main tab" style='padding-left:20px;padding-right:20px;'>
+					<div>
+						<table class=" data-table" id="ss_table" style="margin-top:10px;">
+
+						</table>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="margin-left:350px;">
+				<div class="modal-content" style="width:1105px;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="myModalLabel">添加成员</h4>
+					</div>
+					<div class="modal-body">
+						<form id="add">
+							<table class="table" style="border:1px solid #ddd;">
+								<tbody>
+									<tr>
+										<th>用户名</th>
+										<th>密码</th>
+										<th>角色</th>
+										<th>电话</th>
+										<th>权限</th>
+									</tr>
+									<tr>
+										<td><input type="text" name="w_name" id="w_name" value=""></td>
+										<td><input type="text" name="w_password" id="w_password" value=""></td>
+										<td><input type="text" name="w_admin" id="w_admin" value=""></td>
+										<td><input type="tel" name="w_tel" id="w_tel"></td>
+										<td><input type="level" name="w_level" id="w_level" value=""></td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" id="w_button" class="btn btn-primary">确认</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--	弹窗-->
+		<!-- Modal -->
+		<div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="myModalLabel">设置密码</h4>
+					</div>
+					<div class="modal-body">
+						<div class="tab-content">
+							<div class="tab-pane active w_tab" id="time_line">
+								<form action="" id="password">
+									<table class="table table-striped">
+										<tbody>
+											<tr>
+												<td>用户名</td>
+												<td><input type="text" name="name" value=""></td>
+
+											</tr>
+											<tr>
+												<td>密码</td>
+												<td><input type="text" name="old_password" value=""></td>
+											</tr>
+											<tr>
+												<td>确认密码</td>
+												<td><input type="text" name="new_password" value=""></td>
+											</tr>
+										</tbody>
+									</table>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary new_psd">确认</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

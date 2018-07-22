@@ -1,0 +1,993 @@
+#import com.arpc
+#import struct.arpc
+//------------------------------------------
+service Client2Server
+{
+	///<GM指令
+	openvip(VipLevel vl);
+	///< 匹配
+	requestPhoto();
+	
+	ping();
+    ///< 登录
+	sessionlogin(COM_LoginInfo info);
+	login(COM_LoginInfo info);     
+	///<创建角色
+    createPlayer(string playername, uint8 playerTmpId);
+	deletePlayer(string playername);
+    ///<进入游戏
+    enterGame(uint32 playerInstId);
+	///初始化信息
+	requestBag();
+	requestEmployees();
+	requestStorage(StorageType tp);
+	requestAchievement();
+	initminig();
+	requestCompound();
+	///<同步移动坐标
+	move(float x, float z);
+	moveToNpc(int32 npcid);
+	moveToNpc2(NpcType type);
+	moveToZone(int32 sceneId, int32 zoneId);
+	autoBattle(); 
+	stopAutoBattle();
+	stopMove();
+	exitCopy();		//退出副本
+	///<进入场景, 只有在主城才有效
+	transforScene(int32 sceneId);
+	///<场景加载完成，可同步位置信息
+	sceneLoaded();
+	///<请求一个角色的详细信息
+	querySimplePlayerInst(uint32 instId);
+	///<登出
+	logout();
+	///改变属性
+	changProp(uint32 guid, array<COM_Addprop> props);
+	///<技能
+	learnSkill(uint32 skid);
+	babyLearnSkill(uint32 instId,uint32 oldSkId,uint32 newSkId,uint32 newSkLv);
+	forgetSkill(uint32 skid);
+	///<发送战斗指令
+	syncOrder(COM_Order order);
+	///<是否战斗超时
+	syncOrderTimeout();
+	///<聊天
+	sendChat(COM_Chat content, string targetName);
+	requestAudio(int32 audioId);
+	//各种炫耀
+	//@{
+	//show item
+	publishItemInst(ItemContainerType type, uint32 itemInstId, ChatKind chatType, string playerName);
+	queryItemInst(int32 showId);
+	//show baby
+	publishbabyInst(ChatKind type,uint32 babyInstId,string playerName);
+	querybabyInst(int32 showId);
+	//@}
+	///<使用物品
+	useItem(uint32 slot , uint32 target , uint32 stack);
+	///<穿装备
+	wearEquipment(uint32 target,uint32 itemInstId );
+	///<卸下装备
+	delEquipment(uint32 target,uint32 itemInstId );
+	///<前后排
+	setPlayerFront(bool isFront);
+	///<设置出战宝宝
+	setBattlebaby(uint32 babyID, bool isBattle);
+	changeBabyName(uint32 babyID, string name);
+	//宠物强化
+	intensifyBaby(uint32 babyid);
+	///<设置出战伙伴
+	setBattleEmp(uint32 empID,EmployeesBattleGroup group, bool isBattle);
+	changeEmpBattleGroup(EmployeesBattleGroup group);
+	requestEvolve(uint32 empInstId);
+	requestUpStar(uint32 empInstId);
+	requestDelEmp(uint32 empInstId);
+	delEmployee(array<uint32> emps);				//回收伙伴
+	onekeyDelEmp();									//一键回收
+	delEmployeeSoul(uint32 instid,uint32 soulNum);	//回收佣兵之心
+	///<整理背包
+	sortBagItem();
+	sellBagItem(uint32 instId,uint32 stack);
+	///<请求仓库数据
+	depositItemToStorage(uint32 instid);		//存放道具到仓库
+	depositBabyToStorage(uint32 instid);
+	storageItemToBag(uint32 instid);			//从仓库取出道具
+	storageBabyToPlayer(uint32 instid);
+	sortStorage(StorageType tp);				//整理
+	delStorageBaby(uint32 instid);
+	///<team
+	jointLobby();
+	exitLobby();
+	createTeam(COM_CreateTeamInfo cti);
+	changeTeam(COM_CreateTeamInfo info);
+	kickTeamMember(uint32 uuid);
+	changeTeamLeader(uint32 uuid);
+	joinTeam(uint32 teamId,string pwd);
+	exitTeam();
+	changeTeamPassword(string pwd);
+	joinTeamRoom();
+	inviteTeamMember(string name);
+	isjoinTeam(uint32 teamId,bool isFlag);
+	leaveTeam(); //暂离
+	backTeam(); //归队
+	refuseBackTeam();//拒绝归队
+	teamCallMember(int32 playerId); //召唤
+	requestJoinTeam(string targetName);	//申请进队
+	ratifyJoinTeam(string sendName);	//同意进队
+	///<抽取伙伴
+	drawLotteryBox(BoxType type, bool isFree);
+	///<任务相关
+	acceptQuest(int32 questId);
+	submitQuest(int32 npcId, int32 questId);
+	giveupQuest(int32 questId);
+	///社会关系
+	requestContactInfoById(uint32 instId);
+	requestContactInfoByName(string instName);
+	requestFriendList();
+	
+	addFriend(uint32 instId);
+	delFriend(uint32 instId);
+	addBlacklist(uint32 instId);
+	delBlacklist(uint32 instId);
+	requestReferrFriend();
+
+	mining(int32 gatherId,int32 times);
+
+	//合成
+	compoundItem(int32 itemId,int32 gemId);
+	//背包物品拆分
+	bagItemSplit(int32  instId,int32  splitNum);
+	//JJC
+	requestChallenge(string name);		//请求挑战
+	requestRival();						//请求对手
+	requestMySelfJJCData();
+	requestCheckMsg(string name);		//请求查看某信息
+	requestMyAllbattleMsg();
+	//请求排行榜
+	requestJJCRank();
+	requestLevelRank();
+	requestBabyRank();	
+	requestEmpRank();
+	requestPlayerFFRank();
+	//查询信息
+	queryOnlinePlayerbyName(string name);
+	queryPlayerbyName(string name);
+	queryBaby(uint32 instId);
+	queryEmployee(uint32 instId);
+	//新手指引
+	guideFinish(uint64 guideIdx);
+	//请求进入指定战斗
+	enterBattle(int32 battleId);
+	//
+	shopBuyItem(int32 id, int32 num);
+	//领取首充礼包
+	getFirstRechargeItem();
+	//领取等级礼包
+	requestLevelGift(int32 level);
+	//设置当前称号
+	setCurrentTitle(int32 title);
+	
+	openBuyBox();
+	//领取成就奖励
+	requestAchaward(int32 achId);
+	sign(int32 index);
+	requestSignupReward7();
+	requestSignupReward14();
+	requestSignupReward28();
+
+	requestActivityReward(int32 index);
+	//百人道场
+	resetHundredTier();
+	enterHundredScene(int32 level);
+	//删除宝宝
+	delBaby(int32 instId);
+	//重置宝宝
+	resetBaby(int32 instId);
+	//宝宝洗点
+	resetBabyProp(int32 instId);
+	//宝宝改造
+	remouldBaby(int32 instid);
+	//伙伴技能升级
+	empSkillLevelUp(uint32 empId, int32 skillId);
+	//开关双倍经验
+	setOpenDoubleTimeFlag(bool isFlag);
+	
+	//和NPC对话完
+	talkedNpc(int32 npcId);
+	//PVPJJC匹配对手
+	jjcBattleGo(uint32 id);		//playerid or teamID
+	requestMyJJCTeamMsg();
+	startMatching();
+	stopMatching();
+	exitPvpJJC();
+	joinPvpLobby();
+	exitPvpLobby();
+	requestpvprank();		//请求在线JJC排名
+	///勇者选拔战活动
+	joinWarriorchoose();		//队长请求打开此活动界面
+	warriorStart();				//开始匹配对手
+	warriorStop();				//停止
+	///邮件
+	sendMail(string playername, string title, string content);
+	readMail(int32 mailId);
+	delMail(int32 mailId);
+	getMailItem(int32 mailId);
+	// 展示物品
+	
+	//请求状态
+	requestState();
+	//帮派
+	//{@
+	createGuild(string guildName);									//创建帮派
+	delGuild(uint32 guildId);										//解散帮派
+	requestJoinGuild(uint32 guid);									//加入帮派
+	leaveGuild();													//退出帮派
+	kickOut(int32 guid);											//踢人
+	acceptRequestGuild(int32 playerId); 							//接受申请
+	refuseRequestGuild(int32 playerId);								//拒绝申请
+	changeMemberPosition(int32 targetId , GuildJob job);			//任命
+	transferPremier( int32 targetId );								//移交帮主
+	changeGuildNotice( string notice );								//修改公告
+	queryGuildList(int16 page);										//请求帮派列表
+	inviteJoinGuild(string playerName);								//邀请进会
+	respondInviteJoinGuild(string sendName);						//回应邀请进会
+	buyGuildItem(int32 tableId,int32 times);
+	entryGuildBattle();
+	transforGuildBattleScene();
+	addGuildMoney(int32 money);
+	updateGuildBuiling(GuildBuildingType gbt);
+	refreshGuildShop();
+	levelupGuildSkill(int32 skId);
+	presentGuildItem(int32 num);
+	progenitusAddExp(int32 monsterId,bool isSuper);
+	setProgenitusPosition(int32 mId,int32 pos);
+	guildsign();													//家族签到
+	//@}
+
+	//商会
+	fetchSelling(COM_SearchContext context);
+	fetchSelling2(COM_SearchContext context);
+	selling(int32 iteminstid, int32 babyinstid,int32 price);
+	unselling(int32 sellid);
+	buy(int32 sellid);
+
+	//修理
+	fixItem(int32 instId,FixType type);    
+	fixAllItem(array<uint32> items,FixType type);	
+	//碎片
+	makeDebirsItem(int32 instId,int32 num);
+	//升级神器
+	levelUpMagicItem(array<uint32> items);
+	//突破神器
+	tupoMagicItem(int32 level);
+	//转职神器
+	changeMagicJob(JobType job);
+	//pk
+	requestPk(uint32 playerId);
+	//ui 记录
+	uiBehavior(UIBehaviorType type);
+	//转盘
+	openZhuanpan();
+	zhuanpanGo(uint32 counter);
+	//兑换码
+	redemptionSpree(string code);
+	//场景角色筛选
+	sceneFilter(array<SceneFilterType> sfType);
+	//答题验证
+	sendExamAnswer(uint32 questionId,uint8 answer);
+	//许愿
+	sendwishing(COM_Wishing wish);
+	requestWish();				//查看他人许愿
+	
+	//队长关闭对话
+	leaderCloseDialog();
+	//领取在线时间奖励
+	requestOnlineReward(uint32 index);
+	//成长基金
+	requestFundReward(uint32 level);
+	//翻牌
+	openCard(uint16 index);		
+	resetCard();
+	//热点伙伴
+	hotRoleBuy();
+	//7天领奖
+	requestSevenReward(uint32 qid);
+	//领取vip奖励
+	vipreward();
+	//
+	requestChargeTotalSingleReward(uint32 index);
+	requestChargeTotalReward(uint32 index);	//累计充值
+	requestChargeEverySingleReward(uint32 index);
+	requestChargeEveryReward(uint32 index);//单笔充值	
+	requestLoginTotal(uint32 index);	//累计登录
+	buyDiscountStoreSingle(int32 itemId, int32 itemStack);
+	buyDiscountStore(int32 itemId, int32 itemStack);	//打折商店
+	requestEmployeeActivityReward(uint32 index);	//累计抽伙伴
+	requestmyselfrechargeleReward(uint32 index);	//个人累计充值常驻板
+	requestEverydayIntegral();			//领取每日积分
+	buyIntegralItem(uint32 id, uint32 num);					
+	///踢掉帮派组长
+	familyLoseLeader();
+	
+	verificationSMS(string phoneNumber,string code);
+	lockItem(int32 instId, bool isLock);
+	lockBaby(int32 instId,bool isLock);
+	showBaby(int32 instId);
+	
+	wearFuwen(int32 itemInstId);
+	takeoffFuwen(int32 slotId);
+	compFuwen(int32 itemInstId);
+	
+	///伙伴任务
+	requestEmployeeQuest();
+	acceptEmployeeQuest(int32 questId, array<int32> employees);
+	submitEmployeeQuest(int32 questId);
+	//水晶系统
+	crystalUpLevel();
+	resetCrystalProp(array<int32> locklist);
+	magicItemOneKeyLevel();
+	//交任务
+	submitQuest2(int32 npcId, int32 questId, int32 instId); //附加交任务物品ID
+};
+
+//------------------------------------------
+service Server2Client
+{
+	pong();
+	///错误返回
+	errorno(ErrorNo e);
+	teamerrorno(string name,ErrorNo e);
+	//<短线重连
+	reconnection(COM_ReconnectInfo recInfo);
+    ///<登录
+	sessionfailed();
+	loginok(string sessionkey,array<COM_SimpleInformation> players);	
+	logoutOk();
+    ///<创建角色	
+    createPlayerOk(COM_SimpleInformation player);
+	deletePlayerOk(string name);
+    ///<进入游戏    
+    enterGameOk(COM_PlayerInst inst);
+	initBabies(array<COM_BabyInst> insts);
+	initEmployees(array<COM_EmployeeInst> insts, bool isFlag);
+	initEmpBattleGroup(COM_BattleEmp bep);
+	initNpc(array<int32> npcList);
+	initAchievement(array<COM_Achievement> actlist);
+	initGather(uint32 allnum,array<COM_Gather> gathers);
+	initcompound(array<uint32> compounds);
+	///<添加宝宝
+	addBaby(COM_BabyInst inst);
+	refreshBaby(COM_BabyInst inst);
+	delBabyOK(uint32 babyInstId);
+	changeBabyNameOK(uint32 babyId,string name);
+	remouldBabyOK(uint32 instid);
+	//宠物强化
+	intensifyBabyOK(uint32 babyid,uint32 intensifyLevel);
+	///<技能
+	learnSkillOk(COM_Skill inst);
+	forgetSkillOk(uint32 skid);
+	addSkillExp(uint32 skid, uint32 uExp,ItemUseFlag flag);
+	babyLearnSkillOK(uint32 instId,uint32 newSkId);
+	skillLevelUp(uint32 instId,COM_Skill inst);
+	
+	///<可进入副本
+	joinScene(COM_SceneInfo info);
+	joinCopySceneOK(int32 secneid);
+	initCopyNums();	//重置副本次数
+	//往场景内添加一个角色
+	addToScene(COM_ScenePlayerInformation inst);
+	//从场景删除一个角色
+	delFormScene(int32 instId);
+	///<移动
+	move2(int32 instId, COM_FPosition pos);
+	cantMove(); ///目标不可达
+	///<返回角色详细信息
+	querySimplePlayerInstOk(COM_SimplePlayerInst player);
+	transfor2(int32 instId, COM_FPosition pos);
+	///<地图开启场景
+	openScene(int32 sceneId);
+	autoBattleResult(bool isOk);
+	talked2Npc(int32 npcId);
+	talked2Player(int32 playerId);
+	useItemOk(int32 itemId,int32 stack);
+	syncBattleStatus(int32 playerId, bool inBattle);
+	///<进入战斗
+	enterBattleOk(COM_InitBattle initBattle);
+	exitBattleOk(BattleJudgeType bjt, COM_BattleOverClearing init);
+	
+	///<返回处理战报结果
+    syncOrderOk(uint32 uid);
+	
+	///<返回处理两动情况下第一动的处理结果
+	syncOrderOkEX();
+	
+	///<同步一回合战报
+	syncOneTurnAction(COM_BattleReport reports);
+	
+	///<同步属性
+	syncProperties(uint32 guid,array<COM_PropValue> props);
+	
+	///<接收聊天信息
+	receiveChat(COM_ChatInfo info,COM_ContactInfo myinfo);
+	requestAudioOk(int32 audioId, array<uint8> content);
+	//各种炫耀
+	//@{
+	//show item
+	publishItemInstRes(COM_ShowItemInstInfo info, ChatKind type);
+	queryItemInstRes(COM_ShowItemInst item);
+	//show character
+	publishBabyInstRes(COM_ShowbabyInstInfo info ,ChatKind type);
+	queryBabyInstRes(COM_ShowbabyInst inst);
+
+	//@}
+	//禁言
+	setNoTalkTime(float t);
+	///<添加npc
+	addNpc(array<int32> npcList);
+	///<删除npc
+	delNpc(array<int32> npcList);	
+	///<更新队长
+	setTeamLeader(int32 playerId, bool isLeader);
+	///<初始换背包
+	initBag(array<COM_Item> items);
+	
+	///<添加背包物品
+	addBagItem(COM_Item item);
+	
+	///<删除背包物品
+	delBagItem(uint16 slot);
+
+	///<更新背包道具
+	updateBagItem(COM_Item item);
+	///同步仓库
+	depositItemOK(COM_Item item);
+	getoutItemOK(uint16 slot);
+	depositBabyOK(COM_BabyInst baby);
+	getoutBabyOK(uint16 slot);
+	sortItemStorageOK(array<COM_Item> items);
+	sortBabyStorageOK(array<uint32> babys);
+	initItemStorage(uint16 gridNum,array<COM_Item> items);
+	initBabyStorage(uint16 gridNum,array<COM_BabyInst> babys);
+	openStorageGrid(StorageType tp,uint16 gridNum);	///gridNum当前仓库格子数量
+	delStorageBabyOK(uint16 slot);
+	///<初始化装备
+	initPlayerEquips(array<COM_Item> equips);
+	
+	///<穿装备OK
+	wearEquipmentOk(uint32 target, COM_Item equip);
+	scenePlayerWearEquipment(uint32 target, uint32 itemId);
+	///<卸下装备OK
+	delEquipmentOk(uint32 target ,uint32 itemInstId );
+	scenePlayerDoffEquipment(uint32 target, uint32 itemId);
+	///<整理背包OK
+	sortBagItemOk();
+
+	///<team
+	jointLobbyOk(array<COM_SimpleTeamInfo> infos);
+	exitLobbyOk();
+	syncDelLobbyTeam(uint32 teamId);
+	syncUpdateLobbyTeam(COM_SimpleTeamInfo info);
+	syncAddLobbyTeam(COM_SimpleTeamInfo team);
+	createTeamOk(COM_TeamInfo team);
+	changeTeamOk(COM_TeamInfo team);
+	joinTeamOk(COM_TeamInfo team);
+	addTeamMember(COM_SimplePlayerInst info);
+	delTeamMember(int32 instId);
+	changeTeamLeaderOk(int32 uuid);
+	exitTeamOk(bool iskick);
+	updateTeam(COM_TeamInfo team);
+	joinTeamRoomOK(COM_TeamInfo team);
+	inviteJoinTeam(uint32 teamId,string name);
+	syncTeamDirtyProp(int32 guid,array<COM_PropValue> props);
+	leaveTeamOk(int32 playerId); //暂离
+	backTeamOK(int32 playerId); //归队
+	teamCallMemberBack();
+	refuseBackTeamOk(int32 playerId); //拒绝归队
+	requestJoinTeamTranspond(string reqName);		//转发进队申请
+	///<抽取伙伴返回
+	drawLotteryBoxRep(array<COM_Item> items);
+	
+	///<添加伙伴
+	addEmployee(COM_EmployeeInst employee);
+	battleEmployee(int32 empId,EmployeesBattleGroup group,bool forbattle);
+	changeEmpBattleGroupOK(EmployeesBattleGroup group);
+	evolveOK(int32 guid, QualityColor qc);
+	upStarOK(int32 guid, int32 star,COM_Skill sk);
+	delEmployeeOK(array<uint32> instids);
+	sycnEmployeeSoul(int32 guid,uint32 soulNum);
+
+	///<任务相关
+	initQuest(array<COM_QuestInst> qlist,array<int32> clist);
+	acceptQuestOk(COM_QuestInst inst);
+	submitQuestOk(int32 questId);
+	giveupQuestOk(int32 questId);
+	updateQuestInst(COM_QuestInst inst);
+	
+	//社会关系
+	requestContactInfoOk(COM_ContactInfo contact);
+	addFriendOK(COM_ContactInfo inst);
+	delFriendOK(uint32 instId);
+	addBlacklistOK(COM_ContactInfo inst);
+	delBlacklistOK(uint32 instId);
+	findFriendFail();
+	referrFriendOK(array<COM_ContactInfo> insts);
+	requestFriendListOK(array<COM_ContactInfo> insts);
+	//刮刮卡
+	lotteryOk(int32 lotteryId, array<COM_DropItem> dropItem);
+
+	//开始我挖矿成功
+	//resetMineTimes(array<uint16> times);
+	openGatherOK(COM_Gather gather);
+	miningOk(array<COM_DropItem> items,COM_Gather gather,uint32 gatherNum);
+	//合成成功
+	openCompound(uint32 compoundId);
+	compoundItemOk(COM_Item item);
+	//
+	//开启背包格子成功
+	openBagGridOk(int32 num);
+	//JJC
+	requestChallengeOK(bool isOK);
+	requestMySelfJJCDataOK(COM_EndlessStair info);
+	requestRivalOK(array<COM_EndlessStair> infos);
+	rivalTimeOK();
+	checkMsgOK(COM_SimplePlayerInst inst);
+	requestMyAllbattleMsgOK(array<COM_JJCBattleMsg> infos);
+	myBattleMsgOK(COM_JJCBattleMsg info);
+	//排行榜
+	requestJJCRankOK(uint32 myRank,array<COM_EndlessStair> infos);
+	requestLevelRankOK(uint32 myRank,array<COM_ContactInfo> infos);
+	requestBabyRankOK(uint32 myRank,array<COM_BabyRankData> infos);
+	requestEmpRankOK(uint32 myRank,array<COM_EmployeeRankData> infos);
+	requestPlayerFFRankOK(uint32 myRank,array<COM_ContactInfo> infos);
+	
+	//查询信息OK
+	queryOnlinePlayerOK(bool isOnline);
+	queryPlayerOK(COM_SimplePlayerInst inst);
+	queryBabyOK(COM_BabyInst inst);
+	queryEmployeeOK(COM_EmployeeInst inst);
+	
+	//新手指引
+	initGuide(uint32 guideMask);
+	
+	buyShopItemOk(int32 id);
+
+	addPlayerTitle(int32 title);
+	delPlayerTitle(int32 title);
+	
+	//
+	requestOpenBuyBox(float greenTime,float blueTime, int32 greenFreeNum);
+	requestGreenBoxTimeOk();
+	requestBlueBoxTimeOk();
+
+	//成就
+	updateAchievementinfo(COM_Achievement achs);
+
+	//
+	syncOpenSystemFlag(uint64 flag);
+	//活动
+	requestActivityRewardOK(uint32 ar);
+	syncActivity(COM_ActivityTable table);
+	updateActivityStatus(ActivityType type, bool open);
+	updateActivityCounter(ActivityType type, int32 counter,int32 reward); //reward 是活跃度
+	syncExam(COM_Exam exam);
+	syncExamAnswer(COM_Answer answer);
+	//同步宠物神殿
+	petActivityNoNum(string name);		//没次数
+	//百人道场
+	syncHundredInfo(COM_HundredBattle hb);
+	//签到系统初始化
+	initSignUp(array<int32> info, int32 process, bool sign7, bool sign14, bool sign28);
+	signUp(bool flag);
+	requestSignupRewardOk7();
+	requestSignupRewardOk14();
+	requestSignupRewardOk28();
+	//同步双倍经验时间
+	sycnDoubleExpTime(bool isFlag, float times);
+	//同步状态
+	sycnStates(array<COM_State> states);
+	//PVPJJC
+	requestpvprankOK(array<COM_ContactInfo> infos);		//请求在线JJC排名OK
+	syncMyJJCTeamMember();
+	startMatchingOK();
+	stopMatchingOK(float times);
+	updatePvpJJCinfo(COM_PlayerVsPlayer info);
+	exitPvpJJCOk();
+	syncEnemyPvpJJCPlayerInfo(COM_SimpleInformation info);
+	syncEnemyPvpJJCTeamInfo(array<COM_SimpleInformation> infos,uint32 teamID_);
+	///勇者选拔战活动
+	openWarriorchooseUI();		//通知所有队员打开此活动界面
+	warriorStartOK();
+	warriorStopOK();
+	syncWarriorEnemyTeamInfo(array<COM_SimpleInformation> infos,uint32 teamID_);
+	///邮件相关
+	appendMail(array<COM_Mail> mails);
+	delMail(int32 mailId);
+	updateMailOk(COM_Mail mail);
+	//展示物品
+	
+	//公告
+	boardcastNotice(string content, bool isGm);
+	//帮派
+	//{@
+	createGuildOK();
+	delGuildOK();
+	leaveGuildOk(string who , bool isKick);														//退出帮派
+	initGuildData(COM_Guild guild);																//初始化帮派信息
+	initGuildMemberList(array<COM_GuildMember> member);											//初始化帮派成员列表
+	modifyGuildMemberList( COM_GuildMember member , ModifyListFlag flag);						//更新帮派成员列表
+	modifyGuildList( COM_GuildViewerData data , ModifyListFlag flag);							//更新帮派列表		
+	queryGuildListResult(int16 page,int16 pageNum,array<COM_GuildViewerData> guildList);		//请求帮派列表
+	inviteGuild(string sendName,string guildName);
+	updateGuildShopItems(array<COM_GuildShopItem> items);
+	updateGuildBuilding(GuildBuildingType type,COM_GuildBuilding building);
+	updateGuildMyMember(COM_GuildMember member);
+	levelupGuildSkillOk(COM_Skill skInst);//祝福
+	presentGuildItemOk(int32 val); //捐献
+	progenitusAddExpOk(COM_GuildProgen mInst);//神兽升级
+	setProgenitusPositionOk(array<int32> positions); //神兽设置位置
+	updateGuildFundz(int32 val); //同步当前资金
+	updateGuildMemberContribution(int32 val);
+	
+	openGuildBattle(string otherName,int32 playerNum, int32 level, bool isLeft, int32 lstime);
+	startGuildBattle(string otherName, int32 otherCon, int32 selfCon);
+	closeGuildBattle(bool isWinner);
+	syncGuildBattleWinCount(int32 myWin,int32 otherWin);	
+	//@}
+	initMySelling(array<COM_SellItem> items);				///初始化我的售卖
+	initMySelled(array<COM_SelledItem> items);
+	fetchSellingOk(array<COM_SellItem> items,int32 total);		///查询交易列表
+	fetchSellingOk2(array<COM_SellItem> items,int32 total);		///查询交易列表
+	sellingOk(COM_SellItem item);								///售卖成功
+	selledOk(COM_SelledItem item);									///卖出去橙弓
+	unsellingOk(int32 sellid);									///取消售卖成功
+	//兑换码
+	redemptionSpreeOk();
+	//状态
+	insertState(COM_State st);
+	updattState(COM_State st);
+	removeState(uint32 stid);
+	//修理
+	requestFixItemOk(COM_Item item);
+	//碎片
+	makeDebirsItemOK();
+	//神器
+	updateMagicItem(int32 level ,int32 exp);
+	changeMagicJobOk(JobType job);
+	magicItemTupoOk(int32 level);
+	//转盘
+	zhuanpanOK(array<uint32> pond);
+	updateZhuanpanNotice(COM_Zhuanpan zhuanp);
+	sycnZhuanpanData(COM_ZhuanpanData data);
+	//副本没次数
+	copynonum(string name);
+	//场景角色筛选
+	sceneFilterOk(array<SceneFilterType> sfType);
+	//许愿
+	wishingOK();
+	shareWishOK(COM_Wish wish);
+	
+	//广播队长关闭对话
+	leaderCloseDialogOk();
+	//在线时间活动开始计时
+	startOnlineTime();
+	requestOnlineTimeRewardOK(uint32 index);
+	//vip奖励可领取状态同步
+	sycnVipflag(bool flag);
+	//成长基金
+	buyFundOK(bool flag);
+	requestFundRewardOK(uint32 level);
+	//首冲
+	firstRechargeOK(bool isFlag);
+	firstRechargeGiftOK(bool isFlag);
+	//运营活动
+	agencyActivity(ADType type, bool isFlag);			//运营活动开关通知
+	updateFestival(COM_ADLoginTotal festival);
+	updateSelfRecharge(COM_ADChargeTotal val);
+	updateSysRecharge(COM_ADChargeTotal val);
+	updateSelfDiscountStore(COM_ADDiscountStore val);
+	updateSysDiscountStore(COM_ADDiscountStore val);
+	updateSelfOnceRecharge(COM_ADChargeEvery val);
+	updateSysOnceRecharge(COM_ADChargeEvery val);
+	openCardOK(COM_ADCardsContent data);			//翻牌
+	resetCardOK();
+	sycnHotRole(COM_ADHotRole data);			//热点
+	hotRoleBuyOk(uint16 buyNum);					//热点伙伴购买成功
+	updateSevenday(COM_Sevenday data);
+	updateEmployeeActivity(COM_ADEmployeeTotal data);
+	updateMinGiftActivity(COM_ADGiftBag data);
+	updateIntegralShop(COM_IntegralData data);
+	//
+	updateShowBaby(uint32 playerId, uint32 showBabyTableId, string showBabyName);
+	//个人累计充值常驻板
+	updateMySelfRecharge(COM_ADChargeTotal val);
+	
+	verificationSMSOk(string phoneNumber);
+	requestLevelGiftOK(int32 level);
+	sycnConvertExp(int32 val);				//同步转存经验
+	
+	wearFuwenOk(COM_Item inst);
+	takeoffFuwenOk(int32 slot);
+	compFuwenOk();
+	
+	
+	//伙伴任务
+	requestEmployeeQuestOk(array<COM_EmployeeQuestInst> questList);
+	acceptEmployeeQuestOk(COM_EmployeeQuestInst inst);
+	submitEmployeeQuestOk(int32 questId, bool isSuccess);
+	//同步水晶系统
+	sycnCrystal(COM_CrystalData data);
+	crystalUpLeveResult(bool isOK);
+	resetCrystalPropOK();
+	//历程礼包
+	sycnCourseGift(array<COM_CourseGift> data);
+	orderOk(string orderId, int32 shopId);//傻逼运营
+	updateRandSubmitQuestCount(int32 submitCount);
+	//更新场景队员
+	updateTeamMember(int32 playerId, bool isMember);
+};
+
+////////////////////////////////////////////////////////////////////////////////
+
+service SGE_World2Login{
+	queryAccount(COM_LoginInfo info);
+	setAccountSeal(string accountname, bool val);
+	setPhoneNumber(string accountname, string phoneNumber);
+};
+
+service SGE_Login2World{
+	queryAccountOk(COM_AccountInfo info,bool isNew,bool isSeal);
+	setAccountSealOk(string accountname);
+};
+
+service SGE_Gateway2World{
+	syncConnectInfo(int32 indoor,string ip);
+};
+
+////////////////////////////////////////////////////////////////////////////////
+
+service SGE_World2DB
+{
+	queryPlayerSimpleInformation(string username,int32 serverId); //查询角色信息
+	queryPlayer(string username,int32 playerId);
+	createPlayer(string username, SGE_DBPlayerData inst, int32 serverId);
+	updatePlayer(string username, SGE_DBPlayerData inst);
+	deletePlayer(string playername);
+	queryPlayerById(string name,int32 instId,int32 where);//name请求发起者 
+
+	insertEndlessStair(int32 rank, string name);
+	updateEndlessStair(int32 rank, string name);
+	
+	createBaby(string playername,COM_BabyInst inst,bool isToStorage);
+	deleteBaby(string playername,int32 babyInstId);
+	//resetBabyOwner(string playername,int32 babyInstId);
+	updateBaby(COM_BabyInst inst);
+	updateBabys(string playername,array<COM_BabyInst> babys);
+	queryBabyById(string name,uint32 instid);
+	
+	createEmployee(string playername,COM_EmployeeInst inst);
+	deleteEmployee(string playername,array<uint32> instIds);
+	updateEmployee(COM_EmployeeInst inst);
+	queryEmployeeById(string name, uint32 instid);
+
+	//邮件相关
+	insertMail(COM_Mail mail);
+	insertMailAll(COM_Mail mail);
+	insertMailByRecvs(COM_Mail mail, array<string> recvs);
+	fatchMail(string recvName, int32 mailId);
+	delMail(string recvName, int32 mailId);
+	updateMail(COM_Mail mail);
+	
+	// 帮派
+	//@{
+	insertGuild(COM_Guild guild,COM_GuildMember guildMember);
+	updateGuildRequestList(uint32 guildId , array<COM_GuildRequestData> data);
+	createGuildMember(COM_GuildMember guildMember);
+	delGuild(int32 guildId );
+	updateGuildNotice(uint32 guildId , string notice);
+	updateGuild(COM_Guild guild);
+	updateMemberPosition(int32 roleId , GuildJob job);
+	updateMemberContribution(int32 roleId, int32 contribution);
+	updateGuildStruction(uint32 guildId , int8 level , int32 struction);
+	deleteGuildMember(int32 playerId);
+	
+	//@}
+	//---激活码
+	//queryIdgen(string playerName,string idgen);
+	//updateKeyGift(COM_KeyContent giftdata);
+	//运营活动
+	insertActivity(ADType adt,SGE_SysActivity date);
+	
+	// 充值
+	insertLoseCharge(int32 playerId, SGE_OrderInfo order);
+	//伙伴任务
+	insertEmployeeQuest(uint32 playerId,SGE_PlayerEmployeeQuest data);
+	delEmployeeQuest(uint32 playerId);
+	
+	deleteEndlessStair(string name);
+};
+
+service SGE_DB2World
+{
+	syncGlobalGuid(uint32 id);
+	syncContactInfo(array<SGE_ContactInfoExt> info);
+	
+	queryPlayerSimpleInformationOk(string username, array<COM_SimpleInformation> insts,int32 serverId); //查询角色信息
+	queryPlayerOk(string username, SGE_DBPlayerData player);
+	createPlayerOk(string username, SGE_DBPlayerData inst, int32 inDoorId);
+	createPlayerSameName(string username);
+	queryPlayerByIdOK(string playername,SGE_DBPlayerData inst,int32 where);  //where 0是竞技场查询 1是请求角色信息 2 是请求竞技场角色信息 不一样的是调用前端接口不一样
+	queryEndlessStairAllDateOK(array<string> name);
+	queryPlayerByLevelOK(array<COM_ContactInfo> info);
+	queryPlayerByFFOK(array<COM_ContactInfo> info);
+	
+	createBabyOK(string playername,COM_BabyInst inst,bool isToStorage);
+	deleteBabyOK(string playername,int32 babyInstId);
+	queryBabyByFFOK(array<COM_BabyRankData> infos);
+	queryBabyByIdOK(string name, COM_BabyInst inst);
+	UpdateBabysOK(string playername);
+	
+	createEmployeeOK(string playername,COM_EmployeeInst inst);
+	deleteEmployeeOK(string playername,array<uint32> instIds);
+	queryEmployeeByFFOK(array<COM_EmployeeRankData> infos);	//playerName请求的人
+	queryEmployeeByIdOK(string name,COM_EmployeeInst inst);
+	
+	appendMail(string playerName, array<COM_Mail> mails);
+	
+	// 帮派
+	//@{
+	insertGuildOK(COM_Guild guild,COM_GuildMember guildMember);
+	updateMemberJobOk(int32 roleId , GuildJob job);
+	
+	syncGuild(array<COM_Guild> guilds);
+	syncGuildMember(array<COM_GuildMember>	guildMember);
+	//@}
+	
+	//---激活码
+	//queryIdgenOK(string playerName,COM_KeyContent content, bool isHas);
+	//运营活动
+	fatchActivity(SGE_SysActivity date);
+	//伙伴任务
+	syncEmployeeQuest(array<SGE_PlayerEmployeeQuest> info);
+};
+
+/////////////////////////////////////////////////////////////////////////////////
+//场景服务器
+
+service SGE_Scene2World{
+	
+};
+
+service SGE_World2Scene{
+	initDynamicNpcs(NpcType type, int32 count);
+	refreshDynamicNpcs(NpcType type, int32 count);
+	finiDynamicNpcs(NpcType type);
+	addDynamicNpcs(int32 sceneId,array<int32> npcs);
+	delDynamicNpc(int32 npcId);
+	delDynamicNpc2(int32 sceneId, int32 npcId);
+	openSceneCopy(int32 instId);
+	closeSceneCopy(int32 instId);
+};
+
+service SGE_Player_Scene2World{
+	joinScene(COM_SceneInfo info);
+	move2(COM_FPosition pos);
+	cantMove(); ///目标不可达
+	transfor2(COM_FPosition pos);
+	autoBattleResult(bool isOk);
+	zoneJoinBattle(int32 zoneId);
+	playerAddNpc(array<int32> npcs);
+	playerDelNpc(array<int32> npcs);
+	talkedNpc(int32 npcid);
+	findDynamicNpcOK(int32 npcid,bool hasnpc);
+};
+
+service SGE_Player_World2Scene{
+	initScenePlayer(SGE_ScenePlayerInfo info);
+	scenePlayerUpLevel(int32 level);
+	scenePlayerAddCurrentQuest(int32 questId);
+	scenePlayerDelCurrentQuest(int32 questId);
+	scenePlayerAddAcceptableQuest(int32 questId);
+	scenePlayerDelAcceptableQuest(int32 questId);
+	openScene(int32 sceneId);
+	joinBattle(); //开始战斗
+	finishBattle(); //战斗完毕
+	transforScene(int32 sceneId);
+	transforSceneByEntry(int32 sceneId,int32 entryId);
+	backHomeScene();
+	///<场景加载完成，可同步位置信息
+	sceneLoaded();
+	move(COM_FPosition pos);
+	moveToNpc(int32 npcid);
+	moveToNpc2(NpcType type);
+	moveToZone(int32 sceneId, int32 zoneId);
+	autoBattle();
+	stopMove();
+	//组队相关信息
+	addFollow(int32 scenePlayerId);
+	delFollow(int32 scenePlayerId);
+	delFollows();
+	addFollows(array<int32> scenePlayers);
+	
+	//是否可进入下一场景
+	setEntryFlag(int32 scenePlayerId,bool isFlag);
+	addNpc(int32 npcid);
+	delNpc(int32 npcid);
+	findDynamicNpc(int32 npcId);
+};
+
+////////////////////////////////////////////////////////////////////////////////
+
+service SGE_World2GMT
+{
+};
+
+service SGE_GMT2World
+{
+	addExp(uint32 playerId , uint32 exp);
+	addMoney(uint32 playerId, int32 money);
+	addDiamond(uint32 playerId, int32 diamond);
+	openGM(uint32 playerId);
+	closeGM(uint32 playerId);
+	noTalkPlayer(uint32 playerId , uint32 time);
+	sealPlayer(uint32 playerId);
+	kickPlayer(uint32 playerId);
+	openTalkPlayer(uint32 playerId);
+	unsealPlayer(uint32 playerId);
+	sendMailAllOnline(COM_Mail mail,int32 lowLevel,int32 highLevel,int64 lowRegTime, int64 highRegTime);
+	gmtNotice(NoticeSendType bType, string note, uint64 thetime, int64 itvtime);
+	//活动
+
+	setChargeTotal(COM_ADChargeTotal data);	//累计充值
+	setChargeEvery(COM_ADChargeEvery data);	//单笔充值
+	setDiscountStore(COM_ADDiscountStore data);	//打折商店
+	setLoginTotal(COM_ADLoginTotal data);		//累计登录
+	setHotRole(COM_ADHotRole data);	//热点角色
+	setEmployeeActivity(COM_ADEmployeeTotal data);
+	setMinGiftBagActivity(COM_ADGiftBag data);
+	setZhuanpanActivity(COM_ZhuanpanData data);
+	setIntegralshop(COM_IntegralData data);
+	makeOrder(uint32 playerId, SGE_GmtOrder order);
+	doScript(string script);
+	playerDoScript(uint32 playerId, string script);
+};
+
+///拍卖行
+service SGE_World2Mall{
+	fetchSell(int32 playerid,COM_SearchContext context);
+	fetchMySell(int32 playerid);
+	fetchSelledItem(int32 playerId);
+	sell(COM_SellItem item); ///卖
+	unSell(int32 playerid,int32 sellid); ///取消卖
+	buy(SGE_BuyContent content);	///买
+	insertSelledItem(COM_SelledItem item);
+	
+};
+
+service SGE_Mall2World{
+	fetchSellOk(int32 playerid,array<COM_SellItem> items,int32 totalSize);
+	fetchMySellOk(int32 playerid,array<COM_SellItem> items);
+	fetchSelledItemOk(int32 playerId,array<COM_SelledItem> items);
+	sellOk(int32 playerid,COM_SellItem item);
+	unSellOk(int32 playerid,int32 sellid);
+	buyOk(int32 playerid,COM_SellItem item);
+	buyFail(int32 playerid,ErrorNo errorno);
+};
+
+/////////////////////////////////////////////////////////////////////////////////
+//后台log
+
+service Backlog
+{
+	log(string key,string msg, string stack, string version);
+};
+
+//经分log
+service SGE_Log{
+	account(SGE_Account data);
+	login(SGE_Login data);
+	order(SGE_Order data);	
+	role(SGE_LogRole data);
+	playersay(uint32 senderId,string senderName,COM_Chat chat);
+	playerTrack(SGE_LogProduceTrack data);
+	playerUIBehavior(SGE_LogUIBehavior core);
+};

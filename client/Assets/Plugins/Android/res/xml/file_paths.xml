@@ -1,0 +1,28 @@
+<paths xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 适配7.0 必须添加 -->
+    <root-path
+        name="root_path"
+        path="." />
+
+    <files-path
+        name="filesDir"
+        path="test1" />
+
+    <cache-path
+        name="appCache"
+        path="cache" />
+
+    <external-path
+        name="downloadFile"
+        path="SYSdk" />
+
+    <external-files-path
+        name="photoFile"
+        path="header" />
+
+    <external-cache-path
+        name="imgCache"
+        path="header" />
+
+</paths>

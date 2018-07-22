@@ -1,0 +1,339 @@
+
+enum Constant
+{
+	C_None,
+	C_SceneVisibleMaxRadius, //同场景最大可见半径
+	C_SceneVisibleMaxNum, //同场景最大可见人数
+	C_ServerHost,
+	C_ServerPort,
+	C_BacklogHost,
+	C_BacklogPort,
+	C_BattleCacheMax,
+	C_PlayerMaxLevel,		//角色等级上限
+	C_OnceMaxExp,			//单次获得最大经验
+	C_BagInitSize,
+	C_BagMaxSize,
+	C_MazeRandTime,
+	C_DepositeMaxTime,		///离线最大托管时间
+	C_LearnSkillMaxNum,		///学习技能最大数量
+	C_TiliMax,				///体力最大值
+	C_TiliResetInterval,	///体力回复间隔
+	C_TiliResetValue,		///体力回复数量
+	C_JJCRivalTimeCD,		///竞技场挑战CD
+	C_JJCRivalNum,			///竞技场挑战次数
+	C_JJCOpenlevel,			///竞技场开启等级
+	C_PVPJJCOpenlevel,		///在线竞技场开启等级
+	C_PVPJJCMeanTime1,		///PVPJJC匹配时间段(s)
+	C_PVPJJCMeanTime2,
+	C_PVPJJCMeanTime3,
+	C_PVPJJCMeanTime4,
+	C_PVPJJCMeanTime5,
+	C_PVPJJCMeanTime6,
+	C_WarriorTrophylow,		///勇者选拔三种奖励DROPID
+	C_WarriorTrophymiddle,
+	C_WarriorTrophyhigh,
+	C_WarriorTrophyMax,		///勇者选拔箱子最大个数
+	C_MonsterSneakAttack,	///怪物偷袭几率
+	C_BoxGreenTimeCD,		///普通宝箱CD
+	C_BoxBlueTimeCD,		///高级宝箱CD
+	C_BoxGreenFreeNum,		///普通宝箱免费次数
+	C_BoxGreenSpend,		///抽Green伙伴花费
+	C_BoxBlueSpendItem,		///抽伙伴所需道具
+	C_BoxBlueSpend,			///抽Blue伙伴花费道具数量
+	C_BoxGoldSpend,			///抽Gold伙伴花费道具数量
+	C_Employeelasttime,		///钻石单抽区间
+	C_EmployeeRare,			///抽伙伴稀有,目前是紫色
+	C_EmpDelFeedback1,		///伙伴解雇按星级返还金币
+	C_EmpDelFeedback2,
+	C_EmpDelFeedback3,
+	C_EmpDelFeedback4,
+	C_EmpDelFeedback5,
+	C_RandomMin,			///遇敌最小步数
+	C_RandomMax,			///遇敌最大步数
+	C_GapWorldLevel_One,	///与世界等级差距
+	C_GapWorldLevel_Two,
+	C_GapWorldLvExtra_One,	///与世界等级差距匹配的经验加成
+	C_GapWorldLvExtra_Two,
+	C_GapWorldLvExtra_Three,
+	C_HundredBattle,			///百人道场开启等级
+	C_HundredChallengeNum,		///百人道场每日挑战次数
+	C_HundredTier,			///百人道场总层数
+	C_PetActivityNum,		///宠物神殿挑战次数
+	C_PingTimeOut,
+	
+	C_EquipDurVar,			///装备耐久系数
+	
+	C_InitMoney,			///默认送的金币
+	C_InitDiamond,		///默认送的钻石
+	
+	C_RankUpdataTime,			///排行榜更新时间
+
+	C_OfflineExperienceTimeMin,
+	C_OfflineExperienceTimeMax,
+	C_OfflineHourExperience,
+	C_RefreshAverageTimeout,
+	C_SignPay, //补签消费
+	C_SignReward7, ///连续签到奖励daoju
+	C_SignReward14,
+	C_SignReward28,
+
+	C_ResetBabyPay, ///重置宝宝消耗
+	C_SkillExpItem, ///技能升级道具
+	C_BabyExpItem, ///宠物升级道具
+	C_DoubleExpItem, ///双倍道具
+	C_ResetPlayerPay, ///洗点道具
+	
+	///宠物初始忠诚
+	C_BabyLoyalMin, ///
+	C_BabyLoyalMax,
+	C_BabyLoyalVar,
+	C_BabyLoyalSkillId,
+	C_AttackSkillId,
+	C_DefenseSkillId,
+	C_NothingSkillId,
+
+	///宠物强化技能ID
+	C_BabyStrongSkillId,
+
+	C_TeamMaxSize,
+	C_BattleMaxSize,
+	C_MineTimeMax, ///挖矿倒计时
+	C_EverydayDoubleExp,	//每天赠送双倍经验
+	C_DoubleExpMax,			//双倍经验上限
+
+	C_MushroomHitMax, ///蘑菇每日上线
+	
+	C_TongjiRefreshHour, //通缉任务刷新时间
+	C_TongjiTimesMax,	///通缉任务每轮上线
+	C_TongjiMaxDrop,		///通缉任务给奖励的最大次数
+	C_TongjiTeamMemberLevelMin,
+	C_TongjiTeamSizeMin,
+
+	C_XijiHitMax,
+	
+	///帮会
+	C_CreateGuildLevel,		///可创建帮会等级
+	C_CreateGuildGold,		///创建帮派所需金钱
+	C_CreateGuildItem,		///创建帮派所需道具
+	C_RequsetJoinGuildMax,	///帮会申请列表最大长度
+	C_GuildMemberMaxNum,	///帮派成员最大个数
+	C_VicePremierMaxNum,	///副帮主最大个数
+	C_FamilyBattleLevelMin, ///帮派战参加最低等级
+	C_FamilyBattleScene, 	///帮派战场景
+	C_FamilyBattleOpenRand, ///帮派战开启随机
+	C_FamilyShopConsume,		
+	C_FamilyInitFundz,			//帮派初始化资金
+	C_FamilyLearnSkillPay,		//帮派学习祝福支付
+	C_FamilySkillExp,			//帮派技能经验
+	C_FamilyPresentItemId,		//帮派采集道具
+	C_FamilyPresentMailSender,	//帮派采集发送邮件
+	C_FamilyPresentMailTitle,	//帮派采集发送邮件
+	C_FamilyPresentMailContent,	//帮派采集发送邮件
+	C_FamilyPresentMailItemId0, //帮派采集发送邮件道具
+	C_FamilyPresentMailItemId1, //帮派采集发送邮件道具
+	C_FamilyPresentMailItemId2, //帮派采集发送邮件道具
+	C_FamilyPresentMailItemId3, //帮派采集发送邮件道具
+	C_FamilyPresentMailItemId4, //帮派采集发送邮件道具
+	C_FamilyPresentMailItemId5, //帮派采集发送邮件道具
+	C_FamilyPresentMailItemId6, //帮派采集发送邮件道具
+	C_FamilyPresentMailItemId7, //帮派采集发送邮件道具
+	C_FamilyPresentMailItemId8, //帮派采集发送邮件道具
+	C_FamilyPresentMailItemId9, //帮派采集发送邮件道具
+	C_FamilyProgenitusMonsterId0, //帮派神兽
+	C_FamilyProgenitusMonsterId1, //帮派神兽
+	C_FamilyProgenitusMonsterId2, //帮派神兽
+	C_FamilyProgenitusMonsterId3, //帮派神兽
+	C_FamilyProgenitusAddExpPay, //帮派神兽普通提升花费
+	C_FamilyProgenitusAddExpSuperPay, //帮派神兽超级提升花费
+	C_FamilyProgenitusAddExp,	//帮派神兽普通提升经验
+	C_FamilyProgenitusAddSuperExp, //帮派神兽超级提升经验
+	C_ProgenitusPositionMax, //帮派神兽最大出战数量
+	C_FamilyOneDayFundzLose, //帮派每日扣除帮贡
+	C_FamilyNoMoneyDays, //帮派没有帮贡日期计数
+	C_FamilyDemonCount,
+	C_FamilyLeaderCount,
+	C_FamilyJoinGuildIntervalTime, ///加入帮派最小间隔
+	C_FamilyLeaderOffineTimeMax, ///被弹劾时间限制
+	C_FamilyLoseLeaderItem, ///弹劾使用道具 
+	
+	///VIP
+	C_Vip1Reward,			///会员每日奖励
+	C_Vip2Reward,			///超级会员每日奖励
+	C_Vip1RewardNum,		///会员每日奖励数量
+	C_Vip2RewardNum,		///会员每日奖励数量
+	C_VipTime,
+
+	//商会
+	C_MallTax, //税率
+	C_MallSellPay, //摊位费
+	C_MallMailSender, ///邮件发送者
+	C_MallMailTitle, ///邮件发送者
+	C_MallMailContent,
+	
+	//金币上线
+	C_MoneyMax,
+	C_DiamondMax,
+
+	//宠物上限
+	C_BabyMax,
+
+	//
+	C_WorldChatTime, ///聊天喊话所需金币
+	//好友和黑名单上限
+	C_FriendMax,
+	//第一次roll 
+	C_FirstRollEmployeeCon,
+	C_FirstRollEmployeeDia,
+
+	C_GuideNewSceneId0,
+	C_GuideNewSceneId1,
+	
+	C_TeamGuideStep1,
+	C_TeamGuideStep2,
+	
+	//组队等级限制
+	C_TeamNoTaget,
+	C_Team10,
+	C_Team20,
+	C_Team30,
+	C_Team40,
+	C_Team50,
+	C_Team60,
+	C_TeamTongji,
+	C_TeamMogu,
+	C_TeamXiji,
+	C_TeamBairen,
+	C_TeamPVP,
+	C_TeamOutSide,
+	C_Copy,
+	C_Hero,
+	
+	C_AiAttackTime,		//Ai出手时间
+	C_ItemStroagePageGridNum,//仓库每页个数
+	C_BabyStroagePageGridNum,//仓库每页个数
+	C_ItemStroageGridMax,	//仓库最大格子数
+	C_BabyStroageGridMax,	//仓库最大格子数
+	
+	//
+	C_CatchPetItemID,
+	C_CatchPetItemInShopID,
+	C_BossMuc,
+	C_PutnMuc,
+	C_PvpMuc,
+	C_PkItemDorp,	//PK活动道具掉落概率
+	//转盘
+	C_ZhuanPanOneGo,
+	C_ZhuanPanTenGo,
+	
+	C_BattleSpeed,
+	C_FixNoticePth,
+	C_UpdateNoticePth,
+	C_ExamOpenLevel,
+	C_ExamNumMax,			//每此答题活动最大次数
+	C_ExamRight10,			//答对10题
+	C_ExamRight20,			//答对20题
+	C_AllGatherNum,			//采集总次数
+	C_GatherNumMax,			//采集每日次数
+	C_GM,					//GM开关
+	C_WishStoreMax,			//许愿池最大储存
+	C_WishShareMaxNum,		//每日分享
+	C_WishShareExp,			//许愿分享
+	C_WishShareMoney,
+	C_WishItem,
+	C_WishNpcID,
+	C_WishDistance,
+	C_IosPayServerId,
+	C_AndroidPayServerId,
+	C_MallMinPrice,
+	
+	C_Vip1ShopID,
+	C_Vip2ShopID,
+	
+	C_OpenCardMax,		//最大翻牌次数
+	C_OpenCardNeedItem,	//翻牌所需道具,洗牌也用这个东西
+	C_ResetCardNeedItemNum,
+	C_HotShopBuyNum,	//热点商店购买次数
+	C_ADActivityOpenLv,		//等级开启精彩活动
+	
+	C_SelfChargeTotal,			//个人累计充值天数
+	C_SelfChargeEvery,			//个人单笔充值天数
+	C_SelfDiscountStore,		//个人打折银行
+	
+	C_PT_NoSleep,			///抗昏睡
+	C_PT_NoPetrifaction,	///抗石化
+	C_PT_NoDrunk,			///抗酒醉
+	C_PT_NoChaos,			///抗混乱
+	C_PT_NoPoison,		///抗毒
+	
+	C_PT_Stama, 		///体力
+	C_PT_Strength,	///力量
+	C_PT_Power, 		///强度
+	C_PT_Speed, 	 	///速度
+	C_PT_Magic,	 	///魔法
+	
+	C_PT_Attack,		///攻击力
+	C_PT_Defense,		///防御力
+	C_PT_Agile,		///敏捷
+	C_PT_Spirit,		///精神
+	C_PT_Reply,		///回复
+	
+	C_PT_Hit,				///命中
+	C_PT_Dodge,			///闪躲
+	C_PT_Crit,			///必杀
+	C_PT_counterpunch,	///反击
+	
+	C_DialogScale,		///对话缩放附加值
+	
+	C_HPBuffShopID,		///商场buffID
+	C_MPBuffShopID,
+	C_WorldExpBuffShopID,
+	
+	C_NoBattleTime,
+	C_GuildBattleStartIntervalTime,
+	C_MallShopFreezeTime, ///拍卖行售卖冻结天数
+	C_FamilySignDrop,	///签到奖励
+	C_PhoneItem,	///签到奖励
+	//各个活动单次转储经验
+	C_TongJiExp,
+	C_RiChangExp,
+	C_BaiRenExp,
+	C_FuBenExp,
+	C_PetExp,
+	C_WuDouExp,
+	C_ExamExp,
+	C_PromiseExp,
+	C_ConvertExpMax,		//转换上限
+	C_AucGoodProtect,		//拍卖行售卖冻结天数
+	C_MinGiftBag,			//小额礼包初始数据
+	
+	C_GrowFundShopID,		//成长基金shopid
+	C_SmallChange1ShopID,	//1元shopid
+	C_SmallChange3ShopID,	//3元shopid
+	C_GiftBtn,				//礼包兑换按钮
+	
+	C_CompRunesNeedNum, //合成符文需要数量
+	C_FuWenOpenLevel,   //符文开启等级
+	C_MinGiftPrice,			//小额礼包售价(现价)
+	C_MinGiftOldPrice,		//小额礼包售价(原价)
+	
+	C_CleanRandQuestWeekDay,
+	C_AccecptRandQuestLimit, //跑环任务限制
+	C_SubmitRandQuestRewaredNumber0,
+	C_SubmitRandQuestRewaredNumber1,
+	C_SubmitRandQuestRewared0,
+	C_SubmitRandQuestRewared1,
+	C_CrystalNeedItem,		//水晶升级所需道具
+	C_CrystalNeedDiamond,	//水晶属性重置消耗
+	C_EverydayIntegral,		//每日领取积分
+	C_IntegralRatio,		//充值返还积分比例
+	
+	C_BoxBlueSpendDiamond,	//伙伴抽取花费钻石
+	C_BoxGoldSpendDiamond,
+	
+	C_ShopMailSender,
+	C_ShopMailContent,
+	
+	C_Max,
+	
+
+};

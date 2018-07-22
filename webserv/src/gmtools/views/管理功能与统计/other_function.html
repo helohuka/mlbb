@@ -1,0 +1,128 @@
+<!--GM功能-->
+<!--cdkey生成-->
+{{define "cdkey_generate"}}
+    <div>
+		
+		<fieldset>
+			<legend>生成CDKEY</legend>
+			<div id="cdkey_generate_div_1">
+				<label for="cdkey_generate_tag" class="ui-controlgroup-label">TAG</label>
+				<input id="cdkey_generatey_tag" name="cdkey_generate_tag" class="ui-controlgroup-item" />
+				<label for="cdkey_generate_number" class="ui-controlgroup-label">数量</label>
+				<input id="cdkey_generate_number" name="cdkey_generate_number" class="ui-controlgroup-item" /><br /><br />
+				<label for="cdkey_generate_reward" class="ui-controlgroup-label">奖励</label>
+				<input id="cdkey_generate_reward" name="cdkey_generate_reward" class="ui-controlgroup-item" />
+				<label for="cdkey_generate_channel" class="ui-controlgroup-label">渠道</label>
+				<input id="cdkey_generate_channel" name="cdkey_generate_channel" class="ui-controlgroup-item" /><br /><br />
+				<label for="cdkey_generate_use_condition" class="ui-controlgroup-label">使用条件</label>
+				<input id="cdkey_generate_use_condition" name="cdkey_generate_use_condition" class="ui-controlgroup-item" />
+				<label for="cdkey_generate_type" class="ui-controlgroup-label">是否公用</label>
+				<input id="cdkey_generate_type" name="cdkey_generate_type" type="checkbox" value="1" onclick= "if(this.c==1){this.c=0;this.checked=0}else{this.c=1}"   c="0"/>
+				<input type="submit" value="发送">
+			</div>
+		</fieldset>
+		
+	</div>
+{{end}}
+<!--cdkey查询-->
+{{define "cdkey_select"}}
+	<div>
+		<fieldset>
+			<legend>根据条件查询</legend>
+			<div id="cdkey_select_div_1">
+			     <select id="cdkey_select_condition" name="cdkey_select_condition">
+						{{range .CdkeySelectCondition}}
+			  			<option value={{.Id}} {{if .IsSelected}} select="selected"{{end}}>{{.Value}}</option>
+			  			{{end}}
+				</select>
+				<!--label for="cdkey_select_channel" class="ui-controlgroup-label">渠道</label>
+				<input id="cdkey_select_channel" name="cdkey_select_channel" class="ui-controlgroup-item" /><br /><br />
+				<label for="cdkey_select_reward" class="ui-controlgroup-label">奖励</label>
+				<input id="cdkey_select_reward" name="cdkey_select_reward" class="ui-controlgroup-item" /><br /><br />
+				<label for="cdkey_select_activation_time" class="ui-controlgroup-label">激活时间</label>
+				<input id="cdkey_select_activation_time" name="cdkey_select_activation_time" class="ui-controlgroup-item" /><br /><br />-->
+				<input type="submit" value="发送">
+			</div>
+		</fieldset>
+	</div>
+{{end}}
+<!--服务器监控（状态查询）-->
+{{define "server_monitor"}}
+    <div>
+		{{range $key, $val := .Servs}}
+				<div>
+					
+				<table width="400px" border="1" bordercolor="gray" cellspacing="0" cellpadding="5" text-align="center">
+					<tr bgcolor="white">
+						<td>id</td>
+						<td>服务器名称</td>
+						<td>大区</td>
+						<td>大区名称</td>
+						<td>容量</td>
+					</tr>
+					{{range $val}}
+					<tr bgcolor="#ff7300">
+					
+						<td>
+						{{ printf "%d" .Id }}
+						</td>
+						<td>
+						{{ printf "%s" .Name }}
+						</td>
+						<td>
+						{{ printf "%d" .Area }}
+						</td>
+						<td>
+						{{ printf "%s" .AreaName }}
+						</td>
+						<td>
+						{{ printf "%d" .Capa }}
+						</td>
+					</tr>
+					{{end}}
+				</table>
+					
+				</div>	
+		{{end}}
+	</div>
+{{end}}
+<div id="other_function" >
+	<ul>
+		<li><a href="#other_function-3">服务器状态查询</a></li>
+		<li><a href="#other_function-1">CDKEY生成</a></li>
+		<li><a href="#other_function-2">CDKEY查询</a></li>
+		
+		
+	</ul>
+	
+	
+	<div id="other_function-1">
+		<form action="do_cdkey_generate" method="post" target="_blank">
+			{{template "cdkey_generate" .}}
+		</form>
+	</div>
+	<div id="other_function-2">
+		<form action="do_cdkey_select" method="post" target="_blank">
+			{{template "cdkey_select" .}}
+		</form>
+	</div>
+	<div id="other_function-3">
+		<form action="" method="post" target="_blank">
+			{{template "server_monitor" .}}
+		</form>
+	</div>
+	
+	
+</div>
+<script language="javascript" type="text/javascript">
+	{{range $key, $val := .Servs}}
+	$( "{{ printf "#server_monitor_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	{{end}}
+	
+	$( "#cdkey_generate_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#cdkey_select_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#server_monitor_div_1" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#other_function" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#other_function li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+</script>

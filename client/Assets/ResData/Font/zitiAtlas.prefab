@@ -1,0 +1,618 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: zitiAtlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: aaf84496dad48f8479af2136dbc0be0c, type: 2}
+  mSprites:
+  - name: bang
+    x: 59
+    y: 702
+    width: 54
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 3
+    paddingTop: 2
+    paddingBottom: 3
+  - name: chuan
+    x: 59
+    y: 535
+    width: 53
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 4
+    paddingTop: 2
+    paddingBottom: 3
+  - name: chuang
+    x: 59
+    y: 207
+    width: 54
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 5
+    paddingTop: 2
+    paddingBottom: 5
+  - name: de
+    x: 116
+    y: 817
+    width: 52
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 4
+    paddingTop: 2
+    paddingBottom: 3
+  - name: douhao
+    x: 86
+    y: 22
+    width: 18
+    height: 21
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 35
+    paddingTop: 37
+    paddingBottom: 2
+  - name: ge
+    x: 0
+    y: 475
+    width: 55
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 1
+    paddingBottom: 3
+  - name: gou
+    x: 59
+    y: 646
+    width: 54
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 3
+    paddingTop: 2
+    paddingBottom: 3
+  - name: gu
+    x: 59
+    y: 591
+    width: 54
+    height: 54
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 4
+    paddingTop: 2
+    paddingBottom: 4
+  - name: hou
+    x: 59
+    y: 371
+    width: 55
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 3
+    paddingBottom: 4
+  - name: jiang
+    x: 0
+    y: 814
+    width: 57
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 2
+  - name: jiao
+    x: 116
+    y: 873
+    width: 53
+    height: 54
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 4
+    paddingTop: 2
+    paddingBottom: 4
+  - name: jin
+    x: 0
+    y: 419
+    width: 56
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 3
+  - name: juhao
+    x: 59
+    y: 17
+    width: 26
+    height: 26
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 31
+    paddingTop: 34
+    paddingBottom: 0
+  - name: la
+    x: 59
+    y: 44
+    width: 54
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 4
+    paddingTop: 2
+    paddingBottom: 5
+  - name: lu
+    x: 0
+    y: 588
+    width: 58
+    height: 54
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 2
+    paddingBottom: 4
+  - name: lun
+    x: 0
+    y: 871
+    width: 58
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 1
+    paddingBottom: 3
+  - name: mai
+    x: 0
+    y: 361
+    width: 54
+    height: 57
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 3
+    paddingTop: 1
+    paddingBottom: 2
+  - name: mao
+    x: 116
+    y: 590
+    width: 47
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 6
+    paddingTop: 2
+    paddingBottom: 2
+  - name: neng
+    x: 116
+    y: 647
+    width: 51
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 5
+    paddingTop: 2
+    paddingBottom: 3
+  - name: ni
+    x: 59
+    y: 481
+    width: 55
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 4
+    paddingTop: 3
+    paddingBottom: 4
+  - name: qi
+    x: 116
+    y: 760
+    width: 51
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 5
+    paddingRight: 4
+    paddingTop: 2
+    paddingBottom: 2
+  - name: ru
+    x: 0
+    y: 22
+    width: 54
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 4
+    paddingTop: 1
+    paddingBottom: 3
+  - name: shang
+    x: 226
+    y: 876
+    width: 53
+    height: 51
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 5
+  - name: shen
+    x: 0
+    y: 699
+    width: 55
+    height: 57
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 4
+    paddingTop: 1
+    paddingBottom: 2
+  - name: shi
+    x: 0
+    y: 303
+    width: 54
+    height: 57
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 3
+    paddingTop: 0
+    paddingBottom: 3
+  - name: shi2
+    x: 0
+    y: 643
+    width: 57
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 3
+  - name: shi3
+    x: 170
+    y: 876
+    width: 55
+    height: 51
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 5
+  - name: shuo
+    x: 0
+    y: 532
+    width: 56
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 3
+    paddingTop: 1
+    paddingBottom: 4
+  - name: suo
+    x: 0
+    y: 247
+    width: 55
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 3
+  - name: ta
+    x: 116
+    y: 703
+    width: 51
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 5
+    paddingTop: 1
+    paddingBottom: 3
+  - name: wang
+    x: 59
+    y: 153
+    width: 54
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 4
+  - name: xi
+    x: 0
+    y: 757
+    width: 56
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 1
+    paddingBottom: 3
+  - name: xian
+    x: 59
+    y: 98
+    width: 53
+    height: 54
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 3
+    paddingTop: 2
+    paddingBottom: 4
+  - name: yin
+    x: 0
+    y: 79
+    width: 55
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 3
+  - name: you
+    x: 59
+    y: 425
+    width: 53
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 5
+    paddingTop: 2
+    paddingBottom: 3
+  - name: yu
+    x: 0
+    y: 135
+    width: 55
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 2
+    paddingBottom: 3
+  - name: zhe
+    x: 59
+    y: 816
+    width: 54
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 3
+    paddingTop: 2
+    paddingBottom: 2
+  - name: zhe2
+    x: 59
+    y: 758
+    width: 53
+    height: 57
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 4
+    paddingTop: 1
+    paddingBottom: 2
+  - name: zhi
+    x: 0
+    y: 191
+    width: 55
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 1
+    paddingTop: 1
+    paddingBottom: 4
+  - name: zhu
+    x: 59
+    y: 873
+    width: 56
+    height: 54
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 3
+    paddingTop: 2
+    paddingBottom: 4
+  - name: ziti_0
+    x: 0
+    y: 928
+    width: 1007
+    height: 96
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 17
+    paddingTop: 0
+    paddingBottom: 928
+  - name: "\u4F60"
+    x: 59
+    y: 317
+    width: 55
+    height: 53
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 4
+    paddingTop: 3
+    paddingBottom: 4
+  - name: "\u6301"
+    x: 59
+    y: 261
+    width: 53
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 5
+    paddingTop: 2
+    paddingBottom: 3
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+  mCoordinates: 0
+  sprites: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

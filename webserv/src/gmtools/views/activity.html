@@ -1,0 +1,536 @@
+<!--运营活动页-->
+
+<!--登录活动-->
+{{define "login_activity"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "login_activity%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "login_activity_serv_%d"  .Id }}" >{{ printf "%s" .Name }}</label>
+						<input type="checkbox" name="{{ printf "login_activity_serv_%d"  .Id }}" id="{{ printf "login_activity_serv_%d"  .Id }}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+		<fieldset>
+			<legend>时间参数</legend>
+			<div id="login_activity_div_1">
+				<label for="login_activity_low_time" class="ui-controlgroup-label">活动开始时间</label>
+				<input id="login_activity_low_time" name="login_activity_low_time1" class="ui-controlgroup-item" type="date" />
+				<input id="login_activity_low_time2" name="login_activity_low_time2" class="ui-controlgroup-item" type="time" /><br/>
+			</div>
+			
+		</fieldset>
+		<fieldset>
+			<legend>参数</legend><br/>
+			<div id="login_activity_div_2" >
+					
+					<table border="1px" id="tab16" style="table-layout:fixed;word-break:break-all;border-collapse:collapse;width:750px">
+						<tr align="center">
+							<td width="18%">天数</td>
+							<td width="18%">奖励</td>
+							<td width="18%">数量</td>
+							<td width="18%">...</td>
+							<td width="18%">选择</td>
+						</tr>
+					</table>
+				  <input type="button" onclick="addTr2('tab16', -1)" value="添加">
+				  <input type="button" onclick="delTr2()" value="删除">
+				<input type="submit" value="发送">
+			</div>
+		</fieldset>
+	</div>
+	<!--<div>
+		<fieldset>		
+			<legend>活动状态</legend>
+				<div id="history_login_activity">
+					<label for="history_login_activity" class="ui-controlgroup-label">活动状态</label>
+					<input id="history_login_activity" name="history_login_activity" class="ui-controlgroup-item" type="hidden" value="登录活动"/>
+					<input type="submit"  value="查询">
+				</div>
+		</fieldset>
+	</div>
+	-->
+{{end}}
+
+<!--累积充值-->
+{{define "accumulate_recharge"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "accumulate_recharge%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "accumulate_recharge_serv_%d" .Id}}" >{{ printf "%s" .Name }}</label>
+						<input type="checkbox" name="{{ printf "accumulate_recharge_serv_%d" .Id}}" id="{{ printf "accumulate_recharge_serv_%d" .Id}}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+		
+		<fieldset>
+				<legend>时间参数</legend>
+				<div id="accumulate_recharge_div_2">
+				<label for="accumulate_recharge_appointed_day" class="ui-controlgroup-label">指定时间开启</label>
+				<input id="accumulate_recharge_appointed_day" class="ui-controlgroup-item" name="accumulate_recharge_appointed_day1" type="date"/>
+				<input id="accumulate_recharge_appointed_day" class="ui-controlgroup-item" name="accumulate_recharge_appointed_day2" type="time"/><br/><br/>
+				<label for="accumulate_recharge_close_day" class="ui-controlgroup-label">活动关闭时间</label>
+				<input id="accumulate_recharge_close_day" class="ui-controlgroup-item" name="accumulate_recharge_close_day1" type="date"/>
+				<input id="accumulate_recharge_close_day" class="ui-controlgroup-item" name="accumulate_recharge_close_day2" type="time"/><br/>
+				
+				</div>
+		</fieldset>	
+		<fieldset>
+			<legend>累积充值档次</legend>
+			<div id="accumulate_recharge_div_1">
+				  <table border="1px #ooo" id="tab" style="table-layout:fixed;word-break:break-all;border-collapse:collapse;width:750px">
+				   <tr align="center">
+					<td width="20%">金额</td>
+					<td width="20%">奖励</td>
+					<td width="20%">...</td>
+					<td width="20%">...</td>
+					<td width="20%">选择</td>
+				   </tr>
+				  </table>
+				  <input type="button" onclick="addTr2('tab', -1)" value="添加">
+				 <input type="button" onclick="delTr2()" value="删除">
+				<input type="submit" value="发送">
+			</div>
+		</fieldset>	
+	</div>
+	<div>
+		<!--<fieldset>	
+			<legend>活动状态</legend>
+			<div id="history_accumulate_recharge">
+				<label for="history_accumulate_recharge" class="ui-controlgroup-label">活动状态</label>
+				<input id="history_accumulate_recharge" name="history_accumulate_recharge" class="ui-controlgroup-item" type="hidden" value="累积充值"/>
+				<input type="button" onclick="history_accumulate_recharge_click()" value="查询">
+			</div>
+		</fieldset>
+		-->
+	</div>
+{{end}}
+
+<!--打折商店-->
+{{define "discount_store"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "discount_store%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "discount_store_serv_%d"  .Id }}" >{{ printf "%s" .Name }}</label>
+						<input type="checkbox" name="{{ printf "discount_store_serv_%d"  .Id }}" id="{{ printf "discount_store_serv_%d"  .Id }}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+			<fieldset>
+				<legend>时间参数</legend>
+				<div id="discount_store_div_1">
+					<label for="discount_store_open_time" class="ui-controlgroup-label">指定开启时间</label>
+					<input id="discount_store_open_time" name="discount_store_open_time1" class="ui-controlgroup-item" type="date" />
+					<input id="discount_store_open_time" name="discount_store_open_time2" class="ui-controlgroup-item" type="time" /><br/><br/>
+					<label for="discount_store_close_time" class="ui-controlgroup-label">活动关闭时间</label>
+					<input id="discount_store_close_time" name="discount_store_close_time1" class="ui-controlgroup-item" type="date" />
+					<input id="discount_store_close_time" name="discount_store_close_time2" class="ui-controlgroup-item" type="time" /><br/>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>商店内容</legend>
+				<div id="discount_store_div_2">
+					<br/><table border="1px #ooo" id="tab17" style="table-layout:fixed;word-break:break-all;border-collapse:collapse;width:750px">
+						<tr align="center" width="100px">
+							<td width="20%">道具ID</td>
+							<td width="20%">价格</td>
+							<td width="20%">折扣</td>
+							<td width="20%">限购</td>
+							<td width="20%">选择</td>
+						</tr>
+					</table>
+				  <input type="button" onclick="addTr2('tab17', -1)" value="添加">
+				   <input type="button" onclick="delTr2()" value="删除">
+					<input type="submit" value="发送">
+				</div>	
+			</fieldset>
+	</div>
+	<!--<div>
+		<fieldset>
+					
+			<legend>活动状态</legend>
+			<div id="history_discount_store">
+				<label for="history_discount_store" class="ui-controlgroup-label">活动状态</label>
+				<input id="history_discount_store" name="history_discount_store" class="ui-controlgroup-item" type="hidden" value="打折商店"/>
+				<input type="button" onclick="history_discount_store_click()" value="查询">
+			</div>
+		</fieldset>
+	</div>
+	-->
+{{end}}
+
+<!--单笔充值-->
+{{define "single_recharge"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "single_recharge%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "single_recharge_serv_%d" .Id}}" >{{ printf "%s" .Name }}</label>
+						<input type="checkbox" name="{{ printf "single_recharge_serv_%d" .Id}}" id="{{ printf "single_recharge_serv_%d" .Id}}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+	
+	<fieldset>
+			<legend>时间参数</legend>
+			<div id="single_recharge_div_2">
+				<label for="single_recharge_appointed_day" class="ui-controlgroup-label">指定时间开启</label>
+				<input id="single_recharge_appointed_day" class="ui-controlgroup-item" name="single_recharge_appointed_day1" type="date" />
+				<input id="single_recharge_appointed_day" class="ui-controlgroup-item" name="single_recharge_appointed_day2" type="time" /><br/><br/>
+				<label for="single_recharge_close_day" class="ui-controlgroup-label">活动关闭时间</label>
+				<input id="single_recharge_close_day" class="ui-controlgroup-item" name="single_recharge_close_day1" type="date" />
+				<input id="single_recharge_close_day" class="ui-controlgroup-item" name="single_recharge_close_day2" type="time" /><br/>
+				
+			</div>
+	</fieldset>
+	<fieldset>
+			<legend>单笔充值档次</legend>
+			<div id="single_recharge_div_1">
+			<table border="1px #ooo" id="tab1" style="table-layout:fixed;word-break:break-all;border-collapse:collapse;width:750px">
+				   <tr align="center">
+					<td width="20%">金额</td>
+					<td width="20%">奖励</td>
+					<td width="20%">...</td>
+					<td width="20%">...</td>
+					<td width="20%">选择</td>
+				   </tr>
+			</table>
+				  <input type="button" onclick="addTr2('tab1', -1)" value="添加">
+				  <input type="button" onclick="delTr2()" value="删除">
+				  <input type="submit" value="发送">
+			</div>
+	</fieldset>
+	</div>
+	<!--<div>
+		<fieldset>		
+			<legend>活动状态</legend>
+			<div id="history_single_recharge">
+				<label for="history_single_recharge" class="ui-controlgroup-label">活动状态</label>
+				<input id="history_single_recharge" name="history_single_recharge" class="ui-controlgroup-item" type="hidden" value="单笔充值" />
+				<input type="button" onclick="history_single_recharge_click()" value="查询">
+			</div>
+		</fieldset>
+	</div>
+	-->
+{{end}}
+
+<!--热点伙伴-->
+{{define "hotspot_partner"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+			
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "hotspot_partner%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "hotspot_partner_serv_%d"  .Id }}" >{{ printf "%s" .Name }}</label>
+						<input type="checkbox"  name="{{ printf "hotspot_partner_serv_%d"  .Id }}" id="{{ printf "hotspot_partner_serv_%d"  .Id }}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+			<fieldset>
+				<legend>伙伴参数</legend>
+				<div id="hotspot_partner_div_1">
+					<label for="hotspot_partner_type" class="ui-controlgroup-label">它是伙伴</label>
+					<input id="hotspot_partner_type" name="hotspot_partner_type" type="checkbox" value="1" onclick= "if(this.c==1){this.c=0;this.checked=0}else{this.c=1}"   c="0"/>
+				<br/><br/>
+					<label for="hotspot_partner_opentime" class="ui-controlgroup-label">活动开启时间</label>
+					<input id="hotspot_partner_opentime" name="hotspot_partner_opentime1" class="ui-controlgroup-item" type="date" />
+					<input id="hotspot_partner_opentime" name="hotspot_partner_opentime2" class="ui-controlgroup-item" type="time" /><br/><br/>
+					<label for="hotspot_partner_closetime" class="ui-controlgroup-label">活动关闭时间</label>
+					<input id="hotspot_partner_closetime" name="hotspot_partner_closetime1" class="ui-controlgroup-item" type="date" />
+					<input id="hotspot_partner_closetime" name="hotspot_partner_closetime2" class="ui-controlgroup-item" type="time" /><br/><br/>
+					
+					<label for="hotspot_partner_prop_id" class="ui-controlgroup-label">伙伴道具的ID</label>
+					<input id="hotspot_partner_prop_id" name="hotspot_partner_prop_id" class="ui-controlgroup-item" /><br/><br/>
+					<label for="hotspot_partner_price" class="ui-controlgroup-label">热点伙伴价格</label>
+					<input id="hotspot_partner_price" name="hotspot_partner_price" class="ui-controlgroup-item" /><br/><br/>
+					<label for="hotspot_partner_prop_quantity" class="ui-controlgroup-label">伙伴道具数量</label>
+					<input id="hotspot_partner_prop_quantity" name="hotspot_partner_prop_quantity" class="ui-controlgroup-item" /><br/><br/>
+					
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>参数</legend>
+				<div id="hotspot_partner_div_2">
+					<label for="hotspot_partner_purchased_number" class="ui-controlgroup-label">玩家购买次数</label>
+					<input id="hotspot_partner_purchased_number" name="hotspot_partner_purchased_number" class="ui-controlgroup-item" />
+					<input type="submit" value="发送">
+				</div>
+			</fieldset>	
+	</div>
+	<!--<div>
+		<fieldset>		
+			<legend>活动状态</legend>
+			<div id="history_hotspot_partner">
+				<label for="history_hotspot_partner" class="ui-controlgroup-label">活动状态</label>
+				<input id="history_hotspot_partner" name="history_hotspot_partner" class="ui-controlgroup-item" type="hidden" value="热点伙伴"/>
+				<input type="button" onclick="history_hotspot_partner_click()" value="查询">
+			</div>
+		</fieldset>
+	</div>
+	-->
+{{end}}
+<!--抽伙伴活动-->
+{{define "extract_partner"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+			
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "extract_partner%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "extract_partner_serv_%d"  .Id }}" >{{ printf "%s" .Name }}</label>
+						<input type="checkbox"  name="{{ printf "extract_partner_serv_%d"  .Id }}" id="{{ printf "extract_partner_serv_%d"  .Id }}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+			<fieldset>
+				<legend>时间参数</legend>
+				<div id="extract_partner_div_1">
+					<label for="extract_partner_opentime" class="ui-controlgroup-label">活动开启时间</label>
+					<input id="extract_partner_opentime" name="extract_partner_opentime1" class="ui-controlgroup-item" type="date" />
+					<input id="extract_partner_opentime" name="extract_partner_opentime2" class="ui-controlgroup-item" type="time" /><br/><br/>
+					<label for="extract_partner_closetime" class="ui-controlgroup-label">活动关闭时间</label>
+					<input id="extract_partner_closetime" name="extract_partner_closetime1" class="ui-controlgroup-item" type="date" />
+					<input id="extract_partner_closetime" name="extract_partner_closetime2" class="ui-controlgroup-item" type="time" /><br/><br/>
+					
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>参数</legend>
+				<div id="extract_partner_div_2">
+				<table border="1px #ooo" id="tab12" style="table-layout:fixed;word-break:break-all;border-collapse:collapse;width:750px">
+				   	<tr align="center">
+					<td width="20%">档位</td>
+					<td width="20%">需招募次数</td>
+					<td width="20%">奖励</td>
+					<td width="20%">...</td>
+					<td width="20%">选择</td>
+				   </tr>
+					</table>
+					<input type="button" onclick="addTr2('tab12', -1)" value="添加">
+				  	<input type="button" onclick="delTr2()" value="删除">
+					<input type="submit" value="发送">
+				</div>
+			</fieldset>
+	</div>
+	<!--<div>
+		<fieldset>		
+			<legend>活动状态</legend>
+			<div id="history_extract_partner">
+				<label for="history_extract_partner" class="ui-controlgroup-label">活动状态</label>
+				<input id="history_extract_partner" name="history_extract_partner" class="ui-controlgroup-item" type="hidden" value="抽伙伴活动"/>
+				<input type="button" onclick="history_extract_partner_click()" value="查询">
+			</div>
+		</fieldset>
+	</div>
+	-->
+{{end}}
+<div id="activity" >
+	<ul>
+		<li><a href="#activity-1">登录活动</a></li>
+		<li><a href="#activity-2">累积充值</a></li>
+		<li><a href="#activity-3">打折商店</a></li>
+		<li><a href="#activity-4">单笔充值</a></li>
+		<li><a href="#activity-5">热点伙伴</a></li>
+		<li><a href="#activity-6">抽伙伴伙伴</a></li>
+	</ul>
+	<div id="activity-1">
+		<form action="do_login_activity" method="post" target="_blank">
+			{{template "login_activity" .}}
+		</form>
+	</div>
+	<div id="activity-2">
+		<form action="do_accumulate_recharge" method="post" target="_blank">
+			{{template "accumulate_recharge" .}}
+		</form>
+	</div>
+	<div id="activity-3">
+		<form action="do_discount_store" method="post" target="_blank">
+			{{template "discount_store" .}}
+		</form>
+	</div>
+	<div id="activity-4">
+		<form action="do_single_recharge" method="post" target="_blank">
+			{{template "single_recharge" .}}
+		</form>
+	</div>
+	<div id="activity-5">
+		<form action="do_hotspot_partner" method="post" target="_blank">
+			{{template "hotspot_partner" .}}
+		</form>
+	</div>
+	<div id="activity-6">
+		<form action="do_extract_partner" method="post" target="_blank">
+			{{template "extract_partner" .}}
+		</form>
+	</div>
+</div>
+
+
+
+<script  language="javascript" type="text/javascript">
+	{{range $key, $val := .Servs}}
+	<!--登录活动-->
+	$( "{{ printf "#login_activity%s" $key }}" ).controlgroup({"direction": "horizontal"});	
+	<!--累积充值-->
+	$( "{{ printf "#accumulate_recharge%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	<!--打折商店-->	
+	$( "{{ printf "#discount_store%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	<!--单笔充值-->
+	$( "{{ printf "#single_recharge%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	<!--热点伙伴-->
+	$( "{{ printf "#hotspot_partner%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	<!--抽伙伴活动-->
+	$( "{{ printf "#extract_partner%s" $key }}" ).controlgroup({"direction": "horizontal"});
+    {{end}}
+	
+	$( "#login_activity_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#login_activity_div_2" ).controlgroup({"direction": "horizontal"});
+	$( "#history_login_activity" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#accumulate_recharge_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#accumulate_recharge_div_2" ).controlgroup({"direction": "horizontal"});
+	//$( "#history_accumulate_recharge" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#discount_store_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#discount_store_div_2" ).controlgroup({"direction": "horizontal"});
+	$( "#history_discount_store" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#single_recharge_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#single_recharge_div_2" ).controlgroup({"direction": "horizontal"});
+	$( "#history_single_recharge" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#hotspot_partner_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#hotspot_partner_div_2" ).controlgroup({"direction": "horizontal"});
+	$( "#history_hotspot_partner" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#extract_partner_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#extract_partner_div_2" ).controlgroup({"direction": "horizontal"});
+	$( "#history_extract_partner" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#activity" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#activity li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+	
+	 ////////添加一行、删除一行封装方法///////
+	/**
+	* 为table指定行添加一行
+	*
+	* tab 表id
+	* row 行数，如：0->第一行 1->第二行 -2->倒数第二行 -1->最后一行
+	* trHtml 添加行的html代码
+	*
+	*/
+	function addTr(tab, row, trHtml){
+	 //获取table最后一行 $("#tab tr:last")
+	 //获取table第一行 $("#tab tr").eq(0)
+	 //获取table倒数第二行 $("#tab tr").eq(-2)
+	 var $tr=$("#"+tab+" tr").eq(row);
+	 if($tr.size()==0){
+		alert("指定的table id或行数不存在！");
+		return;
+	 }
+	 $tr.after(trHtml);
+	}
+
+	function delTr(ckb){
+	 //获取选中的复选框，然后循环遍历删除
+	 var ckbs=$("input[name="+ckb+"]:checked");
+	 if(ckbs.size()==0){
+		alert("要删除指定行，需选中要删除的行！");
+		return;
+	 }
+		   ckbs.each(function(){
+			  $(this).parent().parent().remove();
+		   });
+	}
+
+	/**
+	* 全选
+	* 
+	* allCkb 全选复选框的id
+	* items 复选框的name
+	*/
+	function allCheck(allCkb, items){
+	$("#"+allCkb).click(function(){
+	  $('[name='+items+']:checkbox').attr("checked", this.checked );
+	});
+	}
+
+	////////添加一行、删除一行测试方法///////
+	$(function(){
+	//全选
+	allCheck("allCkb", "ckb");
+	});
+
+	function addTr2(tab, row){
+		var trHtml="<tr><td><input  type='text' style='width:145px' name='ckb' /></td><td><input type='text' style='width:145px'  name='ckeb'/></td><td><input type='text' style='width:145px'  name='ckeb2'/></td><td><input type='text' style='width:145px'  name='ckeb3'/></td><td><input type='checkbox' style='width:145px'  name='ckbc'/></td></tr>";
+		addTr(tab, row, trHtml);
+	}
+
+	function delTr2(){
+		delTr('ckbc');
+	}
+	/*
+	function history_login_activity_click(){
+		var id = Math.random();
+    	document.write('<form id="post' + id + '" name="post'+ id +'" action="history" method="post">');
+   		document.write('<input type="hidden" name="type" value="login_activity" />');
+    	document.write('</form>');    
+    	document.getElementById('post' + id).submit();
+	}
+	*/
+	function history_accumulate_recharge_click(){
+		var id = Math.random();
+    	document.write('<form id="post' + id + '" name="post'+ id +'" action="history" method="post">');
+   		document.write('<input type="hidden" name="type" value="accumulate_recharge" />');
+    	document.write('</form>');    
+    	document.getElementById('post' + id).submit();
+	}
+	function history_discount_store_click(){
+		var id = Math.random();
+    	document.write('<form id="post' + id + '" name="post'+ id +'" action="history" method="post">');
+   		document.write('<input type="hidden" name="type" value="discount_store" />');
+    	document.write('</form>');    
+    	document.getElementById('post' + id).submit();
+	}
+	function history_single_recharge_click(){
+		var id = Math.random();
+    	document.write('<form id="post' + id + '" name="post'+ id +'" action="history" method="post">');
+   		document.write('<input type="hidden" name="type" value="single_recharge" />');
+    	document.write('</form>');    
+    	document.getElementById('post' + id).submit();
+	}
+	function history_hotspot_partner_click(){
+		var id = Math.random();
+    	document.write('<form id="post' + id + '" name="post'+ id +'" action="history" method="post">');
+   		document.write('<input type="hidden" name="type" value="hotspot_partner" />');
+    	document.write('</form>');    
+    	document.getElementById('post' + id).submit();
+	}
+	function history_extract_partner_click(){
+		var id = Math.random();
+    	document.write('<form id="post' + id + '" name="post'+ id +'" action="history" method="post">');
+   		document.write('<input type="hidden" name="type" value="extract_partner" />');
+    	document.write('</form>');    
+    	document.getElementById('post' + id).submit();
+	}
+	
+</script >

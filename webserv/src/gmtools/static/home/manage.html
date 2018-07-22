@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>法兰城的回忆【管理功能】</title>
+  	<!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <!-- Custom styles for this template -->
+    <link href="../css/navbar-static-top.css" rel="stylesheet">
+    <link href="../css/dashboard.css" rel="stylesheet">
+	<!--分页css-->
+	<link href="../css/king-table.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+	<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-3.3.2.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+	<!--分页js-->
+	<script type="text/javascript" src="../js/king-table.js"></script>
+	
+	<script src="../js/date.js"></script>
+	<script src="../js/js.js"></script>
+	
+	<script>
+		if(sessionStorage.getItem("type")!=2){
+		window.location.href="index.html" //证明不是用户登录的，跳转到你需要的页面；
+		};
+	</script>
+  	</head>
+  	<body>
+	    <!-- Static navbar -->
+	    <nav class="navbar navbar-inverse navbar-static-top" role="navigation" >
+		    <div class="container">
+		        <div id="navbar" class="navbar-collapse collapse" style="width:1401px;">
+		          <ul class="nav navbar-nav ou">
+		            <li  class="active"><a href="manage.html" >管理功能 </a></li>
+		            <li><a href="chat.html" >聊天查询</a></li>
+		            <li><a href="operative.html">运营活动</a></li>
+		            <li><a href="role.html">角色查询</a></li>
+		            <li><a href="history.html">历史公告邮件/活动状态查询</a></li>
+		            <li><a href="gm.html" >GM功能</a></li>
+		            <li><a href="statistic.html" >数据统计</a></li>
+		            <li><a href="user.html" >用户统计</a></li>
+					
+					
+		          </ul>
+		          <button  type="button" id="Admin_btn" class="btn btn-default" style="margin-top:8px;margin-left:100px;">超级管理员</button>
+				
+		        </div>
+	        </div>
+	    </nav>
+	    <!-- 侧导航结束 -->
+	    <div class="container-fluid">
+	      	<div class="row">
+		        <div class="col-sm-3 col-md-2 sidebar w_sidebar">
+			        <ul class="nav nav-sidebar ul">
+			            <li class="active"><a href="#">系统公告</a></li>
+			            <li class="oli"><a href="#">区服公告</a></li>
+			            <li class="ali"><a href="#">滚动公告</a></li>
+			            <li class="bli"><a href="#">邮件发送</a></li>
+			            <li class="cli"><a href="#">角色操作</a></li>
+						<li ><a href="#">钻石统计</a></li>
+						<li ><a href="#">水晶统计</a></li>
+						<li ><a href="#">金币统计</a></li>
+			        </ul>
+		        </div>
+	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main tab" id="D_content">
+			          <!-- 系统公告模块 -->
+			        <div class="row placeholders show" style="text-align:left;">
+			            <form id="system">
+				            <div>
+				                <fieldset>
+				                  <legend>公告内容</legend>
+				                  <textarea id="content" name="content" style="resize:none;width:100%;height:20em"></textarea>
+				                </fieldset>
+								<fieldset>
+				                  <legend>渠道</legend>
+				                  <textarea id="content" name="sev_Channels" style="resize:none;width:100%;height:5em"></textarea>
+				                </fieldset>
+				                <fieldset>
+				                  <legend>参数</legend>
+				                  <div id="param " role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix input">
+				                    <label for="title" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">公告标题</span></label>
+				                    <input id="title" name="title" class="ui-controlgroup-item">
+				                    <label for="color" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents">公告颜色</span></label>
+				                    <input id="color" name="color" class="ui-controlgroup-item" type="color" style="height:30px;">
+				                    <input id="system_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button" >
+				                  </div>
+				                </fieldset>
+				            </div>
+			            </form>
+			        </div> 
+			          <!-- 区域公告模快 -->
+			        <div  aria-labelledby="ui-id-25" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+			            <form id="server">
+			                <div>
+			                    <fieldset class="fieldset">
+			                       <legend class="legend">刘龙勤大区</legend>
+			                        <div id="刘龙勤大区" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix lab "> 
+										<div type="text" style="min-width:100px;height: 34px;cursor:pointer;border:1px solid #999" class="sevs_input">
+											<p>All</p>
+										</div>
+										<ul class="sevs_types" name="sevs_types" style="background:#fff;border:1px solid #999;position:relative;z-index:999;" class="show">
+								                             
+								        </ul>
+			                        </div>
+			                    </fieldset>  
+			                    <fieldset>
+			                       <legend>公告内容</legend>
+			                       <textarea id="content" name="content" style="resize:none;width:100%;height:20em"></textarea>
+			                    </fieldset>
+			                    <fieldset>
+				                    <legend>参数</legend>
+				                    <div id="param" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+				                        <label for="title" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">公告标题</span></label>
+				                        <input id="title" name="title" class="ui-controlgroup-item">
+				                        <label for="color" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents">公告颜色</span></label>
+				                        <input id="color" name="color" class="ui-controlgroup-item" type="color" style="height:30px;">
+				                        <input id="server_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button" >
+				                    </div>
+			                    </fieldset>
+			                </div>
+			            </form>
+			        </div>
+			            <!-- 滚动公告 -->
+			        <div id="manager-3" aria-labelledby="ui-id-26" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+			              <form  id="roll">
+			                    <div>
+				                    <fieldset class="fieldset">
+				                       
+				                    </fieldset>  
+				                    <fieldset>
+				                        <legend>公告内容</legend>
+				                        <textarea id="content" name="content" style="resize:none;width:100%;height:20em"></textarea>
+				                    </fieldset> 
+				                    <fieldset>
+				                        <legend>发送方式</legend>
+				                        <div id="send" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+					                        <label for="param" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents">发送方式</span></label>
+					                        <select id="types" name="types" style=" width: 175px;height: 34px;margin-left: 10px;">
+					                              
+					                                <option value="NST_Immediately" select="selected">立即发送</option>
+					                                
+					                                <option value="NST_Timming">定时发送</option>
+					                                
+					                                <option value="NST_Loop">循环发送</option>    
+					                        </select>
+										
+				                            <br><br>
+				                        
+											<label for="low_time" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:73px;">时间参数</label>
+							                <div class="input-group date form_datetime col-sm-3 " id="form_datetime1" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;">
+							                    <input id="param" name="param_name0" class="form-control" size="16" type="text" value="" readonly>
+							                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+												<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+							                </div>
+				                         
+											<label for="low_time" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:73px;">循环时间</label>
+							                <div class="input-group date form_datetime col-sm-3" id="form_datetime2" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="margin-bottom:20px;float:left;margin-right:10px;">
+							                    <input id="param" name="param_name4" class="form-control" size="16" type="text" value="" readonly>
+							                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+												<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+							                </div>
+				                         
+											<input id="roll_notice_send_param" class="ui-controlgroup-item roll_param" name="param_name3" style="height:30px;">
+				                            <input id="roll_btn" type="button" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+				                        </div>
+				                    </fieldset>
+			                    </div>
+			              </form>
+			          </div>
+			          <!-- 邮件发送 -->
+			          <div id="manager-4" aria-labelledby="ui-id-27" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+			                <form  id="mail">
+			                  <div>
+			                    <fieldset class="fieldset">
+			                      
+			                    </fieldset>  
+			                    <fieldset>
+			                      <legend>邮件头</legend>
+			                        <div id="header" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix" style="margin-bottom:15px;">
+			                          <label for="title" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">标题</span></label>
+			                          <input id="title" name="title" class="ui-controlgroup-item">
+			                          <label for="sender" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">发件人</span></label>
+			                          <input id="sender" name="sender" class="ui-controlgroup-item">
+			                        </div>
+			                    </fieldset> 
+			                    <fieldset>
+			                      <legend>邮件内容</legend>
+			                      <textarea id="content" name="content" style="resize:none;width:100%;height:10em"></textarea>
+			                    </fieldset>
+			                    <fieldset>
+			                      <legend>收件人</legend>
+			                      <textarea id="recvers" name="recvers" style="resize:none;width:100%;height:10em"></textarea>
+			                    </fieldset>
+			                    <fieldset>
+			                      <legend>邮件道具</legend>
+			                      <div id="div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_1" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_1" name="item_1" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+			                        
+			                        <label for="stack_1" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_1" name="stack_1" class="ui-controlgroup-item">
+			                      </div>
+			                  
+			                      <div id="div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_2" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_2" name="item_2" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+			                        <label for="stack_2" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_2" name="stack_2" class="ui-controlgroup-item">
+			                      </div>
+			                  
+			                      <div id="div_3" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_3" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_3" name="item_3" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+			                        <label for="stack_3" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_3" name="stack_3" class="ui-controlgroup-item">
+			                      </div>
+			
+			                      <div id="div_4" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_4" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_4" name="item_4" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+			                        <label for="stack_4" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_4" name="stack_4" class="ui-controlgroup-item">
+			                      </div>
+			                    
+			                      <div id="div_5" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="item_5" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">道具</span></label>
+			                        <input id="item_5" name="item_5" class="ui-controlgroup-item ui-autocomplete-input" autocomplete="off">
+			                        <label for="stack_5" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">堆叠</span></label>
+			                        <input id="stack_5" name="stack_5" class="ui-controlgroup-item">
+			                      </div>
+			                    </fieldset>
+			                    <fieldset style="margin-top:10px;">
+			                      <legend>等级限制</legend>
+			                      <div id="level" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                        <label for="low_level" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">最低等级</span></label>
+			                        <input id="low_level" name="low_level" class="ui-controlgroup-item">
+			                        <label for="high_level" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-right"><span class="ui-controlgroup-label-contents">最高等级</span></label>
+			                        <input id="high_level" name="high_level" class="ui-controlgroup-item">
+			                      </div>
+			                    </fieldset>
+			                    <fieldset style="margin-top:10px;">
+			                      <legend>注册时间限制</legend>
+			                      <div id="time" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+						                <label for="low_time" class="col-sm-1 control-label" style="margin-top:8px;padding-left:0;width:73px;">最早注册</label>
+						                <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" style="float:left;">
+						                    <input id="low_time" name="low_time1" class="form-control" size="16" type="text" value="" readonly>
+						                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+						                </div>
+						                <label for="high_time" class="col-sm-1 control-label" style="margin-top:5px;width:88px;">最晚注册</label>
+						                <div class="input-group date form_datetime col-sm-3" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+						                    <input id="high_time" name="high_time1" class="form-control" size="16" type="text" value="" readonly>
+						                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+						                </div>
+			                    </fieldset>
+			                    
+			                    <fieldset style="margin-top:10px;">
+			                      <legend>操作方式</legend>
+				                    <div id="_contorl" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+				                        <select id="types" name="types" style="display:block;margin-left: 33px; width: 175px;height: 25px;margin-bottom:20px;">
+				                          
+				                            <option value="IGMT_PlayerId" select="selected">角色ID</option>
+				                            
+				                            <option value="IGMT_AllOnline">当前在线</option>
+				                            
+				                            <option value="IGMT_AllRegist">所有注册</option>
+				                            
+				                        </select>
+				                        <label for="timmer" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents">定时</span></label>
+				                        <input id="timmer" class="ui-controlgroup-item" type=" datetime">
+				                        <input id="mail_btn" type="button" name="send_mail_submit" value="发送" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+				                    </div>
+			                    </fieldset>
+			                </div>
+			            </form>
+			        </div>
+		          <!-- 角色操作 -->
+		          <div id="manager-5" aria-labelledby="ui-id-28" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+		              <form action="" id="player"> 
+		                <div>
+		                    <fieldset class="fieldset1">
+		                      
+		                    </fieldset>   
+		                    <fieldset>
+			                       <legend>角色操作</legend>
+			                       <div id="player_op" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+			                       <select id="player_type" name="player_type" style="display: block;margin-left: 46px; width: 175px;height: 25px;">
+		                              
+			                            <option value="GMCT_NoTalk" select="selected">禁言</option>
+			                              
+			                            <option value="GMCT_Seal">封号</option>
+			                              
+			                            <option value="GMCT_Kick">踢人</option>
+			                              
+			                            <option value="GMCT_OpenTalk">解除禁言</option>
+			                              
+			                            <option value="GMCT_Unseal">解除封号</option>
+			                              
+			                            <option value="GMCT_SkipGuide">跳过引导</option>
+			                              
+			                            <option value="GMCT_AddMoney">添加金币</option>
+			                              
+			                            <option value="GMCT_AddDiamond">添加钻石</option>
+			                              
+			                            <option value="GMCT_AddExp">添加经验</option>
+										
+										<option value="GMCT_DoScript">执行命令</option>
+			                              
+			                            <option value="GMCT_OpenGM">OpenGM</option>
+			                              
+			                            <option value="GMCT_CloseGM">CloseGM</option>
+		                              
+		                            </select>
+		                           <br>
+		                           <label for="playerid" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents">角色ID</span></label>
+		                           <input id="playerid" name="playerid" class="ui-controlgroup-item"><br><br>
+		                           <label for="param" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item"><span class="ui-controlgroup-label-contents" style="margin-left:10px;">参数</span></label>
+		                           <input id="param"  class="ui-controlgroup-item param">
+		                           <input id="player_btn" type="button" value="执行" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+		                        </div>
+		                    </fieldset>
+		                </div>
+		              </form>
+		          	</div>
+					 <!-- 钻石统计 -->
+		          	<div id="manager-6" aria-labelledby="ui-id-29" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+		              <form action="" id="QueryDia"> 
+		                <div>
+		                    <fieldset class="fieldset1">
+		                      
+		                    </fieldset>   
+		                     <input id="QueryDia_btn" type="button" value="执行" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+		                </div>
+						<div>   
+				                <table class=" data-table QueryDia_table" id="QueryDia_table" style="margin-top:10px;">
+						
+								</table>
+		               		</div>
+		              </form>
+		          	</div>
+					 <!-- 水晶统计 -->
+		          	<div id="manager-7" aria-labelledby="ui-id-30" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+		              <form action="" id="QueryRMB"> 
+		                <div>
+		                    <fieldset class="fieldset1">
+		                      
+		                    </fieldset>   
+		                     <input id="QueryRMB_btn" type="button" value="执行" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+		                </div>
+						<div>   
+				                <table class=" data-table QueryRMB_table" id="QueryRMB_table" style="margin-top:10px;">
+						
+								</table>
+		               	</div>
+		              </form>
+		          	</div>
+					 <!-- 金币统计 -->
+		          	<div id="manager-8" aria-labelledby="ui-id-31" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+			            <form action="" id="QueryMoney"> 
+			                <div>
+			                    <fieldset class="fieldset1">
+			                      
+			                    </fieldset> 
+								 <input id="QueryMoney_btn" type="button" value="执行" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+			                </div>
+							<div>   
+				                <table class=" data-table QueryMoney_table" id="QueryMoney_table" style="margin-top:10px;">
+						
+								</table>
+		               		</div>
+			            </form>
+		          	</div>
+	        	</div>
+	      	</div>
+	    </div>
+  	</body>
+</html>

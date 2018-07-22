@@ -1,0 +1,1 @@
+xcopy %~dp0\..\Config\Tables\*.* %~dp0\..\Client\Assets\StreamingAssets\%1\TableTemp\ /s/e/y

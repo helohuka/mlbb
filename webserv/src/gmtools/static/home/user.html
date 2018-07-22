@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>法兰城的回忆【用户统计】</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-3.3.2.min.js"></script>
+	<script type="text/javascript" src="../js/king-table.js"></script>
+	<script src="../js/echarts.min.js"></script>
+	
+    <script src="../js/js.js"></script>
+	<script src="../js/queryLog.js"></script>
+	<link href="../css/king-table.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/navbar-static-top.css" rel="stylesheet">
+    <link href="../css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+	<script>
+		//sessionStorage.setItem("type","1")//给你的第一个页面添加这句话，把type存进sessioStorage里面
+		if(sessionStorage.getItem("type")!=2){
+		window.location.href="index.html" //证明不是用户登录的，跳转到你需要的页面；
+		};
+		
+		
+	</script>
+  </head>
+  <body>
+    <!-- Static navbar -->
+   <nav class="navbar navbar-inverse navbar-static-top" role="navigation" >
+      <div class="container">
+        <div id="navbar" class="navbar-collapse collapse" style="width:1401px;">
+          <ul class="nav navbar-nav ou">
+            <li ><a href="manage.html" >管理功能 </a></li>
+            <li><a href="chat.html" >聊天查询</a></li>
+            <li><a href="operative.html">运营活动</a></li>
+            <li><a href="role.html">角色查询</a></li>
+            <li><a href="history.html">历史公告邮件/活动状态查询</a></li>
+            <li><a href="gm.html" >GM功能</a></li>
+            <li><a href="statistic.html" >数据统计</a></li>
+            <li class="active"><a href="user.html" >用户统计</a></li>
+			
+          </ul>
+           <button  type="button" id="Admin_btn" class="btn btn-default" style="margin-top:8px;margin-left:100px;">超级管理员</button>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- 导航结束 -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar w_sidebar">
+          <ul class="nav nav-sidebar ul">
+            <li class="active history"><a href="#">每日活跃(player)</a></li>
+            <li class="history"><a href="#">每日新增(player)</a></li>
+			<li class="history"><a href="#">时间段活跃(player)</a></li>
+            <li class="history"><a href="#">时间段新增(player)</a></li>
+			<li class="history"><a href="#">角色充值记录</a></li>
+			<li class="history"><a href="#">每日活跃(account)</a></li>
+			<li class="history"><a href="#">每日新增(account)</a></li>
+			<li class="history"><a href="#">时间段活跃(account)</a></li>
+            <li class="history"><a href="#">时间段新增(account)</a></li>
+			
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main tab">
+			<div class="div1 show">
+				<p></p>
+				<div id="ring" style="width:1000px;height:500px;"></div>
+			</div>
+			<div class="div2 hide" >
+				<p></p>
+				<div id="dnu" style="width:1000px;height:500px;"></div>
+			</div>
+			<div class="div3 hide">
+				<label for="meeting">开始日期：</label><input id="opendate" type="date" value="2017-04-03"/>
+				<label for="meeting">结束日期：</label><input id="closedate" type="date" value="2017-04-04"/>
+				<input id="btn" type="button" value="确认"/>
+				<label for="meeting">输入服务器id：</label><input id="dau_sev_id" type="text" placeholder="输入服务器id"/>
+				<label for="meeting">显示数据框：</label><input id="dau_data" type="text" placeholder="显示总数据"/>
+				<input id="dau_btn" type="button" value="查找"/>
+				<table class=" data-table" id="dau_table" style="margin-top:10px;">
+							
+				</table>
+			</div>
+			<div class="div4 hide" >
+				<label for="meeting1">开始日期：</label><input id="newdate" type="date" value="2017-04-03"/>
+				<label for="meeting1">结束日期：</label><input id="olddate" type="date" value="2017-04-04"/>
+				<input id="newbtn" type="button" value="确认"/>
+				<label for="meeting">输入服务器id：</label><input id="dnu_sev_id" type="text" placeholder="输入服务器id"/>
+				<label for="meeting">显示数据框：</label><input id="dnu_data" type="text" placeholder="显示总数据"/>
+				<input id="old_btn" type="button" value="查找"/>
+				<table class=" data-table" id="dnu_table" style="margin-top:10px;">
+							
+				</table>
+			</div>
+			<div class="div5 hide" >
+				<form id="player_rrs">
+					<fieldset     style="margin-right: 10px;">
+			             <div id="send" style="float:right" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix;">
+								<label for="param" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item;" style=" float:left;   margin-top: 8px;margin-right: 5px;"><span class="ui-controlgroup-label-contents">服务器</span></label>
+				                 <div style="height: 34px;float:right;">
+									<input type="text" style="height: 34px;cursor:pointer;" class="player_input" value="All"/>
+									<ul id="player_severs" name="player_severs" style=" width: 175px;background:#fff;border:1px solid #999;position:relative;z-index:999;" class="hide">
+						                <li id="0"  class="player_rss" style="cursor:pointer;list-style: none;height: 30px;width: 173px;margin-left: -35px;" >ALL</li>             
+						            </ul>
+								</div>
+								<div class="sjx" style="top:37px;right:60px;"></div>
+						</div>
+					</fieldset>
+				</form>
+				<table class=" data-table" id="player_rss_table" style="margin-top:10px;">
+							
+				</table>
+				<table class=" data-table" id="player_old_table" style="margin-top:10px;">
+							
+				</table>
+			</div>
+			<div class="div6 hide">
+				<p></p>
+				<div id="account_ring" style="width:1000px;height:500px;"></div>
+			</div>
+			<div class="div7 hide" >
+				<p></p>
+				<div id="account_dnu" style="width:1000px;height:500px;"></div>
+			</div>
+			<div class="div8 hide">
+				<label for="meeting">开始日期：</label><input id="account_opendate" type="date" value="2017-04-03"/>
+				<label for="meeting">结束日期：</label><input id="account_closedate" type="date" value="2017-04-04"/>
+				<input id="account_btn" type="button" value="确认"/>
+				<label for="meeting">输入服务器id：</label><input id="account_dau_sev_id" type="text" placeholder="输入服务器id"/>
+				<label for="meeting">显示数据框：</label><input id="account_dau_data" type="text" placeholder="显示总数据"/>
+				<input id="account_dau_btn" type="button" value="查找"/>
+				<table class=" data-table" id="account_dau_table" style="margin-top:10px;">
+							
+				</table>
+			</div>
+			<div class="div9 hide" >
+				<label for="meeting1">开始日期：</label><input id="account_newdate" type="date" value="2017-04-03"/>
+				<label for="meeting1">结束日期：</label><input id="account_olddate" type="date" value="2017-04-04"/>
+				<input id="account_newbtn" type="button" value="确认"/>
+				<label for="meeting">输入服务器id：</label><input id="account_dnu_sev_id" type="text" placeholder="输入服务器id"/>
+				<label for="meeting">显示数据框：</label><input id="account_dnu_data" type="text" placeholder="显示总数据"/>
+				<input id="account_old_btn" type="button" value="查找"/>
+				<table class=" data-table" id="account_dnu_table" style="margin-top:10px;">
+							
+				</table>
+			</div>
+			
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

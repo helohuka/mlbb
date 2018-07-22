@@ -1,0 +1,126 @@
+<!--{{define "player_information"}}
+    <div>
+		{{range $key, $val := .Servs}}
+			<fieldset>
+				<legend>{{ printf "%s" $key }}</legend>
+				<div id="{{ printf "player_information_%s" $key }}" >
+					{{range $val}}
+						<label for="{{ printf "player_information_serv_%d"  .Id }}" >{{ printf "%s" .Name }}</label>
+						<input type="checkbox" name="{{ printf "player_information_serv_%d"  .Id }}" id="{{ printf "player_information_serv_%d"  .Id }}">
+					{{end}}
+				</div>
+			</fieldset>			
+		{{end}}
+		<fieldset>
+			<legend>时间参数</legend>
+			<div id="player_information_div_1">
+				<label for="player_information_low_time" class="ui-controlgroup-label">活动开始时间</label>
+				<input id="player_information_low_time1" name="player_information_low_time1" class="ui-controlgroup-item" type="date" />
+				<input id="player_information_low_time2" name="player_information_low_time2" class="ui-controlgroup-item" type="time" /><br/>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>参数</legend><br/>
+			<div id="player_information_div_2" >
+				<input type="submit" value="发送">222qqqq
+			</div>
+		</fieldset>
+	</div>
+{{end}}
+-->
+{{define "grade_distribution"}}
+    <div>
+		{{range $key, $val := .GradeDistribution}}
+			<table>
+				<tr>
+					<td>等级</td>
+					<td>用户数</td>
+					<td>总用户数</td>
+					<td>比例</td>
+					<td>累计比例</td>
+					<td>服务器</td>
+					
+				</tr>
+				{{range $val}}
+				<tr>
+					<td>{{printf "%d" .Grade}}</td>
+					<td>{{printf "%d" .UsersNumber}}</td>
+					<td>{{printf "%d" .TotalUsers}}</td>
+					<td>{{printf "%d" .Ratio}}</td>
+					<td>{{printf "%d" .CumulativeRatio}}</td>
+					<td>{{printf "%s" .Servs}}</td>
+				
+				</tr>
+				{{end}}
+			</table>		
+		{{end}}
+		
+	</div>
+{{end}}
+{{define "user_retention"}}
+    <div>
+		{{range $key, $val := .UserRetention}}
+			<table>
+				<tr>
+					<td>日期</td>
+					<td>DNU</td>
+					<td>DAU</td>
+					<td>次日留存</td>
+					<td>15日留存</td>
+					<td>服务器</td>
+					<td>渠道</td>
+				</tr>
+				{{range $val}}
+				<tr>
+					<td>{{printf "%d" .Date}}</td>
+					<td>{{printf "%d" .DNU}}</td>
+					<td>{{printf "%d" .DAU}}</td>
+					<td>{{printf "%s" .MorrowRetained}}</td>
+					<td>{{printf "%s" .FifteenRetained}}</td>
+					<td>{{printf "%s" .Servs}}</td>
+					<td>{{printf "$s" .Channel}}</td>
+				</tr>
+				{{end}}
+			</table>		
+		{{end}}
+		
+{{end}}
+<div id="user_statistics" >
+	<ul>
+		
+		
+		<li><a href="#user_statistics-2">等级分布</a></li>
+		<li><a href="#user_statistics-3">用户留存</a></li>
+	</ul>	
+	
+	
+	
+	<div id="user_statistics-2">
+		<form action="do_grade_distribution" method="post" target="_blank">
+			{{template "grade_distribution" .}}
+		</form>
+	</div>
+	<div id="user_statistics-3">
+		<form action="do_user_retention" method="post" target="_blank">
+			{{template "user_retention" .}}
+		</form>
+	</div>
+	
+	
+</div>
+<script language="javascript" type="text/javascript">
+	{{range $key, $val := .Servs}}
+	
+	$( "{{ printf "#grade_distribution_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	$( "{{ printf "#user_retention_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	{{end}}
+	
+	
+	$( "#grade_distribution_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#grade_distribution_div_2" ).controlgroup({"direction": "horizontal"});
+	$( "#user_retention_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#user_retention_div_2" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#user_statistics" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#user_statistics li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+</script>

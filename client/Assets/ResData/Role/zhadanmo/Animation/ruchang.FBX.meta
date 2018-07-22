@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 8593f1a4f867fd249adb4e5ce346fddd
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bone0001
+    100002: Bone01
+    100004: Bone02
+    100006: Bone02(mirrored)
+    100008: Bone02(mirrored)01
+    100010: Bone02(mirrored)02
+    100012: Bone03
+    100014: Bone03(mirrored)
+    100016: Bone03(mirrored)01
+    100018: Bone03(mirrored)02
+    100020: Bone04
+    100022: Bone04(mirrored)
+    100024: Bone04(mirrored)01
+    100026: Bone04(mirrored)02
+    100028: Bone05
+    100030: Bone06
+    100032: Bone07
+    100034: Bone08
+    100036: Bone09
+    100038: Bone10
+    100040: Bone11
+    100042: Bone12
+    100044: //RootNode
+    400000: Bone0001
+    400002: Bone01
+    400004: Bone02
+    400006: Bone02(mirrored)
+    400008: Bone02(mirrored)01
+    400010: Bone02(mirrored)02
+    400012: Bone03
+    400014: Bone03(mirrored)
+    400016: Bone03(mirrored)01
+    400018: Bone03(mirrored)02
+    400020: Bone04
+    400022: Bone04(mirrored)
+    400024: Bone04(mirrored)01
+    400026: Bone04(mirrored)02
+    400028: Bone05
+    400030: Bone06
+    400032: Bone07
+    400034: Bone08
+    400036: Bone09
+    400038: Bone10
+    400040: Bone11
+    400042: Bone12
+    400044: //RootNode
+    7400000: ruchang
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ruchang
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 204
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bone0001
+        weight: 1
+      - path: Bone01
+        weight: 1
+      - path: Bone01/Bone02
+        weight: 1
+      - path: Bone01/Bone02/Bone03
+        weight: 1
+      - path: Bone01/Bone02/Bone03/Bone04
+        weight: 1
+      - path: Bone01/Bone02(mirrored)
+        weight: 1
+      - path: Bone01/Bone02(mirrored)/Bone03(mirrored)
+        weight: 1
+      - path: Bone01/Bone02(mirrored)/Bone03(mirrored)/Bone04(mirrored)
+        weight: 1
+      - path: Bone05
+        weight: 1
+      - path: Bone05/Bone02(mirrored)01
+        weight: 1
+      - path: Bone05/Bone02(mirrored)01/Bone03(mirrored)01
+        weight: 1
+      - path: Bone05/Bone02(mirrored)01/Bone03(mirrored)01/Bone04(mirrored)01
+        weight: 1
+      - path: Bone05/Bone06
+        weight: 1
+      - path: Bone05/Bone06/Bone07
+        weight: 1
+      - path: Bone05/Bone06/Bone07/Bone08
+        weight: 1
+      - path: Bone12
+        weight: 1
+      - path: Bone12/Bone02(mirrored)02
+        weight: 1
+      - path: Bone12/Bone02(mirrored)02/Bone03(mirrored)02
+        weight: 1
+      - path: Bone12/Bone02(mirrored)02/Bone03(mirrored)02/Bone04(mirrored)02
+        weight: 1
+      - path: Bone12/Bone10
+        weight: 1
+      - path: Bone12/Bone10/Bone09
+        weight: 1
+      - path: Bone12/Bone10/Bone09/Bone11
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

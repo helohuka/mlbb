@@ -1,0 +1,42 @@
+/*
+ * Author:sandy
+ * Creat Date:2012-09-20
+*/
+/*base*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,table,th,td,iframe{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:0;vertical-align:top;}
+option{padding-left:5px;*padding:0;}
+li{list-style:none;}
+cite,code,caption,em,i{font-style:normal;font-weight:normal;}
+q:before,q:after{content:'';}
+a{color:#0085da;text-decoration:none;}
+input[type="radio"],input[type="checkbox"]{margin-right:8px;};
+/*a:visited{color:#800080;}*/
+a:hover{text-decoration:underline;}
+a:active,a:focus{outline:none;}
+input,textarea,select{font-family:"microsoft yahei";font-size:inherit;font-weight:inherit;vertical-align:middle}
+input,textarea,select{*font-size:100%;}
+h2,h3{font-size:14px}
+textarea{resize:none;overflow-x:hidden;overflow-y:auto;width:586px;height:86px;padding:12px 0 0 12px;border:1px solid #dfdfdf;vertical-align:text-bottom;margin-right:22px;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.imp{color:#0085da !important;}
+.grey{color:#909090;}
+.clear{clear:both;overflow:hidden;zoom:1}
+body{font:12px/21px "microsoft yahei";color:#404040;background-position:center 31px;background-repeat:no-repeat;}
+.wrap{width:1000px;overflow:hidden;margin:10px auto 74px;}
+
+.sub-nav{border-bottom:1px solid #e6e6e6;overflow: hidden;font-size:16px;font-family:"microsoft yahei";padding-top:6px;}
+.sub-nav li{float:left;display:inline;margin-right:30px;}
+.sub-nav a{color:#333;display:inline-block;height:30px;}
+
+.text-box{border:1px solid #ededed;height:35px;line-height:35px;margin-right:6px;padding-left: 11px;}
+
+.doc-set{color:#333;line-height:38px;}
+.doc-set li{overflow:hidden;zoom:1;border-bottom:1px dashed #e6e6e6;padding:10px 0;clear:both;}
+.doc-dt{float:left;width:150px;padding-right:15px;text-align:right;}
+.doc-dd{float:right;width:835px;}

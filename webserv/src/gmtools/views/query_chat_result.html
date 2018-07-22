@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="us">
+	{{template "header.html" .}}
+	
+
+		<div class="ui-widget">
+			<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
+				<p>
+					{{range .Records }}
+						{{ printf " %s | %s(%d) [%d] : %s "  .Timestamp .PlayerName .PlayerGuid .ChannelId .Content }}	<br>
+					{{end}}
+				</p>
+			</div>
+		</div>
+
+
+</html>

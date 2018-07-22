@@ -1,0 +1,67 @@
+<!--数据统计-->
+<!--订单统计-->
+{{define "order_inquiry"}}
+	<div>
+		{{range $key, $val := .Orders}}
+		<div>
+			<table width="700px" border="1" bordercolor="gray" cellspacing="0" cellpadding="5" text-align="center">
+				<tr>
+					<td>订单id</td>
+					<td>游戏名</td>
+					<td>渠道id</td>
+					<td>渠道名</td>
+					<td>角色id</td>
+					<td>充值等级</td>
+					<td>账号id</td>
+					<td>充值金额</td>
+					<td>充值时间</td>
+				</tr>
+				{{range $val}}
+				<tr bgcolor="#ff7300">
+				    <td>{{ printf "%d" .OrderId }}</td>
+					<td>{{ printf "%s" .Game }}</td>
+					<td>{{ printf "%d" .PfId  }}</td>
+					<td>{{ printf "%s" .PfName }}</td>
+					<td>{{ printf "%d" .RoleId }}</td>
+					<td>{{ printf "%d" .RoleLv }}</td>
+					<td>{{ printf "%d" .AccountId }}</td>
+					<td>{{ printf "%d" .Payment }}</td>
+					<td>{{ printf "%s" .PayTime }}</td>	
+				</tr>
+				{{end}}
+			</table>
+	    </div>
+		{{end}}
+	</div>
+{{end}}
+
+<div id="data_statistics" >
+	<ul>
+		<li><a href="#data_statistics-1">订单统计</a></li>
+		<li><a href="#data_statistics-2">付费统计</a></li>
+	</ul>	
+	
+	
+	<div id="data_statistics-1">
+		<form action="" method="post" target="_blank">
+			{{template "order_inquiry" .}}
+		</form>
+	</div>
+	
+	
+	
+</div>
+<script language="javascript" type="text/javascript">
+	{{range $key, $val := .Servs}}
+	$( "{{ printf "#order_inquiry_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	$( "{{ printf "#pay_statistics_%s" $key }}" ).controlgroup({"direction": "horizontal"});
+	{{end}}
+	
+	$( "#order_inquiry_select" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#pay_statistics_div_1" ).controlgroup({"direction": "horizontal"});
+	$( "#pay_statistics_div_2" ).controlgroup({"direction": "horizontal"});
+	
+	$( "#data_statistics" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#data_statistics li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+</script>

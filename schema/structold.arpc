@@ -1,0 +1,118 @@
+#import com.arpc
+#import struct.arpc
+
+struct SGE_PlayerInst_Old : COM_Entity
+{
+	bool	isLeavingTeam_; ///是否队伍暂离
+	bool	isBattle_;
+	bool	autoBattle_;
+	bool	isTeamLeader_;
+	int32	sceneId_; //下线时场景ID
+	int32 	openSubSystemFlag_;
+	int64	createTime_;	//创建时间
+	string	guildName_;
+	COM_FPosition		scenePos_;
+	COM_PlayerVsPlayer	pvpInfo_;
+	
+	bool	onlineTimeFlag_;
+	float	onlineTime_;
+	array<uint32>	onlineTimeReward_;
+	
+	bool	isFund_;
+	array<uint32>	fundtags_;
+
+	bool	openDoubleTimeFlag_;
+	bool 	isFirstLogin_;
+	bool	firstRechargeDiamond_;		//首充
+	bool	isFirstRechargeGift_;		//是否领取首充礼包
+	float   offlineExp_;
+	float	rivalTime_;
+	int8	rivalNum_;
+	int8	promoteAward_;
+	uint64	guideIdx_;
+	float	noTalkTime_;		//禁言倒计时
+	uint32	wishShareNum_;		//许愿分享次数
+	uint32	warriortrophyNum_;	//获得箱子个数
+	uint32	employeelasttime_;			//上一次钻石单抽抽中紫色次数
+	uint32	employeeonecount_;			//钻石单抽次数
+	uint32	employeetencount_;			//钻石10连抽次数
+	float	greenBoxTimes_;				//普通宝箱CD时间
+	float	blueBoxTimes_;				//普通宝箱CD时间
+	uint32	greenBoxFreeNum_;			//普通宝箱免费次数
+	COM_HundredBattle   hbInfo_;
+	array<int32>		openScenes_; //开启的场景
+	array<uint32>		copyNum_;		//可进入副本次数
+	
+	int32		magicItemLevel_;//神器等级
+	int32		magicItemeExp_; //神器经验
+	JobType		magicItemeJob_; //神器职业
+	int32		magicTupoLevel_;//神器突破等级 
+	array<int32>	cachedNpcs_;
+	array<string> gft_;	//兑换过的礼包类型
+	array<uint32>	babycache_;		//babyRace count
+	array<int32>	titles_;
+	int32	guildContribution_;
+	uint32	exitGuildTime_;
+	array<COM_Skill>	guildSkills_;
+	array<ADType>		gmActivities_;
+	COM_ADLoginTotal	festival_; //节日活动
+	COM_ADChargeTotal	selfRecharge_; //个人累计充值
+	COM_ADChargeTotal	sysRecharge_; //系统累计充值
+	COM_ADDiscountStore	selfDiscountStore_; //打折商店
+	COM_ADDiscountStore	sysDiscountStore_; //打折商店
+	COM_ADChargeEvery	selfOnceRecharge_; ///单笔充值
+	COM_ADChargeEvery	sysOnceRecharge_;
+	COM_ADEmployeeTotal	empact_;		///累计抽伙伴
+	COM_ADCards			selfCards_;		//翻牌
+	COM_ADChargeTotal	myselfRecharge_; //个人累计充值常驻版
+	COM_ADHotRole		hotdata_;
+	COM_ADGiftBag		gbdata_;		//小额礼包
+	bool				sevenflag_;
+	bool				signFlag_;
+	array<COM_Sevenday>	sevendata_;
+	bool		viprewardflag_;			//VIP奖励领取标记
+	string		phoneNumber_;
+	array<uint32>	levelgift_;			//已领取等级礼包ID
+	
+	COM_ActivityTable activity_;
+	array<COM_Item> fuwen_;
+};
+
+///DB 存储相关
+struct SGE_DBPlayerData_Old : SGE_PlayerInst_Old
+{
+	bool			freeze_;
+	bool			seal_;
+	uint32			signs_;
+	int32			sellIdMax_; ///售卖ID
+	int32			acceptRandQuestCounter_;
+	int32			submitRandQuestCounter_;
+	string			pfid_;//角色使用的渠道
+
+	array<SGE_OrderInfo> orders_; ///这个是充值数组
+	uint64			loginTime_;
+	uint64			logoutTime_;
+	uint32			genItemMaxGuid_; ///创建道具使用
+	uint32			gaterMaxNum_;	///采集总次数
+	bool			firstRollEmployeeCon_; //第一次金币roll
+	bool			firstRollEmployeeDia_; //第一次钻石roll
+	array<COM_EmployeeInst> employees_;
+	array<COM_Item>			itemStorage_;
+	array<COM_BabyInst>		babyStorage_;
+	array<COM_BabyInst>		babies_;
+	array<COM_Item>			bagItems_;
+	array<COM_QuestInst>	quests_;
+	array<int32>			completeQuests_;
+	array<COM_Item>			mineReward_;
+	array<COM_JJCBattleMsg> jjcBattleMsg_;
+	array<COM_ContactInfo>	friend_;
+	array<COM_ContactInfo>	blacklist_;
+
+	array<int32>			achValues_;
+	array<COM_Achievement>	achievement_;
+	EmployeesBattleGroup	empBattleGroup_;	//伙伴当前出战组
+	array<uint32>			employeeGroup1_;
+	array<uint32>			employeeGroup2_;
+	array<COM_Gather>		gatherData_;
+	array<uint32>			compoundList_;
+};

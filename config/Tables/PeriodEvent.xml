@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+	<PeriodEvents>
+		<DayEvent>
+			<event hour="11" minute="00" sec="0" script="sys_openmushroom" />
+			<event hour="11" minute="30" sec="0" script="sys_refreshmushroom" />
+			<event hour="12" minute="00" sec="0" script="sys_refreshmushroom" />
+			<event hour="12" minute="30" sec="0" script="sys_refreshmushroom" />
+			<event hour="12" minute="59" sec="59" script="sys_closemushroom" />
+		
+			<event hour="17" minute="00" sec="0" script="sys_openmushroom" />
+			<event hour="17" minute="30" sec="0" script="sys_refreshmushroom" />
+			<event hour="18" minute="00" sec="0" script="sys_refreshmushroom" />
+			<event hour="18" minute="30" sec="0" script="sys_refreshmushroom" />
+			<event hour="18" minute="59" sec="59" script="sys_closemushroom" />
+			<event hour="22" minute="00" sec="0" script="sys_sendPVRrewardbyday" />
+			<event hour="23" minute="59" sec="59" script="sys_reset_activity" />
+			<event hour="11" minute="57" sec="0" script="sys_tishiopenexam" />
+			<event hour="12" minute="0" sec="0" script="sys_openexam" />
+			<event hour="12" minute="59" sec="59" script="sys_closeexam" />
+			<event hour="18" minute="57" sec="0" script="sys_tishiopenexam" />
+			<event hour="19" minute="0" sec="0" script="sys_openexam" />
+			<event hour="19" minute="59" sec="59" script="sys_closeexam" />
+			<event hour="13" minute="00" sec="00" script="sys_open_guild_demon_invaded" />
+			<event hour="23" minute="59" sec="50" script="sys_close_guild_demon_invaded" />
+			
+			
+			<event hour="1" minute="00" sec="00" script="sys_refreshWhiteQuest" />
+			<event hour="9" minute="00" sec="00" script="sys_refreshWhiteQuest" />
+			<event hour="17" minute="00" sec="00" script="sys_refreshWhiteQuest" />
+			
+			<event hour="0" minute="00" sec="00" script="sys_pass_zero_hour" />
+			
+					
+		</DayEvent>
+		<WeekEvent>
+		
+			<event day="2" hour="0" minute="0" sec="0" script="sys_refreshBlueQuest" />
+			<event day="4" hour="0" minute="0" sec="0" script="sys_refreshBlueQuest" />
+			<event day="6" hour="0" minute="0" sec="0" script="sys_refreshBlueQuest" />
+			<event day="7" hour="0" minute="0" sec="0" script="sys_refreshBlueQuest" />
+			
+			<event day="1" hour="0" minute="0" sec="0" script="sys_refreshPurpleQuest" />
+			
+			<event day="3" hour="18" minute="59" sec="0" script="sys_openGuildBattle" />
+			<event day="3" hour="19" minute="54" sec="0" script="sys_openGuildBattle5min" />
+			<event day="3" hour="19" minute="59" sec="59" script="sys_startGuildBattle" />
+			<event day="3" hour="21" minute="29" sec="59" script="sys_stopGuildBattle" />
+			<event day="3" hour="21" minute="39" sec="59" script="sys_closeGuildBattle" />
+			
+			<event day="6" hour="18" minute="59" sec="0" script="sys_openGuildBattle" />
+			<event day="6" hour="19" minute="54" sec="0" script="sys_openGuildBattle5min" />
+			<event day="6" hour="19" minute="59" sec="59" script="sys_startGuildBattle" />
+			<event day="6" hour="21" minute="29" sec="59" script="sys_stopGuildBattle" />
+			<event day="6" hour="21" minute="39" sec="59" script="sys_closeGuildBattle" />
+			
+			<event day="2" hour="20" minute="00" sec="00" script="sys_open_team_pk" />
+			<event day="2" hour="20" minute="05" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="10" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="15" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="20" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="25" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="30" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="35" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="40" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="45" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="50" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="55" sec="00" script="sys_refresh_team_pk" />
+			<event day="2" hour="20" minute="59" sec="59" script="sys_close_team_pk" />
+			
+			<event day="2" hour="19" minute="00" sec="00" script="sys_open_pet" />
+			<event day="2" hour="19" minute="59" sec="59" script="sys_close_pet" />
+			
+			<event day="5" hour="19" minute="00" sec="00" script="sys_open_pet" />
+			<event day="5" hour="19" minute="59" sec="59" script="sys_close_pet" />
+			
+			<event day="5" hour="20" minute="00" sec="00" script="sys_open_team_pk" />
+			<event day="5" hour="20" minute="05" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="10" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="15" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="20" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="25" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="30" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="35" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="40" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="45" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="50" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="55" sec="00" script="sys_refresh_team_pk" />
+			<event day="5" hour="20" minute="59" sec="59" script="sys_close_team_pk" />
+			
+			<event day="1" hour="13" minute="00" sec="00" script="sys_add_pronpc" />
+			<event day="3" hour="13" minute="00" sec="00" script="sys_add_pronpc" />
+			<event day="5" hour="13" minute="00" sec="00" script="sys_add_pronpc" />
+			<event day="7" hour="13" minute="00" sec="00" script="sys_add_pronpc" />
+			<event day="1" hour="17" minute="00" sec="00" script="sys_del_pronpc" />
+			<event day="3" hour="17" minute="00" sec="00" script="sys_del_pronpc" />
+			<event day="5" hour="17" minute="00" sec="00" script="sys_del_pronpc" />
+			<event day="7" hour="17" minute="00" sec="00" script="sys_del_pronpc" />
+			
+			<event day="2" hour="13" minute="00" sec="00" script="sys_add_star" />
+			<event day="4" hour="13" minute="00" sec="00" script="sys_add_star" />
+			<event day="6" hour="13" minute="00" sec="00" script="sys_add_star" />
+			<event day="2" hour="14" minute="00" sec="00" script="sys_del_star" />
+			<event day="4" hour="14" minute="00" sec="00" script="sys_del_star" />
+			<event day="6" hour="14" minute="00" sec="00" script="sys_del_star" />
+			<event day="2" hour="15" minute="00" sec="00" script="sys_add_star" />
+			<event day="4" hour="15" minute="00" sec="00" script="sys_add_star" />
+			<event day="6" hour="15" minute="00" sec="00" script="sys_add_star" />
+			<event day="2" hour="16" minute="00" sec="00" script="sys_del_star" />
+			<event day="4" hour="16" minute="00" sec="00" script="sys_del_star" />
+			<event day="6" hour="16" minute="00" sec="00" script="sys_del_star" />
+			<event day="2" hour="17" minute="00" sec="00" script="sys_add_star" />
+			<event day="4" hour="17" minute="00" sec="00" script="sys_add_star" />
+			<event day="6" hour="17" minute="00" sec="00" script="sys_add_star" />
+			<event day="2" hour="18" minute="00" sec="00" script="sys_del_star" />
+			<event day="4" hour="18" minute="00" sec="00" script="sys_del_star" />
+			<event day="6" hour="18" minute="00" sec="00" script="sys_del_star" />
+
+
+			<event day="1" hour="20" minute="00" sec="00" script="sys_open_single_pk" />
+			<event day="1" hour="20" minute="05" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="10" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="15" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="20" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="25" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="30" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="35" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="40" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="45" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="50" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="55" sec="00" script="sys_refresh_single_pk" />
+			<event day="1" hour="20" minute="59" sec="59" script="sys_close_single_pk" />
+			
+			<event day="4" hour="20" minute="00" sec="00" script="sys_open_single_pk" />
+			<event day="4" hour="20" minute="05" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="10" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="15" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="20" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="25" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="30" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="35" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="40" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="45" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="50" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="55" sec="00" script="sys_refresh_single_pk" />
+			<event day="4" hour="20" minute="59" sec="59" script="sys_close_single_pk" />
+			
+			<event day="7" hour="19" minute="00" sec="00" script="sys_openWarrior" />
+			<event day="7" hour="20" minute="59" sec="59" script="sys_closeWarrior" />
+			
+			<event day="1" hour="19" minute="00" sec="00" script="sys_open_hongbao" />
+			<event day="1" hour="19" minute="05" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="10" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="15" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="20" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="25" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="30" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="35" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="40" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="45" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="50" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="55" sec="00" script="sys_refresh_hongbao" />
+			<event day="1" hour="19" minute="59" sec="59" script="sys_close_hongbao" />
+			
+			<event day="4" hour="19" minute="00" sec="00" script="sys_open_hongbao" />
+			<event day="4" hour="19" minute="05" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="10" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="15" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="20" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="25" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="30" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="35" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="40" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="45" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="50" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="55" sec="00" script="sys_refresh_hongbao" />
+			<event day="4" hour="19" minute="59" sec="59" script="sys_close_hongbao" />
+			
+		</WeekEvent>
+		
+	</PeriodEvents>
+</root>

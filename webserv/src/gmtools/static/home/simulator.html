@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
+		<title>法兰城的回忆【游服操作】</title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">-->
+		<link rel="stylesheet" href="../css/bootstrap-3.3.2.min.css" type="text/css">
+		<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap-3.3.2.min.js"></script>
+
+		<script src="../js/js.js"></script>
+		<!-- Custom styles for this template -->
+		<link href="../css/navbar-static-top.css" rel="stylesheet">
+		<link href="../css/dashboard.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/index.css">
+		<link rel="stylesheet" href="../css/simuloater.css">
+		<style>
+			.tjtable input[type="text"] {
+				width: 100%;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- Static navbar -->
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div id="navbar" class="navbar-collapse collapse" style="width:1401px;">
+					<ul class="nav navbar-nav ou">
+						<li>
+							<a href="manage.html">管理功能 </a>
+						</li>
+						<li>
+							<a href="chat.html">聊天查询</a>
+						</li>
+						<li>
+							<a href="operative.html">运营活动</a>
+						</li>
+						<li>
+							<a href="role.html">角色查询</a>
+						</li>
+						<li>
+							<a href="history.html">历史公告邮件/活动状态查询</a>
+						</li>
+						<li>
+							<a href="gm.html">GM功能</a>
+						</li>
+						<li>
+							<a href="statistic.html">数据统计</a>
+						</li>
+						<li>
+							<a href="user.html">用户统计</a>
+						</li>
+						<li class="active">
+							<a href="simulator.html">游服操作</a>
+						</li>
+						<li>
+							<a href="admin.html">管理员操作页面</a>
+						</li>
+					</ul>
+					<button type="button" id="Admin_btn" class="btn btn-default" style="margin-top:8px;margin-left:100px;">超级管理员</button>
+				</div>
+			</div>
+		</nav>
+		<!-- 导航结束 -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-md-2 sidebar w_sidebar">
+					<ul class="nav nav-sidebar ul">
+						<li class="active">
+							<a href="#">模拟充值</a>
+						</li>
+						<li>
+							<a href="#">执行命令</a>
+						</li>
+						<li class="oli">
+							<a href="#">渠道管理</a>
+						</li>
+						<li>
+							<a href="#">重启服务器</a>
+						</li>
+						<li>
+							<a href="#">添加服务器</a>
+						</li>
+						<li>
+							<a href="#">账号映射</a>
+						</li>
+						<li>
+							<a href="#">渠道映射</a>
+						</li>
+						<li>
+							<a href="#">是否新服</a>
+						</li>
+						<li>
+							<a href="#">更新服务器</a>
+						</li>
+						<li>
+							<a href="#">备份服务器</a>
+						</li>
+						<li>
+							<a href="#">渠道版本管理</a>
+						</li>
+						<li>
+							<a href="#">添加渠道版本</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main tab" id="D_content">
+					<!-- 模拟模块 -->
+					<div class="row placeholders show" style="text-align:left;">
+						<form id="simulator">
+							<div>
+								<fieldset class="fieldset1">
+
+								</fieldset>
+								<fieldset>
+									<div>
+										<table class="table btable" style="border:1px solid #999;">
+											<tbody>
+												<tr align="center" width="100px">
+													<td width="16%">商城ID</td>
+													<td width="16%">订单编号 </td>
+													<td width="16%">订单金额 </td>
+													<td width="16%">角色id</td>
+												</tr>
+												<tr align="center" width="100px">
+													<td width="16%"><input type="text" name="ShopId" /></td>
+													<td width="16%"><input type="text" name="Orderid" /> </td>
+													<td width="16%"><input type="text" name="Payment" /> </td>
+													<td width="16%"><input type="text" name="PlayerId" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</fieldset>
+								<input type="button" id="mn_but" value="执行" />
+							</div>
+						</form>
+					</div>
+					<!-- 执行模块 -->
+					<div class="row placeholders hide" style="text-align:left;">
+						<form id="execute">
+							<div>
+								<fieldset class="fieldset">
+
+								</fieldset>
+								<fieldset>
+									<textarea id="content" name="content" style="resize:none;width:100%;height:20em"></textarea>
+								</fieldset>
+								<fieldset>
+									<div id="param " role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix inputs">
+
+										<input id="zx_but" type="button" value="执行" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+									</div>
+								</fieldset>
+							</div>
+						</form>
+					</div>
+					<!-- 渠道模块 -->
+					<div class="row placeholders hide" style="text-align:left;">
+						<div role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+							<form id="qudao" style="float:left;margin-right:20px;">
+								<table class="table" style="border:1px solid #999;">
+									<tbody class="tbody">
+										<tr align="center" width="100px">
+											<td width="14%">服务器ID</td>
+											<td width="14%">服务器名</td>
+											<td width="14%">版本号</td>
+											<td width="14%">资源版本号</td>
+											<td width="14%">渠道ID</td>
+											<td width="14%">沙箱测试</td>
+											<td width="14%"></td>
+										</tr>
+									</tbody>
+								</table>
+
+							</form>
+						</div>
+					</div>
+					<!-- 服务器模块 -->
+					<div class="row placeholders hide" style="text-align:left;">
+						<div role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+							<form id="sever_execute" style="float:left;margin-right:20px;">
+								<!--<label for="SSHUsername" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">虚拟机用户名</span></label>
+		                        <input  name="SSHUsername" id="SSHUsername" class="ui-controlgroup-item" >-->
+								<label for="SSHPassword" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">用户密码</span></label>
+								<input name="SSHPassword" id="SSHPassword" class="ui-controlgroup-item">
+								<label for="sever_id" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">服务器ID</span></label>
+								<input name="sever_id" id="sever_id" class="ui-controlgroup-item">
+								<input id="restart" name="restart" type="button" value="重启" class="ui-widget ui-controlgroup-item ui-button ui-corner-right " role="button">
+							</form>
+						</div>
+					</div>
+					<!--添加服务器-->
+					<div class="row placeholders hide tjfuq" style="text-align:left;">
+						<form id="tjfuq">
+							<div>
+								<fieldset>
+									<div>
+										<table class="table btable tjtable" style="width:50%;border:1px solid #999;">
+											<tbody>
+
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											 <td style="width:16%;">虚拟机用户名</td>
+											<td width="30%"><input type="text" name="SSHUsername" placeholder="string" /> </td>
+				                         </tr>-->
+												<tr align="center" width="100px">
+													<td width="16%">用户密码</td>
+													<td width="16%"><input type="text" name="SSHPassword" placeholder="string" /></td>
+												</tr>
+												<tr align="center" width="100px" style="border:1px solid #999;">
+													<td width="16%">大区ID </td>
+													<td width="16%"><input type="text" name="Area" placeholder="int" /> </td>
+												</tr>
+												<tr align="center" width="100px">
+													<td width="16%">大区名</td>
+													<td width="16%"><input type="text" name="AreaName" placeholder="string" /></td>
+												</tr>
+												<tr align="center" width="100px" style="border:1px solid #999;">
+													<td width="50%">服务器ID</td>
+													<td width="50%"><input type="text" name="ServID" placeholder="int" /></td>
+												</tr>
+												<tr align="center" width="100px" style="border:1px solid #999;">
+													<td width="16%">服务器名</td>
+													<td width="16%"><input type="text" name="Name" placeholder="string" /></td>
+												</tr>
+
+												<tr align="center" width="100px" style="border:1px solid #999;">
+													<td width="16%">服务器地址</td>
+													<td width="16%"><input type="text" name="Host" placeholder="string" /> </td>
+												</tr>
+
+												<tr align="center" width="100px" style="border:1px solid #999;">
+													<td width="16%">开始端口</td>
+													<td width="16%"><input type="text" name="Port" placeholder="int" /> </td>
+												</tr>
+												<tr align="center" width="100px" style="border:1px solid #999;">
+													<td width="16%">数据库地址</td>
+													<td width="16%"><input type="text" name="LogDBHost" placeholder="string" /> </td>
+												</tr>
+
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库端口</td>
+											<td width="16%" ><input type="text" name="LogDBPort" placeholder="int"/></td>
+				                         </tr>
+										
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库用户名</td>
+											<td width="16%" ><input type="text" name="LogDBUsr" placeholder="string"/></td>
+				                         </tr>
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库用户密码</td>
+											<td width="16%"><input type="text" name="LogDBPwd" placeholder="string"/> </td>
+				                         </tr>-->
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%" style="border:1px solid #999;">游戏数据表名</td>
+											<td width="16%" style="border:1px solid #999;"><input type="text" name="DBgameName" placeholder="string"/></td>
+				                         </tr>
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">日志数据表名</td>
+											<td width="16%"><input type="text" name="LogDBName" placeholder="string"/> </td>
+				                         </tr>-->
+												<tr align="center" width="100px" style="border:1px solid #999;">
+													<td width="16%" style="border:1px solid #999;">包文件</td>
+													<td width="16%" style="border:1px solid #999;"><input type="text" name="Source" placeholder="string" /></td>
+												</tr>
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%" style="border:1px solid #999;">路径</td>
+											<td width="16%" style="border:1px solid #999;"><input type="text" name="Path" placeholder="string"/></td>
+				                         </tr>-->
+											</tbody>
+										</table>
+									</div>
+								</fieldset>
+								<input type="button" id="add_sever" value="执行" />
+								<div class="circle"></div>
+								<div class="su_box"></div>
+							</div>
+						</form>
+					</div>
+					<!-- 映射 -->
+					<div id="other_function-6" aria-labelledby="ui-id-42" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+						<form id="add_mapping">
+							<div>
+								<fieldset>
+									<legend>用户id映射</legend>
+									<div id="cdkey_mapping_div_1" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+
+										<input id="old_id" name="old_id" type="text" placeholder="用户原始id" />
+										<input id="new_id" name="new_id" type="text" placeholder="用户新id" />
+										<input id="mapping_btn" type="button" name="check" value="添加" class="ui-widget ui-controlgroup-item ui-button ui-corner-right btn" role="button">
+									</div>
+								</fieldset>
+							</div>
+						</form>
+					</div>
+					<!-- 渠道映射 -->
+					<div id="other_function-2" aria-labelledby="ui-id-42" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+						<form id="Channel_mapping">
+							<div>
+								<fieldset>
+									<legend>用户渠道映射</legend>
+									<div id="cdkey_mapping_div_2" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+										<input id="anyId" name="anyId" type="text" placeholder="渠道id" />
+										<input id="pfId" name="pfId" type="text" placeholder="pfid" />
+										<input id="pfName" name="pfName" type="text" placeholder="渠道名" />
+										<input id="desc" name="desc" type="text" placeholder="渠道备注" />
+										<input id="Channel_btn" type="button" name="check" value="执行" class="ui-widget ui-controlgroup-item ui-button ui-corner-right btn" role="button">
+										<input id="particulars_btn" type="button" name="check" value="详情" class="ui-widget ui-controlgroup-item ui-button ui-corner-right btn" role="button">
+									</div>
+								</fieldset>
+							</div>
+						</form>
+					</div>
+					<!-- 是否新服 -->
+					<div class="row placeholders hide" style="text-align:left;">
+						<div role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+							<form id="sever_isnew" style="float:left;margin-right:20px;">
+								<label for="sever_id" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">服务器ID</span></label>
+								<input name="sever_id" id="sever_id" class="ui-controlgroup-item">
+								<label for="isnew" class="ui-controlgroup-label ui-widget ui-widget-content ui-state-default ui-controlgroup-item ui-corner-left"><span class="ui-controlgroup-label-contents">是否新服</span></label>
+								<input name="isnew" id="isnew" class="ui-controlgroup-item">
+								<input id="issever" name="issever" type="button" value="执行" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button">
+
+							</form>
+						</div>
+					</div>
+					<!--跟新服务器-->
+					<div class="row placeholders hide tjfuq" style="text-align:left;">
+						<form id="gxfuq">
+							<div>
+								<fieldset>
+									<div>
+										<table class="table btable tjtable" style="width:50%;border:1px solid #999;">
+											<tbody>
+
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											 <td style="width:16%;">虚拟机用户名</td>
+											<td width="30%"><input type="text" name="SSHUsername" placeholder="string" /> </td>
+				                         </tr>-->
+												<tr align="center" width="100px">
+													<td width="16%">用户密码</td>
+													<td width="16%"><input type="text" name="SSHPassword" placeholder="string" /></td>
+												</tr>
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											 <td width="16%">大区ID </td>
+											<td width="16%"><input type="text" name="Area" placeholder="int"/> </td>
+				                         </tr>
+										<tr align="center" width="100px">
+											<td width="16%">大区名</td>
+											<td width="16%" ><input type="text" name="AreaName" placeholder="string"/></td>
+				                         </tr>-->
+												<tr align="center" width="100px" style="border:1px solid #999;">
+													<td width="50%">服务器ID</td>
+													<td width="50%"><input type="text" name="ServID" placeholder="string" /></td>
+												</tr>
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											 <td width="16%">服务器名</td>
+											 <td width="16%"><input type="text" name="Name" placeholder="string"/></td>
+				                         </tr>
+										
+										
+										
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">地址</td>
+											<td width="16%"><input type="text" name="Host" placeholder="string"/> </td>
+				                         </tr>
+										
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">端口</td>
+											<td width="16%"><input type="text" name="Port" placeholder="int"/> </td>
+				                         </tr>
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库地址</td>
+											<td width="16%"><input type="text" name="LogDBHost" placeholder="string"/> </td>
+				                         </tr>
+										
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库端口</td>
+											<td width="16%" ><input type="text" name="LogDBPort" placeholder="int"/></td>
+				                         </tr>
+										
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库用户名</td>
+											<td width="16%" ><input type="text" name="LogDBUsr" placeholder="string"/></td>
+				                         </tr>
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库用户密码</td>
+											<td width="16%"><input type="text" name="LogDBPwd" placeholder="string"/> </td>
+				                         </tr>-->
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%" style="border:1px solid #999;">游戏数据表名</td>
+											<td width="16%" style="border:1px solid #999;"><input type="text" name="DBgameName" placeholder="string"/></td>
+				                         </tr>
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">日志数据表名</td>
+											<td width="16%"><input type="text" name="LogDBName" placeholder="string"/> </td>
+				                         </tr>-->
+												<tr align="center" width="100px" style="border:1px solid #999;">
+													<td width="16%" style="border:1px solid #999;">包文件</td>
+													<td width="16%" style="border:1px solid #999;"><input type="text" name="Source" placeholder="string" /></td>
+												</tr>
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%" style="border:1px solid #999;">路径</td>
+											<td width="16%" style="border:1px solid #999;"><input type="text" name="Path" placeholder="string"/></td>
+				                         </tr>-->
+											</tbody>
+										</table>
+									</div>
+								</fieldset>
+								<input type="button" id="up_sever" value="执行" />
+								<div class="circle"></div>
+								<div class="su_box"></div>
+							</div>
+						</form>
+						<div style="margin-top: 10px;">
+							<ol>
+								<li>用户密码:目标机器用户密码</li>
+								<li>服务器id:可以是多个，多个必须用逗号隔开</li>
+								<li>包文件：服务器对应的包文件</li>
+							</ol>
+						</div>
+					</div>
+					<!--备份服务器-->
+					<div class="row placeholders hide tjfuq" style="text-align:left;">
+						<form id="backups">
+							<div>
+								<fieldset>
+									<div>
+										<table class="table btable tjtable" style="width:50%;border:1px solid #999;">
+											<tbody>
+
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											 <td style="width:16%;">虚拟机用户名</td>
+											<td width="30%"><input type="text" name="SSHUsername" placeholder="string" /> </td>
+				                         </tr>
+										<tr align="center" width="100px">
+											<td width="16%">用户密码</td>
+											<td width="16%" ><input type="text" name="SSHPassword" placeholder="string"/></td>
+				                         </tr>-->
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											 <td width="16%">大区ID </td>
+											<td width="16%"><input type="text" name="Area" placeholder="int"/> </td>
+				                         </tr>
+										<tr align="center" width="100px">
+											<td width="16%">大区名</td>
+											<td width="16%" ><input type="text" name="AreaName" placeholder="string"/></td>
+				                         </tr>-->
+												<tr align="center" width="100px" style="border:1px solid #999;">
+													<td width="50%">服务器ID</td>
+													<td width="50%"><input type="text" name="ServID" placeholder="int" /></td>
+												</tr>
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											 <td width="16%">服务器名</td>
+											 <td width="16%"><input type="text" name="Name" placeholder="string"/></td>
+				                         </tr>
+										
+										
+										
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">地址</td>
+											<td width="16%"><input type="text" name="Host" placeholder="string"/> </td>
+				                         </tr>
+										
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">端口</td>
+											<td width="16%"><input type="text" name="Port" placeholder="int"/> </td>
+				                         </tr>
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库地址</td>
+											<td width="16%"><input type="text" name="LogDBHost" placeholder="string"/> </td>
+				                         </tr>
+										
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库端口</td>
+											<td width="16%" ><input type="text" name="LogDBPort" placeholder="int"/></td>
+				                         </tr>
+										
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库用户名</td>
+											<td width="16%" ><input type="text" name="LogDBUsr" placeholder="string"/></td>
+				                         </tr>
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">数据库用户密码</td>
+											<td width="16%"><input type="text" name="LogDBPwd" placeholder="string"/> </td>
+				                         </tr>-->
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%" style="border:1px solid #999;">游戏数据表名</td>
+											<td width="16%" style="border:1px solid #999;"><input type="text" name="DBgameName" placeholder="string"/></td>
+				                         </tr>
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%">日志数据表名</td>
+											<td width="16%"><input type="text" name="LogDBName" placeholder="string"/> </td>
+				                         </tr>
+										<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%" style="border:1px solid #999;">包文件</td>
+											<td width="16%" style="border:1px solid #999;"><input type="text" name="Source" placeholder="string"/></td>
+				                         </tr>-->
+												<!--<tr align="center" width="100px" style="border:1px solid #999;">
+											<td width="16%" style="border:1px solid #999;">路径</td>
+											<td width="16%" style="border:1px solid #999;"><input type="text" name="Path" placeholder="string"/></td>
+				                         </tr>-->
+											</tbody>
+										</table>
+									</div>
+								</fieldset>
+								<input type="button" id="backups_sever" value="执行" />
+								<div class="circle"></div>
+								<div class="su_box"></div>
+							</div>
+						</form>
+					</div>
+					<!-- 渠道版本管理 -->
+					<div class="row placeholders hide" style="text-align:left;">
+						<form id="Channel_Versions">
+							<table class="table Channel_Versions_tab" style="border:1px solid #999;">
+								<tbody class="Channel_tbody">
+									<tr align="center" width="100px">
+										<td width="14%">渠道ID</td>
+										<td width="14%">版本号</td>
+										<td width="14%">服务器id</td>
+										<td width="14%"></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</form>
+					</div>
+					<!-- 添加渠道  版本 -->
+					<div id="other_function-8" aria-labelledby="ui-id-42" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content hide" aria-hidden="false" style="display: block;">
+						<form id="add_Channel_Versions">
+							<div>
+								<fieldset>
+									<legend>添加渠道  版本</legend>
+									<div id="cdkey_mapping_div_10" role="toolbar" class="ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix">
+
+										<input  name="channel" type="text" placeholder="渠道id" required="required" class="channel"/>
+										<input name="version" type="text" placeholder="版本号" required="required" class="versions"/>
+										<input id="Channel_Versions_btn" type="button" name="check" value="添加" class="ui-widget ui-controlgroup-item ui-button ui-corner-right btn" role="button">
+									</div>
+								</fieldset>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">详情</h4>
+						</div>
+						<div class="modal-body">
+							<table class="table " style="border:1px solid #999;">
+								<tbody class="detatable">
+
+								</tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade " id="CVModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="CVModalLabel">选择服务器</h4>
+						</div>
+						<div class="modal-body CV_body">
+							<div style="padding:10px 0">
+								<form class="CV_form" style="padding:10px;">
+									<b>服务器id：</b>
+									<ul></ul>
+									<div style="clear:both;"></div>
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal" id="cv_btn" style="background:green;color:#fff;">确认</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade " id="DelModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="DelModalLabel">删除提示</h4>
+						</div>
+						<div class="modal-body CV_body">
+							<div style="padding:10px 0;text-align: center">
+								<form class="Del_form" style="padding:10px;">
+									<b style="font-size: 20px;">确定要删除吗？</b>
+								</form>
+
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal" id="delbtn" style="background:green;color:#fff;">确认</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		if(sessionStorage.getItem("type") != 2) {
+			window.location.href = "index.html" //证明不是用户登录的，跳转到你需要的页面；
+		};
+
+		// 重启服务器
+		$("#restart").click(function() {
+			//alert($("#sever_execute").serialize())
+			$.ajax({
+				type: "post",
+				url: "../do_sever_execute.php",
+				data: $("#sever_execute").serialize(),
+				success: function(e) {
+					alert(e)
+				},
+				error: function(e) {
+					alert(e)
+				}
+			})
+
+		})
+		var text = [];
+		var sev_arr = [];
+		//渠道管理
+		$.ajax({
+			type: "post",
+			url: "../query_area_servers.php",
+			dataType: "json",
+			success: function(e) {
+				for(var key in e) {
+					var tim = e[key]
+					for(var i = 0; i < tim.length; i++) {
+
+						text.push({
+							Id: tim[i].id,
+							Capa: tim[i].capa,
+							Area: tim[i].area,
+							Name: tim[i].name,
+							Host: tim[i].host,
+							Port: tim[i].port,
+							Channels: tim[i].Channels,
+							Path: tim[i].Path,
+							Sandbox: tim[i].Sandbox,
+							CDN: tim[i].CDN,
+							Logdbhost: tim[i].logdbhost,
+							Logdbname: tim[i].logdbname,
+							Logdbport: tim[i].logdbport,
+							Logdbpwd: tim[i].logdbpwd,
+							Logdbusr: tim[i].logdbusr,
+							Oauthport: tim[i].oauthport,
+							Payport: tim[i].payport,
+							Versions: tim[i].Versions,
+							Gmtport: tim[i].gmtport,
+							DBGameName: tim[i].DBGameName,
+							NoCheck: tim[i].NoCheck
+
+						});
+						var id = tim[i].id;
+						sev_arr.push({
+							id: id,
+							name: tim[i].name,
+							versions: tim[i].Versions,
+							CDN: tim[i].CDN,
+							Channels: tim[i].Channels,
+							Sandbox: tim[i].Sandbox
+						})
+
+						//var select= tim[i].Channels.join(",")
+                        oli='<li><input type="checkbox" value="' + id + '" name="serverids" class="serverids" />&nbsp;'+ tim[i].name +'</li>'
+                        $(".CV_body ul").append(oli)
+					}
+
+
+				}
+				//	console.log(sev_arr)
+				function JsonSort(json, key) {
+					//console.log(json);
+					for(var j = 1, jl = json.length; j < jl; j++) {
+						var temp = json[j],
+							val = temp[key],
+							i = j - 1;
+						while(i >= 0 && json[i][key] > val) {
+							json[i + 1] = json[i];
+							i = i - 1;
+						}
+						json[i + 1] = temp;
+
+					}
+					return json;
+				}
+				var json = JsonSort(sev_arr, 'id');
+
+				for(var i = 0; i < json.length; i++) {
+					if(json[i].Channels == null) {
+						select = ""
+					} else {
+						select = json[i].Channels.join(",")
+					}
+					if(json[i].versions == null) {
+						version = ""
+					} else {
+						version = json[i].versions.join(",")
+					}
+					lable = '<tr><td class="fwqid">' + json[i].id + '</td><td class="fwqname">' + json[i].name + '</td><td class="version"><input  value="' + version + '"/></td><td class="CDN"><input  value="' + json[i].CDN + '"/></td><td class="qd"><input  value="' + select + '"/></td><td class="sandbox"><input  value=" ' + json[i].Sandbox + '"/></td ></td ><td><input class="update" name="update" type="button" value="更新" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button"><input class="details" name="details" type="button" value="详情" data-toggle="modal" data-target="#myModal" class="ui-widget ui-controlgroup-item ui-button ui-corner-right" role="button"></td></tr>'
+					$(".tbody").append(lable)
+				}
+
+
+			}
+		})
+
+		$(document).on("click", ".update", function() {
+			var id = $(this).parent().siblings(".fwqid").html()
+			var name = $(this).parent().siblings(".fwqname").html()
+			var version = $(this).parent().siblings(".version").find("input").val()
+			var CDN = $(this).parent().siblings(".CDN").find("input").val()
+			var qd = $(this).parent().siblings(".qd").find("input").val()
+			var sandbox = $(this).parent().siblings(".sandbox").find("input").val()
+			$.ajax({
+				type: "post",
+				url: "../do_channel.php",
+				data: {
+					id: id,
+					name: name,
+					version: version,
+					CDN: CDN,
+					qd: qd,
+					sandbox: sandbox
+				},
+				success: function(e) {
+					alert(e)
+				},
+				error: function(e) {
+					alert("失败")
+				}
+
+			})
+
+		})
+		$(document).on("click", ".details", function() {
+			var index = $(this).parent().parent().children('td').eq(0).html()
+			console.log(index)
+			for(var i = 0; i < text.length; i++) {
+				//console.log(text[i].Id)
+				if(text[i].Id == index) {
+					lable = '<tr><td>服务器id</td><td>' + text[i].Id + '</td></tr><tr><td>服务器名</td><td>' + text[i].Name + '</td></tr><tr><td>容量</td><td>' + text[i].Capa + '</td></tr><tr><td>大区</td><td>' + text[i].Area + '</td></tr><tr><td>服务器地址</td><td >' + text[i].Host + '</td></tr><tr><td>服务器端口</td><td>' + text[i].Port + '</td ></tr><tr><td>资源版本号</td><td>' + text[i].CDN + '</td></tr><tr><td>日志数据地址</td><td>' + text[i].Logdbhost + '</td></tr><tr><td>日志数据表名</td><td>' + text[i].Logdbname + '</td></tr><tr><td>日志数据端口</td><td>' + text[i].Logdbport + '</td></tr><tr><td>日志数据用户名</td><td>' + text[i].Logdbusr + '</td></tr><tr><td>日志数据用户密码</td><td>' + text[i].Logdbpwd + '</td></tr><tr><td>GMT端口</td><td>' + text[i].Gmtport + '</td></tr><tr><td>认证端口</td><td>' + text[i].Oauthport + '</td></tr><tr><td>支付端口</td><td>' + text[i].Payport + '</td></tr><tr><td>版本号</td><td>' + text[i].Versions + '</td></tr><tr></td ><td>渠道</td><td ><input  value="' + text[i].Channels + '" title="' + text[i].Channels + '"/></td></tr><tr><td>路径</td><td>' + text[i].Path + '</td></tr><tr><td>沙箱</td><td>' + text[i].Sandbox + '</td></tr><tr><td>游戏数据名</td><td>' + text[i].DBGameName + '</td></tr><tr><td>忽略检测</td><td>' + text[i].NoCheck + '</td></tr>'
+					$(".detatable").html(lable)
+				}
+			}
+		})
+
+		//添加服务器
+		$("#add_sever").click(function() {
+			$(".su_box").css("height", $(window).height())
+			$(".su_box").show()
+			$(".circle").show()
+			//alert($("#tjfuq").serialize())
+			$.ajax({
+				type: "post",
+				url: "../do_add_sever.php",
+				data: $("#tjfuq").serialize(),
+				success: function(e) {
+					$(".circle").delay(10000).hide(0);
+					$(".su_box").delay(10000).hide(0);
+					alert(e)
+				}
+			})
+		})
+		//是否新服
+		$("#issever").click(function() {
+			$.ajax({
+				type: "post",
+				url: "/data_DoIsSever",
+				data: $("#sever_isnew").serialize(),
+				success: function(e) {
+					alert(e)
+				}
+			})
+		})
+		//跟新服务器
+		$("#up_sever").click(function() {
+			$(".su_box").css("height", $(window).height())
+			$(".su_box").show()
+			$(".circle").show()
+			//alert($("#gxfuq").serialize())
+			$.ajax({
+				type: "post",
+				url: "../do_up_sever.php",
+				data: $("#gxfuq").serialize(),
+				success: function(e) {
+					$(".circle").hide()
+					$(".su_box").hide()
+					alert(e)
+				}
+			})
+		})
+		//备份服务器
+		$("#backups_sever").click(function() {
+			$(".su_box").css("height", $(window).height())
+			$(".su_box").show()
+			$(".circle").show()
+			//alert($("#backups").serialize())
+			$.ajax({
+				type: "post",
+				url: "../do_backups_sever.php",
+				data: $("#backups").serialize(),
+				success: function(e) {
+					$(".circle").hide()
+					$(".su_box").hide()
+					alert(e)
+				}
+			})
+		})
+
+		//渠道版本管理
+		$.ajax({
+			type: "post",
+			url: "../channel_versions",
+			success: function(e) {
+                var con = JSON.parse(e)
+                // var arrid=[]
+                for (var key in con) {
+                    var tim = con[key];
+                    for (var i = 0; i < tim.length; i++) {
+                        sev_lable = '<tr> <td><input type="text" value="' + tim[i][0] + '" name="channel" class="CV_channel"/></td><td><input type="text" value="' + tim[i][1] + '" name="version" class="CV_version"/></td><td><input type="text" value="' + tim[i][2] + '"  class="CV_id"  title="' + tim[i][2] + '" readonly="readonly"/></td><td style="text-align: center;"><input  type="button" value="选服"  data-toggle="modal" data-target="#CVModal" class="CV_btn" style="background:green;color:#fff;border-radius:10%;width:75px;border:1px solid green;"/>&nbsp;<input  type="button" value="删除" class="delectable" style="background:red;color:#fff;border-radius:10%;width:75px;border:1px solid red;" data-toggle="modal" data-target="#DelModal"/></td></tr>'
+                        $(".Channel_Versions_tab").append(sev_lable)
+
+                    }
+                }
+            }
+		})
+		//点击选服把版本和渠道传给弹窗选服页面
+        $(document).on("click", ".CV_btn", function() {
+            $(".CV_form").find("p").remove()
+            var channel=$(this).parent().siblings().find(".CV_channel").val()
+            var version=$(this).parent().siblings().find(".CV_version").val()
+			var con='<p><b>渠道：</b><input type="text" value="'+channel+'" name="channel" readonly="readonly" class="channels"> </p><p><b>版本：</b><input type="text" value="'+version+'" name="version" readonly="readonly" class="Version"> <text/p>'
+            $(".CV_form").prepend(con)
+            var  sev_id=$(this).parent().siblings().find(".CV_id").val()
+            sev_id=sev_id.split(",")
+            //console.log(sev_id[0])
+           	var num=$(".CV_body ul li ")
+			for(var i=0;i<num.length;i++){
+				 num.eq(i).find("input").prop("checked","")
+				for(var j=0;j<sev_id.length;j++){
+					if(num.eq(i).find("input").val() ==  sev_id[j]){
+						num.eq(i).find("input").prop("checked","checked")
+					}
+				}
+			}
+		})
+		//传一条数据到删除弹窗提示
+        $(document).on("click", ".delectable", function() {
+            $(".Del_form").find("p").remove()
+            var channel=$(this).parent().siblings().find(".CV_channel").val()
+            var version=$(this).parent().siblings().find(".CV_version").val()
+            var con='<p><b>渠道：</b><input type="text" value="'+channel+'" name="channel" readonly="readonly" class="Channels"> </p><p><b>版本：</b><input type="text" value="'+version+'" name="version" readonly="readonly" class="Versions"> <text/p>'
+            $(".Del_form").prepend(con)
+
+        })
+		//渠道版本管理保存修改
+		$(document).on("click", "#cv_btn", function() {
+
+		    console.log($(".CV_form").serialize())
+			console.log($(".channels").val())
+            console.log($(".Version").val())
+		    if($(".channels").val() != "" && $(".Version").val() != "" ){
+                $.ajax({
+                    type: "post",
+                    url: "../versions_channel" ,
+                    data: $(".CV_form").serialize(),
+                    success: function(e) {
+                        var con = JSON.parse(e)
+                        if(con[0].error != 0) {
+                            alert(con[0].desc)
+                        } else {
+                            alert("成功")
+                        }
+                    }
+                })
+
+            }else{
+		        alert("渠道 版本不能为空")
+			}
+		})
+        //渠道版本管理删除修改
+        $(document).on("click", "#delbtn", function() {
+            console.log($(".Channels").val())
+            console.log($(".Versions").val())
+            if($(".Channels").val() != "" && $(".Versions").val() != "" ){
+                $.ajax({
+                    type: "post",
+                    url: "../versions_channel" ,
+                    data: {channel:$(".Channels").val(),version:$(".Versions").val(),delete:"delete"},
+                    success: function(e) {
+                        var con = JSON.parse(e)
+                        if(con[0].error != 0) {
+                            alert(con[0].desc)
+                        } else {
+                            alert("成功")
+                        }
+                    }
+                })
+
+            }else{
+                alert("渠道 版本不能为空")
+            }
+        })
+        //添加渠道版本
+        $("#Channel_Versions_btn").click(function() {
+            console.log($("#add_Channel_Versions").serialize())
+            console.log($(".channel").val())
+            console.log($(".versions").val())
+
+            if($(".channel").val() != "" && $(".versions").val() != ""){
+                $.ajax({
+                    type: "post",
+                    url: "../add_versions_channel",
+                    data: $("#add_Channel_Versions").serialize(),
+                    success: function(e) {
+                        var con = JSON.parse(e)
+                        if(con[0].error != 0) {
+                            alert(con[0].desc)
+                        } else {
+                            alert("成功")
+                        }
+                    }
+                })
+			}else{
+                alert("您还没填写渠道和版本号")
+			}
+
+        })
+	</script>
+
+</html>

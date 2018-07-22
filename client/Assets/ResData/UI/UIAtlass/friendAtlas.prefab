@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: friendAtlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 272eeecf50836114f95633f845457052, type: 2}
+  mSprites:
+  - name: biaoqingkuang
+    x: 0
+    y: 370
+    width: 189
+    height: 142
+    borderLeft: 42
+    borderRight: 32
+    borderTop: 36
+    borderBottom: 48
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ditu
+    x: 312
+    y: 309
+    width: 100
+    height: 87
+    borderLeft: 29
+    borderRight: 27
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: hb_renwukuang
+    x: 0
+    y: 262
+    width: 119
+    height: 106
+    borderLeft: 24
+    borderRight: 20
+    borderTop: 26
+    borderBottom: 30
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 3
+    paddingBottom: 0
+  - name: hb_renwukuangxuanzhong
+    x: 191
+    y: 287
+    width: 119
+    height: 109
+    borderLeft: 29
+    borderRight: 24
+    borderTop: 33
+    borderBottom: 33
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: hy_gengduoanniu
+    x: 387
+    y: 170
+    width: 68
+    height: 68
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: hy_guanbi
+    x: 188
+    y: 217
+    width: 68
+    height: 68
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: hy_heimingdanguanbi
+    x: 414
+    y: 315
+    width: 81
+    height: 81
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 2
+  - name: hy_xiaotanchu
+    x: 121
+    y: 283
+    width: 65
+    height: 85
+    borderLeft: 56
+    borderRight: 28
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: jn_jinlan
+    x: 319
+    y: 398
+    width: 126
+    height: 114
+    borderLeft: 37
+    borderRight: 30
+    borderTop: 36
+    borderBottom: 29
+    paddingLeft: 1
+    paddingRight: 2
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jn_jinlanliang
+    x: 191
+    y: 398
+    width: 126
+    height: 114
+    borderLeft: 38
+    borderRight: 34
+    borderTop: 41
+    borderBottom: 41
+    paddingLeft: 3
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: sanjiao
+    x: 312
+    y: 234
+    width: 73
+    height: 73
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: sanjiao2
+    x: 414
+    y: 240
+    width: 73
+    height: 73
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+  mCoordinates: 0
+  sprites: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
