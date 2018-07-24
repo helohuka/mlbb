@@ -199,8 +199,8 @@ public class UILoginPanel : UIBase {
     
     IEnumerator ServNotice()
     {
-        LaunchLoginInfo();
-        NetConnection.Instance.sessionlogin(GameManager.Instance.loginInfo_);
+        //LaunchLoginInfo();
+       // NetConnection.Instance.sessionlogin(GameManager.Instance.loginInfo_);
         WWWForm form = new WWWForm();
         form.AddField("servid", GameManager.ServId_.ToString());
         Request www = new Request("post", GlobalValue.CenterServerHost + GlobalValue.servNotice, form);

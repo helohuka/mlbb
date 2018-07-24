@@ -13,10 +13,6 @@ type Server struct {
 
 func (c *Server) Post() {
 	servid, _ := strconv.Atoi(c.Input().Get("servid"))
-	if servid < 2000 {
-		c.Ctx.WriteString("")
-		return
-	}
 	serv := models.GetServById(servid)
 	if serv != nil {
 		c.Ctx.WriteString(serv.Notice)

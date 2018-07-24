@@ -651,7 +651,7 @@ public class ApplicationEntry : MonoBehaviour
             logQue.Dequeue();
         logQue.Enqueue(sLog);
 		CommonEvent.ExcuteException(sLog);
-        //NGUIDebug.Log (sLog);
+         NGUIDebug.Log (sLog);
 
         //Backlog.Instance.log(SystemInfo.deviceUniqueIdentifier, cond, stack.Replace('\n', '|'), "0");
 	}

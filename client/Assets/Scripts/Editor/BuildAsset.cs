@@ -375,8 +375,4 @@ public class BuildAsset
         BuildMusic();
         BuildIcon();
     }
-    public static void CopyTable()
-    {
-
-    }
 }
