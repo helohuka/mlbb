@@ -45,9 +45,8 @@ static public class Configure
     /// <summary>
     /// Asset ¸ùÄ¿Â¼
     /// </summary>
-#if UNITY_EDITOR
-    public const string PlatformAssetFolder = "/01";
-#elif UNITY_IOS || UNITY_IPHONE
+
+#if UNITY_IOS || UNITY_IPHONE
     public const string PlatformAssetFolder = "/02";
 #elif UNITY_ANDROID
     public const string PlatformAssetFolder = "/03";

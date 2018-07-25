@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using System.Collections;
 using System.IO;
-using System.Diagnostics;
 using System.Collections.Generic;
 
 public class BuildAsset
 {
 
-#if UNITY_EDITOR
-    const BuildTarget target_ = BuildTarget.StandaloneWindows;
-#elif UNITY_IOS || UNITY_IPHONE
+#if UNITY_IOS || UNITY_IPHONE
     const BuildTarget target_ = BuildTarget.iPhone;
 #elif UNITY_ANDROID
     const BuildTarget target_ = BuildTarget.Android;
@@ -135,7 +131,7 @@ public class BuildAsset
             if (files[i].Contains(".meta"))
                 continue;
             string name = files[i].Substring(files[i].IndexOf("Assets"));
-            Object file = UnityEditor.AssetDatabase.LoadAssetAtPath(name, typeof(Object));
+            Object file = AssetDatabase.LoadAssetAtPath(name, typeof(Object));
             if (file != null)
                 res.Add(file);
         }
@@ -280,6 +276,7 @@ public class BuildAsset
     [MenuItem("BuildToolset/MakeEffect")]
     public static void BuildEffect()
     {
+        mkdir(effectBundleOutputFolder_);
         Caching.CleanCache();
         {
             initEffectRefAssets();
@@ -323,6 +320,7 @@ public class BuildAsset
     [MenuItem("BuildToolset/Weapon")]
     public static void BuildWeapon()
     {
+        mkdir(weaponBundleOutputFolder_);
         Caching.CleanCache();
         List<Object> files = filter(weaponPrefabFolder_);
         for (int i = 0; i < files.Count; ++i)
@@ -334,6 +332,7 @@ public class BuildAsset
     [MenuItem("BuildToolset/MakeSound")]
     public static void BuildSound()
     {
+        mkdir(soundBundleOutputFolder_);
         Caching.CleanCache();
         List<Object> files = filter(soundPrefabFolder_);
         for (int i = 0; i < files.Count; ++i)
@@ -345,6 +344,7 @@ public class BuildAsset
     [MenuItem("BuildToolset/MakeMusic")]
     public static void BuildMusic()
     {
+        mkdir(musicBundleOutputFolder_);
         Caching.CleanCache();
         List<Object> files = filter(musicPrefabFolder_);
         for (int i = 0; i < files.Count; ++i)
@@ -356,6 +356,7 @@ public class BuildAsset
     [MenuItem("BuildToolset/MakeIcon")]
     public static void BuildIcon()
     {
+        mkdir(iconBundleOutputFolder_);
         Caching.CleanCache();
         List<Object> files = filter(iconPrefabFolder_);
         for (int i = 0; i < files.Count; ++i)
@@ -367,12 +368,14 @@ public class BuildAsset
     [MenuItem("BuildToolset/MakeAll")]
     public static void BuildAll()
     {
-        BuildPlayers();
-        BuildUI();
+        AssetDatabase.Refresh();
         BuildEffect();
+        BuildUI();
+        BuildPlayers();
         BuildWeapon();
         BuildSound();
         BuildMusic();
         BuildIcon();
+        AssetDatabase.Refresh();
     }
 }
