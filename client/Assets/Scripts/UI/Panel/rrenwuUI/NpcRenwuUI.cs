@@ -637,170 +637,149 @@ public class NpcRenwuUI : UIBase {
                 InitTalk(talkId);
                 return;
             }
-//            int minLv = 0;
-//            GlobalValue.Get(Constant.C_TongjiTeamSizeMin, out minLv);
-//            if (!TeamSystem.IsInTeam())
-//            {
-//                MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("noTeam"), () =>
-//                {
-//					if(!GamePlayer.Instance.GetOpenSubSystemFlag(OpenSubSystemFlag.OSSF_Team))
-//					{
-//                        PopText.Instance.Show(LanguageManager.instance.GetValue("duiwuweikai"));
-//					}else
-//					{
-//						TeamUI.ShowMe();
-//					}
-//                   
-//                });
-//                QuestId = 0;
-//            }
-           // else 
-//				if (TeamSystem.IsInTeam() && TeamSystem.IsTeamLeader())
-//            {
-//                int crtCount = ActivitySystem.Instance.GetCount(ActivityType.ACT_Tongji);
-//                int maxCount = DaliyActivityData.GetActivityMaxCount(ActivityType.ACT_Tongji);
-//                if (crtCount / maxCount == 0)
-//                {
-//                    int tongjiteam = 5;
-//                    if (TeamSystem.RealTeamCount() < tongjiteam)
-//                    {
-//                        int temQuestId = QuestId;
-//                        MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("suggestTeamNumber"), () =>
-//                        {
-//							if(!GamePlayer.Instance.GetOpenSubSystemFlag(OpenSubSystemFlag.OSSF_Team))
-//							{
-//                                PopText.Instance.Show(LanguageManager.instance.GetValue("duiwuweikai"));
-//							}else
-//							{
-//								TeamUI.ShowMe();
-//							}
-//                            
-//                        }, false, () =>
-//                        {
-//							if(!IsJobQuestSame(QuestId))
-//							{
-								//PopText.Instance.Show(LanguageManager.instance.GetValue( "bunengjie"));
-//				             QuestSystem.TryAcceptQuest(QuestId);
-							//}
-                            
-                       // }, null, LanguageManager.instance.GetValue("gotosee"), LanguageManager.instance.GetValue("ignore"));
-//                        QuestId = 0;
-                    //}
-               // }
-           // }
-//            else if (TeamSystem.IsInTeam())
-//            {
-//                COM_SimplePlayerInst[] infos = TeamSystem.GetTeamMembers();
-//                for (int i = 0; i < infos.Length; ++i)
-//                {
-//                    minLv = 0;
-//                    GlobalValue.Get(Constant.C_TongjiTeamMemberLevelMin, out minLv);
-//                    if (infos[i].properties_[(int)PropertyType.PT_Level] < minLv)
-//                    {
-//
-//                        PopText.Instance.Show(string.Format(LanguageManager.instance.GetValue("levelNotEnough"), infos[i].instName_));
-//                        lvCheckOk = false;
-//                        break;
-//                    }
-//                }
-//                if(lvCheckOk == false)
-//                    QuestId = 0;
-//            }
+            //            int minLv = 0;
+            //            GlobalValue.Get(Constant.C_TongjiTeamSizeMin, out minLv);
+            //            if (!TeamSystem.IsInTeam())
+            //            {
+            //                MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("noTeam"), () =>
+            //                {
+            //					if(!GamePlayer.Instance.GetOpenSubSystemFlag(OpenSubSystemFlag.OSSF_Team))
+            //					{
+            //                        PopText.Instance.Show(LanguageManager.instance.GetValue("duiwuweikai"));
+            //					}else
+            //					{
+            //						TeamUI.ShowMe();
+            //					}
+            //                   
+            //                });
+            //                QuestId = 0;
+            //            }
+            // else 
+            //				if (TeamSystem.IsInTeam() && TeamSystem.IsTeamLeader())
+            //            {
+            //                int crtCount = ActivitySystem.Instance.GetCount(ActivityType.ACT_Tongji);
+            //                int maxCount = DaliyActivityData.GetActivityMaxCount(ActivityType.ACT_Tongji);
+            //                if (crtCount / maxCount == 0)
+            //                {
+            //                    int tongjiteam = 5;
+            //                    if (TeamSystem.RealTeamCount() < tongjiteam)
+            //                    {
+            //                        int temQuestId = QuestId;
+            //                        MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("suggestTeamNumber"), () =>
+            //                        {
+            //							if(!GamePlayer.Instance.GetOpenSubSystemFlag(OpenSubSystemFlag.OSSF_Team))
+            //							{
+            //                                PopText.Instance.Show(LanguageManager.instance.GetValue("duiwuweikai"));
+            //							}else
+            //							{
+            //								TeamUI.ShowMe();
+            //							}
+            //                            
+            //                        }, false, () =>
+            //                        {
+            //							if(!IsJobQuestSame(QuestId))
+            //							{
+            //PopText.Instance.Show(LanguageManager.instance.GetValue( "bunengjie"));
+            //				             QuestSystem.TryAcceptQuest(QuestId);
+            //}
+
+            // }, null, LanguageManager.instance.GetValue("gotosee"), LanguageManager.instance.GetValue("ignore"));
+            //                        QuestId = 0;
+            //}
+            // }
+            // }
+            //            else if (TeamSystem.IsInTeam())
+            //            {
+            //                COM_SimplePlayerInst[] infos = TeamSystem.GetTeamMembers();
+            //                for (int i = 0; i < infos.Length; ++i)
+            //                {
+            //                    minLv = 0;
+            //                    GlobalValue.Get(Constant.C_TongjiTeamMemberLevelMin, out minLv);
+            //                    if (infos[i].properties_[(int)PropertyType.PT_Level] < minLv)
+            //                    {
+            //
+            //                        PopText.Instance.Show(string.Format(LanguageManager.instance.GetValue("levelNotEnough"), infos[i].instName_));
+            //                        lvCheckOk = false;
+            //                        break;
+            //                    }
+            //                }
+            //                if(lvCheckOk == false)
+            //                    QuestId = 0;
+            //            }
             if (lvCheckOk && QuestId != 0)
             {
-				if(!IsJobQuestSame(QuestId))
-				{
-					QuestSystem.TryAcceptQuest(QuestId);
-				}
-				QuestId = 0;
+                if (!IsJobQuestSame(QuestId))
+                {
+                    QuestSystem.TryAcceptQuest(QuestId);
+                }
+                QuestId = 0;
             }
             HideMe();
         }
         else if (quest.questKind_ == QuestKind.QK_Rand)
-		{
-			if(quest.questType_ == QuestType.QT_GiveBaby || quest.questType_ == QuestType.QT_GiveItem)
-			{
-				TurnOnUIPlanel.SwithShowMe(QuestId,_NpcId);
-			}else
-			{
-				int randMaxcount = 0;
-				GlobalValue.Get(Constant.C_AccecptRandQuestLimit, out randMaxcount);
-				if (QuestSystem.randCount >= randMaxcount)
-				{
-					HideMe();
-				}
-				if (QuestSystem.IsQuestFinish(QuestId))
-				{
-					talkId = quest.finishTalk_;
-					InitTalk(talkId);
-				}
-				else if (QuestSystem.IsQuestDoing(QuestId))
-				{
-					talkId = quest.proTalk_;
-					InitTalk(talkId);
-				}
-				else if (QuestSystem.IsQuestAcceptable(QuestId))
-				{
-					talkId = quest.startTalk_;
-					InitTalk(talkId);
-				}
-				else
-				{
-					QuestId = 0;
-				}
-			}
-           
-		}
-		else if (quest.questKind_ == QuestKind.QK_Daily)
-		{
-			if(quest.questType_ == QuestType.QT_GiveBaby || quest.questType_ == QuestType.QT_GiveItem)
-			{
-				TurnOnUIPlanel.SwithShowMe(QuestId,_NpcId);
-			}else
-			{
-				if (QuestSystem.IsQuestFinish(QuestId))
-				{
-					talkId = quest.finishTalk_;
-					InitTalk(talkId);
-				}
-				else if (QuestSystem.IsQuestDoing(QuestId))
-				{
-					talkId = quest.proTalk_;
-					InitTalk(talkId);
-				}
-				else if (QuestSystem.IsQuestAcceptable(QuestId))
-				{
-					talkId = quest.startTalk_;
-					InitTalk(talkId);
-				}
-				else
-				{
-					QuestId = 0;
-				}
-			}
-		}
-		else 
         {
-        	   if (QuestSystem.IsQuestFinish(QuestId))
-				{
-					talkId = quest.finishTalk_;
-					InitTalk(talkId);
-				}
-				else if (QuestSystem.IsQuestDoing(QuestId))
-				{
-					talkId = quest.proTalk_;
-					InitTalk(talkId);
-				}
-				else if (QuestSystem.IsQuestAcceptable(QuestId))
-				{
-					talkId = quest.startTalk_;
-					InitTalk(talkId);
-				}
-				else
-				{
-					QuestId = 0;
-				}
-			}
+           
+       
+            {
+                int randMaxcount = 0;
+                GlobalValue.Get(Constant.C_AccecptRandQuestLimit, out randMaxcount);
+                if (QuestSystem.randCount >= randMaxcount)
+                {
+                    HideMe();
+                }
+                if (QuestSystem.IsQuestFinish(QuestId))
+                {
+                    if (quest.questType_ == QuestType.QT_GiveBaby || quest.questType_ == QuestType.QT_GiveItem)
+                    {
+                        TurnOnUIPlanel.SwithShowMe(QuestId, _NpcId);
+                    }
+                    talkId = quest.finishTalk_;
+                    InitTalk(talkId);
+                }
+                else if (QuestSystem.IsQuestDoing(QuestId))
+                {
+                    talkId = quest.proTalk_;
+                    InitTalk(talkId);
+                }
+                else if (QuestSystem.IsQuestAcceptable(QuestId))
+                {
+                    talkId = quest.startTalk_;
+                    InitTalk(talkId);
+                }
+                else
+                {
+                    QuestId = 0;
+                }
+            }
+
+        }
+        else
+        {
+            if (QuestSystem.IsQuestFinish(QuestId))
+            {
+                if (quest.questType_ == QuestType.QT_GiveBaby || quest.questType_ == QuestType.QT_GiveItem)
+                {
+                    TurnOnUIPlanel.SwithShowMe(QuestId, _NpcId);
+                }
+                talkId = quest.finishTalk_;
+                InitTalk(talkId);
+            }
+            else if (QuestSystem.IsQuestDoing(QuestId))
+            {
+                talkId = quest.proTalk_;
+                InitTalk(talkId);
+            }
+            else if (QuestSystem.IsQuestAcceptable(QuestId))
+            {
+                talkId = quest.startTalk_;
+                InitTalk(talkId);
+            }
+            else
+            {
+                QuestId = 0;
+            }
+
+        }
 
 
         GuideManager.Instance.ProcEvent(ScriptGameEvent.SGE_NpcRenwuPreAccept, talkId);

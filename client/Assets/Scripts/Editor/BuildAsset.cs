@@ -2,6 +2,8 @@
 using UnityEditor;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections;
+
 
 public class BuildAsset
 {
@@ -121,7 +123,7 @@ public class BuildAsset
             Directory.Delete(dir, true);
         Directory.CreateDirectory(dir);
     }
-    static List<Object> filter(string dir)
+    static List<UnityEngine.Object> filter(string dir)
     {
         List<Object> res = new List<Object>();
 
@@ -183,7 +185,7 @@ public class BuildAsset
         mkdir(playerBundleOutputFolder_);
         Caching.CleanCache();
         //dep角色shader
-        {
+        { 
             BuildPipeline.PushAssetDependencies();
             string[] assetfiles = new string[] { "Assets/Scripts/Shader/PlayerShader.shader", "Assets/ResData/Role/yingzi/yingzi01.mat" };
             Object[] objfiles = new Object[assetfiles.Length];
@@ -337,7 +339,7 @@ public class BuildAsset
         List<Object> files = filter(soundPrefabFolder_);
         for (int i = 0; i < files.Count; ++i)
         {
-            BuildPipeline.BuildAssetBundle(files[i], null, string.Format(soundPrefabFolder_ + "{0}.bytes", files[i].name), BuildAssetBundleOptions.CollectDependencies | BuildAssetBundleOptions.DeterministicAssetBundle, target_);
+            BuildPipeline.BuildAssetBundle(files[i], null, string.Format(soundBundleOutputFolder_ + "{0}.bytes", files[i].name), BuildAssetBundleOptions.CollectDependencies | BuildAssetBundleOptions.DeterministicAssetBundle, target_);
         }
         AssetDatabase.Refresh();
     }
@@ -369,13 +371,59 @@ public class BuildAsset
     public static void BuildAll()
     {
         AssetDatabase.Refresh();
+        StartCoroutine(buildEffect());
+        StartCoroutine(buildUI());
+        StartCoroutine(buildPlayers());
+        StartCoroutine(buildWeapon());
+        StartCoroutine(buildSound());
+        StartCoroutine(buildMusic());
+        StartCoroutine(buildIcon());
+        
+    }
+
+    private static void StartCoroutine(IEnumerator enumerator)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    static IEnumerator buildEffect()
+    {
         BuildEffect();
+        yield return null;
+    }
+
+    static IEnumerator buildUI()
+    {
         BuildUI();
+        yield return null;
+    }
+
+    static IEnumerator buildPlayers()
+    {
         BuildPlayers();
+        yield return null;
+    }
+
+    static IEnumerator buildWeapon()
+    {
         BuildWeapon();
+        yield return null;
+    }
+
+    static IEnumerator buildSound()
+    {
         BuildSound();
+        yield return null;
+    }
+    static IEnumerator buildMusic()
+    {
         BuildMusic();
+        yield return null;
+    }
+
+    static IEnumerator buildIcon()
+    {
         BuildIcon();
-        AssetDatabase.Refresh();
+        yield return null;
     }
 }
