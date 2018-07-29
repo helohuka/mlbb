@@ -94,7 +94,8 @@ public class MiaoshaUI : UIBase
   //          //gameHandler.PayProduct(smallChangeId);
   //      }
 
-        SDK185.Pay((int)Constant.C_SmallChange1ShopID, msData.price_, "秒杀");
+        //傻逼谁做的 数据都不全
+        SDK185.Pay((int)Constant.C_SmallChange1ShopID, 10, "秒杀");
 	}
 
 	void OnMiaoshaEnvet(COM_ADGiftBag adg)

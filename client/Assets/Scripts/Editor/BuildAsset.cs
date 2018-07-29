@@ -4,8 +4,9 @@ using System.IO;
 using System.Collections.Generic;
 using System.Collections;
 
+using System.Threading;
 
-public class BuildAsset
+public class BuildAsset : MonoBehaviour
 {
 
 #if UNITY_IOS || UNITY_IPHONE
@@ -335,7 +336,7 @@ public class BuildAsset
     public static void BuildSound()
     {
         mkdir(soundBundleOutputFolder_);
-        Caching.CleanCache();
+       // Caching.CleanCache();
         List<Object> files = filter(soundPrefabFolder_);
         for (int i = 0; i < files.Count; ++i)
         {
@@ -371,59 +372,62 @@ public class BuildAsset
     public static void BuildAll()
     {
         AssetDatabase.Refresh();
-        StartCoroutine(buildEffect());
+
+        Thread thr = new Thread(BuildSound);
+
+        /*StartCoroutine(buildEffect());
         StartCoroutine(buildUI());
         StartCoroutine(buildPlayers());
         StartCoroutine(buildWeapon());
         StartCoroutine(buildSound());
         StartCoroutine(buildMusic());
-        StartCoroutine(buildIcon());
+        StartCoroutine(buildIcon());*/
+
+        thr.Start();
+
+       
         
     }
 
-    private static void StartCoroutine(IEnumerator enumerator)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    static IEnumerator buildEffect()
+  
+    void buildEffect()
     {
         BuildEffect();
-        yield return null;
+      
     }
 
-    static IEnumerator buildUI()
+    void buildUI()
     {
         BuildUI();
-        yield return null;
+        
     }
 
-    static IEnumerator buildPlayers()
+    void buildPlayers()
     {
         BuildPlayers();
-        yield return null;
+        
     }
 
-    static IEnumerator buildWeapon()
+    void buildWeapon()
     {
         BuildWeapon();
-        yield return null;
+        
     }
 
-    static IEnumerator buildSound()
+    void buildSound()
     {
         BuildSound();
-        yield return null;
+       
     }
-    static IEnumerator buildMusic()
+    void buildMusic()
     {
         BuildMusic();
-        yield return null;
+       
     }
 
-    static IEnumerator buildIcon()
+    void buildIcon()
     {
         BuildIcon();
-        yield return null;
+      
     }
 }
