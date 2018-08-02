@@ -58,9 +58,10 @@ CREATE TABLE `Player` (
 -- ----------------------------
 DROP TABLE IF EXISTS `EndlessStair`;
 CREATE TABLE `EndlessStair` (
+  `ID` INT(32) NOT NULL AUTO_INCREMENT,
   `Rank` int(32) NOT NULL,
   `PlayerName` varchar(60) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`Rank`)
+   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
