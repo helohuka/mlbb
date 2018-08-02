@@ -38,7 +38,7 @@ func MakeNewServer(sshHost, sshPassword, mysqlHost, mysqlUsername, mysqlPassword
 	cmd += fmt.Sprintf("echo  'Env.setString(V_GatewayHost,\"127.0.0.1:%d\");'>> env.lua\n", startPort)
 	cmd += fmt.Sprintf("echo  'Env.setString(V_GatewayListenClientMultiIndoor,\"%d,%d\");'>> env.lua\n", serverId, startPort)
 	startPort += 1
-	cmd += fmt.Sprintf("echo  'Env.setInt(V_PayListenPort,     21081);'>> env.lua\n", startPort)
+	cmd += fmt.Sprintf("echo  'Env.setInt(V_PayListenPort,%d);'>> env.lua\n", startPort)
 	startPort += 1
 	cmd += fmt.Sprintf("echo  'Env.setString(V_AnySDKPayNotifyListen,\"0.0.0.0:%d\");'>> env.lua\n", startPort)
 	startPort += 1
