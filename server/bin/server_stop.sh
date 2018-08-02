@@ -57,7 +57,7 @@ if [ -n "$gmtool" ] ; then
 	echo "kill gmool server process-${gmtool}" 
 else
 	echo "gmtool-server is not running!"
-fi 
+fi
 
 world=`ps aux | grep "$pwd/world -d" | grep -v "grep" | awk '{print $2}'`
 if [ -n "$world" ] ; then
@@ -65,7 +65,7 @@ if [ -n "$world" ] ; then
 	echo "kill world server process-${world}" 
 else
 	echo "world-server is not running!"
-fi 
+fi
 
 db=`ps aux | grep "$pwd/db -d" | grep -v "grep" | awk '{print $2}'`
 if [ -n "$db" ] ; then
