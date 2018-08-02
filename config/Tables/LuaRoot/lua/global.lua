@@ -68,8 +68,8 @@ Global.setInt(C_EmpDelFeedback3,32000);
 Global.setInt(C_EmpDelFeedback4,76500);
 Global.setInt(C_EmpDelFeedback5,170000);
 
-Global.setInt(C_InitMoney,0);
-Global.setInt(C_InitDiamond,0);
+Global.setInt(C_InitMoney,500000);
+Global.setInt(C_InitDiamond,10000);
 
 Global.setInt(C_GapWorldLevel_One,10);
 Global.setInt(C_GapWorldLevel_Two,20);
