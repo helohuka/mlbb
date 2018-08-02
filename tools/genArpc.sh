@@ -1,7 +1,7 @@
 #!/bin/bash 
-/usr/local/bin/rpc -i ../Schema/env.arpc -o ../Server/common/gen_rpc/ -g cpp
-/usr/local/bin/rpc -i ../Schema/global.arpc -o ../Server/common/gen_rpc/ -g cpp
-/usr/local/bin/rpc -i ../Schema/com.arpc -o ../Server/common/gen_rpc/ -g cpp
-/usr/local/bin/rpc -i ../Schema/proto.arpc -o ../Server/common/gen_rpc/ -g cpp
-/usr/local/bin/rpc -i ../Schema/struct.arpc -o ../Server/common/gen_rpc/ -g cpp
-/usr/local/bin/rpc -i ../Schema/structold.arpc -o ../Server/common/gen_rpc/ -g cpp
+./rpc -i ../schema/env.arpc -o ../server/common/gen_rpc/ -g cpp
+./rpc -i ../schema/global.arpc -o ../server/common/gen_rpc/ -g cpp
+./rpc -i ../schema/com.arpc -o ../server/common/gen_rpc/ -g cpp
+./rpc -i ../schema/proto.arpc -o ../server/common/gen_rpc/ -g cpp
+./rpc -i ../schema/struct.arpc -o ../server/common/gen_rpc/ -g cpp
+./rpc -i ../schema/structold.arpc -o ../server/common/gen_rpc/ -g cpp
