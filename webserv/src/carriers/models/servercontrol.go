@@ -27,9 +27,9 @@ func MakeNewServer(sshHost, sshPassword, mysqlHost, mysqlUsername, mysqlPassword
 	cmd += fmt.Sprintf("cd %d \n", serverId)
 	cmd += fmt.Sprintf("echo 'CREATE DATABASE IF NOT EXISTS `%d_game` DEFAULT CHARSET utf8 COLLATE utf8_bin;' >> ./sql/CreateDB.sql \n", serverId)
 	cmd += fmt.Sprintf("echo 'CREATE DATABASE IF NOT EXISTS `%d_log` DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_bin;' >> ./sql/CreateDB.sql \n", serverId)
-	cmd += fmt.Sprintf("mysql -h%s -P%d -u%s -p%s < ./sql/CreateDB.sql \n", mysqlHost, mysqlPort, mysqlUsername, mysqlPassword)
-	cmd += fmt.Sprintf("mysql -h%s -P%d -u%s -p%s %s < ./sql/DDL.sql \n", mysqlHost, mysqlPort, mysqlUsername, mysqlPassword, gameDB)
-	cmd += fmt.Sprintf("mysql -h%s -P%d -u%s -p%s %s < ./sql/Log.sql \n", mysqlHost, mysqlPort, mysqlUsername, mysqlPassword, logDB)
+	cmd += fmt.Sprintf("mysql -h%s -P%d -u%s -p'%s' < ./sql/CreateDB.sql \n", mysqlHost, mysqlPort, mysqlUsername, mysqlPassword)
+	cmd += fmt.Sprintf("mysql -h%s -P%d -u%s -p'%s' %s < ./sql/DDL.sql \n", mysqlHost, mysqlPort, mysqlUsername, mysqlPassword, gameDB)
+	cmd += fmt.Sprintf("mysql -h%s -P%d -u%s -p'%s' %s < ./sql/Log.sql \n", mysqlHost, mysqlPort, mysqlUsername, mysqlPassword, logDB)
 
 	//写入配置文件
 	cmd += fmt.Sprintf("cd bin \n")
