@@ -60,7 +60,6 @@ DROP TABLE IF EXISTS `EndlessStair`;
 CREATE TABLE `EndlessStair` (
   `Rank` int(32) NOT NULL,
   `PlayerName` varchar(60) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`Rank`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
