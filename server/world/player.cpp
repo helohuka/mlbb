@@ -5202,7 +5202,7 @@ bool Player::orderFromSDK(S32 shopId,S32 num,std::string const& orderid,std::str
 		ACE_DEBUG((LM_ERROR,"buyShopItemByRMB record->paytype_ != SPT_RMB shopId====%d\n" ,shopId));
 		return false;
 	}
-	if(record->pay_ < payment){
+	if(record->pay_ > (int32)payment){
 		ACE_DEBUG((LM_ERROR,"SDK pushed payment error !!!\n"));
 		return false;
 	}
