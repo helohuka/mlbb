@@ -645,7 +645,7 @@ public class BuildAssetBundle : MonoBehaviour
 
         if (path.Equals(uiAssetsPath_))
         {
-            string jsonStr = System.IO.File.ReadAllText(string.Format(uiDependJson, platformAndroid_));
+            string jsonStr = System.IO.File.ReadAllText(string.Format(uiDependJson, platformIOS_));
             atlasRefDic_ = LitJson.JsonMapper.ToObject<Dictionary<string, List<string>>>(jsonStr);
 
             //dep字体(所有ui)
@@ -665,7 +665,7 @@ public class BuildAssetBundle : MonoBehaviour
 
         if (path.Equals(playerAssetsPath_))
         {
-            string jsonStr = System.IO.File.ReadAllText(string.Format(playerDependJson, platformAndroid_));
+            string jsonStr = System.IO.File.ReadAllText(string.Format(playerDependJson, platformIOS_));
             playerRefDic_ = LitJson.JsonMapper.ToObject<Dictionary<string, List<string>>>(jsonStr);
             
             //dep角色shader
@@ -681,7 +681,7 @@ public class BuildAssetBundle : MonoBehaviour
 
         if (path.Equals(effectAssetsPath_))
         {
-            string jsonStr = System.IO.File.ReadAllText(string.Format(effectDependJson, platformAndroid_));
+            string jsonStr = System.IO.File.ReadAllText(string.Format(effectDependJson, platformIOS_));
             effectRefDic_ = LitJson.JsonMapper.ToObject<Dictionary<string, List<string>>>(jsonStr);
 
             //dep特效shader

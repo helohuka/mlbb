@@ -10,7 +10,7 @@ public class SDK185 : MonoBehaviour
     void Start()
     {
 
-        
+
         SDKInterface.Instance.Init();
 
         ClientLog.Instance.LogError("INIT  ______");

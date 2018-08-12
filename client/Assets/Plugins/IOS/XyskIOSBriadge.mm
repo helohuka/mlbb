@@ -1,6 +1,5 @@
 #import <AdSupport/AdSupport.h>
 #import <AVFoundation/AVFoundation.h>
-#import "TalkingDataEAuth.h"
 #include <sys/socket.h>
 #include <netdb.h>
 #include <arpa/inet.h>
@@ -46,24 +45,15 @@ extern "C" {
 	
 	void _initEAuth( const char* appid, const char* secretid)
 	{
-		NSString *AppID = [[NSString alloc] initWithUTF8String:appid];
-		NSString *SecretID = [[NSString alloc] initWithUTF8String:secretid];
-		[TalkingDataEAuth initEAuth:AppID secretId:SecretID];
+		
 	}
 	
 	void _requestCode(const char* mobile, const char* userid)
 	{
-		NSString *MobileNum = [[NSString alloc] initWithUTF8String:mobile];
-		NSString *UserID = [[NSString alloc] initWithUTF8String:userid];
-		[TalkingDataEAuth applyAuthCode:@"86" mobile:MobileNum accountName:UserID delegate:nil];
 	}
 	
 	void _auth(const char* mobile, const char* userid, const char* code)
 	{
-		NSString *MobileNum = [[NSString alloc] initWithUTF8String:mobile];
-		NSString *CodeNum = [[NSString alloc] initWithUTF8String:code];
-		NSString *UserID = [[NSString alloc] initWithUTF8String:userid];
-		[TalkingDataEAuth bindEAuth:@"86"  mobile:MobileNum authCode:CodeNum accountName:UserID delegate:nil];
 	}
     
     bool AddSkipBackupAttributeToItemAtURL(NSURL* URL)

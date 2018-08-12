@@ -27,8 +27,8 @@ public abstract class SDKInterface
                 _instance = new SDKInterfaceDefault();
 #elif UNITY_ANDROID
                 _instance = new SDKInterfaceAndroid();
-//#elif UNITY_IOS
-//                _instance = new SDKInterfaceIOS();
+#elif UNITY_IOS
+                _instance = new SDKInterfaceIOS();
 #endif
             }
 
