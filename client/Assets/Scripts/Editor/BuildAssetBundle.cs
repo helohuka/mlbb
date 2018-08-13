@@ -31,10 +31,6 @@ public class BuildAssetBundle : MonoBehaviour
     const string platformAndroid_ = "AssetBundleAndroid";
     const string platformWP8_ = "AssetBundleWP8";
 
-    const string uiDependJson = "Assets/StreamingAssets/{0}/TableTemp/UIDependence.json";
-    const string effectDependJson = "Assets/StreamingAssets/{0}/TableTemp/EffectDependence.json";
-    const string playerDependJson = "Assets/StreamingAssets/{0}/TableTemp/PlayerDependence.json";
-    
     static string[] ExcludeUI = new string[] { "" };
 
 #if UNITY_IOS
@@ -242,13 +238,6 @@ public class BuildAssetBundle : MonoBehaviour
         AssetDatabase.Refresh();
     }
 
-    [MenuItem("Custom Editor/Build/PCAssetbundle/Music")]
-    static void BuildPCAssetbundleMusic()
-    {
-        Pack(musicAssetsPath_, string.Format(musicBundleOutputPath_, platformPC_));
-        AssetDatabase.Refresh();
-    }
-
     [MenuItem("Custom Editor/Build/PCAssetbundle/Icon")]
     static void BuildPCAssetbundleIcon()
     {
@@ -260,8 +249,8 @@ public class BuildAssetBundle : MonoBehaviour
     static void CopyTablePC()
     {
         ProcessStartInfo startInfo = new ProcessStartInfo();
-        startInfo.WorkingDirectory = Application.dataPath + "/../../config/";
-        startInfo.FileName = Application.dataPath + "/../../config/syncTable.bat";
+        startInfo.WorkingDirectory = Application.dataPath + "/../../Config/";
+        startInfo.FileName = Application.dataPath + "/../../Config/syncTable.bat";
         startInfo.Arguments = "AssetBundlePC";
         Process.Start(startInfo);
     }
@@ -311,14 +300,13 @@ public class BuildAssetBundle : MonoBehaviour
     [MenuItem("Custom Editor/Build/AndroidPackage/BrandNew")]
     static void BuildAndroidPackage()
     {
-        CopyTableAndroid();
         BuildAndroidAssetbundleEffect();
         BuildAndroidAssetbundleUI();
         BuildAndroidAssetbundlePlayer();
         BuildAndroidAssetbundleWeapon();
         BuildAndroidAssetbundleSound();
 		BuildAndroidAssetbundleMusic ();
-       
+        CopyTableAndroid();
         AssetDatabase.Refresh();
         BuildAndroidProject();
     }
@@ -405,8 +393,8 @@ public class BuildAssetBundle : MonoBehaviour
     static void CopyTableAndroid()
     {
         ProcessStartInfo startInfo = new ProcessStartInfo();
-        startInfo.WorkingDirectory = Application.dataPath + "/../../tools/";
-        startInfo.FileName = Application.dataPath + "/../../tools/cpConfig.bat";
+        startInfo.WorkingDirectory = Application.dataPath + "/../../Config/";
+        startInfo.FileName = Application.dataPath + "/../../Config/syncTable.bat";
         startInfo.Arguments = "AssetBundleAndroid";
         Process.Start(startInfo);
     }
@@ -645,7 +633,8 @@ public class BuildAssetBundle : MonoBehaviour
 
         if (path.Equals(uiAssetsPath_))
         {
-            string jsonStr = System.IO.File.ReadAllText(string.Format(uiDependJson, platformIOS_));
+            string file = EditorUtility.OpenFilePanel("请选择UI依赖数据文件", Application.dataPath + "/../../Config/Tables/", "json");
+            string jsonStr = System.IO.File.ReadAllText(file);
             atlasRefDic_ = LitJson.JsonMapper.ToObject<Dictionary<string, List<string>>>(jsonStr);
 
             //dep字体(所有ui)
@@ -665,7 +654,8 @@ public class BuildAssetBundle : MonoBehaviour
 
         if (path.Equals(playerAssetsPath_))
         {
-            string jsonStr = System.IO.File.ReadAllText(string.Format(playerDependJson, platformIOS_));
+            string file = EditorUtility.OpenFilePanel("请选择角色依赖数据文件", Application.dataPath + "/../../Config/Tables/", "json");
+            string jsonStr = System.IO.File.ReadAllText(file);
             playerRefDic_ = LitJson.JsonMapper.ToObject<Dictionary<string, List<string>>>(jsonStr);
             
             //dep角色shader
@@ -681,7 +671,8 @@ public class BuildAssetBundle : MonoBehaviour
 
         if (path.Equals(effectAssetsPath_))
         {
-            string jsonStr = System.IO.File.ReadAllText(string.Format(effectDependJson, platformIOS_));
+            string file = EditorUtility.OpenFilePanel("请选择特效依赖数据文件", Application.dataPath + "/../../Config/Tables/", "json");
+            string jsonStr = System.IO.File.ReadAllText(file);
             effectRefDic_ = LitJson.JsonMapper.ToObject<Dictionary<string, List<string>>>(jsonStr);
 
             //dep特效shader
@@ -825,7 +816,7 @@ public class BuildAssetBundle : MonoBehaviour
         if (pathName.Contains(platformIOS_)) tar = BuildTarget.iPhone;
         else if (pathName.Contains(platformAndroid_)) tar = BuildTarget.Android;
 
-        string file = EditorUtility.OpenFilePanel("请选择UI依赖数据文件", Application.dataPath + "/../../config/Tables/", "json");
+        string file = EditorUtility.OpenFilePanel("请选择UI依赖数据文件", Application.dataPath + "/../../Config/Tables/", "json");
         string jsonStr = System.IO.File.ReadAllText(file);
         atlasRefDic_ = LitJson.JsonMapper.ToObject<Dictionary<string, List<string>>>(jsonStr);
 
@@ -879,7 +870,7 @@ public class BuildAssetBundle : MonoBehaviour
         if (pathName.Contains(platformIOS_)) tar = BuildTarget.iPhone;
         else if (pathName.Contains(platformAndroid_)) tar = BuildTarget.Android;
 
-        string file = EditorUtility.OpenFilePanel("请选择角色依赖数据文件", Application.dataPath + "/../../config/Tables/", "json");
+        string file = EditorUtility.OpenFilePanel("请选择角色依赖数据文件", Application.dataPath + "/../../Config/Tables/", "json");
         string jsonStr = System.IO.File.ReadAllText(file);
         playerRefDic_ = LitJson.JsonMapper.ToObject<Dictionary<string, List<string>>>(jsonStr);
 
@@ -936,7 +927,7 @@ public class BuildAssetBundle : MonoBehaviour
         if (pathName.Contains(platformIOS_)) tar = BuildTarget.iPhone;
         else if (pathName.Contains(platformAndroid_)) tar = BuildTarget.Android;
 
-        string file = EditorUtility.OpenFilePanel("请选择特效依赖数据文件", Application.dataPath + "/../../config/Tables/", "json");
+        string file = EditorUtility.OpenFilePanel("请选择特效依赖数据文件", Application.dataPath + "/../../Config/Tables/", "json");
         string jsonStr = System.IO.File.ReadAllText(file);
         effectRefDic_ = LitJson.JsonMapper.ToObject<Dictionary<string, List<string>>>(jsonStr);
 
@@ -1164,7 +1155,6 @@ public class BuildAssetBundle : MonoBehaviour
         if (anim != null && anim.runtimeAnimatorController != null)
         {
             path = AssetDatabase.GetAssetPath(anim.runtimeAnimatorController);
-            
             guid = AssetDatabase.AssetPathToGUID(path);
             if (!playerRefDic_[crtPlayer_].Contains(guid))
                 playerRefDic_[crtPlayer_].Add(guid);

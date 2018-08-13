@@ -39,9 +39,8 @@ public class ChargeMoney : MonoBehaviour {
 	{
 		int pId = param1;
 		ClientLog.Instance.Log(" shot id is : " + pId);
-        SDK185.Pay(pId);
         //gameHandler.PayProduct(pId);
-    }
+	}
 	void OnClickDown(ButtonScript obj, object args, int param1, int param2)
 	{
 		StoreUI.Instance.itemInfoTips.gameObject.SetActive (true);

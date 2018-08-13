@@ -55,7 +55,7 @@ public class LevelRewardShopUI : UIBase
 				cell.ItemCount = int.Parse(str[1]);
 				cell.showTips  = true;
 			}
-			UIManager.SetButtonEventHandler (buyBtn.gameObject, EnumButtonEvent.OnClick, OnBuyBtn, giftData.shopId_, giftData.price_);
+			UIManager.SetButtonEventHandler (buyBtn.gameObject, EnumButtonEvent.OnClick, OnBuyBtn, giftData.shopId_, 0);
 		}
 		
 	}
@@ -96,11 +96,9 @@ public class LevelRewardShopUI : UIBase
 	
 	private void OnBuyBtn(ButtonScript obj, object args, int param1, int param2)
 	{
-		if (param2 == 0)
+		if (param1 == 0)
 			return;
-        SDK185.Pay(param1, param2, "Àú³ÌÀñ°ü");
-        
-        //gameHandler.PayProduct(param1);
+		//gameHandler.PayProduct(param1);
 	}
 	
 	void OnLecelRewardShopEnvet(int num)

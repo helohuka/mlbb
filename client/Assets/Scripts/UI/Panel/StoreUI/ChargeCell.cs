@@ -23,9 +23,14 @@ public class ChargeCell : MonoBehaviour {
 				spData_ = value;
 				//iconSp.spriteName = spData_.icon_;
 				HeadIconLoader.Instance.LoadIcon (spData_._Icon, iconSp);
-			    //去掉返利的
-				TopMarkSp.gameObject.SetActive(false);
-				
+				if(spData_._Hot==1)
+				{
+					TopMarkSp.gameObject.SetActive(true);
+				}
+				else
+				{
+					TopMarkSp.gameObject.SetActive(false);
+				}
 				if(spData_._Recommend == 1)
 				{
 					MarkSp.gameObject.SetActive(true);

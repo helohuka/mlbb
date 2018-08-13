@@ -48,8 +48,8 @@ public class MessageBoxUI : UIBase
 
         //if (gameHandler._SdkInitSuccess)
         //{
-            GuideManager.Instance.RegistGuideAim(okBtn.gameObject, GuideAimType.GAT_MessageBoxOkBtn);
-            GuideManager.Instance.ProcEvent(ScriptGameEvent.SGE_MessageBoxOpen);
+        //    GuideManager.Instance.RegistGuideAim(okBtn.gameObject, GuideAimType.GAT_MessageBoxOkBtn);
+        //    GuideManager.Instance.ProcEvent(ScriptGameEvent.SGE_MessageBoxOpen);
         //}
 		this.gameObject.transform.localPosition = new Vector3 (0, 0, -2000);
     

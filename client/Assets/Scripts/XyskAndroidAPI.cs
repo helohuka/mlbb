@@ -6,7 +6,7 @@ public class XyskAndroidAPI {
     public static string getMacAndroid()
     {
 #if UNITY_ANDROID
-        AndroidJavaClass jc = new AndroidJavaClass("com.xysk.api.APIActivity");
+        AndroidJavaClass jc = new AndroidJavaClass("com.xysk.androidapi.XyskActivity");
         string mac = "";
         mac = jc.CallStatic<string>("getMACAddress", new object[]{"wlan0"});
         if(string.IsNullOrEmpty(mac))
@@ -105,15 +105,14 @@ public class XyskAndroidAPI {
     public static bool hasMicrophoneAuth()
     {
 #if UNITY_ANDROID
-        AndroidJavaClass jc = new AndroidJavaClass("com.xysk.api.APIActivity");
+        AndroidJavaClass jc = new AndroidJavaClass("com.xysk.androidapi.XyskActivity");
         return jc.CallStatic<bool>("isHasPermission");
 #endif
         return true;
     }
 
-    public static string VersionName()
+    public static string getPackageVersion()
     {
-       
 #if UNITY_ANDROID
         using (AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
         {
@@ -135,36 +134,7 @@ public class XyskAndroidAPI {
                 }
             }
         }
-        
-#endif
         return "";
-    }
-
-    public static string VersionCode()
-    {
-
-#if UNITY_ANDROID
-        using (AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
-        {
-            if (null != unityPlayer)
-            {
-                using (AndroidJavaObject currActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
-                {
-                    if (null != currActivity)
-                    {
-                        using (AndroidJavaObject pkgMgr = currActivity.Call<AndroidJavaObject>("getPackageManager"))
-                        {
-                            string pkgName = currActivity.Call<string>("getPackageName");
-                            using (AndroidJavaObject pkgInfo = pkgMgr.Call<AndroidJavaObject>("getPackageInfo", new object[] { pkgName, 0 }))
-                            {
-                                return pkgInfo.Get<int>("versionCode").ToString();
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
 #endif
         return "";
     }

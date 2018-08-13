@@ -365,7 +365,6 @@ function PlayerLevelUp(RECEIVER,ARG0)
 		Player.setemployeebattlegroup(RECEIVER, 2021)
 	elseif ARG0 == 10 then
 		Player.accept_quest(RECEIVER,90011);
-		Player.set_opensubsystem(RECEIVER,OSSF_Team);
 	elseif ARG0 == 12 then
 		Player.set_opensubsystem(RECEIVER,OSSF_EmployeePos15);	--15级开启伙伴位置
 		Player.set_opensubsystem(RECEIVER,OSSF_EmployeeGet);
@@ -396,8 +395,6 @@ function PlayerLevelUp(RECEIVER,ARG0)
 		Player.accept_quest(RECEIVER,90004);
 	elseif ARG0 == 25 then
 		Player.accept_quest(RECEIVER,90003);
-		Player.set_opensubsystem(RECEIVER,OSSF_Cystal);
-		Player.openCystal(RECEIVER)
 	elseif ARG0 == 30 then
 		Player.accept_quest(RECEIVER,90009);
 		Player.add_item(RECEIVER,10051,3)
@@ -406,9 +403,13 @@ function PlayerLevelUp(RECEIVER,ARG0)
 	elseif ARG0 == 35 then
 		Player.set_opensubsystem(RECEIVER,OSSF_PVPJJC); --在线竞技场
 		Player.set_opensubsystem(RECEIVER,OSSF_Hundred); --百人
+	elseif ARG0 == 45 then
 		Player.set_opensubsystem(RECEIVER,OSSF_PetEquip);
 	elseif ARG0 == 60 then	
 		Player.openscene(RECEIVER,402);
+	elseif ARG0 == 61 then
+		Player.set_opensubsystem(RECEIVER,OSSF_Cystal);
+		Player.openCystal(RECEIVER)
 	end
 end
 
@@ -3145,10 +3146,10 @@ end
 function Recharge(RECEIVER,ARG0,ARG1)
 	local playername = Player.getplayerName(RECEIVER)
 	if ARG0 == 5 and ARG1 == 1 then
-		sys_send_mail("系统",playername,"VIP充值奖励","恭喜您获得会员充值奖励3000钻石",0,0,"5518,3")
+		sys_send_mail("系统",playername,"VIP充值奖励","恭喜您获得会员充值奖励300钻石",0,0,"5047,1")
 		--Sys.vipitem("系统","VIP每日礼包","恭喜您获得今日VIP礼包！");
 	elseif ARG0 == 5 and ARG1 == 2 then
-		sys_send_mail("系统",playername,"VIP充值奖励","恭喜您获得高级会员充值奖励18000钻石",0,0,"5518,18")
+		sys_send_mail("系统",playername,"VIP充值奖励","恭喜您获得高级会员充值奖励600钻石",0,0,"5050,1")
 	end
 end
 

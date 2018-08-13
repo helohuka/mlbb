@@ -79,23 +79,19 @@ public class MiaoshaUI : UIBase
 			return;
 		if (msData.isflag_)
 			return;
-		//int smallChangeId = 0;
-		//if(msData.price_ == 1)
-		//{
-		//	GlobalValue.Get(Constant.C_SmallChange1ShopID, out smallChangeId);
-  //          SDK185.Pay(smallChangeId);
-  //          //gameHandler.PayProduct(smallChangeId);
+		int smallChangeId = 0;
+		if(msData.price_ == 1)
+		{
+			GlobalValue.Get(Constant.C_SmallChange1ShopID, out smallChangeId);
+			//gameHandler.PayProduct(smallChangeId);
 
-  //      }
-		//else if(msData.price_ == 3)
-		//{
-		//	GlobalValue.Get(Constant.C_SmallChange3ShopID, out smallChangeId);
-  //          SDK185.Pay(smallChangeId);
-  //          //gameHandler.PayProduct(smallChangeId);
-  //      }
+		}
+		else if(msData.price_ == 3)
+		{
+			GlobalValue.Get(Constant.C_SmallChange3ShopID, out smallChangeId);
+			//gameHandler.PayProduct(smallChangeId);
+		}
 
-        //傻逼谁做的 数据都不全
-        SDK185.Pay((int)Constant.C_SmallChange1ShopID, 10, "秒杀");
 	}
 
 	void OnMiaoshaEnvet(COM_ADGiftBag adg)

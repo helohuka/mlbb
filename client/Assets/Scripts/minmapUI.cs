@@ -1,4 +1,10 @@
 ﻿using UnityEngine;
+using System.Collections;
+
+using UnityEngine;
+
+using System.Collections;
+
 public class minmapUI : MonoBehaviour {
 	
 	public UITexture backGround;//小地图背景

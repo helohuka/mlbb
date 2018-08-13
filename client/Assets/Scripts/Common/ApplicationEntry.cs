@@ -9,11 +9,11 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using UnityHTTP;
 
-public class ApplicationEntry : MonoBehaviour
+public class ApplicationEntry : MonoBehaviour 
 {
 
-    public GameObject uiRoot;
-    public Camera ui3DCamera;
+	public GameObject uiRoot;
+	public Camera ui3DCamera;
     public Object nameLabel;
     public GameObject switchSceneMask_;
     public AudioSource audioSource_;
@@ -21,17 +21,17 @@ public class ApplicationEntry : MonoBehaviour
     static ApplicationEntry inst = null;
     GameObject uiLoadingPanel_;
     string fixContent_ = "";
-    string fixNoticeHtp = "";
+	string  fixNoticeHtp =  "";
     Camera uiCamera_;
-    public Camera UICamera
+	public Camera UICamera
     {
         get { return uiCamera_; }
     }
 
     public string host_;
     public int port_;
-    public bool isChcekFile;
-    public bool isLoadFileFinish;
+	public bool isChcekFile;
+	public bool isLoadFileFinish;
 
     public string ResVersion;
     public bool ResVerIsDirty;
@@ -39,17 +39,17 @@ public class ApplicationEntry : MonoBehaviour
     bool mayShowSysNotice;
     bool mayPullResFolderName;
 
-    static public ApplicationEntry Instance
-    {
-        get { return inst; }
-    }
+	static public ApplicationEntry Instance
+	{
+		get { return inst; }
+	}
     CCPRestSDK.CCPRestSDK api;
 
     string version = "";
     string platformPath = "";
-    // Use this for initialization
-    void Start()
-    {
+	// Use this for initialization
+	void Start ()
+	{
         //玩家是否手动设置了画质
         string userSet = PlayerPrefs.GetString("UserSetQualityLevel");
         GameManager.Instance.QualityLv = PlayerPrefs.GetInt("QualityLevel", GameManager.Instance.QualityLv);
@@ -61,9 +61,9 @@ public class ApplicationEntry : MonoBehaviour
         }
         QualitySettings.SetQualityLevel(GameManager.Instance.QualityLv);
 
-        inst = this;
-        DontDestroyOnLoad(uiRoot);
-        DontDestroyOnLoad(ui3DCamera);
+		inst = this;
+		DontDestroyOnLoad (uiRoot);
+		DontDestroyOnLoad (ui3DCamera);
         DontDestroyOnLoad(this);
 
         GameManager.Instance.JudgeIsPad();
@@ -73,11 +73,11 @@ public class ApplicationEntry : MonoBehaviour
 
         uiCamera_ = uiRoot.GetComponentInChildren<UICamera>().camera;
 
-        Application.targetFrameRate = 30;
+		Application.targetFrameRate = 30;
         Application.runInBackground = true;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        // catch global log
-        Application.RegisterLogCallback(logReport);
+		// catch global log
+		Application.RegisterLogCallback(logReport);
 
         VersionManager.Instance.finishDownFileEvent += new RequestEventHandler<int>(OnFinishDownFileEvent);
         VersionManager.Instance.CopyEvent += new RequestEventHandler<int>(OnCopyEvent);
@@ -96,65 +96,65 @@ public class ApplicationEntry : MonoBehaviour
 
         PlayerDepLoader.Instance.OnPlayerLoaded += PlayerAsseMgr.LoadRefAssetsFin;
         EffectDepLoader.Instance.OnEffectLoaded += EffectAssetMgr.LoadRefAssetsFin;
-
-        //        AssetLoader.LoadAssetBundle("commonAssets", AssetLoader.EAssetType.ASSET_UI, (AssetBundle bundle, ParamData data) =>
-        //        {
-        //            //PopText.Instance.Init();
-        //            //NpcHeadChat.Instance.Init();
-        //            //UIManager.Instance.InitIconCell();
-        //            //GuideManager.Instance.creator.InitArrow();
-        //            //AssetLoader.LoadAssetBundle("PlayerShader", AssetLoader.EAssetType.ASSET_PLAYER, null, null);
-        //            //StartCoroutine(PullResFolderName());
-        //            mayPullResFolderName = true;
-        //			TransferRate._Inst.Send("Load CommonAssets End");
-        //        }, null, Configure.assetsPathstreaming);
-        mayPullResFolderName = true;
-        mayShowSysNotice = true;
+        
+//        AssetLoader.LoadAssetBundle("commonAssets", AssetLoader.EAssetType.ASSET_UI, (AssetBundle bundle, ParamData data) =>
+//        {
+//            //PopText.Instance.Init();
+//            //NpcHeadChat.Instance.Init();
+//            //UIManager.Instance.InitIconCell();
+//            //GuideManager.Instance.creator.InitArrow();
+//            //AssetLoader.LoadAssetBundle("PlayerShader", AssetLoader.EAssetType.ASSET_PLAYER, null, null);
+//            //StartCoroutine(PullResFolderName());
+//            mayPullResFolderName = true;
+//			TransferRate._Inst.Send("Load CommonAssets End");
+//        }, null, Configure.assetsPathstreaming);
+		mayPullResFolderName = true;
+		mayShowSysNotice = true;
 
         //cinemaPre_ = Resources.Load<GameObject>("Cinema");
 
         //Caching.CleanCache();
-    }
+	}
 
-    public void LoginUIOk()
-    {
-        OnCopyEvent(1);
-    }
+	public void LoginUIOk()
+	{
+		OnCopyEvent(1);
+	}
 
 
-    void OnCopyEvent(int num)
-    {
-        //连资源服务器 查看版本
-        //..
-        if (true)
-        {
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN
-            VersionManager.Instance.finishDownFileEvent(1);
-#else
+	void OnCopyEvent(int num)
+	{
+		//连资源服务器 查看版本
+		//..
+		if(true)
+		{
+			#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+        	VersionManager.Instance.finishDownFileEvent(1);
+			#else
 			//VersionManager.Instance._isCheck = true;
 			VersionManager.Instance.finishDownFileEvent(1);
-#endif
-        }
-        else
-        {
-            Debug.LogError("Cannot connect to server " + host_ + ":" + port_);
-        }
-    }
+			#endif
+		}
+		else
+		{
+			Debug.LogError("Cannot connect to server " + host_ + ":" + port_); 
+		}
+	}
 
 
-    void OnFinishDownFileEvent(int num)
-    {
+	void OnFinishDownFileEvent(int num)
+	{
         if (isChcekFile)
             return;
 
-        LuaMaster.Instance.Init();
-        ConfigLoader.Instance.Init();
+		LuaMaster.Instance.Init (); 
+		ConfigLoader.Instance.Init ();
 
         float speed = 0f;
         GlobalValue.Get(Constant.C_BattleSpeed, out speed);
         Battle.Instance.reportPlaySpeed_ = speed;
-
-        NetConnection.Instance.OnSocketError += SocketHandler;
+		
+		NetConnection.Instance.OnSocketError += SocketHandler;
 
         ResetGameConfig();
 
@@ -168,13 +168,13 @@ public class ApplicationEntry : MonoBehaviour
         switchSceneMask_.transform.parent = uiRoot.transform;
         switchSceneMask_.transform.localScale = Vector3.one;
         switchSceneMask_.SetActive(false);
-
-    }
+		
+	}
 
     public void ConnectToWorld(string ip, int port)
     {
-        host_ = ip;
-        port_ = port;
+		host_ = ip;
+		port_ = port;
         NetConnection.Instance.connect(ip, port, FirstConnectCallBack);
 
         //连接网络时 加载些轻量级资源
@@ -198,10 +198,12 @@ public class ApplicationEntry : MonoBehaviour
 
     void FirstConnectCallBack(System.IAsyncResult ar)
     {
+		TransferRate._Inst.Send("Connect World End");
         if (ar != null)
         {
             if (!isChcekFile)
             {
+				TransferRate._Inst.Send("Load Config Begin");
                 ConfigLoader.Instance.parseDataFin_ += ApplicationEntry.Instance.ParseDataFinish;
                 ConfigLoader.Instance.LoadAndParseData();
                 LoadNessaryAssets();
@@ -250,7 +252,7 @@ public class ApplicationEntry : MonoBehaviour
         panel = uiLoadingPanel_.GetComponent<UIPanel>();
         if (panel == null)
             panel = uiLoadingPanel_.AddComponent<UIPanel>();
-        if (GuideManager.Instance.IsGuiding_)
+        if(GuideManager.Instance.IsGuiding_)
         {
             panel.depth = GuideCreator.GuideDepth + 10;
             panel.sortingOrder = GuideCreator.GuideDepth + 10;
@@ -324,14 +326,14 @@ public class ApplicationEntry : MonoBehaviour
         }
     }
 
-    public void PostSocketErr(int errCode)
-    {
-        SocketHandler(errCode);
-    }
+	public void PostSocketErr(int errCode)
+	{
+		SocketHandler(errCode);
+	}
 
-    void SocketHandler(int errCode)
+	void SocketHandler(int errCode)
     {
-        ClientLog.Instance.Log(errCode + "  " + netStatusWarning_);
+		ClientLog.Instance.Log(errCode + "  " + netStatusWarning_);
         if (netStatusWarning_ && UIManager.Instance.isOpen(UIASSETS_ID.UIASSETS_MessageBoxPanel))
             return;
         else
@@ -339,7 +341,7 @@ public class ApplicationEntry : MonoBehaviour
 
         NetConnection.Instance.discard();
         netStatusWarning_ = true;
-        switch (errCode)
+        switch(errCode)
         {
             case 90090:
                 MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("pullServInfoFailed"), () =>
@@ -354,13 +356,13 @@ public class ApplicationEntry : MonoBehaviour
                     netStatusWarning_ = false;
                 }, true, null, null, "", "", 4001);
                 break;
-            case 2333:
+			case 2333:
                 ReconnectCallBack(null);
                 //NetConnection.Instance.connect(host_, port_, ReconnectCallBack);
                 UILoginPanel.userName_ = "";
                 GameManager.Instance.loginInfo_ = null;
-                netStatusWarning_ = false;
-                break;
+				netStatusWarning_ = false;
+			    break;
             case 99001:
                 MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("connectionTimeout"), () =>
                 {
@@ -381,16 +383,16 @@ public class ApplicationEntry : MonoBehaviour
                 //}, true, null, null, "", "", 4001);
                 break;
             case 10058:
-                if (!string.IsNullOrEmpty(GameManager.ServName_))
-                {
+				if (!string.IsNullOrEmpty(GameManager.ServName_))
+				{
                     MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("NetworkShutdown"), () =>
-                    {
+					{
                         if (!string.IsNullOrEmpty(host_))
                             NetConnection.Instance.connect(host_, port_, ReconnectCallBack);
-                        netStatusWarning_ = false;
+						    netStatusWarning_ = false;
                     }, true, null, null, LanguageManager.instance.GetValue("reconnect"), "", 4001);
-                }
-                break;
+				}
+	            break;
             case 10061:
                 if (!string.IsNullOrEmpty(GameManager.ServName_))
                 {
@@ -400,7 +402,24 @@ public class ApplicationEntry : MonoBehaviour
                         netStatusWarning_ = false;
                     }, true, null, null, "", "", 4001);
                 }
-                break;
+            break;
+            case 57557:
+                //MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("BattleInitErr"), () =>
+                //{
+                //    ErrorTipsUI.ShowMe(LanguageManager.instance.GetValue("dataSyncing"));
+                //    GameManager.Instance.ClearCurrentState();
+                //    NetConnection.Instance.requestPhoto();
+                //    //if (NetConnection.Instance.connect(host_, port_))
+                //    //{
+                //    //    //不是登录界面或重登录界面则返回重登录界面
+                //    //    if (!string.IsNullOrEmpty(StageMgr.Scene_name) && !StageMgr.Scene_name.Equals(GlobalValue.StageName_ReLoginScene))
+                //    //        ReturnToLogin();
+                //    //    else
+                //    //        ErrorTipsUI.ShowMe(LanguageManager.instance.GetValue("connectionSuccess"));
+                //    //}
+                //    netStatusWarning_ = false;
+                //}, true, null, null, "", "", 4001);
+                //break;
             case 57558:
                 ErrorTipsUI.ShowMe(LanguageManager.instance.GetValue("dataSyncing"));
                 GameManager.Instance.ClearCurrentState();
@@ -427,17 +446,27 @@ public class ApplicationEntry : MonoBehaviour
                     NetConnection.Instance.connect(host_, port_, ReconnectCallBack);
                 }, true, null, null, "", "", 4001);
                 break;
-            //case 1234:
-            //    MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("sdkInitError"), () =>
-            //    {
-            //        GameObject.FindObjectOfType<gameHandler>().Reinit();
-            //    }, true, null, null, LanguageManager.instance.GetValue("reconnect"), "", 4001);
-            //    break;
-
+            case 1234:
+                MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("sdkInitError"), () =>
+                {
+                    //GameObject.FindObjectOfType<gameHandler>().Reinit();
+                }, true, null, null, LanguageManager.instance.GetValue("reconnect"), "", 4001);
+                break;
+            case 2345:
+                MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("loginFailed"), () =>
+                {
+                    //game.GameUser.getInstance().login();
+                }, true, null, null, LanguageManager.instance.GetValue("reconnect"), "", 4001);
+                break;
             default:
+                //MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("connectionErr")/* + errCode.ToString()*/, () =>
+                //{
+                if(!string.IsNullOrEmpty(host_))
+                    NetConnection.Instance.connect(host_, port_, ReconnectCallBack);
+                //}, true, null, null, "", "", 4001);
                 break;
         }
-    }
+	}
 
     IEnumerator PullResFolderName()
     {
@@ -511,11 +540,12 @@ public class ApplicationEntry : MonoBehaviour
         yield return null;
     }
 
-    public void ParseDataFinish()
-    {
+	public void ParseDataFinish()
+	{
+		TransferRate._Inst.Send("Load Config End");
         // init some system which based on config table.
         ActivitySystem.Instance.Init();
-        SceneLoader.Instance.Init();
+		SceneLoader.Instance.Init();
 
         //这个界面为ui打开前的loading 需要快速加载 所以预先加载到内存
         UIAssetMgr.LoadUI(UIASSETS_ID.UIASSETS_UILoading, (Assets, paramData) =>
@@ -533,20 +563,24 @@ public class ApplicationEntry : MonoBehaviour
 
         //加载聊天ui
         GameManager.Instance.InitChatUI("LoginScene");
-    }
-
-    // Update is called once per frame
+	}
+	
+	// Update is called once per frame
     void Update()
     {
         if (Application.platform == RuntimePlatform.Android && (Input.GetKeyDown(KeyCode.Escape)))
         {
-
-            MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("ConfirmQuit"), () =>
+            //if (game.GameUser.getInstance().isFunctionSupported("exit"))
+            //{
+            //    game.GameUser.getInstance().callFuncWithParam("exit");
+            //}
+            //else
             {
-                SDKInterface.Instance.SDKExit();
-                    //Application.Quit();
+                MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("ConfirmQuit"), () =>
+                {
+                    Application.Quit();
                 }, false, null, null, "", "", 2000, true);
-
+            }
         }
 
         AtlasLoader.Instance.Update();
@@ -568,42 +602,36 @@ public class ApplicationEntry : MonoBehaviour
         EffectMgr.Instance.Update();
         VersionManager.Instance.Update();
         ChatSystem.Update();
-        BagSystem.instance.UpdateUsetime();
-        BabyData.UpdateUsetime();
+		BagSystem.instance.UpdateUsetime ();
+		BabyData.UpdateUsetime ();
         EmployeeTaskSystem.instance.Update();
-
-        if ( mayShowSysNotice)
+        if ((/*gameHandler._SdkInitSuccess ||*/ GlobalValue.IsDebugMode) && mayPullResFolderName)
         {
+            mayPullResFolderName = false;
+            //跳过cdn检查
+			TransferRate._Inst.Send("Load LoginPanel Begin");
+//            UIFactory.Instance.LoadUIPanel("LoginPanel", () =>
+//            {
+                UIFactory.Instance.OpenUI(GlobalValue.StageName_LoginScene, menuTypes.MAIN);
+				TransferRate._Inst.Send("Load LoginPanel End");
+//                AssetLoader.LoadAssetBundle("NpcNameLabel", AssetLoader.EAssetType.ASSET_UI, (AssetBundle bundle2, ParamData data2) =>
+//                {
+//                    nameLabel = bundle2.mainAsset;
+//                    mayShowSysNotice = true;
+//                }, null, Configure.assetsPathstreaming);
+//            });
+            //StartCoroutine(PullResFolderName());
+        }
+
+        if ((/*gameHandler._SdkInitSuccess ||*/ GlobalValue.IsDebugMode) && mayShowSysNotice)
+        {
+			TransferRate._Inst.Send("Show System Notice");
             mayShowSysNotice = false;
             //公告时 加载点轻量级资源
             PopText.Instance.Init();
             NpcHeadChat.Instance.Init();
             StartCoroutine(SysNotice());
         }
-
-
-        //PopText.Instance.Init();
-        //NpcHeadChat.Instance.Init();
-        //StartCoroutine(SysNotice());
-
-
-        if ( mayPullResFolderName)
-        {
-            mayPullResFolderName = false;
-            //跳过cdn检查
-            UIFactory.Instance.LoadUIPanel("LoginPanel", () =>
-            {
-                UIFactory.Instance.OpenUI(GlobalValue.StageName_LoginScene, menuTypes.MAIN);
-                AssetLoader.LoadAssetBundle("NpcNameLabel", AssetLoader.EAssetType.ASSET_UI, (AssetBundle bundle2, ParamData data2) =>
-                {
-                    nameLabel = bundle2.mainAsset;
-                    mayShowSysNotice = true;
-                }, null, Configure.assetsPathstreaming);
-            });
-            StartCoroutine(PullResFolderName());
-            //       
-        }
-       
     }
 
     public bool netStatusWarning_ = false;
@@ -651,7 +679,7 @@ public class ApplicationEntry : MonoBehaviour
             logQue.Dequeue();
         logQue.Enqueue(sLog);
 		CommonEvent.ExcuteException(sLog);
-      //   NGUIDebug.Log (sLog);
+        //NGUIDebug.Log (sLog);
 
         //Backlog.Instance.log(SystemInfo.deviceUniqueIdentifier, cond, stack.Replace('\n', '|'), "0");
 	}

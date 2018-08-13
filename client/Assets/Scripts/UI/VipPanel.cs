@@ -125,7 +125,7 @@ public class VipPanel : MonoBehaviour {
                     //NetConnection.Instance.sendChat(info, "");
                     int vip2Id;
                     GlobalValue.Get(Constant.C_Vip2ShopID, out vip2Id);
-                   
+                    //gameHandler.PayProduct(vip2Id);
                 });
             else
             {
@@ -143,14 +143,12 @@ public class VipPanel : MonoBehaviour {
             {
                 int vip1Id;
                 GlobalValue.Get(Constant.C_Vip1ShopID, out vip1Id);
-                SDK185.Pay(vip1Id);
                 //gameHandler.PayProduct(vip1Id);
             }
             else
             {
                 int vip2Id;
                 GlobalValue.Get(Constant.C_Vip2ShopID, out vip2Id);
-                SDK185.Pay(vip2Id);
                 //gameHandler.PayProduct(vip2Id);
             }
         }

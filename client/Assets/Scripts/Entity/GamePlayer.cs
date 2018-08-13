@@ -403,11 +403,11 @@ public class GamePlayer : Actor
                 adTypes.Add(ADType.ADT_OnlineReward);
         }
 		adTypes.Add (ADType.ADT_Level);
-  //      if (String.IsNullOrEmpty(inst.phoneNumber_) && GameManager.ServId_ != 801 && GameManager.ServId_ != 802) //评测
-		//{
-		//	adTypes.Add (ADType.ADT_PhoneNumber);
-		//	MoreActivityData.instance.SetTypeRad((int)ADType.ADT_PhoneNumber, 1);
-		//}
+        if (String.IsNullOrEmpty(inst.phoneNumber_) && GameManager.ServId_ != 801 && GameManager.ServId_ != 802) //评测
+		{
+			adTypes.Add (ADType.ADT_PhoneNumber);
+			MoreActivityData.instance.SetTypeRad((int)ADType.ADT_PhoneNumber, 1);
+		}
 		adTypes.Add (ADType.ADT_Sign);
 		if(adTypes.Contains(ADType.ADT_GiftBag))
 		{ 

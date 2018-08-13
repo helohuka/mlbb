@@ -410,25 +410,33 @@ public static class GlobalValue
      *      渠道支付验证地址
      */
 #if UNITY_IOS
-    public const string CenterServerHost = "http://118.89.218.164:18080/";
+    public static string centerservhost = "https://loginmhflc.tanyu.mobi/";
 #else
-    public const string CenterServerHost = "http://118.89.218.164:18080/";
+	public static string centerservhost = "http://loginmhflc.tanyu.mobi/";
 #endif
     public static string resVersion = "servs/cdn";
     public static string sysNotice = "notice/system";
     public static string servNotice = "notice/server";
     public static string servListUrl = "servs/query";
 
+    /*
+     * 资源cdn服务器地址
+     */
+#if UNITY_IOS
+    public static string cdnservhost = "https://z5.tanyu.mobi/mhflc/Version/";
+#else
+	public static string cdnservhost = "http://z5.tanyu.mobi/mhflc/Version/";
+#endif
 
     //获取渠道号 如果是"" 则由渠道sdk赋值
-    public static string channelID = "0";
+    public static string channelID = "999";
 	
     public static bool IsDebugMode
 	{
 		get
 		{
 			bool isDebug = channelID.Equals(TestChannelID) || channelID.Equals(AnysdkChannelID);
-			return false;
+			return isDebug;
 		}
 	}
 	//开发测试的ChannelID is 9

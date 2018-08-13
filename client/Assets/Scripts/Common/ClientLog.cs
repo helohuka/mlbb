@@ -43,7 +43,7 @@ public class ClientLog
 		{
 			return;
 		}
-		Debug.LogError( message.ToString(),context );
+		Debug.LogError( message, context );
 	}
 	//
 	public void LogErrorEx( object message )
@@ -57,7 +57,7 @@ public class ClientLog
 		{
 			return;
 		}
-		Debug.LogError( message.ToString() );
+		Debug.LogError( message );
 	}
 	//
 	public void LogErrorEx( object message, Object context )

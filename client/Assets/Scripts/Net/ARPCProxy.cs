@@ -174,6 +174,7 @@ public class ARPCProxy : Server2ClientProxy
 
     public bool enterGameOk(COM_PlayerInst inst)
     {
+		TransferRate._Inst.Send("Final Enter Game");
         GuideManager.Instance.Init(inst.guideIdx_);
         GamePlayer.Instance.SetPlayer(inst);
         CommonEvent.ExcuteAccountChange(CommonEvent.DefineAccountOperate.LOGIN);
@@ -2193,7 +2194,13 @@ public class ARPCProxy : Server2ClientProxy
 		ShopData sd = ShopData.GetData(shopid);
 		if(sd == null)
 			return true;
-        
+
+		//gameHandler gh = UnityEngine.GameObject.FindObjectOfType<gameHandler>();
+		//if(gh == null)
+		//	return true;
+
+		//gh.OrderOk(orderid, shopid);
+
 		return true;
 	}
 	public bool updateRandSubmitQuestCount(int count)

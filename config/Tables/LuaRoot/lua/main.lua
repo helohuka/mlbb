@@ -359,7 +359,7 @@ function NpcTalked(GAMEEVENT,ARG0,ARG1)
 			local num = table.getn(team_table)
 			for i=1,table.getn(team_table),1
 			do
-				if team_table[i] < 20 then
+				if team_table[i] < 30 then
 					gameLib.PopText("teamlevelpvp")
 					return true
 				else
@@ -378,7 +378,7 @@ function NpcTalked(GAMEEVENT,ARG0,ARG1)
 			return true
 		end
 		local lv = gameLib.PlayerLevel()
-		if lv < 20 then
+		if lv < 30 then
 			gameLib.PopText("equipLevel")
 			return true
 		elseif lv >= 20 and lv < 35 then
@@ -394,7 +394,7 @@ function NpcTalked(GAMEEVENT,ARG0,ARG1)
 		local team_table = gameLib.TeamMemberLevel()
 		if team_table == nil then
 			local lv = gameLib.PlayerLevel()
-			if lv < 20 then
+			if lv < 30 then
 				gameLib.PopText("equipLevel")
 				return true
 			elseif lv >= 20 and lv < 35 then
@@ -411,7 +411,7 @@ function NpcTalked(GAMEEVENT,ARG0,ARG1)
 		local num = table.getn(team_table)
 		for i=1,table.getn(team_table),1
 		do
-			if team_table[i] < 20 then
+			if team_table[i] < 30 then
 				gameLib.PopText("teamlevelpvp")
 				return true
 			else

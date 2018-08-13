@@ -129,10 +129,18 @@ public class SetPanelUI : UIBase {
 		UIManager.SetButtonEventHandler (gonggaoBtn.gameObject, EnumButtonEvent.OnClick, OnGongGao, 0, 0);
        // UIManager.SetButtonEventHandler(switchAccountBtn.gameObject, EnumButtonEvent.OnClick, OnUnReg, 0, 0);
 
-	    
-		unRegBtn.gameObject.SetActive(true);
-		UIManager.SetButtonEventHandler(unRegBtn.gameObject, EnumButtonEvent.OnClick, OnUnReg, 0, 0);
-		
+	 //   if (game.GameUser.getInstance().isFunctionSupported("logout"))
+		//{
+		//	unRegBtn.gameObject.SetActive(true);
+		//	UIManager.SetButtonEventHandler(unRegBtn.gameObject, EnumButtonEvent.OnClick, OnUnReg, 0, 0);
+		//}else
+		{
+			unRegBtn.gameObject.SetActive(false);
+		}
+
+
+
+
 		UIManager.SetButtonEventHandler (musicOn.gameObject, EnumButtonEvent.OnClick, OnClickmusicOff, 0, 0);
 		UIManager.SetButtonEventHandler (musicOff.gameObject, EnumButtonEvent.OnClick, OnClickmusicOn, 0, 0);
 		UIManager.SetButtonEventHandler (SoundOn.gameObject, EnumButtonEvent.OnClick,  OnClickSoundOff, 0, 0);
@@ -249,17 +257,24 @@ public class SetPanelUI : UIBase {
 	//公告是退出功能
 	void OnGongGao(ButtonScript obj, object args, int param1, int param2)
 	{
-        
+        //if (game.GameUser.getInstance().isFunctionSupported("exit"))
+        //{
+        //    game.GameUser.getInstance().callFuncWithParam("exit");
+        //}
+        //else
+        {
             MessageBoxUI.ShowMe(LanguageManager.instance.GetValue("ConfirmQuit"), () =>
             {
-                SDKInterface.Instance.SDKExit();
+                Application.Quit();
             });
-        
+        }
 	}
 	void OnUnReg(ButtonScript obj, object args, int param1, int param2)
 	{
-
-        SDKInterface.Instance.OnLogout();
+        //if (game.GameUser.getInstance().isFunctionSupported("logout"))
+        //{
+        //    game.GameUser.getInstance().callFuncWithParam("logout");
+        //}
 //        else
 //        {
 //            NetConnection.Instance.logout();

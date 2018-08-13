@@ -7,7 +7,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-//这个文件是什么东西自动生成的
 using System;
 using System.IO;
 using System.Collections;
@@ -41,76 +40,6 @@ static public class Configure
 #endif
         }
     }
-
-    /// <summary>
-    /// Asset 根目录
-    /// </summary>
-
-#if UNITY_IOS || UNITY_IPHONE
-    public const string PlatformAssetFolder = "/02";
-#elif UNITY_ANDROID
-    public const string PlatformAssetFolder = "/03";
-#else
-    public const string PlatformAssetFolder = "/01";
-#endif
-
-    /// <summary>
-    /// 读取文件的方式
-    /// </summary>
-    public const string FolderMethod = "file:///";
-
-
-    static string streamingAssetsFolder_ = Application.streamingAssetsPath + PlatformAssetFolder;
-    static string persistentAssetsFolder_ = Application.persistentDataPath + PlatformAssetFolder;
-    public static string StreamAssetsFolder {
-        get
-        {
-            return streamingAssetsFolder_;
-
-        }
-    }
-
-    public static string PersistentAssetsFolder {
-        get
-        {
-            return persistentAssetsFolder_;
-
-        }
-    }
-    private static string makeStreamingAssetFolder(string subFolder)
-    {
-        return streamingAssetsFolder_ + subFolder;
-    }
-
-    static string configFolder_ = makeStreamingAssetFolder("/Config/");
-    static string tableFolder_ = makeStreamingAssetFolder("/Config/Tables/");
-    static string scriptFolder_ = makeStreamingAssetFolder("/Config/Tables/LuaRoot/");
-
-    public static string ConfigFolder
-    {
-        get
-        {
-            return configFolder_;
-        }
-    }
-
-    public static string TableFolder
-    {
-        get
-        {
-            return tableFolder_;
-        }
-    }
-
-    public static string ScriptFolder
-    {
-        get
-        {
-            return scriptFolder_;
-        }
-    }
-
-
 
 #if UNITY_EDITOR
     public static string cfgPath = "file:///" + Application.dataPath + "/../../Config/Tables/";
@@ -151,11 +80,6 @@ static public class Configure
 	public static string cfgPathStn =  "file:///" + Application.streamingAssetsPath + "/AssetBundlePC/TableTemp/";
 	public static string scriptPathStre = Application.streamingAssetsPath + "/AssetBundlePC/TableTemp/LuaRoot/";
 #endif
-
-
-
-
-
 
 }
 

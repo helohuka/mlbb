@@ -863,12 +863,12 @@ public class GameManager
 
 	public string GetVersionNum()
 	{
-#if UNITY_ANDROID && !UNITY_EDITOR
-		return "0." + XyskAndroidAPI.VersionName() + "." + XyskAndroidAPI.VersionCode() ;
-#elif UNITY_IOS
+		#if UNITY_ANDROID && !UNITY_EDITOR
+		return XyskAndroidAPI.getPackageVersion();
+        #elif UNITY_IOS
         return XyskIOSAPI.GetVersion();
-#endif
-        return "99.99.99";
+        #endif
+		return "1.1.1";
 	}
 
     public string PlatformToString()

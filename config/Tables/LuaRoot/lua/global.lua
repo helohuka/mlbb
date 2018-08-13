@@ -58,8 +58,8 @@ Global.setInt(C_BoxGreenSpend, 10000);
 Global.setInt(C_BoxBlueSpendItem,4511);
 Global.setInt(C_BoxBlueSpend,2);
 Global.setInt(C_BoxGoldSpend,20);
-Global.setInt(C_BoxBlueSpendDiamond,500);
-Global.setInt(C_BoxGoldSpendDiamond,4500);
+Global.setInt(C_BoxBlueSpendDiamond,200);
+Global.setInt(C_BoxGoldSpendDiamond,1800);
 Global.setInt(C_Employeelasttime,20);
 Global.setInt(C_EmployeeRare,5);
 Global.setInt(C_EmpDelFeedback1,0);
@@ -68,8 +68,8 @@ Global.setInt(C_EmpDelFeedback3,32000);
 Global.setInt(C_EmpDelFeedback4,76500);
 Global.setInt(C_EmpDelFeedback5,170000);
 
-Global.setInt(C_InitMoney,500000);
-Global.setInt(C_InitDiamond,10000);
+Global.setInt(C_InitMoney,0);
+Global.setInt(C_InitDiamond,0);
 
 Global.setInt(C_GapWorldLevel_One,10);
 Global.setInt(C_GapWorldLevel_Two,20);
@@ -149,8 +149,8 @@ Global.setInt(C_FamilyJoinGuildIntervalTime, 86400);
 --//Vip
 Global.setInt(C_Vip1Reward, 4511);  --ItemId
 Global.setInt(C_Vip2Reward, 4511);
-Global.setInt(C_Vip1RewardNum, 2);
-Global.setInt(C_Vip2RewardNum, 10);
+Global.setInt(C_Vip1RewardNum, 1);
+Global.setInt(C_Vip2RewardNum, 2);
 Global.setInt(C_Vip1ShopID, 2101);
 Global.setInt(C_Vip2ShopID, 2102);
 Global.setFloat(C_VipTime,2592000);
@@ -243,8 +243,8 @@ Global.setInt(C_PvpMuc, 11);
 
 Global.setInt(C_PkItemDorp, 50);
 
-Global.setInt(C_ZhuanPanOneGo, 500);
-Global.setInt(C_ZhuanPanTenGo, 4500);
+Global.setInt(C_ZhuanPanOneGo, 200);
+Global.setInt(C_ZhuanPanTenGo, 1800);
 
 Global.setInt(C_AllGatherNum, 1000);
 Global.setInt(C_GatherNumMax, 1000);

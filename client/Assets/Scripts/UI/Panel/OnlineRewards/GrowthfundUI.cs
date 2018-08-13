@@ -86,7 +86,6 @@ public class GrowthfundUI : UIBase {
 			}
             int growFund = 0;
             GlobalValue.Get(Constant.C_GrowFundShopID, out growFund);
-            SDK185.Pay(growFund);
             //gameHandler.PayProduct(growFund);
 			//StoreUI.SwithShowMe(2);
 		}

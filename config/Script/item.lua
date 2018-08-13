@@ -444,14 +444,13 @@ function item_xinshoubao(RECEIVER, ARG0)
 	if Player.get_bag_free_slot(RECEIVER) < 6 then
 		return EN_OpenBaoXiangBagFull;
 	end
-	Player.add_money(RECEIVER,500000)
+	Player.add_money(RECEIVER,10000)
 	local pro = Player.get_property(RECEIVER,PT_Profession)
 	local shuijing = {1351,1352,1353,1354}
 	local index = math.ceil(math.random(1,4));
 	Player.add_item(RECEIVER,shuijing[index],1)
 	Player.add_item(RECEIVER,5100,1)
 	Player.add_item(RECEIVER,5101,1)
-	Player.add_diamond(RECEIVER,10000)
 	--Player.add_item(RECEIVER,5075,1)
 	return EN_None;
 end
@@ -1631,12 +1630,7 @@ end
 
 --渠道礼包
 function item_libao1(RECEIVER, ARG0)
-if Player.get_bag_free_slot(RECEIVER) < 1 then
-		return EN_OpenBaoXiangBagFull;
-	end
-	Player.add_diamond(RECEIVER,3000)
-	Player.add_money(RECEIVER,100000)
-	Player.add_item(RECEIVER,5087,5)
+	Player.add_diamond(RECEIVER,300)
 	return EN_None;
 end
 
@@ -1653,14 +1647,12 @@ end
 
 --进群礼包300钻、3W金、宠物强化之魂*5
 function item_libao3(RECEIVER, ARG0)
-	if Player.get_bag_free_slot(RECEIVER) < 3 then
+	if Player.get_bag_free_slot(RECEIVER) < 1 then
 		return EN_OpenBaoXiangBagFull;
 	end
 	Player.add_diamond(RECEIVER,200)
 	Player.add_money(RECEIVER,6000)
-	Player.add_item(RECEIVER,4510,10)
-	Player.add_item(RECEIVER,21350,10)
-	Player.add_item(RECEIVER,21351,10)
+	Player.add_item(RECEIVER,5086,3)
 	return EN_None;
 end
 
