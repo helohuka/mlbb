@@ -216,8 +216,21 @@ PayNotify::handle_close(ACE_HANDLE handle, ACE_Reactor_Mask close_mask)
 }
 
 void 
-PayNotify::proc( const char* post )
+PayNotify::proc(const char* post)
 {
+	if (NULL == post)
+	{
+		ACE_DEBUG((LM_ERROR, "if (NULL == post)"));
+		close();
+		return;
+	}
+
+	if (strlen(post) > 65535) {
+		ACE_DEBUG((LM_ERROR, "if (strlen(post) > 65535) {"));
+		close();
+		return;
+	}
+
 	Json::Value json;
 	Json::Reader reader;
 	if(reader.parse(post,json)){
